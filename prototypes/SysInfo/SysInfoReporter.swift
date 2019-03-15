@@ -11,7 +11,7 @@ import Foundation
 public class SysInfoReporter {
 	
 	// MARK: - Singleton
-	private static let sharedManager = SysInfoReporter()
+	public static let sharedManager = SysInfoReporter()
 	private init() {
 	}
 	
@@ -72,7 +72,7 @@ extension SysInfoReporter {
 // MARK: Timer
 extension SysInfoReporter {
 	
-	@objc func onTimer() {
+	@objc private func onTimer() {
 		update()
 	}
 	
