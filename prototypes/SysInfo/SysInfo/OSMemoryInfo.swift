@@ -11,10 +11,10 @@ import Foundation
 extension SysInfo {
 	
 	public struct OSMemoryInfo {
-		public var freeSize = UInt64(0)
-		public var activeSize = UInt64(0)
-		public var inactiveSize = UInt64(0)
-		public var wireSize = UInt64(0)
+		public var freeSize = UInt32(0)
+		public var activeSize = UInt32(0)
+		public var inactiveSize = UInt32(0)
+		public var wireSize = UInt32(0)
 		
 		public var totalSize = UInt64(0)
 		public var usedSize = UInt64(0)
@@ -30,9 +30,9 @@ extension SysInfo {
 		osMemoryInfo.inactiveSize = hostStatics.inactiveSize
 		osMemoryInfo.wireSize = hostStatics.wireSize
 		
-		osMemoryInfo.totalSize = osMemoryInfo.freeSize + osMemoryInfo.activeSize + osMemoryInfo.inactiveSize + osMemoryInfo.wireSize
-		osMemoryInfo.usedSize = osMemoryInfo.activeSize + osMemoryInfo.wireSize
-		osMemoryInfo.unusedSize = osMemoryInfo.totalSize - osMemoryInfo.usedSize
+		osMemoryInfo.totalSize = UInt64(osMemoryInfo.freeSize) + UInt64(osMemoryInfo.activeSize) + UInt64(osMemoryInfo.inactiveSize) + UInt64(osMemoryInfo.wireSize)
+		osMemoryInfo.usedSize = UInt64(osMemoryInfo.activeSize) + UInt64(osMemoryInfo.wireSize)
+		osMemoryInfo.unusedSize = UInt64(osMemoryInfo.totalSize) - UInt64(osMemoryInfo.usedSize)
 		
 		return osMemoryInfo
 	}

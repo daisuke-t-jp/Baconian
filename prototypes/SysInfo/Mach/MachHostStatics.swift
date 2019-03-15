@@ -11,10 +11,10 @@ import Foundation
 extension Mach {
 	
 	struct HostStatics {
-		public var freeSize = UInt64(0)
-		public var activeSize = UInt64(0)
-		public var inactiveSize = UInt64(0)
-		public var wireSize = UInt64(0)
+		public var freeSize = UInt32(0)
+		public var activeSize = UInt32(0)
+		public var inactiveSize = UInt32(0)
+		public var wireSize = UInt32(0)
 	}
 	
 	static func hostStatics() -> HostStatics {
@@ -35,12 +35,12 @@ extension Mach {
 		}
 		
 		
-		let pageSize64 = UInt64(pageSize)
+		let pageSize2 = UInt32(pageSize)
 		var hostStatics = HostStatics()
-		hostStatics.freeSize = UInt64(machHostStatics.free_count) * pageSize64
-		hostStatics.activeSize = UInt64(machHostStatics.active_count) * pageSize64
-		hostStatics.inactiveSize = UInt64(machHostStatics.inactive_count) * pageSize64
-		hostStatics.wireSize = UInt64(machHostStatics.wire_count) * pageSize64
+		hostStatics.freeSize = machHostStatics.free_count * pageSize2
+		hostStatics.activeSize = machHostStatics.active_count * pageSize2
+		hostStatics.inactiveSize = machHostStatics.inactive_count * pageSize2
+		hostStatics.wireSize = machHostStatics.wire_count * pageSize2
 		
 		return hostStatics
 	}
