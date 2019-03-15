@@ -14,8 +14,20 @@ let enabledDummyAllocation = false
 var dummyMemory = [TimeInterval: [UInt]]()
 
 
-while(true) {
+
+class test: SysInfoReporterDelegate {
 	
+	func SysInfoReporter(_ manager: SysInfoReporter, didUpdate data: SysInfoReportData) {
+		print("")
+	}
+	
+}
+
+var obj = test()
+SysInfoReporter.sharedManager.start(obj)
+
+while(true) {
+	/*
 	if enabledDummyAllocation {
 		dummyMemory[Date().timeIntervalSinceNow] = [UInt](repeating: 32, count: 1024*1024*32)
 	}
@@ -85,7 +97,8 @@ while(true) {
 
 	print("--------------------")
 	print("")
+	*/
 	
-	
-	Thread.sleep(forTimeInterval: 3)
+	Thread.sleep(forTimeInterval: 0.001)
+	RunLoop.current.run()
 }
