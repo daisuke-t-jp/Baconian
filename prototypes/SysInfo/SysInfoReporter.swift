@@ -17,7 +17,7 @@ public class SysInfoReporter {
 	
 	
 	// MARK: - Enum, Const
-	public static let defaultInterval = TimeInterval(10)
+	public static let defaultInterval = TimeInterval(1)
 	
 	
 	// MARK: - Property

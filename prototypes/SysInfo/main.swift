@@ -18,6 +18,9 @@ var dummyMemory = [TimeInterval: [UInt]]()
 class test: SysInfoReporterDelegate {
 	
 	func SysInfoReporter(_ manager: SysInfoReporter, didUpdate data: SysInfoReportData) {
+		print("OSMemoryGrowed        : \(data.osMemoryGrowed)")
+		print("ProcessMemoryGrowed   : \(data.processMemoryGrowed)")
+		print("ProcessCPUUsageGrowed : \(data.processCPUUsageGrowed)")
 		print("")
 	}
 	
