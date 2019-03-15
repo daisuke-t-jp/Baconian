@@ -93,15 +93,21 @@ extension SysInfoReporter {
 		reportData.processMemoryInfo = processMemoryInfo
 		reportData.threadInfo = threadInfo
 		
-		if self.osMemoryInfo.usedSize > 0 && osMemoryInfo.usedSize > 0 {
+		if osMemoryInfo.usedSize > self.osMemoryInfo.usedSize {
 			reportData.osMemoryGrowed = Int64(osMemoryInfo.usedSize - self.osMemoryInfo.usedSize)
 		}
-		if self.processMemoryInfo.residentSize > 0 && processMemoryInfo.residentSize > 0 {
-			reportData.processMemoryGrowed = Int64(processMemoryInfo.residentSize - self.processMemoryInfo.residentSize)
+		else {
+			reportData.osMemoryGrowed = -Int64(self.osMemoryInfo.usedSize - osMemoryInfo.usedSize)
 		}
-		if self.threadInfo.cpuUsage > 0.0 && threadInfo.cpuUsage > 0.0 {
-			reportData.processCPUUsageGrowed = threadInfo.cpuUsage - self.threadInfo.cpuUsage
+		
+		if processMemoryInfo.residentSize > self.processMemoryInfo.residentSize {
+			reportData.processMemoryGrowed = Int64(processMemoryInfo.residentSize -  self.processMemoryInfo.residentSize)
 		}
+		else {
+			reportData.processMemoryGrowed = -Int64(self.processMemoryInfo.residentSize -  processMemoryInfo.residentSize)
+		}
+
+		reportData.processCPUUsageGrowed = threadInfo.cpuUsage - self.threadInfo.cpuUsage
 		
 		self.osMemoryInfo = osMemoryInfo
 		self.processMemoryInfo = processMemoryInfo

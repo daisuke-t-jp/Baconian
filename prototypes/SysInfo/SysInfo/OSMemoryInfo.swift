@@ -11,10 +11,10 @@ import Foundation
 extension SysInfo {
 	
 	public struct OSMemoryInfo {
-		public var freeSize = UInt32(0)
-		public var activeSize = UInt32(0)
-		public var inactiveSize = UInt32(0)
-		public var wireSize = UInt32(0)
+		public var freeSize = UInt64(0)
+		public var activeSize = UInt64(0)
+		public var inactiveSize = UInt64(0)
+		public var wireSize = UInt64(0)
 		
 		public var totalSize = UInt64(0)
 		public var usedSize = UInt64(0)
