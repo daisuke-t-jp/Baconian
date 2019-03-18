@@ -38,7 +38,7 @@
 		026A0465223F35DA00048572 /* SysInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SysInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		026A0468223F35DA00048572 /* SysInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SysInfo.h; sourceTree = "<group>"; };
 		026A0469223F35DA00048572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		026A046E223F35DB00048572 /* SysInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SysInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		026A046E223F35DB00048572 /* SysInfoTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SysInfoTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026A0473223F35DB00048572 /* SysInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysInfoTests.swift; sourceTree = "<group>"; };
 		026A0475223F35DB00048572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		026A04A4223F390800048572 /* SysInfoReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoReporterDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				026A0465223F35DA00048572 /* SysInfo.framework */,
-				026A046E223F35DB00048572 /* SysInfoTests.xctest */,
+				026A046E223F35DB00048572 /* SysInfoTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		026A0464223F35DA00048572 /* SysInfo */ = {
+		026A0464223F35DA00048572 /* SysInfo-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 026A0479223F35DB00048572 /* Build configuration list for PBXNativeTarget "SysInfo" */;
+			buildConfigurationList = 026A0479223F35DB00048572 /* Build configuration list for PBXNativeTarget "SysInfo-macOS" */;
 			buildPhases = (
 				026A0460223F35DA00048572 /* Headers */,
 				026A0461223F35DA00048572 /* Sources */,
@@ -174,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = SysInfo;
+			name = "SysInfo-macOS";
 			productName = SysInfo;
 			productReference = 026A0465223F35DA00048572 /* SysInfo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		026A046D223F35DB00048572 /* SysInfoTests */ = {
+		026A046D223F35DB00048572 /* SysInfoTests-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 026A047C223F35DB00048572 /* Build configuration list for PBXNativeTarget "SysInfoTests" */;
+			buildConfigurationList = 026A047C223F35DB00048572 /* Build configuration list for PBXNativeTarget "SysInfoTests-macOS" */;
 			buildPhases = (
 				026A046A223F35DB00048572 /* Sources */,
 				026A046B223F35DB00048572 /* Frameworks */,
@@ -192,9 +192,9 @@
 			dependencies = (
 				026A0471223F35DB00048572 /* PBXTargetDependency */,
 			);
-			name = SysInfoTests;
+			name = "SysInfoTests-macOS";
 			productName = SysInfoTests;
-			productReference = 026A046E223F35DB00048572 /* SysInfoTests.xctest */;
+			productReference = 026A046E223F35DB00048572 /* SysInfoTests-macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -228,8 +228,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				026A0464223F35DA00048572 /* SysInfo */,
-				026A046D223F35DB00048572 /* SysInfoTests */,
+				026A0464223F35DA00048572 /* SysInfo-macOS */,
+				026A046D223F35DB00048572 /* SysInfoTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +304,7 @@
 /* Begin PBXTargetDependency section */
 		026A0471223F35DB00048572 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 026A0464223F35DA00048572 /* SysInfo */;
+			target = 026A0464223F35DA00048572 /* SysInfo-macOS */;
 			targetProxy = 026A0470223F35DB00048572 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,7 +451,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfo;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SysInfo;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -478,7 +478,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfo;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SysInfo;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		026A0479223F35DB00048572 /* Build configuration list for PBXNativeTarget "SysInfo" */ = {
+		026A0479223F35DB00048572 /* Build configuration list for PBXNativeTarget "SysInfo-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026A047A223F35DB00048572 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		026A047C223F35DB00048572 /* Build configuration list for PBXNativeTarget "SysInfoTests" */ = {
+		026A047C223F35DB00048572 /* Build configuration list for PBXNativeTarget "SysInfoTests-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				026A047D223F35DB00048572 /* Debug */,

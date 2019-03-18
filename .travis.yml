@@ -1,0 +1,13 @@
+branches:
+  only: 
+    - master
+
+matrix:
+  include:
+    - os: osx
+      language: swift
+      osx_image: xcode10
+      script:
+        # macOS
+        - xcodebuild clean -project "SysInfo.xcodeproj" 
+        - xcodebuild test -project "SysInfo.xcodeproj" -scheme "SysInfo-macOS" -destination "platform=OS X" -configuration Debug

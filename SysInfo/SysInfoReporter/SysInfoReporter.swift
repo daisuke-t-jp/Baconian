@@ -8,11 +8,14 @@
 
 import Foundation
 
-// TODO: travis
 // TODO: readme
 // TODO: podspec
 // TODO: mac demo
 // TODO: ui(view)
+// TODO: jazzy
+// TODO: header image
+// TODO: iOS
+
 
 public class SysInfoReporter {
 	
