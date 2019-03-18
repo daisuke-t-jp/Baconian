@@ -1,0 +1,16 @@
+PODS:
+  - SysInfo (1.0.0)
+
+DEPENDENCIES:
+  - SysInfo (from `../../`)
+
+EXTERNAL SOURCES:
+  SysInfo:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  SysInfo: 335746110dbc2608981237035c059d950519033b
+
+PODFILE CHECKSUM: 79a6ca8ebf65c6042251fed679ef631a4c6ca6a7
+
+COCOAPODS: 1.6.0
