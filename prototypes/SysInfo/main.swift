@@ -18,9 +18,18 @@ var dummyMemory = [TimeInterval: [UInt]]()
 class test: SysInfoReporterDelegate {
 	
 	func SysInfoReporter(_ manager: SysInfoReporter, didUpdate data: SysInfoReportData) {
-		print("OSMemoryGrowed        : \(data.osMemoryGrowed)")
-		print("ProcessMemoryGrowed   : \(data.processMemoryGrowed)")
-		print("ProcessCPUUsageGrowed : \(data.processCPUUsageGrowed)")
+		print("# Summary")
+		print("- OSMemoryGrowed        : \(data.osMemoryGrowed.memoryByteFormatString)")
+		print("- ProcessMemoryGrowed   : \(data.processMemoryGrowed.memoryByteFormatString)")
+		print("- ProcessCPUUsageGrowed : \(data.processCPUUsageGrowed)[%]")
+		print("# Detail")
+		print("## OSMemory")
+		print("- usedSize   : \(data.osMemoryInfo.usedSize.memoryByteFormatString)")
+		print("- unusedSize : \(data.osMemoryInfo.unusedSize.memoryByteFormatString)")
+		print("## ProcessMemory")
+		print("- resident : \(data.processMemoryInfo.residentSize.memoryByteFormatString)")
+		print("## Thread")
+		print("- cpuUsage : \(data.threadInfo.cpuUsage)[%]")
 		print("")
 	}
 	
@@ -102,6 +111,8 @@ while(true) {
 	print("")
 	*/
 	
-	Thread.sleep(forTimeInterval: 0.001)
-	RunLoop.current.run()
+	autoreleasepool {
+		Thread.sleep(forTimeInterval: 0.001)
+		RunLoop.current.run()
+	}
 }
