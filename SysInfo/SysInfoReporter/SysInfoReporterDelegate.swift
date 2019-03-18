@@ -15,7 +15,7 @@ public protocol SysInfoReporterDelegate: class {
 	///
 	/// - Parameter manager: The SysInfoReporter reporting the event.
 	/// - Parameter data: An data of report.
-	func SysInfoReporter(_ manager: SysInfoReporter, didUpdate data: SysInfoReporter.SysInfoReportData)
+	func sysInfoReporter(_ manager: SysInfoReporter, didUpdate data: SysInfoReporter.SysInfoReportData)
 }
 
 /// The delegate for SysInfoReporterDelegate's optional func.

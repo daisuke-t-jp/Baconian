@@ -12,7 +12,12 @@ extension FixedWidthInteger {
 	var decialFormatString: String {
 		let formatter = NumberFormatter()
 		formatter.numberStyle = .decimal
-		let str = formatter.string(from: self as! NSNumber)
+		
+		guard let number = (self as? NSNumber) else {
+			return "\(self)"
+		}
+		
+		let str = formatter.string(from: number)
 		return str ?? "\(self)"
 	}
 	

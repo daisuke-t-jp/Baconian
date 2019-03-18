@@ -126,9 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				026A04AB223F390A00048572 /* Mach.swift */,
+				026A04AE223F390A00048572 /* MachHostStatics.swift */,
 				026A04AC223F390A00048572 /* MachTaskInfo.swift */,
 				026A04AD223F390A00048572 /* MachThreadInfo.swift */,
-				026A04AE223F390A00048572 /* MachHostStatics.swift */,
 			);
 			path = Mach;
 			sourceTree = "<group>";
@@ -136,8 +136,8 @@
 		026A04D0223F3C9000048572 /* SysInfoReporter */ = {
 			isa = PBXGroup;
 			children = (
-				026A04D1223F3C9000048572 /* ProcessMemoryInfo.swift */,
 				026A04D2223F3C9000048572 /* OSMemoryInfo.swift */,
+				026A04D1223F3C9000048572 /* ProcessMemoryInfo.swift */,
 				026A04D3223F3C9000048572 /* ThreadInfo.swift */,
 				026A04A8223F390900048572 /* SysInfoReportData.swift */,
 				026A04A4223F390800048572 /* SysInfoReporterDelegate.swift */,
@@ -168,6 +168,7 @@
 				026A0461223F35DA00048572 /* Sources */,
 				026A0462223F35DA00048572 /* Frameworks */,
 				026A0463223F35DA00048572 /* Resources */,
+				026A04D7223F5DB000048572 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,6 +250,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		026A04D7223F5DB000048572 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		026A0461223F35DA00048572 /* Sources */ = {

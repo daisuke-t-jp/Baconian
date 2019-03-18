@@ -33,7 +33,7 @@ extension SysInfoReporter {
 		
 		for thread in array {
 			guard !Mach.threadInfoIsIdle(thread) else {
-				threadInfo.idleNum = threadInfo.idleNum + 1
+				threadInfo.idleNum += 1
 				continue
 			}
 			

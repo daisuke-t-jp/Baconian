@@ -8,6 +8,12 @@
 
 import Foundation
 
+// TODO: travis
+// TODO: readme
+// TODO: podspec
+// TODO: mac demo
+// TODO: ui(view)
+
 public class SysInfoReporter {
 	
 	// MARK: - Singleton
@@ -18,12 +24,17 @@ public class SysInfoReporter {
 	
 	// MARK: - Enum, Const
 	public static let defaultInterval = TimeInterval(1)
-	
+	public enum State {
+		case stop
+		case run
+		case pause
+	}
 	
 	// MARK: - Property
+	public private(set) var state = State.stop
 	private var timer: Timer?
 
-	/// A delegate of BeaconDetectManager.
+	/// A delegate of SysInfoReporter.
 	weak private var delegate: SysInfoReporterDelegate?
 	
 	private var osMemoryInfo = OSMemoryInfo()
@@ -39,6 +50,7 @@ extension SysInfoReporter {
 	public func start(_ delegate: SysInfoReporterDelegate, interval: TimeInterval = defaultInterval) {
 		stop()
 		
+		state = .run
 		self.delegate = delegate
 		
 		timer = Timer.scheduledTimer(timeInterval: interval,
@@ -47,14 +59,22 @@ extension SysInfoReporter {
 									 userInfo: nil,
 									 repeats: true)
 		
-		guard let timer = timer else {
+		/*
+		guard timer != nil else {
 			return
 		}
 		
 		RunLoop.current.add(timer, forMode: .common)
+		*/
+	}
+	
+	public func pause() {
+		state = .pause
 	}
 	
 	public func stop() {
+		state = .stop
+		
 		delegate = nil
 		
 		guard let timer = self.timer else {
@@ -73,6 +93,10 @@ extension SysInfoReporter {
 extension SysInfoReporter {
 	
 	@objc private func onTimer() {
+		guard !(state == .pause) else {
+			return
+		}
+		
 		update()
 	}
 	
@@ -95,15 +119,13 @@ extension SysInfoReporter {
 		
 		if osMemoryInfo.usedSize > self.osMemoryInfo.usedSize {
 			reportData.osMemoryGrowed = Int64(osMemoryInfo.usedSize - self.osMemoryInfo.usedSize)
-		}
-		else {
+		} else {
 			reportData.osMemoryGrowed = -Int64(self.osMemoryInfo.usedSize - osMemoryInfo.usedSize)
 		}
 		
 		if processMemoryInfo.residentSize > self.processMemoryInfo.residentSize {
 			reportData.processMemoryGrowed = Int64(processMemoryInfo.residentSize -  self.processMemoryInfo.residentSize)
-		}
-		else {
+		} else {
 			reportData.processMemoryGrowed = -Int64(self.processMemoryInfo.residentSize -  processMemoryInfo.residentSize)
 		}
 
@@ -117,7 +139,7 @@ extension SysInfoReporter {
 			return
 		}
 		
-		delegate.SysInfoReporter(self, didUpdate: reportData)
+		delegate.sysInfoReporter(self, didUpdate: reportData)
 	}
 	
 }
