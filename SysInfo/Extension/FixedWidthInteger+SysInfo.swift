@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension FixedWidthInteger {
+public extension FixedWidthInteger {
 	var decialFormatString: String {
 		let formatter = NumberFormatter()
 		formatter.numberStyle = .decimal
