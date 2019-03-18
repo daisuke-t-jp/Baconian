@@ -6,7 +6,7 @@
 //  Copyright © 2019 SysInfo. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for SysInfo.
 FOUNDATION_EXPORT double SysInfoVersionNumber;

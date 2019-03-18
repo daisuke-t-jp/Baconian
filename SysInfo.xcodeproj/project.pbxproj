@@ -10,6 +10,18 @@
 		026A046F223F35DB00048572 /* SysInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026A0465223F35DA00048572 /* SysInfo.framework */; };
 		026A0474223F35DB00048572 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A0473223F35DB00048572 /* SysInfoTests.swift */; };
 		026A0476223F35DB00048572 /* SysInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 026A0468223F35DA00048572 /* SysInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		026A04B4223F390A00048572 /* SysInfoReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A4223F390800048572 /* SysInfoReporterDelegate.swift */; };
+		026A04B5223F390A00048572 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A6223F390900048572 /* TimeInterval+SysInfo.swift */; };
+		026A04B6223F390A00048572 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */; };
+		026A04B7223F390A00048572 /* SysInfoReportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A8223F390900048572 /* SysInfoReportData.swift */; };
+		026A04B8223F390A00048572 /* SysInfoReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A9223F390900048572 /* SysInfoReporter.swift */; };
+		026A04B9223F390A00048572 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04AB223F390A00048572 /* Mach.swift */; };
+		026A04BA223F390A00048572 /* MachTaskInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04AC223F390A00048572 /* MachTaskInfo.swift */; };
+		026A04BB223F390A00048572 /* MachThreadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04AD223F390A00048572 /* MachThreadInfo.swift */; };
+		026A04BC223F390A00048572 /* MachHostStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04AE223F390A00048572 /* MachHostStatics.swift */; };
+		026A04D4223F3C9000048572 /* ProcessMemoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04D1223F3C9000048572 /* ProcessMemoryInfo.swift */; };
+		026A04D5223F3C9000048572 /* OSMemoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04D2223F3C9000048572 /* OSMemoryInfo.swift */; };
+		026A04D6223F3C9000048572 /* ThreadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04D3223F3C9000048572 /* ThreadInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +41,18 @@
 		026A046E223F35DB00048572 /* SysInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SysInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		026A0473223F35DB00048572 /* SysInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysInfoTests.swift; sourceTree = "<group>"; };
 		026A0475223F35DB00048572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		026A04A4223F390800048572 /* SysInfoReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoReporterDelegate.swift; sourceTree = "<group>"; };
+		026A04A6223F390900048572 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
+		026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
+		026A04A8223F390900048572 /* SysInfoReportData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoReportData.swift; sourceTree = "<group>"; };
+		026A04A9223F390900048572 /* SysInfoReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoReporter.swift; sourceTree = "<group>"; };
+		026A04AB223F390A00048572 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
+		026A04AC223F390A00048572 /* MachTaskInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskInfo.swift; sourceTree = "<group>"; };
+		026A04AD223F390A00048572 /* MachThreadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachThreadInfo.swift; sourceTree = "<group>"; };
+		026A04AE223F390A00048572 /* MachHostStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostStatics.swift; sourceTree = "<group>"; };
+		026A04D1223F3C9000048572 /* ProcessMemoryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessMemoryInfo.swift; sourceTree = "<group>"; };
+		026A04D2223F3C9000048572 /* OSMemoryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMemoryInfo.swift; sourceTree = "<group>"; };
+		026A04D3223F3C9000048572 /* ThreadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +95,9 @@
 		026A0467223F35DA00048572 /* SysInfo */ = {
 			isa = PBXGroup;
 			children = (
+				026A04A5223F390900048572 /* Extension */,
+				026A04AA223F390A00048572 /* Mach */,
+				026A04D0223F3C9000048572 /* SysInfoReporter */,
 				026A0468223F35DA00048572 /* SysInfo.h */,
 				026A0469223F35DA00048572 /* Info.plist */,
 			);
@@ -84,6 +111,39 @@
 				026A0475223F35DB00048572 /* Info.plist */,
 			);
 			path = SysInfoTests;
+			sourceTree = "<group>";
+		};
+		026A04A5223F390900048572 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				026A04A6223F390900048572 /* TimeInterval+SysInfo.swift */,
+				026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		026A04AA223F390A00048572 /* Mach */ = {
+			isa = PBXGroup;
+			children = (
+				026A04AB223F390A00048572 /* Mach.swift */,
+				026A04AC223F390A00048572 /* MachTaskInfo.swift */,
+				026A04AD223F390A00048572 /* MachThreadInfo.swift */,
+				026A04AE223F390A00048572 /* MachHostStatics.swift */,
+			);
+			path = Mach;
+			sourceTree = "<group>";
+		};
+		026A04D0223F3C9000048572 /* SysInfoReporter */ = {
+			isa = PBXGroup;
+			children = (
+				026A04D1223F3C9000048572 /* ProcessMemoryInfo.swift */,
+				026A04D2223F3C9000048572 /* OSMemoryInfo.swift */,
+				026A04D3223F3C9000048572 /* ThreadInfo.swift */,
+				026A04A8223F390900048572 /* SysInfoReportData.swift */,
+				026A04A4223F390800048572 /* SysInfoReporterDelegate.swift */,
+				026A04A9223F390900048572 /* SysInfoReporter.swift */,
+			);
+			path = SysInfoReporter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +208,7 @@
 				TargetAttributes = {
 					026A0464223F35DA00048572 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					026A046D223F35DB00048572 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +255,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026A04B8223F390A00048572 /* SysInfoReporter.swift in Sources */,
+				026A04B5223F390A00048572 /* TimeInterval+SysInfo.swift in Sources */,
+				026A04BB223F390A00048572 /* MachThreadInfo.swift in Sources */,
+				026A04D5223F3C9000048572 /* OSMemoryInfo.swift in Sources */,
+				026A04BC223F390A00048572 /* MachHostStatics.swift in Sources */,
+				026A04B9223F390A00048572 /* Mach.swift in Sources */,
+				026A04B7223F390A00048572 /* SysInfoReportData.swift in Sources */,
+				026A04D6223F3C9000048572 /* ThreadInfo.swift in Sources */,
+				026A04D4223F3C9000048572 /* ProcessMemoryInfo.swift in Sources */,
+				026A04B4223F390A00048572 /* SysInfoReporterDelegate.swift in Sources */,
+				026A04BA223F390A00048572 /* MachTaskInfo.swift in Sources */,
+				026A04B6223F390A00048572 /* FixedWidthInteger+SysInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +413,7 @@
 		026A047A223F35DB00048572 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -358,6 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -365,6 +440,7 @@
 		026A047B223F35DB00048572 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -390,6 +466,7 @@
 		026A047D223F35DB00048572 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SysInfoTests/Info.plist;
@@ -407,6 +484,7 @@
 		026A047E223F35DB00048572 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SysInfoTests/Info.plist;
