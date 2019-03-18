@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "SysInfo/*.{swift}"
+  spec.source_files = 'SysInfo/Extension/*.{swift}', 'SysInfo/Mach/*.{swift}', 'SysInfo/SysInfoReporter/*.{swift}'
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
