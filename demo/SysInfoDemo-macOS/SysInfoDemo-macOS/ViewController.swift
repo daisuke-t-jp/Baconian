@@ -9,10 +9,15 @@
 import Cocoa
 import SysInfo
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, SysInfoReporterDelegate {
+	
+	@IBOutlet weak var textFieldSummaryOSMemoryGrowed: NSTextField!
 
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		SysInfoReporter.sharedManager.start(self)
 	}
 
 	override var representedObject: Any? {
@@ -21,6 +26,11 @@ class ViewController: NSViewController {
 		}
 	}
 
-
+	func sysInfoReporter(_ manager: SysInfoReporter, didUpdate data: SysInfoReporter.SysInfoReportData) {
+		
+		textFieldSummaryOSMemoryGrowed.stringValue = "- OSMemoryGrowed : \(data.osMemoryGrowed.memoryByteFormatString)"
+		
+	}
+	
 }
 
