@@ -26,16 +26,28 @@ public class SysInfoReporter {
 	
 	
 	// MARK: - Enum, Const
-	public static let defaultInterval = TimeInterval(1)
+	public enum UpdateFrequency: TimeInterval {
+		case normally = 5
+		case often = 2
+		case veryOften = 1
+	}
+	
 	public enum State {
 		case stop
 		case run
-		case pause
 	}
+	
 	
 	// MARK: - Property
 	public private(set) var state = State.stop
 	private var timer: Timer?
+	public var updateFrequency: UpdateFrequency = .normally {
+		didSet {
+			if state == .run {
+				start()
+			}
+		}
+	}
 
 	/// A delegate of SysInfoReporter.
 	weak private var delegate: SysInfoReporterDelegate?
@@ -50,42 +62,18 @@ public class SysInfoReporter {
 // MARK: Operation
 extension SysInfoReporter {
 	
-	public func start(_ delegate: SysInfoReporterDelegate, interval: TimeInterval = defaultInterval) {
+	public func start() {
 		stop()
 		
 		state = .run
-		self.delegate = delegate
 		
-		timer = Timer.scheduledTimer(timeInterval: interval,
-									 target: self,
-									 selector: #selector(SysInfoReporter.onTimer),
-									 userInfo: nil,
-									 repeats: true)
-		
-		/*
-		guard timer != nil else {
-			return
-		}
-		
-		RunLoop.current.add(timer, forMode: .common)
-		*/
-	}
-	
-	public func pause() {
-		state = .pause
+		startTimer(updateFrequency.rawValue)
 	}
 	
 	public func stop() {
 		state = .stop
 		
-		delegate = nil
-		
-		guard let timer = self.timer else {
-			return
-		}
-		
-		timer.invalidate()
-		self.timer = nil
+		stopTimer()
 	}
 	
 }
@@ -95,11 +83,28 @@ extension SysInfoReporter {
 // MARK: Timer
 extension SysInfoReporter {
 	
-	@objc private func onTimer() {
-		guard !(state == .pause) else {
+	private func startTimer(_ timeInterval: TimeInterval) {
+		stop()
+		
+		timer = Timer.scheduledTimer(timeInterval: timeInterval,
+									 target: self,
+									 selector: #selector(SysInfoReporter.onTimer),
+									 userInfo: nil,
+									 repeats: true)
+		
+		// TODO: Must be care that case of run on sub thread.
+	}
+	
+	private func stopTimer() {
+		guard let timer = self.timer else {
 			return
 		}
 		
+		timer.invalidate()
+		self.timer = nil
+	}
+	
+	@objc private func onTimer() {
 		update()
 	}
 	
@@ -137,6 +142,7 @@ extension SysInfoReporter {
 		self.osMemoryInfo = osMemoryInfo
 		self.processMemoryInfo = processMemoryInfo
 		self.threadInfo = threadInfo
+		
 		
 		guard let delegate = self.delegate else {
 			return

@@ -1,5 +1,5 @@
 //
-//  TaskInfo.swift
+//  TaskBasicInfo.swift
 //  SysInfo
 //
 //  Created by Daisuke T on 2019/03/14.
@@ -10,7 +10,7 @@ import Foundation
 
 extension Mach {
 	
-	struct TaskInfo {
+	struct TaskBasicInfo {
 		public var virtualSize = UInt64(0)
 		public var residentSize = UInt64(0)
 		public var residentSizeMax = UInt64(0)
@@ -20,11 +20,11 @@ extension Mach {
 		public var suspendCount = Int(0)
 	}
 	
-	static func taskInfo() -> TaskInfo {
-		var machTaskInfo = mach_task_basic_info()
+	static func taskBasicInfo() -> TaskBasicInfo {
+		var machData = mach_task_basic_info()
 		var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.stride / MemoryLayout<integer_t>.stride)
 		
-		_ = withUnsafeMutablePointer(to: &machTaskInfo) {
+		let machRes = withUnsafeMutablePointer(to: &machData) {
 			task_info(mach_task_self_,
 					  task_flavor_t(MACH_TASK_BASIC_INFO),
 					  $0.withMemoryRebound(to: Int32.self, capacity: 1) { pointer in
@@ -32,16 +32,20 @@ extension Mach {
 			}, &count)
 		}
 		
-		var taskInfo = TaskInfo()
-		taskInfo.virtualSize = machTaskInfo.virtual_size
-		taskInfo.residentSize = machTaskInfo.resident_size
-		taskInfo.residentSizeMax = machTaskInfo.resident_size_max
-		taskInfo.userTime = TimeInterval(machTaskInfo.user_time)
-		taskInfo.systemTime = TimeInterval(machTaskInfo.system_time)
-		taskInfo.policy = Int(machTaskInfo.policy)
-		taskInfo.suspendCount = Int(machTaskInfo.suspend_count)
+		guard machRes == KERN_SUCCESS else {
+			return TaskBasicInfo()
+		}
+		
+		var res = TaskBasicInfo()
+		res.virtualSize = machData.virtual_size
+		res.residentSize = machData.resident_size
+		res.residentSizeMax = machData.resident_size_max
+		res.userTime = TimeInterval(machData.user_time)
+		res.systemTime = TimeInterval(machData.system_time)
+		res.policy = Int(machData.policy)
+		res.suspendCount = Int(machData.suspend_count)
 
-		return taskInfo
+		return res
 	}
 }
 

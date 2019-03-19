@@ -16,7 +16,7 @@ extension SysInfoReporter {
 	}
 	
 	static func processMemoryInfo() -> ProcessMemoryInfo {
-		let taskInfo = Mach.taskInfo()
+		let taskInfo = Mach.taskBasicInfo()
 		
 		var processMemoryInfo = ProcessMemoryInfo()
 		processMemoryInfo.residentSize = taskInfo.residentSize

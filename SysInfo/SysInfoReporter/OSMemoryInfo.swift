@@ -22,13 +22,13 @@ extension SysInfoReporter {
 	}
 	
 	static func osMemoryInfo() -> OSMemoryInfo {
-		let hostStatics = Mach.hostStatics()
+		let vmStatics = Mach.hostVMStatics()
 		
 		var osMemoryInfo = OSMemoryInfo()
-		osMemoryInfo.freeSize = hostStatics.freeSize
-		osMemoryInfo.activeSize = hostStatics.activeSize
-		osMemoryInfo.inactiveSize = hostStatics.inactiveSize
-		osMemoryInfo.wireSize = hostStatics.wireSize
+		osMemoryInfo.freeSize = vmStatics.freeSize
+		osMemoryInfo.activeSize = vmStatics.activeSize
+		osMemoryInfo.inactiveSize = vmStatics.inactiveSize
+		osMemoryInfo.wireSize = vmStatics.wireSize
 		
 		osMemoryInfo.totalSize = UInt64(osMemoryInfo.freeSize) + UInt64(osMemoryInfo.activeSize) + UInt64(osMemoryInfo.inactiveSize) + UInt64(osMemoryInfo.wireSize)
 		osMemoryInfo.usedSize = UInt64(osMemoryInfo.activeSize) + UInt64(osMemoryInfo.wireSize)
