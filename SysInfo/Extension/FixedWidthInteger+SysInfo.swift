@@ -9,18 +9,6 @@
 import Foundation
 
 public extension FixedWidthInteger {
-	var decialFormatString: String {
-		let formatter = NumberFormatter()
-		formatter.numberStyle = .decimal
-		
-		guard let number = (self as? NSNumber) else {
-			return "\(self)"
-		}
-		
-		let str = formatter.string(from: number)
-		return str ?? "\(self)"
-	}
-	
 	var memoryByteFormatString: String {
 		return ByteCountFormatter.string(fromByteCount: Int64(self), countStyle: .memory)
 	}
