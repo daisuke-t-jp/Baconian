@@ -41,7 +41,7 @@ public class Reporter {
 	}
 	
 	/// A delegate of Reporter.
-	weak private var delegate: ReporterDelegate?
+	weak public var delegate: ReporterDelegate?
 	
 }
 
