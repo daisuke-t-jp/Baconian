@@ -12,6 +12,13 @@
 		02082B6B2242021600D4DFC2 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B652242021600D4DFC2 /* MachHostVMStatics.swift */; };
 		02082B6C2242021600D4DFC2 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B672242021600D4DFC2 /* MachTaskBasicInfo.swift */; };
 		02082B6D2242021600D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B682242021600D4DFC2 /* MachTaskThreadBasicInfo.swift */; };
+		02082B88224223BA00D4DFC2 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B7F224223BA00D4DFC2 /* Report.swift */; };
+		02082B89224223BA00D4DFC2 /* ReportOSProcessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B81224223BA00D4DFC2 /* ReportOSProcessors.swift */; };
+		02082B8A224223BA00D4DFC2 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B82224223BA00D4DFC2 /* ReportOSMemory.swift */; };
+		02082B8B224223BA00D4DFC2 /* ReportOSCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B83224223BA00D4DFC2 /* ReportOSCPU.swift */; };
+		02082B8C224223BA00D4DFC2 /* ReportProcessMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B85224223BA00D4DFC2 /* ReportProcessMemory.swift */; };
+		02082B8D224223BA00D4DFC2 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B86224223BA00D4DFC2 /* ReportProcessThread.swift */; };
+		02082B8E224223BA00D4DFC2 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B87224223BA00D4DFC2 /* ReportProcessCPU.swift */; };
 		023BBFD52240DFB900842B33 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFCE2240DFB800842B33 /* Mach.swift */; };
 		023BBFD62240DFB900842B33 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFCF2240DFB800842B33 /* MachCPUTick.swift */; };
 		026A046F223F35DB00048572 /* SysInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026A0465223F35DA00048572 /* SysInfo.framework */; };
@@ -43,6 +50,13 @@
 		02082B652242021600D4DFC2 /* MachHostVMStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostVMStatics.swift; sourceTree = "<group>"; };
 		02082B672242021600D4DFC2 /* MachTaskBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskBasicInfo.swift; sourceTree = "<group>"; };
 		02082B682242021600D4DFC2 /* MachTaskThreadBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskThreadBasicInfo.swift; sourceTree = "<group>"; };
+		02082B7F224223BA00D4DFC2 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		02082B81224223BA00D4DFC2 /* ReportOSProcessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSProcessors.swift; sourceTree = "<group>"; };
+		02082B82224223BA00D4DFC2 /* ReportOSMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSMemory.swift; sourceTree = "<group>"; };
+		02082B83224223BA00D4DFC2 /* ReportOSCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSCPU.swift; sourceTree = "<group>"; };
+		02082B85224223BA00D4DFC2 /* ReportProcessMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessMemory.swift; sourceTree = "<group>"; };
+		02082B86224223BA00D4DFC2 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
+		02082B87224223BA00D4DFC2 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
 		023BBFCE2240DFB800842B33 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
 		023BBFCF2240DFB800842B33 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
 		026A0465223F35DA00048572 /* SysInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SysInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +113,36 @@
 			path = Task;
 			sourceTree = "<group>";
 		};
+		02082B7E224223BA00D4DFC2 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				02082B7F224223BA00D4DFC2 /* Report.swift */,
+				02082B80224223BA00D4DFC2 /* OS */,
+				02082B84224223BA00D4DFC2 /* Process */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		02082B80224223BA00D4DFC2 /* OS */ = {
+			isa = PBXGroup;
+			children = (
+				02082B82224223BA00D4DFC2 /* ReportOSMemory.swift */,
+				02082B83224223BA00D4DFC2 /* ReportOSCPU.swift */,
+				02082B81224223BA00D4DFC2 /* ReportOSProcessors.swift */,
+			);
+			path = OS;
+			sourceTree = "<group>";
+		};
+		02082B84224223BA00D4DFC2 /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				02082B85224223BA00D4DFC2 /* ReportProcessMemory.swift */,
+				02082B87224223BA00D4DFC2 /* ReportProcessCPU.swift */,
+				02082B86224223BA00D4DFC2 /* ReportProcessThread.swift */,
+			);
+			path = Process;
+			sourceTree = "<group>";
+		};
 		026A045B223F35DA00048572 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +166,7 @@
 			children = (
 				026A04A5223F390900048572 /* Extension */,
 				026A04AA223F390A00048572 /* Mach */,
+				02082B7E224223BA00D4DFC2 /* Report */,
 				026A04D0223F3C9000048572 /* SysInfoReporter */,
 				026A0468223F35DA00048572 /* SysInfo.h */,
 				026A0469223F35DA00048572 /* Info.plist */,
@@ -304,16 +349,23 @@
 				026A04B8223F390A00048572 /* SysInfoReporter.swift in Sources */,
 				026A04B5223F390A00048572 /* TimeInterval+SysInfo.swift in Sources */,
 				026A04D5223F3C9000048572 /* OSMemoryInfo.swift in Sources */,
+				02082B88224223BA00D4DFC2 /* Report.swift in Sources */,
 				023BBFD62240DFB900842B33 /* MachCPUTick.swift in Sources */,
 				026A04B7223F390A00048572 /* SysInfoReportData.swift in Sources */,
+				02082B8D224223BA00D4DFC2 /* ReportProcessThread.swift in Sources */,
 				023BBFD52240DFB900842B33 /* Mach.swift in Sources */,
+				02082B8E224223BA00D4DFC2 /* ReportProcessCPU.swift in Sources */,
 				02082B6C2242021600D4DFC2 /* MachTaskBasicInfo.swift in Sources */,
 				02082B6B2242021600D4DFC2 /* MachHostVMStatics.swift in Sources */,
 				02082B6D2242021600D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */,
+				02082B8A224223BA00D4DFC2 /* ReportOSMemory.swift in Sources */,
 				026A04D6223F3C9000048572 /* ThreadInfo.swift in Sources */,
+				02082B89224223BA00D4DFC2 /* ReportOSProcessors.swift in Sources */,
 				02082B6A2242021600D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
 				026A04D4223F3C9000048572 /* ProcessMemoryInfo.swift in Sources */,
 				026A04B4223F390A00048572 /* SysInfoReporterDelegate.swift in Sources */,
+				02082B8C224223BA00D4DFC2 /* ReportProcessMemory.swift in Sources */,
+				02082B8B224223BA00D4DFC2 /* ReportOSCPU.swift in Sources */,
 				02082B692242021600D4DFC2 /* MachHostProcessorInfo.swift in Sources */,
 				026A04B6223F390A00048572 /* FixedWidthInteger+SysInfo.swift in Sources */,
 			);

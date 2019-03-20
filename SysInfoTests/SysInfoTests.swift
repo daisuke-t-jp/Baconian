@@ -36,14 +36,15 @@ class SysInfoTests: XCTestCase {
 		let val = Mach.Host.cpuLoadInfo()
 		
 		XCTAssertFalse(val.userTick == 0 &&
-		val.systemTick == 0 &&
-		val.idleTick == 0 &&
-		val.niceTick == 0)
+			val.systemTick == 0 &&
+			val.idleTick == 0 &&
+			val.niceTick == 0)
 	}
 	
 	func testMachHostProcessorInfo() {
 		let array = Mach.Host.processorInfo()
-		XCTAssert(array.count > 0)
+		
+		XCTAssertNotEqual(array.count, 0)
 		
 		for elm in array {
 			XCTAssertFalse(elm.userTick == 0 &&
@@ -65,17 +66,55 @@ class SysInfoTests: XCTestCase {
 	
 	func testMachTaskThreadBasicInfo() {
 		let array = Mach.Task.threadBasicInfo()
-		XCTAssert(array.count > 0)
+		
+		XCTAssertNotEqual(array.count, 0)
 	}
 	
 	
-	/*
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-	*/
-
+	// MARK: - Report OS
+	func testReportOSMemory() {
+		let val = Report.OS.memory()
+		
+		XCTAssertFalse(val.totalSize == 0 &&
+			val.usedSize == 0 &&
+			val.unusedSize == 0 &&
+			val.freeSize == 0 &&
+			val.activeSize == 0 &&
+			val.inactiveSize == 0 &&
+			val.wireSize == 0)
+	}
+	
+	func testReportOSCPU() {
+		let val = Report.OS.cpu()
+		
+		XCTAssertFalse(val.userUsage == 0 &&
+			val.systemUsage == 0 &&
+			val.idleUsage == 0)
+	}
+	
+	func testReportOSProcessors() {
+		let array = Report.OS.processors()
+		
+		XCTAssertNotEqual(array.count, 0)
+	}
+	
+	
+	// MARK: - Report Process
+	func testReportProcessMemory() {
+		let val = Report.Process.memory()
+		
+		XCTAssertNotEqual(val.residentSize, 0)
+	}
+	
+	func testReportProcessCPU() {
+		// NOP
+	}
+	
+	func testReportProcessThread() {
+		let val = Report.Process.thread()
+		
+		XCTAssert(val.totalNum > 0)
+		XCTAssertEqual(val.totalNum, val.busyNum + val.idleNum)
+	}
+	
 }
