@@ -14,4 +14,6 @@ final class Report {
 		static var lastCPUTick = Mach.CPUTick()
 	}
 	
+	final class Process {
+	}
 }
