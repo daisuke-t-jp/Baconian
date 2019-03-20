@@ -43,9 +43,6 @@ public class Reporter {
 	/// A delegate of Reporter.
 	weak private var delegate: ReporterDelegate?
 	
-	private var osMemoryInfo = Report.OS.Memory()
-	private var processMemoryInfo = Report.Process.memory()
-	private var threadInfo = Report.Process.thread()
 }
 
 
@@ -107,39 +104,18 @@ extension Reporter {
 extension Reporter {
 	
 	private func update() {
-		let osMemoryInfo = Report.OS.memory()
-		let processMemoryInfo = Report.Process.memory()
-		let threadInfo = Report.Process.thread()
-		
-		var reporterData = Data()
-		reporterData.osMemoryInfo = osMemoryInfo
-		reporterData.processMemoryInfo = processMemoryInfo
-		reporterData.threadInfo = threadInfo
-		
-		if osMemoryInfo.usedSize > self.osMemoryInfo.usedSize {
-			reporterData.osMemoryGrowed = Int64(osMemoryInfo.usedSize - self.osMemoryInfo.usedSize)
-		} else {
-			reporterData.osMemoryGrowed = -Int64(self.osMemoryInfo.usedSize - osMemoryInfo.usedSize)
-		}
-		
-		if processMemoryInfo.residentSize > self.processMemoryInfo.residentSize {
-			reporterData.processMemoryGrowed = Int64(processMemoryInfo.residentSize -  self.processMemoryInfo.residentSize)
-		} else {
-			reporterData.processMemoryGrowed = -Int64(self.processMemoryInfo.residentSize -  processMemoryInfo.residentSize)
-		}
-		
-		// reportData.processCPUUsageGrowed = threadInfo.cpuUsage - self.threadInfo.cpuUsage
-		
-		self.osMemoryInfo = osMemoryInfo
-		self.processMemoryInfo = processMemoryInfo
-		self.threadInfo = threadInfo
-		
-		
 		guard let delegate = self.delegate else {
 			return
 		}
 		
-		delegate.reporter(self, didUpdate: reporterData)
+		let data = Reporter.Data(osMemory: Report.OS.memory(),
+								 osCPU: Report.OS.cpu(),
+								 osProcessors: Report.OS.processors(),
+								 processMemory: Report.Process.memory(),
+								 processCPU: Report.Process.cpu(),
+								 processThread: Report.Process.thread())
+		
+		delegate.reporter(self, didUpdate: data)
 	}
 	
 }

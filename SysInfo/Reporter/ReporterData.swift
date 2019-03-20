@@ -11,15 +11,29 @@ import Foundation
 extension Reporter {
 	
 	public struct Data {
-		// MARK: - Summary
-		public var osMemoryGrowed = Int64(0)
-		public var processMemoryGrowed = Int64(0)
-		public var processCPUUsageGrowed = Float(0)
-		
-		// MARK: - Detail
-		public var osMemoryInfo = Report.OS.Memory()
-		public var processMemoryInfo = Report.Process.Memory()
-		public var threadInfo = Report.Process.Thread()
+		// OS
+		let osMemory: Report.OS.Memory
+		let osCPU: Report.OS.CPU
+		let osProcessors: [Report.OS.CPU]
+
+		// Process
+		let processMemory: Report.Process.Memory
+		let processCPU: Report.Process.CPU
+		let processThread: Report.Process.Thread
+	}
+	
+}
+
+
+extension Reporter.Data {
+	
+	init() {
+		osMemory = Report.OS.Memory()
+		osCPU = Report.OS.CPU()
+		osProcessors = [Report.OS.CPU]()
+		processMemory = Report.Process.Memory()
+		processCPU = Report.Process.CPU()
+		processThread = Report.Process.Thread()
 	}
 	
 }

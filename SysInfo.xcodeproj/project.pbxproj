@@ -141,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				02082B922242338A00D4DFC2 /* ReporterData.swift */,
-				02082B96224233B400D4DFC2 /* Reporter.swift */,
 				02082B902242338A00D4DFC2 /* ReporterDelegate.swift */,
+				02082B96224233B400D4DFC2 /* Reporter.swift */,
 			);
 			path = Reporter;
 			sourceTree = "<group>";
