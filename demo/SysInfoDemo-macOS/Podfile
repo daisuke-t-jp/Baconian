@@ -1,8 +1,0 @@
-platform :osx, '10.12'
-use_frameworks!
-
-target 'SysInfoDemo-macOS' do
-pod 'SysInfo', :path => "../../"
-end
-
-
