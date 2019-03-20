@@ -38,7 +38,7 @@ extension Mach.Task {
 	
 	
 	static func threadBasicInfo() -> [ThreadBasicInfo] {
-		var actList: thread_act_array_t? = nil
+		var actList: thread_act_array_t?
 		var actListCount: mach_msg_type_number_t = 0
 		guard KERN_SUCCESS == task_threads(mach_task_self_, &actList, &actListCount) else {
 			return [ThreadBasicInfo]()

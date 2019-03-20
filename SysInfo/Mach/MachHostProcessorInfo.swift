@@ -13,7 +13,7 @@ extension Mach.Host {
 	static func processorInfo() -> [Mach.CPUTick] {
 		
 		var cpuCount: natural_t = 0
-		var cpuInfoArray: processor_info_array_t? = nil
+		var cpuInfoArray: processor_info_array_t?
 		var cpuInfoCount: mach_msg_type_number_t = 0
 		guard KERN_SUCCESS == host_processor_info(mach_host_self(), PROCESSOR_CPU_LOAD_INFO, &cpuCount, &cpuInfoArray, &cpuInfoCount) else {
 			return [Mach.CPUTick]()
