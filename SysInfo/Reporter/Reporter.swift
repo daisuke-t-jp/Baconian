@@ -1,17 +1,17 @@
 //
-//  SysInfoReporter.swift
+//  Reporter.swift
 //  SysInfo
 //
-//  Created by Daisuke T on 2019/03/14.
+//  Created by Daisuke T on 2019/03/15.
 //  Copyright © 2019 SysInfo. All rights reserved.
 //
 
 import Foundation
 
-public class SysInfoReporter {
-	
+public class Reporter {
+
 	// MARK: - Singleton
-	public static let sharedManager = SysInfoReporter()
+	public static let sharedManager = Reporter()
 	private init() {
 	}
 	
@@ -39,9 +39,9 @@ public class SysInfoReporter {
 			}
 		}
 	}
-
-	/// A delegate of SysInfoReporter.
-	weak private var delegate: SysInfoReporterDelegate?
+	
+	/// A delegate of Reporter.
+	weak private var delegate: ReporterDelegate?
 	
 	private var osMemoryInfo = Report.OS.Memory()
 	private var processMemoryInfo = Report.Process.memory()
@@ -51,7 +51,7 @@ public class SysInfoReporter {
 
 
 // MARK: Operation
-extension SysInfoReporter {
+extension Reporter {
 	
 	public func start() {
 		stop()
@@ -72,14 +72,14 @@ extension SysInfoReporter {
 
 
 // MARK: Timer
-extension SysInfoReporter {
+extension Reporter {
 	
 	private func startTimer(_ timeInterval: TimeInterval) {
 		stop()
 		
 		timer = Timer.scheduledTimer(timeInterval: timeInterval,
 									 target: self,
-									 selector: #selector(SysInfoReporter.onTimer),
+									 selector: #selector(onTimer),
 									 userInfo: nil,
 									 repeats: true)
 		
@@ -104,30 +104,30 @@ extension SysInfoReporter {
 
 
 // MARK: Update
-extension SysInfoReporter {
+extension Reporter {
 	
 	private func update() {
 		let osMemoryInfo = Report.OS.memory()
 		let processMemoryInfo = Report.Process.memory()
 		let threadInfo = Report.Process.thread()
 		
-		var reportData = SysInfoReportData()
-		reportData.osMemoryInfo = osMemoryInfo
-		reportData.processMemoryInfo = processMemoryInfo
-		reportData.threadInfo = threadInfo
+		var reporterData = Data()
+		reporterData.osMemoryInfo = osMemoryInfo
+		reporterData.processMemoryInfo = processMemoryInfo
+		reporterData.threadInfo = threadInfo
 		
 		if osMemoryInfo.usedSize > self.osMemoryInfo.usedSize {
-			reportData.osMemoryGrowed = Int64(osMemoryInfo.usedSize - self.osMemoryInfo.usedSize)
+			reporterData.osMemoryGrowed = Int64(osMemoryInfo.usedSize - self.osMemoryInfo.usedSize)
 		} else {
-			reportData.osMemoryGrowed = -Int64(self.osMemoryInfo.usedSize - osMemoryInfo.usedSize)
+			reporterData.osMemoryGrowed = -Int64(self.osMemoryInfo.usedSize - osMemoryInfo.usedSize)
 		}
 		
 		if processMemoryInfo.residentSize > self.processMemoryInfo.residentSize {
-			reportData.processMemoryGrowed = Int64(processMemoryInfo.residentSize -  self.processMemoryInfo.residentSize)
+			reporterData.processMemoryGrowed = Int64(processMemoryInfo.residentSize -  self.processMemoryInfo.residentSize)
 		} else {
-			reportData.processMemoryGrowed = -Int64(self.processMemoryInfo.residentSize -  processMemoryInfo.residentSize)
+			reporterData.processMemoryGrowed = -Int64(self.processMemoryInfo.residentSize -  processMemoryInfo.residentSize)
 		}
-
+		
 		// reportData.processCPUUsageGrowed = threadInfo.cpuUsage - self.threadInfo.cpuUsage
 		
 		self.osMemoryInfo = osMemoryInfo
@@ -139,9 +139,10 @@ extension SysInfoReporter {
 			return
 		}
 		
-		delegate.sysInfoReporter(self, didUpdate: reportData)
+		delegate.reporter(self, didUpdate: reporterData)
 	}
 	
 }
+
 
 

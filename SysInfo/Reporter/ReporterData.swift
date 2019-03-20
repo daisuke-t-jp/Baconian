@@ -1,5 +1,5 @@
 //
-//  SysInfoReportData.swift
+//  ReporterData.swift
 //  SysInfo
 //
 //  Created by Daisuke T on 2019/03/15.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-extension SysInfoReporter {
-	public struct SysInfoReportData {
+extension Reporter {
+	
+	public struct Data {
 		// MARK: - Summary
 		public var osMemoryGrowed = Int64(0)
 		public var processMemoryGrowed = Int64(0)
@@ -20,4 +21,5 @@ extension SysInfoReporter {
 		public var processMemoryInfo = Report.Process.Memory()
 		public var threadInfo = Report.Process.Thread()
 	}
+	
 }
