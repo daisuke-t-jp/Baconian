@@ -16,7 +16,7 @@ extension Report.OS {
 		let idleUsage: Float
 		
 		public var description: String {
-			return String(format: "user[%.2f%%] system[%.2f%%] idle[%.2f%%]",
+			return String(format: "user: %.2f%%, system: %.2f%%, idle: %.2f%%",
 						  userUsage * 100,
 						  systemUsage * 100,
 						  idleUsage * 100

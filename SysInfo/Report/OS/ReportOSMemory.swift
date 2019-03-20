@@ -22,7 +22,7 @@ extension Report.OS {
 		
 		
 		public var description: String {
-			return String(format: "total[%@] used[%@] unused[%@](free[%@] active[%@] inactive[%@] wire[%@])",
+			return String(format: "total: %@, used: %@, unused: %@ (free: %@, active: %@, inactive: %@, wire: %@)",
 						  totalSize.memoryByteFormatString,
 						  usedSize.memoryByteFormatString,
 						  unusedSize.memoryByteFormatString,
@@ -61,7 +61,7 @@ extension Report.OS {
 		let res = Memory(
 			totalSize: UInt64(machData.freeSize) + UInt64(machData.activeSize) + UInt64(machData.inactiveSize) + UInt64(machData.wireSize),
 			usedSize: UInt64(machData.activeSize) + UInt64(machData.wireSize),
-			unusedSize: UInt64(machData.freeSize) - UInt64(machData.inactiveSize),
+			unusedSize: UInt64(machData.freeSize) + UInt64(machData.inactiveSize),
 			freeSize: machData.freeSize,
 			activeSize: machData.activeSize,
 			inactiveSize: machData.inactiveSize,

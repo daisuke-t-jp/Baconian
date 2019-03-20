@@ -14,7 +14,7 @@ extension Report.Process {
 		let residentSize: UInt64
 		
 		public var description: String {
-			return String(format: "residentSize[%@]",
+			return String(format: "residentSize: %@",
 						  residentSize.memoryByteFormatString
 			)
 		}

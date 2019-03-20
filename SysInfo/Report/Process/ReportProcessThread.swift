@@ -16,7 +16,7 @@ extension Report.Process {
 		let idleNum: Int
 		
 		public var description: String {
-			return String(format: "totalNum[%@] busyNum[%@] idleNum[%@]",
+			return String(format: "totalNum: %d, busyNum: %d, idleNum: %d",
 						  totalNum,
 						  busyNum,
 						  idleNum

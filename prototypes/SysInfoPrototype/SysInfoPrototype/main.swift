@@ -8,39 +8,55 @@
 
 import Foundation
 
-while(true)
-{
+while(true) {
 	autoreleasepool {
+		print("# Test")
+		print("- \(Date())")
+		print("")
+
 		do {
-			print("# Mach")
+			print("## Mach")
 			
-			// Host
-			print("## Host")
-			print("- HostVMStatics[\(Mach.Host.vmStatics())]")
-			print("- HostCPULoadInfo[\(Mach.Host.cpuLoadInfo())]")
-			print("- HostProcessorInfo[\(Mach.Host.processorInfo())]")
+			print("### Host")
+			print("#### VMStatics")
+			print("- \(Mach.Host.vmStatics())")
+			print("#### CPULoadInfo")
+			print("- \(Mach.Host.cpuLoadInfo())")
+			print("#### ProcessorInfo")
+			print("- \(Mach.Host.processorInfo())")
 			print("")
 			
-			// Task
-			print("## Task")
-			print("- TaskBasicInfo[\(Mach.Task.basicInfo())]")
-			print("- TaskThreadBasicInfo[\(Mach.Task.threadBasicInfo())]")
+			print("### Task")
+			print("#### BasicInfo")
+			print("- \(Mach.Task.basicInfo())")
+			print("#### ThreadBasicInfo")
+			print("- \(Mach.Task.threadBasicInfo())")
+			print("")
 		}
 		
 		do {
-			print("# Report")
+			print("## Report")
 			
-			// OS
-			print("## OS")
-			print("### Memory")
+			print("### OS")
+			print("#### Memory")
 			print("- \(Report.OS.memory())")
+			print("#### CPU")
+			print("- \(Report.OS.cpu())")
+			print("#### Processors")
+			print("- \(Report.OS.processors())")
 			print("")
 			
-			// OS
-			print("## OS")
-			print("### CPU")
-			print("- \(Report.OS.cpu())")
+			print("### Process")
+			print("#### Memory")
+			print("- \(Report.Process.memory())")
+			print("#### CPU")
+			print("- \(Report.Process.cpu())")
+			print("#### Thread")
+			print("- \(Report.Process.thread())")
+			print("")
 		}
+		
+		print("----------")
 		
 		Thread.sleep(forTimeInterval: 1)
 	}

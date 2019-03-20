@@ -15,7 +15,7 @@ extension Report.Process {
 		let time: TimeInterval
 		
 		public var description: String {
-			return String(format: "usage[%.2f%%] time[%fs]",
+			return String(format: "usage: %.2f%%, time: %.2fs",
 						  usage,
 						  time
 			)

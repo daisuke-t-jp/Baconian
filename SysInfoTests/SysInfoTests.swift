@@ -22,7 +22,7 @@ class SysInfoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-	// MARK: - Mach host
+	// MARK: - Mach Host
     func testMachHostVMStatics() {
 		let val = Mach.Host.vmStatics()
 		
@@ -54,7 +54,7 @@ class SysInfoTests: XCTestCase {
 	}
 	
 	
-	// MARK: - Mach task
+	// MARK: - Mach Task
 	func testMachTaskBasicInfo() {
 		let val = Mach.Task.basicInfo()
 		
@@ -67,6 +67,7 @@ class SysInfoTests: XCTestCase {
 		let array = Mach.Task.threadBasicInfo()
 		XCTAssert(array.count > 0)
 	}
+	
 	
 	/*
     func testPerformanceExample() {
