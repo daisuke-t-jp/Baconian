@@ -11,7 +11,8 @@ import Foundation
 final class Report {
 	
 	final class OS {
-		static var lastCPUTick = Mach.CPUTick()
+		static var machHostCPULoadInfoCache = Mach.CPUTick()
+		static var machHostProcessorInfoCache = [Mach.CPUTick]()
 	}
 	
 	final class Process {

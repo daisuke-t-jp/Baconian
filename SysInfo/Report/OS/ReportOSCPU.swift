@@ -22,6 +22,7 @@ extension Report.OS {
 						  idleUsage * 100
 			)
 		}
+		
 	}
 	
 }
@@ -35,6 +36,27 @@ extension Report.OS.CPU {
 		idleUsage = 0
 	}
 	
+	init(_ data: Mach.CPUTick, prevData: Mach.CPUTick) {
+		// Caluculation tick's diff.
+		let user = Float(data.userTick - prevData.userTick)
+		let system = Float(data.systemTick - prevData.systemTick)
+		let idle = Float(data.idleTick - prevData.idleTick)
+		// TODO: let nice = Float(data.niceTick - prevData.niceTick)
+		
+		
+		// Caluculation CPU usage
+		let total = user + system + idle /* + nice */
+		if total == 0 {
+			userUsage = 0
+			systemUsage = 0
+			idleUsage = 0
+		} else {
+			userUsage = user / total
+			systemUsage = system / total
+			idleUsage = idle / total
+		}
+	}
+	
 }
 
 
@@ -43,28 +65,10 @@ extension Report.OS {
 	static func cpu() -> CPU {
 		let machData = Mach.Host.cpuLoadInfo()
 		
-		// Caluculation tick's diff.
-		let user = Float(machData.userTick - lastCPUTick.userTick)
-		let system = Float(machData.systemTick - lastCPUTick.systemTick)
-		let idle = Float(machData.idleTick - lastCPUTick.idleTick)
-		// TODO: nice
-		// let nice = Float(machData.niceTick - lastCPUTick.niceTick)
-		let total = user + system + idle /* + nice */
-		guard total != 0 else {
-			return CPU()
-		}
+		let res = CPU(machData, prevData: machHostCPULoadInfoCache)
 		
-		
-		// Store last cpu tick
-		lastCPUTick = machData
-		
-		
-		// Caluculation CPU usage
-		let res = CPU(
-			userUsage: user / total,
-			systemUsage: system / total,
-			idleUsage: idle / total
-		)
+		// Caching data
+		machHostCPULoadInfoCache = machData
 		
 		return res
 	}
