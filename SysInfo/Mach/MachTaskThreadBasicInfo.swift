@@ -10,13 +10,13 @@ import Foundation
 
 extension Mach.Task {
 	
-	struct ThreadState {
-		static let running = TH_STATE_RUNNING	// thread is running normally
-		static let stopped = TH_STATE_STOPPED	// thread is stopped
-		static let waiting = TH_STATE_WAITING	// thread is waiting normally
-		static let uninterruptible = TH_STATE_UNINTERRUPTIBLE	// thread is in an uninterruptible wait
-		static let halted = TH_STATE_HALTED	 // thread is halted at a clean point
-	}
+	// TODO: Change to enum.
+	typealias ThreadState = Int32
+	static let ThreadStateRunning = TH_STATE_RUNNING	// thread is running normally
+	static let ThreadStateStopped = TH_STATE_STOPPED	// thread is stopped
+	static let ThreadStateWaiting = TH_STATE_WAITING	// thread is waiting normally
+	static let ThreadStateUninterruptible = TH_STATE_UNINTERRUPTIBLE	// thread is in an uninterruptible wait
+	static let ThreadStateHalted = TH_STATE_HALTED		// thread is halted at a clean point
 	
 	struct ThreadFlag: OptionSet {
 		let rawValue: Int32
@@ -26,17 +26,37 @@ extension Mach.Task {
 	}
 	
 	struct ThreadBasicInfo {
-		var userTime = TimeInterval(0)		// user run time
-		var systemTime = TimeInterval(0)	// system run time
-		var cpuUsage = Int(0)				// scaled cpu usage percentage
-		var policy = Int(0)					// scheduling policy in effect
-		var runState = ThreadState.stopped	// run state
-		var flags = ThreadFlag.idle			// various flags
-		var suspendCount = Int(0)			// suspend count for thread
-		var sleepTime = TimeInterval(0)		// number of seconds that thread has been sleeping
+		let userTime: TimeInterval		// user run time
+		let systemTime: TimeInterval	// system run time
+		let cpuUsage: Int				// scaled cpu usage percentage
+		let policy: Int					// scheduling policy in effect
+		let runState: ThreadState		// run state
+		let flags: ThreadFlag			// various flags
+		let suspendCount: Int			// suspend count for thread
+		let sleepTime: TimeInterval		// number of seconds that thread has been sleeping
 	}
 	
+}
+
+
+extension Mach.Task.ThreadBasicInfo {
 	
+	init() {
+		userTime = 0
+		systemTime = 0
+		cpuUsage = 0
+		policy = 0
+		runState = Mach.Task.ThreadStateStopped
+		flags = .idle
+		suspendCount = 0
+		sleepTime = 0
+	}
+	
+}
+
+
+extension Mach.Task {
+
 	static func threadBasicInfo() -> [ThreadBasicInfo] {
 		var actList: thread_act_array_t?
 		var actListCount: mach_msg_type_number_t = 0
@@ -70,17 +90,18 @@ extension Mach.Task {
 					return [ThreadBasicInfo]()
 				}
 				
-				var threadBasicInfo = ThreadBasicInfo()
-				threadBasicInfo.userTime = TimeInterval(machData.user_time)
-				threadBasicInfo.systemTime = TimeInterval(machData.system_time)
-				threadBasicInfo.cpuUsage = Int(machData.cpu_usage)
-				threadBasicInfo.policy = Int(machData.policy)
-				threadBasicInfo.runState = machData.run_state
-				threadBasicInfo.flags = ThreadFlag(rawValue: machData.flags)
-				threadBasicInfo.suspendCount = Int(machData.suspend_count)
-				threadBasicInfo.sleepTime = TimeInterval(machData.sleep_time)
+				let info = ThreadBasicInfo(
+					userTime: TimeInterval(machData.user_time),
+					systemTime: TimeInterval(machData.system_time),
+					cpuUsage: Int(machData.cpu_usage),
+					policy: Int(machData.policy),
+					runState: ThreadState(machData.run_state),
+					flags: ThreadFlag(rawValue: machData.flags),
+					suspendCount: Int(machData.suspend_count),
+					sleepTime: TimeInterval(machData.sleep_time)
+				)
 				
-				array.append(threadBasicInfo)
+				array.append(info)
 			}
 			
 			return array

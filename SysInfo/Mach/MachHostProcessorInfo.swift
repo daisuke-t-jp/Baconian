@@ -32,12 +32,13 @@ extension Mach.Host {
 			
 			var array = [Mach.CPUTick]()
 			for i in 0..<cpuCount {
-				var tick = Mach.CPUTick()
 				let index = Int32(i) * CPU_STATE_MAX
-				tick.userTick = UInt32(cpuInfoArray[Int(index + CPU_STATE_USER)])
-				tick.systemTick = UInt32(cpuInfoArray[Int(index + CPU_STATE_SYSTEM)])
-				tick.idleTick = UInt32(cpuInfoArray[Int(index + CPU_STATE_IDLE)])
-				tick.niceTick = UInt32(cpuInfoArray[Int(index + CPU_STATE_NICE)])
+				let tick = Mach.CPUTick(
+					userTick: UInt32(cpuInfoArray[Int(index + CPU_STATE_USER)]),
+					systemTick: UInt32(cpuInfoArray[Int(index + CPU_STATE_SYSTEM)]),
+					idleTick: UInt32(cpuInfoArray[Int(index + CPU_STATE_IDLE)]),
+					niceTick: UInt32(cpuInfoArray[Int(index + CPU_STATE_NICE)])
+				)
 				
 				array.append(tick)
 			}

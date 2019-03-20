@@ -24,12 +24,12 @@ extension Mach.Host {
 			return Mach.CPUTick()
 		}
 		
-		
-		var res = Mach.CPUTick()
-		res.userTick = UInt32(machData.cpu_ticks.0)		// CPU_STATE_USER
-		res.systemTick = UInt32(machData.cpu_ticks.1)	// CPU_STATE_SYSTEM
-		res.idleTick = UInt32(machData.cpu_ticks.2)		// CPU_STATE_IDLE
-		res.niceTick = UInt32(machData.cpu_ticks.3)		// CPU_STATE_NICE
+		let res = Mach.CPUTick(
+			userTick: machData.cpu_ticks.0, // CPU_STATE_USER
+			systemTick: machData.cpu_ticks.1,	// CPU_STATE_SYSTEM
+			idleTick: machData.cpu_ticks.2,	// CPU_STATE_IDLE
+			niceTick: machData.cpu_ticks.3 // CPU_STATE_NICE
+		)
 		
 		return res
 	}

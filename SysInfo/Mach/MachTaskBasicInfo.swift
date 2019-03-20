@@ -11,15 +11,34 @@ import Foundation
 extension Mach.Task {
 	
 	struct BasicInfo {
-		public var virtualSize = UInt64(0)
-		public var residentSize = UInt64(0)
-		public var residentSizeMax = UInt64(0)
-		public var userTime = TimeInterval(0)
-		public var systemTime = TimeInterval(0)
-		public var policy = Int(0)
-		public var suspendCount = Int(0)
+		let virtualSize: UInt64
+		let residentSize: UInt64
+		let residentSizeMax: UInt64
+		let userTime: TimeInterval
+		let systemTime: TimeInterval
+		let policy: Int
+		let suspendCount: Int
 	}
 	
+}
+
+
+extension Mach.Task.BasicInfo {
+	
+	init() {
+		virtualSize = 0
+		residentSize = 0
+		residentSizeMax = 0
+		userTime = 0
+		systemTime = 0
+		policy = 0
+		suspendCount = 0
+	}
+	
+}
+
+
+extension Mach.Task {
 	static func basicInfo() -> BasicInfo {
 		var machData = mach_task_basic_info()
 		var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.stride / MemoryLayout<integer_t>.stride)
@@ -36,16 +55,16 @@ extension Mach.Task {
 			return BasicInfo()
 		}
 		
-		var res = BasicInfo()
-		res.virtualSize = machData.virtual_size
-		res.residentSize = machData.resident_size
-		res.residentSizeMax = machData.resident_size_max
-		res.userTime = TimeInterval(machData.user_time)
-		res.systemTime = TimeInterval(machData.system_time)
-		res.policy = Int(machData.policy)
-		res.suspendCount = Int(machData.suspend_count)
-
+		let res = BasicInfo(
+			virtualSize: machData.virtual_size,
+			residentSize: machData.resident_size,
+			residentSizeMax: machData.resident_size_max,
+			userTime: TimeInterval(machData.user_time),
+			systemTime: TimeInterval(machData.system_time),
+			policy: Int(machData.policy),
+			suspendCount: Int(machData.suspend_count)
+		)
+		
 		return res
 	}
 }
-

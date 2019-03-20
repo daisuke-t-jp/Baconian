@@ -11,14 +11,15 @@ import Foundation
 extension Report.OS {
 	
 	public struct Memory: CustomStringConvertible {
-		public var totalSize = UInt64(0)
-		public var usedSize = UInt64(0)
-		public var unusedSize = UInt64(0)
+		let totalSize: UInt64
+		let usedSize: UInt64
+		let unusedSize: UInt64
 		
-		public var freeSize = UInt64(0)
-		public var activeSize = UInt64(0)
-		public var inactiveSize = UInt64(0)
-		public var wireSize = UInt64(0)
+		let freeSize: UInt64
+		let activeSize: UInt64
+		let inactiveSize: UInt64
+		let wireSize: UInt64
+		
 		
 		public var description: String {
 			return String(format: "total[%@] used[%@] unused[%@](free[%@] active[%@] inactive[%@] wire[%@])",
@@ -32,20 +33,40 @@ extension Report.OS {
 			)
 		}
 	}
+}
+
+
+extension Report.OS.Memory {
+	
+	init() {
+		totalSize = 0
+		usedSize = 0
+		unusedSize = 0
+		
+		freeSize = 0
+		activeSize = 0
+		inactiveSize = 0
+		wireSize = 0
+	}
+	
+}
+
+
+extension Report.OS {
 	
 	static func memory() -> Memory {
 		let machData = Mach.Host.vmStatics()
 		
-		var res = Memory()
-		res.freeSize = machData.freeSize
-		res.activeSize = machData.activeSize
-		res.inactiveSize = machData.inactiveSize
-		res.wireSize = machData.wireSize
-		
 		// TODO: Validation
-		res.totalSize = UInt64(machData.freeSize) + UInt64(machData.activeSize) + UInt64(machData.inactiveSize) + UInt64(machData.wireSize)
-		res.usedSize = UInt64(machData.activeSize) + UInt64(machData.wireSize)
-		res.unusedSize = UInt64(res.totalSize) - UInt64(res.usedSize)
+		let res = Memory(
+			totalSize: UInt64(machData.freeSize) + UInt64(machData.activeSize) + UInt64(machData.inactiveSize) + UInt64(machData.wireSize),
+			usedSize: UInt64(machData.activeSize) + UInt64(machData.wireSize),
+			unusedSize: UInt64(machData.freeSize) - UInt64(machData.inactiveSize),
+			freeSize: machData.freeSize,
+			activeSize: machData.activeSize,
+			inactiveSize: machData.inactiveSize,
+			wireSize: machData.wireSize
+		)
 		
 		return res
 	}

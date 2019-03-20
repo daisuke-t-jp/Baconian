@@ -1,5 +1,5 @@
 //
-//  MachHostProcessorInfo.swift
+//  MachCPUTick.swift
 //  SysInfo
 //
 //  Created by Daisuke T on 2019/03/14.
@@ -9,12 +9,23 @@
 import Foundation
 
 extension Mach {
-	
+
 	struct CPUTick {
-		public var userTick = UInt32(0)
-		public var systemTick = UInt32(0)
-		public var idleTick = UInt32(0)
-		public var niceTick = UInt32(0)
+		let userTick: UInt32
+		let systemTick: UInt32
+		let idleTick: UInt32
+		let niceTick: UInt32
 	}
 	
+}
+
+extension Mach.CPUTick {
+
+	init() {
+		userTick = 0
+		systemTick = 0
+		idleTick = 0
+		niceTick = 0
+	}
+
 }

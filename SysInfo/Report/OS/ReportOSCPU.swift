@@ -11,9 +11,9 @@ import Foundation
 extension Report.OS {
 	
 	public struct CPU: CustomStringConvertible {
-		public var userUsage = Float(0)
-		public var systemUsage = Float(0)
-		public var idleUsage = Float(0)
+		let userUsage: Float
+		let systemUsage: Float
+		let idleUsage: Float
 		
 		public var description: String {
 			return String(format: "user[%.2f%%] system[%.2f%%] idle[%.2f%%]",
@@ -24,6 +24,22 @@ extension Report.OS {
 		}
 	}
 	
+}
+
+
+extension Report.OS.CPU {
+	
+	init() {
+		userUsage = 0
+		systemUsage = 0
+		idleUsage = 0
+	}
+	
+}
+
+
+extension Report.OS {
+
 	static func cpu() -> CPU {
 		let machData = Mach.Host.cpuLoadInfo()
 		
@@ -34,15 +50,21 @@ extension Report.OS {
 		// TODO: nice
 		// let nice = Float(machData.niceTick - lastCPUTick.niceTick)
 		let total = user + system + idle /* + nice */
-
-		// Caluculation CPU usage
-		var res = CPU()
-		res.userUsage = user / total
-		res.systemUsage = system / total
-		res.idleUsage = idle / total
+		guard total != 0 else {
+			return CPU()
+		}
+		
 		
 		// Store last cpu tick
 		lastCPUTick = machData
+		
+		
+		// Caluculation CPU usage
+		let res = CPU(
+			userUsage: user / total,
+			systemUsage: system / total,
+			idleUsage: idle / total
+		)
 		
 		return res
 	}

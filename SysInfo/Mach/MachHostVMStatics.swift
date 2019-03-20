@@ -11,12 +11,29 @@ import Foundation
 extension Mach.Host {
 	
 	struct VMStatics {
-		public var freeSize = UInt64(0)
-		public var activeSize = UInt64(0)
-		public var inactiveSize = UInt64(0)
-		public var wireSize = UInt64(0)
+		let freeSize: UInt64
+		let activeSize: UInt64
+		let inactiveSize: UInt64
+		let wireSize: UInt64
 	}
 	
+}
+
+
+extension Mach.Host.VMStatics {
+	
+	init() {
+		freeSize = 0
+		activeSize = 0
+		inactiveSize = 0
+		wireSize = 0
+	}
+	
+}
+
+
+extension Mach.Host {
+
 	static func vmStatics() -> VMStatics {
 		let port = mach_host_self()
 		var pageSize = vm_size_t()
@@ -40,14 +57,14 @@ extension Mach.Host {
 		
 		
 		let pageSize2 = UInt64(pageSize)
-		var res = VMStatics()
-		res.freeSize = UInt64(machData.free_count) * pageSize2
-		res.activeSize = UInt64(machData.active_count) * pageSize2
-		res.inactiveSize = UInt64(machData.inactive_count) * pageSize2
-		res.wireSize = UInt64(machData.wire_count) * pageSize2
+		let res = VMStatics(
+			freeSize: UInt64(machData.free_count) * pageSize2,
+			activeSize: UInt64(machData.active_count) * pageSize2,
+			inactiveSize: UInt64(machData.inactive_count) * pageSize2,
+			wireSize: UInt64(machData.wire_count) * pageSize2
+		)
 		
 		return res
 	}
 	
 }
-
