@@ -10,15 +10,23 @@ import Foundation
 
 extension Report.OS {
 	
-	public struct CPU {
+	public struct CPU: CustomStringConvertible {
 		public var userUsage = Float(0)
 		public var systemUsage = Float(0)
 		public var idleUsage = Float(0)
+		
+		public var description: String {
+			return String(format: "user[%.2f%%] system[%.2f%%] idle[%.2f%%]",
+						  userUsage * 100,
+						  systemUsage * 100,
+						  idleUsage * 100
+			)
+		}
 	}
 	
 	static func cpu() -> CPU {
 		let machData = Mach.hostCPULoadInfo()
-	
+		
 		// Caluculation tick's diff.
 		let user = Float(machData.userTick - lastCPUTick.userTick)
 		let system = Float(machData.systemTick - lastCPUTick.systemTick)

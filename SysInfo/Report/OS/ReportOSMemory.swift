@@ -10,7 +10,7 @@ import Foundation
 
 extension Report.OS {
 	
-	public struct Memory {
+	public struct Memory: CustomStringConvertible {
 		public var totalSize = UInt64(0)
 		public var usedSize = UInt64(0)
 		public var unusedSize = UInt64(0)
@@ -19,6 +19,18 @@ extension Report.OS {
 		public var activeSize = UInt64(0)
 		public var inactiveSize = UInt64(0)
 		public var wireSize = UInt64(0)
+		
+		public var description: String {
+			return String(format: "total[%@] used[%@] unused[%@](free[%@] active[%@] inactive[%@] wire[%@])",
+						  totalSize.memoryByteFormatString,
+						  usedSize.memoryByteFormatString,
+						  unusedSize.memoryByteFormatString,
+						  freeSize.memoryByteFormatString,
+						  activeSize.memoryByteFormatString,
+						  inactiveSize.memoryByteFormatString,
+						  wireSize.memoryByteFormatString
+			)
+		}
 	}
 	
 	static func memory() -> Memory {
@@ -31,7 +43,7 @@ extension Report.OS {
 		res.wireSize = machData.wireSize
 		
 		res.totalSize = UInt64(machData.freeSize) + UInt64(machData.activeSize) + UInt64(machData.inactiveSize) + UInt64(machData.wireSize)
-		res.usedSize = UInt64(machData.activeSize) + UInt64(machData.wireSize)
+		res.usedSize = UInt64(machData.activeSize) + UInt64(machData.inactiveSize) + UInt64(machData.wireSize)
 		res.unusedSize = UInt64(res.totalSize) - UInt64(res.usedSize)
 		
 		return res
