@@ -1,5 +1,5 @@
 //
-//  TaskBasicInfo.swift
+//  MachTaskBasicInfo.swift
 //  SysInfo
 //
 //  Created by Daisuke T on 2019/03/14.
