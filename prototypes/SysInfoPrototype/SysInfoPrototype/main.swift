@@ -16,15 +16,15 @@ while(true)
 			
 			// Host
 			print("## Host")
-			print("- HostVMStatics[\(Mach.hostVMStatics())]")
-			print("- HostCPULoadInfo[\(Mach.hostCPULoadInfo())]")
-			print("- HostProcessorInfo[\(Mach.hostProcessorInfo())]")
+			print("- HostVMStatics[\(Mach.Host.vmStatics())]")
+			print("- HostCPULoadInfo[\(Mach.Host.cpuLoadInfo())]")
+			print("- HostProcessorInfo[\(Mach.Host.processorInfo())]")
 			print("")
 			
 			// Task
 			print("## Task")
-			print("- TaskBasicInfo[\(Mach.taskBasicInfo())]")
-			print("- TaskThreadBasicInfo[\(Mach.taskThreadBasicInfo())]")
+			print("- TaskBasicInfo[\(Mach.Task.basicInfo())]")
+			print("- TaskThreadBasicInfo[\(Mach.Task.threadBasicInfo())]")
 		}
 		
 		do {
