@@ -29,7 +29,6 @@
 		026A04B6223F390A00048572 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */; };
 		026A04B7223F390A00048572 /* SysInfoReportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A8223F390900048572 /* SysInfoReportData.swift */; };
 		026A04B8223F390A00048572 /* SysInfoReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A9223F390900048572 /* SysInfoReporter.swift */; };
-		026A04D4223F3C9000048572 /* ProcessMemoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04D1223F3C9000048572 /* ProcessMemoryInfo.swift */; };
 		026A04D6223F3C9000048572 /* ThreadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04D3223F3C9000048572 /* ThreadInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +68,6 @@
 		026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
 		026A04A8223F390900048572 /* SysInfoReportData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoReportData.swift; sourceTree = "<group>"; };
 		026A04A9223F390900048572 /* SysInfoReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoReporter.swift; sourceTree = "<group>"; };
-		026A04D1223F3C9000048572 /* ProcessMemoryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessMemoryInfo.swift; sourceTree = "<group>"; };
 		026A04D3223F3C9000048572 /* ThreadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,7 +202,6 @@
 		026A04D0223F3C9000048572 /* SysInfoReporter */ = {
 			isa = PBXGroup;
 			children = (
-				026A04D1223F3C9000048572 /* ProcessMemoryInfo.swift */,
 				026A04D3223F3C9000048572 /* ThreadInfo.swift */,
 				026A04A8223F390900048572 /* SysInfoReportData.swift */,
 				026A04A4223F390800048572 /* SysInfoReporterDelegate.swift */,
@@ -358,7 +355,6 @@
 				026A04D6223F3C9000048572 /* ThreadInfo.swift in Sources */,
 				02082B89224223BA00D4DFC2 /* ReportOSProcessors.swift in Sources */,
 				02082B6A2242021600D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
-				026A04D4223F3C9000048572 /* ProcessMemoryInfo.swift in Sources */,
 				026A04B4223F390A00048572 /* SysInfoReporterDelegate.swift in Sources */,
 				02082B8C224223BA00D4DFC2 /* ReportProcessMemory.swift in Sources */,
 				02082B8B224223BA00D4DFC2 /* ReportOSCPU.swift in Sources */,

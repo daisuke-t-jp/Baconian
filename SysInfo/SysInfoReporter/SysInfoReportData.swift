@@ -17,7 +17,7 @@ extension SysInfoReporter {
 		
 		// MARK: - Detail
 		public var osMemoryInfo = Report.OS.Memory()
-		public var processMemoryInfo = ProcessMemoryInfo()
+		public var processMemoryInfo = Report.Process.Memory()
 		public var threadInfo = ThreadInfo()
 	}
 }
