@@ -22,7 +22,7 @@ extension SysInfoReporter {
 	}
 	
 	static func osMemoryInfo() -> OSMemoryInfo {
-		let vmStatics = Mach.hostVMStatics()
+		let vmStatics = Mach.Host.VMStatics()
 		
 		var osMemoryInfo = OSMemoryInfo()
 		osMemoryInfo.freeSize = vmStatics.freeSize

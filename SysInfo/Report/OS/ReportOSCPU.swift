@@ -25,7 +25,7 @@ extension Report.OS {
 	}
 	
 	static func cpu() -> CPU {
-		let machData = Mach.hostCPULoadInfo()
+		let machData = Mach.Host.cpuLoadInfo()
 		
 		// Caluculation tick's diff.
 		let user = Float(machData.userTick - lastCPUTick.userTick)

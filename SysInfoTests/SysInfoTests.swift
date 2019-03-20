@@ -7,7 +7,10 @@
 //
 
 import XCTest
+
+#if !SYSINFO_PROTOTYPE
 @testable import SysInfo
+#endif
 
 class SysInfoTests: XCTestCase {
 
@@ -21,7 +24,7 @@ class SysInfoTests: XCTestCase {
 
 	// MARK: - Mach host
     func testMachHostVMStatics() {
-		let val = Mach.hostVMStatics()
+		let val = Mach.Host.vmStatics()
 		
 		XCTAssertFalse(val.freeSize == 0 &&
 			val.activeSize == 0 &&
@@ -30,7 +33,7 @@ class SysInfoTests: XCTestCase {
     }
 
 	func testMachHostCPULoadInfo() {
-		let val = Mach.hostCPULoadInfo()
+		let val = Mach.Host.cpuLoadInfo()
 		
 		XCTAssertFalse(val.userTick == 0 &&
 		val.systemTick == 0 &&
@@ -39,7 +42,7 @@ class SysInfoTests: XCTestCase {
 	}
 	
 	func testMachHostProcessorInfo() {
-		let array = Mach.hostProcessorInfo()
+		let array = Mach.Host.processorInfo()
 		XCTAssert(array.count > 0)
 		
 		for elm in array {
@@ -53,7 +56,7 @@ class SysInfoTests: XCTestCase {
 	
 	// MARK: - Mach task
 	func testMachTaskBasicInfo() {
-		let val = Mach.taskBasicInfo()
+		let val = Mach.Task.basicInfo()
 		
 		XCTAssertFalse(val.virtualSize == 0 &&
 			val.residentSize == 0 &&
@@ -61,13 +64,8 @@ class SysInfoTests: XCTestCase {
 	}
 	
 	func testMachTaskThreadBasicInfo() {
-		let array = Mach.taskThreadBasicInfo()
+		let array = Mach.Task.threadBasicInfo()
 		XCTAssert(array.count > 0)
-		
-		for elm in array {
-			XCTAssertFalse(elm.userTime == 0 &&
-				elm.systemTime == 0)
-		}
 	}
 	
 	/*

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Mach {
+extension Mach.Task {
 	
 	struct ThreadState {
 		static let running = TH_STATE_RUNNING	// thread is running normally
@@ -25,7 +25,7 @@ extension Mach {
 		static let globalForcedIdle = ThreadFlag(rawValue: TH_FLAGS_GLOBAL_FORCED_IDLE)	// thread performs global forced idle
 	}
 	
-	struct TaskThreadBasicInfo {
+	struct ThreadBasicInfo {
 		var userTime = TimeInterval(0)		// user run time
 		var systemTime = TimeInterval(0)	// system run time
 		var cpuUsage = Int(0)				// scaled cpu usage percentage
@@ -37,26 +37,26 @@ extension Mach {
 	}
 	
 	
-	static func taskThreadBasicInfo() -> [TaskThreadBasicInfo] {
+	static func threadBasicInfo() -> [ThreadBasicInfo] {
 		var actList: thread_act_array_t? = nil
 		var actListCount: mach_msg_type_number_t = 0
 		guard KERN_SUCCESS == task_threads(mach_task_self_, &actList, &actListCount) else {
-			return [TaskThreadBasicInfo]()
+			return [ThreadBasicInfo]()
 		}
 		
 		do {
 			guard actListCount > 0 else {
-				return [TaskThreadBasicInfo]()
+				return [ThreadBasicInfo]()
 			}
 			guard let actList = actList else {
-				return [TaskThreadBasicInfo]()
+				return [ThreadBasicInfo]()
 			}
 			defer {
 				vm_deallocate(mach_task_self_, vm_address_t(bitPattern: actList), vm_size_t(actListCount))
 			}
 			
 			
-			var array = [TaskThreadBasicInfo]()
+			var array = [ThreadBasicInfo]()
 			for i in 0..<actListCount {
 				var machData = thread_basic_info()
 				var count = UInt32(THREAD_INFO_MAX)
@@ -67,10 +67,10 @@ extension Mach {
 					}
 				}
 				guard machRes == KERN_SUCCESS else {
-					return [TaskThreadBasicInfo]()
+					return [ThreadBasicInfo]()
 				}
 				
-				var threadBasicInfo = TaskThreadBasicInfo()
+				var threadBasicInfo = ThreadBasicInfo()
 				threadBasicInfo.userTime = TimeInterval(machData.user_time)
 				threadBasicInfo.systemTime = TimeInterval(machData.system_time)
 				threadBasicInfo.cpuUsage = Int(machData.cpu_usage)
@@ -87,12 +87,12 @@ extension Mach {
 		}
 	}
 	
-	static func taskThreadBasicInfoIsIdle(_ taskThreadBasicInfo: TaskThreadBasicInfo) -> Bool {
-		if taskThreadBasicInfo.flags.contains(ThreadFlag.idle) {
+	static func threadBasicInfoIsIdle(_ threadBasicInfo: ThreadBasicInfo) -> Bool {
+		if threadBasicInfo.flags.contains(ThreadFlag.idle) {
 			return true
 		}
 		
-		if taskThreadBasicInfo.flags.contains(ThreadFlag.globalForcedIdle) {
+		if threadBasicInfo.flags.contains(ThreadFlag.globalForcedIdle) {
 			return true
 		}
 		

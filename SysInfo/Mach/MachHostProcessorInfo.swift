@@ -8,31 +8,31 @@
 
 import Foundation
 
-extension Mach {
+extension Mach.Host {
 	
-	static func hostProcessorInfo() -> [CPUTick] {
+	static func processorInfo() -> [Mach.CPUTick] {
 		
 		var cpuCount: natural_t = 0
 		var cpuInfoArray: processor_info_array_t? = nil
 		var cpuInfoCount: mach_msg_type_number_t = 0
 		guard KERN_SUCCESS == host_processor_info(mach_host_self(), PROCESSOR_CPU_LOAD_INFO, &cpuCount, &cpuInfoArray, &cpuInfoCount) else {
-			return [CPUTick]()
+			return [Mach.CPUTick]()
 		}
 		
 		do {
 			guard cpuCount > 0 else {
-				return [CPUTick]()
+				return [Mach.CPUTick]()
 			}
 			guard let cpuInfoArray = cpuInfoArray else {
-				return [CPUTick]()
+				return [Mach.CPUTick]()
 			}
 			defer {
 				vm_deallocate(mach_task_self_, vm_address_t(bitPattern: cpuInfoArray), vm_size_t(cpuInfoCount))
 			}
 			
-			var array = [CPUTick]()
+			var array = [Mach.CPUTick]()
 			for i in 0..<cpuCount {
-				var tick = CPUTick()
+				var tick = Mach.CPUTick()
 				let index = Int32(i) * CPU_STATE_MAX
 				tick.userTick = UInt32(cpuInfoArray[Int(index + CPU_STATE_USER)])
 				tick.systemTick = UInt32(cpuInfoArray[Int(index + CPU_STATE_SYSTEM)])

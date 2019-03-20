@@ -34,7 +34,7 @@ extension Report.OS {
 	}
 	
 	static func memory() -> Memory {
-		let machData = Mach.hostVMStatics()
+		let machData = Mach.Host.vmStatics()
 		
 		var res = Memory()
 		res.freeSize = machData.freeSize
@@ -42,8 +42,9 @@ extension Report.OS {
 		res.inactiveSize = machData.inactiveSize
 		res.wireSize = machData.wireSize
 		
+		// TODO: Validation
 		res.totalSize = UInt64(machData.freeSize) + UInt64(machData.activeSize) + UInt64(machData.inactiveSize) + UInt64(machData.wireSize)
-		res.usedSize = UInt64(machData.activeSize) + UInt64(machData.inactiveSize) + UInt64(machData.wireSize)
+		res.usedSize = UInt64(machData.activeSize) + UInt64(machData.wireSize)
 		res.unusedSize = UInt64(res.totalSize) - UInt64(res.usedSize)
 		
 		return res

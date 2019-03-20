@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension Mach {
+extension Mach.Task {
 	
-	struct TaskBasicInfo {
+	struct BasicInfo {
 		public var virtualSize = UInt64(0)
 		public var residentSize = UInt64(0)
 		public var residentSizeMax = UInt64(0)
@@ -20,7 +20,7 @@ extension Mach {
 		public var suspendCount = Int(0)
 	}
 	
-	static func taskBasicInfo() -> TaskBasicInfo {
+	static func basicInfo() -> BasicInfo {
 		var machData = mach_task_basic_info()
 		var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.stride / MemoryLayout<integer_t>.stride)
 		
@@ -33,10 +33,10 @@ extension Mach {
 		}
 		
 		guard machRes == KERN_SUCCESS else {
-			return TaskBasicInfo()
+			return BasicInfo()
 		}
 		
-		var res = TaskBasicInfo()
+		var res = BasicInfo()
 		res.virtualSize = machData.virtual_size
 		res.residentSize = machData.resident_size
 		res.residentSizeMax = machData.resident_size_max

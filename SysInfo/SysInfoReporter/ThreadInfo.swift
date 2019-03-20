@@ -21,7 +21,7 @@ extension SysInfoReporter {
 	}
 	
 	static func threadInfo() -> ThreadInfo {
-		let array = Mach.taskThreadBasicInfo()
+		let array = Mach.Task.threadBasicInfo()
 		
 		var threadInfo = ThreadInfo()
 		threadInfo.num = array.count
@@ -32,7 +32,7 @@ extension SysInfoReporter {
 		threadInfo.time = TimeInterval(0)
 		
 		for thread in array {
-			guard !Mach.taskThreadBasicInfoIsIdle(thread) else {
+			guard !Mach.Task.threadBasicInfoIsIdle(thread) else {
 				threadInfo.idleNum += 1
 				continue
 			}

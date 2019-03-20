@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension Mach {
+extension Mach.Host {
 	
-	static func hostCPULoadInfo() -> CPUTick {
+	static func cpuLoadInfo() -> Mach.CPUTick {
 		var machData = host_cpu_load_info()
 		var count = mach_msg_type_number_t(MemoryLayout<host_cpu_load_info>.stride / MemoryLayout<integer_t>.stride)
 		
@@ -21,11 +21,11 @@ extension Mach {
 		}
 		
 		guard machRes == KERN_SUCCESS else {
-			return CPUTick()
+			return Mach.CPUTick()
 		}
 		
 		
-		var res = CPUTick()
+		var res = Mach.CPUTick()
 		res.userTick = UInt32(machData.cpu_ticks.0)		// CPU_STATE_USER
 		res.systemTick = UInt32(machData.cpu_ticks.1)	// CPU_STATE_SYSTEM
 		res.idleTick = UInt32(machData.cpu_ticks.2)		// CPU_STATE_IDLE

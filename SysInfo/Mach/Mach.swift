@@ -10,4 +10,10 @@ import Foundation
 
 final class Mach {
 	
+	final class Host {
+	}
+	
+	final class Task {
+	}
+	
 }
