@@ -11,7 +11,7 @@ import Foundation
 final class Report {
 	
 	final class OS {
-		
+		static var lastCPUTick = Mach.CPUTick()
 	}
 	
 }
