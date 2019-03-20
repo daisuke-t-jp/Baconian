@@ -41,7 +41,9 @@ extension Report.OS.CPU {
 		let user = Float(data.userTick - prevData.userTick)
 		let system = Float(data.systemTick - prevData.systemTick)
 		let idle = Float(data.idleTick - prevData.idleTick)
-		// TODO: let nice = Float(data.niceTick - prevData.niceTick)
+		
+		// TODO: nice
+		// let nice = Float(data.niceTick - prevData.niceTick)
 		
 		
 		// Caluculation CPU usage

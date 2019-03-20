@@ -43,7 +43,7 @@ public class SysInfoReporter {
 	/// A delegate of SysInfoReporter.
 	weak private var delegate: SysInfoReporterDelegate?
 	
-	private var osMemoryInfo = OSMemoryInfo()
+	private var osMemoryInfo = Report.OS.Memory()
 	private var processMemoryInfo = ProcessMemoryInfo()
 	private var threadInfo = ThreadInfo()
 }
@@ -107,7 +107,7 @@ extension SysInfoReporter {
 extension SysInfoReporter {
 	
 	private func update() {
-		let osMemoryInfo = SysInfoReporter.osMemoryInfo()
+		let osMemoryInfo = Report.OS.memory()
 		let processMemoryInfo = SysInfoReporter.processMemoryInfo()
 		let threadInfo = SysInfoReporter.threadInfo()
 		

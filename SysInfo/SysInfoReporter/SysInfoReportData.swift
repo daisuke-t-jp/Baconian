@@ -16,7 +16,7 @@ extension SysInfoReporter {
 		public var processCPUUsageGrowed = Float(0)
 		
 		// MARK: - Detail
-		public var osMemoryInfo = OSMemoryInfo()
+		public var osMemoryInfo = Report.OS.Memory()
 		public var processMemoryInfo = ProcessMemoryInfo()
 		public var threadInfo = ThreadInfo()
 	}
