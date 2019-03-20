@@ -45,7 +45,7 @@ public class SysInfoReporter {
 	
 	private var osMemoryInfo = Report.OS.Memory()
 	private var processMemoryInfo = Report.Process.memory()
-	private var threadInfo = ThreadInfo()
+	private var threadInfo = Report.Process.thread()
 }
 
 
@@ -109,7 +109,7 @@ extension SysInfoReporter {
 	private func update() {
 		let osMemoryInfo = Report.OS.memory()
 		let processMemoryInfo = Report.Process.memory()
-		let threadInfo = SysInfoReporter.threadInfo()
+		let threadInfo = Report.Process.thread()
 		
 		var reportData = SysInfoReportData()
 		reportData.osMemoryInfo = osMemoryInfo
@@ -128,7 +128,7 @@ extension SysInfoReporter {
 			reportData.processMemoryGrowed = -Int64(self.processMemoryInfo.residentSize -  processMemoryInfo.residentSize)
 		}
 
-		reportData.processCPUUsageGrowed = threadInfo.cpuUsage - self.threadInfo.cpuUsage
+		// reportData.processCPUUsageGrowed = threadInfo.cpuUsage - self.threadInfo.cpuUsage
 		
 		self.osMemoryInfo = osMemoryInfo
 		self.processMemoryInfo = processMemoryInfo
