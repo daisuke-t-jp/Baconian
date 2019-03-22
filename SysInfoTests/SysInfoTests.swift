@@ -8,7 +8,7 @@
 
 import XCTest
 
-#if !SYSINFO_PROTOTYPE
+#if !SYSINFO_TESTER
 @testable import SysInfo
 #endif
 
@@ -75,7 +75,7 @@ class SysInfoTests: XCTestCase {
 	func testReportOSMemory() {
 		let val = Report.OS.memory()
 		
-		XCTAssertFalse(val.totalSize == 0 &&
+		XCTAssertFalse(val.physicalSize == 0 &&
 			val.usedSize == 0 &&
 			val.unusedSize == 0 &&
 			val.freeSize == 0 &&

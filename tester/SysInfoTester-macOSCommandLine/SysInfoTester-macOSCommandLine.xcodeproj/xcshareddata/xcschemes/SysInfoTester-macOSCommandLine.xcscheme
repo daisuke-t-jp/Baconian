@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "023BBF6C22409E6600842B33"
-               BuildableName = "SysInfoPrototype"
-               BlueprintName = "SysInfoPrototype"
-               ReferencedContainer = "container:SysInfoPrototype.xcodeproj">
+               BuildableName = "SysInfoTester-macOSCommandLine"
+               BlueprintName = "SysInfoTester-macOSCommandLine"
+               ReferencedContainer = "container:SysInfoTester-macOSCommandLine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02082B202241D95300D4DFC2"
-               BuildableName = "SysInfoProtoTypeTests.xctest"
-               BlueprintName = "SysInfoProtoTypeTests"
-               ReferencedContainer = "container:SysInfoPrototype.xcodeproj">
+               BuildableName = "SysInfoTester-macOSCommandLineTests.xctest"
+               BlueprintName = "SysInfoTester-macOSCommandLineTests"
+               ReferencedContainer = "container:SysInfoTester-macOSCommandLine.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "023BBF6C22409E6600842B33"
-            BuildableName = "SysInfoPrototype"
-            BlueprintName = "SysInfoPrototype"
-            ReferencedContainer = "container:SysInfoPrototype.xcodeproj">
+            BuildableName = "SysInfoTester-macOSCommandLine"
+            BlueprintName = "SysInfoTester-macOSCommandLine"
+            ReferencedContainer = "container:SysInfoTester-macOSCommandLine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "023BBF6C22409E6600842B33"
-            BuildableName = "SysInfoPrototype"
-            BlueprintName = "SysInfoPrototype"
-            ReferencedContainer = "container:SysInfoPrototype.xcodeproj">
+            BuildableName = "SysInfoTester-macOSCommandLine"
+            BlueprintName = "SysInfoTester-macOSCommandLine"
+            ReferencedContainer = "container:SysInfoTester-macOSCommandLine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "023BBF6C22409E6600842B33"
-            BuildableName = "SysInfoPrototype"
-            BlueprintName = "SysInfoPrototype"
-            ReferencedContainer = "container:SysInfoPrototype.xcodeproj">
+            BuildableName = "SysInfoTester-macOSCommandLine"
+            BlueprintName = "SysInfoTester-macOSCommandLine"
+            ReferencedContainer = "container:SysInfoTester-macOSCommandLine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

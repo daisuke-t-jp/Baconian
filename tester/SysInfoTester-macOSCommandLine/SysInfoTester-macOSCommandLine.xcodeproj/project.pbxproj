@@ -10,7 +10,6 @@
 		02082B162241BC8400D4DFC2 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B152241BC8400D4DFC2 /* Report.swift */; };
 		02082B1A2241BFE500D4DFC2 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B182241BFE500D4DFC2 /* ReportOSMemory.swift */; };
 		02082B1B2241BFE500D4DFC2 /* ReportOSCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B192241BFE500D4DFC2 /* ReportOSCPU.swift */; };
-		02082B3D2241D9A300D4DFC2 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B3C2241D9A300D4DFC2 /* SysInfoTests.swift */; };
 		02082B3E2241DA8000D4DFC2 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */; };
 		02082B3F2241DA8000D4DFC2 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB422409EE100842B33 /* FixedWidthInteger+SysInfo.swift */; };
 		02082B402241DA8300D4DFC2 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFAF22409EE100842B33 /* Mach.swift */; };
@@ -40,6 +39,8 @@
 		02097557224499F9003CE645 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097555224499F9003CE645 /* ReporterDelegate.swift */; };
 		0209756E2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */; };
 		0209756F2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */; };
+		020975752244D15A003CE645 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975732244D15A003CE645 /* SysInfoTests.swift */; };
+		020975762244D15A003CE645 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 020975742244D15A003CE645 /* Info.plist */; };
 		023BBF7122409E6600842B33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBF7022409E6600842B33 /* main.swift */; };
 		023BBFBD22409EE200842B33 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFAF22409EE100842B33 /* Mach.swift */; };
 		023BBFC022409EE200842B33 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */; };
@@ -67,9 +68,7 @@
 		02082B152241BC8400D4DFC2 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		02082B182241BFE500D4DFC2 /* ReportOSMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSMemory.swift; sourceTree = "<group>"; };
 		02082B192241BFE500D4DFC2 /* ReportOSCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSCPU.swift; sourceTree = "<group>"; };
-		02082B212241D95300D4DFC2 /* SysInfoProtoTypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SysInfoProtoTypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02082B252241D95300D4DFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02082B3C2241D9A300D4DFC2 /* SysInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SysInfoTests.swift; path = ../../../SysInfoTests/SysInfoTests.swift; sourceTree = "<group>"; };
+		02082B212241D95300D4DFC2 /* SysInfoTester-macOSCommandLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SysInfoTester-macOSCommandLineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02082B52224200F500D4DFC2 /* MachHostProcessorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostProcessorInfo.swift; sourceTree = "<group>"; };
 		02082B53224200F500D4DFC2 /* MachHostCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostCPULoadInfo.swift; sourceTree = "<group>"; };
 		02082B54224200F500D4DFC2 /* MachHostVMStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostVMStatics.swift; sourceTree = "<group>"; };
@@ -81,7 +80,9 @@
 		02082B7B224219AD00D4DFC2 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
 		02097555224499F9003CE645 /* ReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterDelegate.swift; sourceTree = "<group>"; };
 		0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
-		023BBF6D22409E6600842B33 /* SysInfoPrototype */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SysInfoPrototype; sourceTree = BUILT_PRODUCTS_DIR; };
+		020975732244D15A003CE645 /* SysInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoTests.swift; sourceTree = "<group>"; };
+		020975742244D15A003CE645 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		023BBF6D22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SysInfoTester-macOSCommandLine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		023BBF7022409E6600842B33 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		023BBFAF22409EE100842B33 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
 		023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
@@ -131,15 +132,6 @@
 			path = OS;
 			sourceTree = "<group>";
 		};
-		02082B222241D95300D4DFC2 /* SysInfoProtoTypeTests */ = {
-			isa = PBXGroup;
-			children = (
-				02082B3C2241D9A300D4DFC2 /* SysInfoTests.swift */,
-				02082B252241D95300D4DFC2 /* Info.plist */,
-			);
-			path = SysInfoProtoTypeTests;
-			sourceTree = "<group>";
-		};
 		02082B51224200F500D4DFC2 /* Host */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,11 +162,21 @@
 			path = Process;
 			sourceTree = "<group>";
 		};
+		020975722244D15A003CE645 /* SysInfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				020975732244D15A003CE645 /* SysInfoTests.swift */,
+				020975742244D15A003CE645 /* Info.plist */,
+			);
+			name = SysInfoTests;
+			path = ../../SysInfoTests;
+			sourceTree = "<group>";
+		};
 		023BBF6422409E6600842B33 = {
 			isa = PBXGroup;
 			children = (
-				023BBF6F22409E6600842B33 /* SysInfoPrototype */,
-				02082B222241D95300D4DFC2 /* SysInfoProtoTypeTests */,
+				023BBF6F22409E6600842B33 /* SysInfoTester-macOSCommandLine */,
+				020975722244D15A003CE645 /* SysInfoTests */,
 				023BBF6E22409E6600842B33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,13 +184,13 @@
 		023BBF6E22409E6600842B33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				023BBF6D22409E6600842B33 /* SysInfoPrototype */,
-				02082B212241D95300D4DFC2 /* SysInfoProtoTypeTests.xctest */,
+				023BBF6D22409E6600842B33 /* SysInfoTester-macOSCommandLine */,
+				02082B212241D95300D4DFC2 /* SysInfoTester-macOSCommandLineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		023BBF6F22409E6600842B33 /* SysInfoPrototype */ = {
+		023BBF6F22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {
 			isa = PBXGroup;
 			children = (
 				023BBFB522409EE100842B33 /* SysInfo.h */,
@@ -198,7 +200,7 @@
 				7EADFCF32242820D00C7AF65 /* Reporter */,
 				023BBF7022409E6600842B33 /* main.swift */,
 			);
-			path = SysInfoPrototype;
+			path = "SysInfoTester-macOSCommandLine";
 			sourceTree = "<group>";
 		};
 		023BBFAD22409EE100842B33 /* Mach */ = {
@@ -237,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02082B202241D95300D4DFC2 /* SysInfoProtoTypeTests */ = {
+		02082B202241D95300D4DFC2 /* SysInfoTester-macOSCommandLineTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02082B282241D95300D4DFC2 /* Build configuration list for PBXNativeTarget "SysInfoProtoTypeTests" */;
+			buildConfigurationList = 02082B282241D95300D4DFC2 /* Build configuration list for PBXNativeTarget "SysInfoTester-macOSCommandLineTests" */;
 			buildPhases = (
 				02082B1D2241D95300D4DFC2 /* Sources */,
 				02082B1E2241D95300D4DFC2 /* Frameworks */,
@@ -249,14 +251,14 @@
 			);
 			dependencies = (
 			);
-			name = SysInfoProtoTypeTests;
+			name = "SysInfoTester-macOSCommandLineTests";
 			productName = SysInfoProtoTypeTests;
-			productReference = 02082B212241D95300D4DFC2 /* SysInfoProtoTypeTests.xctest */;
+			productReference = 02082B212241D95300D4DFC2 /* SysInfoTester-macOSCommandLineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		023BBF6C22409E6600842B33 /* SysInfoPrototype */ = {
+		023BBF6C22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 023BBF7422409E6600842B33 /* Build configuration list for PBXNativeTarget "SysInfoPrototype" */;
+			buildConfigurationList = 023BBF7422409E6600842B33 /* Build configuration list for PBXNativeTarget "SysInfoTester-macOSCommandLine" */;
 			buildPhases = (
 				023BBF6922409E6600842B33 /* Sources */,
 				023BBF6A22409E6600842B33 /* Frameworks */,
@@ -267,9 +269,9 @@
 			);
 			dependencies = (
 			);
-			name = SysInfoPrototype;
-			productName = SysInfoPrototype;
-			productReference = 023BBF6D22409E6600842B33 /* SysInfoPrototype */;
+			name = "SysInfoTester-macOSCommandLine";
+			productName = "SysInfoTester-macOSCommandLine";
+			productReference = 023BBF6D22409E6600842B33 /* SysInfoTester-macOSCommandLine */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +282,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = SysInfoPrototype;
+				ORGANIZATIONNAME = "SysInfoTester-macOSCommandLine";
 				TargetAttributes = {
 					02082B202241D95300D4DFC2 = {
 						CreatedOnToolsVersion = 10.1;
@@ -291,7 +293,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 023BBF6822409E6600842B33 /* Build configuration list for PBXProject "SysInfoPrototype" */;
+			buildConfigurationList = 023BBF6822409E6600842B33 /* Build configuration list for PBXProject "SysInfoTester-macOSCommandLine" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -303,8 +305,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				023BBF6C22409E6600842B33 /* SysInfoPrototype */,
-				02082B202241D95300D4DFC2 /* SysInfoProtoTypeTests */,
+				023BBF6C22409E6600842B33 /* SysInfoTester-macOSCommandLine */,
+				02082B202241D95300D4DFC2 /* SysInfoTester-macOSCommandLineTests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020975762244D15A003CE645 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,10 +354,10 @@
 				02082B5F224200F500D4DFC2 /* MachTaskBasicInfo.swift in Sources */,
 				02082B492241DA8900D4DFC2 /* ReportOSCPU.swift in Sources */,
 				02082B61224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */,
-				02082B3D2241D9A300D4DFC2 /* SysInfoTests.swift in Sources */,
 				02097557224499F9003CE645 /* ReporterDelegate.swift in Sources */,
 				02082B3E2241DA8000D4DFC2 /* TimeInterval+SysInfo.swift in Sources */,
 				02082B7A2242175100D4DFC2 /* ReportProcessCPU.swift in Sources */,
+				020975752244D15A003CE645 /* SysInfoTests.swift in Sources */,
 				02082B402241DA8300D4DFC2 /* Mach.swift in Sources */,
 				02082B3F2241DA8000D4DFC2 /* FixedWidthInteger+SysInfo.swift in Sources */,
 				02082B7722420F3500D4DFC2 /* ReportOSProcessors.swift in Sources */,
@@ -405,14 +408,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SysInfoProtoTypeTests/Info.plist;
+				INFOPLIST_FILE = "SysInfoTester-macOSCommandLineTests/info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "-D SYSINFO_PROTOTYPE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfoProtoTypeTests.SysInfoProtoTypeTests;
+				OTHER_SWIFT_FLAGS = "-D SYSINFO_TESTER";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SysInfoTester-macOSCommandLineTests.SysInfoTester-macOSCommandLineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -425,14 +428,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SysInfoProtoTypeTests/Info.plist;
+				INFOPLIST_FILE = "SysInfoTester-macOSCommandLineTests/info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "-D SYSINFO_PROTOTYPE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfoProtoTypeTests.SysInfoProtoTypeTests;
+				OTHER_SWIFT_FLAGS = "-D SYSINFO_TESTER";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SysInfoTester-macOSCommandLineTests.SysInfoTester-macOSCommandLineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -574,7 +577,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02082B282241D95300D4DFC2 /* Build configuration list for PBXNativeTarget "SysInfoProtoTypeTests" */ = {
+		02082B282241D95300D4DFC2 /* Build configuration list for PBXNativeTarget "SysInfoTester-macOSCommandLineTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02082B262241D95300D4DFC2 /* Debug */,
@@ -583,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		023BBF6822409E6600842B33 /* Build configuration list for PBXProject "SysInfoPrototype" */ = {
+		023BBF6822409E6600842B33 /* Build configuration list for PBXProject "SysInfoTester-macOSCommandLine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				023BBF7222409E6600842B33 /* Debug */,
@@ -592,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		023BBF7422409E6600842B33 /* Build configuration list for PBXNativeTarget "SysInfoPrototype" */ = {
+		023BBF7422409E6600842B33 /* Build configuration list for PBXNativeTarget "SysInfoTester-macOSCommandLine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				023BBF7522409E6600842B33 /* Debug */,
