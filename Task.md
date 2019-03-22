@@ -6,11 +6,13 @@
 ## Load info
 ### Mach Layer
 #### Host
-- [x] Memory(MachHostVMStatics)
+- [x] Virtual Memory(MachHostVMStatics)
   - Free size
   - Active size
   - Inactive size
   - Wire size
+- [x] Physical Memory(MachHostBasicInfo)
+  - Physical size
 - [x] CPU(MachHostCPULoadInfo)
   - User time
   - System time
@@ -30,7 +32,7 @@
 ### Report Layer
 #### OS
 - [x] Memory(ReportOSMemory)
-  - Total size
+  - Physical size
   - Used size
   - Unused size
   - Free size
@@ -58,6 +60,7 @@
 - General
   - Check Memory Leaks
   - High load delegate
+  - Documentation comments
 - UI
   - Reporter View
 - Demo
