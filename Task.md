@@ -56,7 +56,7 @@
 
 ## TODO
 - General
-  - Memory Leaks
+  - Check Memory Leaks
   - High load delegate
 - UI
   - Reporter View

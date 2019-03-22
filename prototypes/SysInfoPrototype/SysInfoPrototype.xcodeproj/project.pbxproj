@@ -38,6 +38,8 @@
 		02082B7D224219AD00D4DFC2 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B7B224219AD00D4DFC2 /* ReportProcessThread.swift */; };
 		02097556224499F9003CE645 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097555224499F9003CE645 /* ReporterDelegate.swift */; };
 		02097557224499F9003CE645 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097555224499F9003CE645 /* ReporterDelegate.swift */; };
+		0209756E2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */; };
+		0209756F2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */; };
 		023BBF7122409E6600842B33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBF7022409E6600842B33 /* main.swift */; };
 		023BBFBD22409EE200842B33 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFAF22409EE100842B33 /* Mach.swift */; };
 		023BBFC022409EE200842B33 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */; };
@@ -78,6 +80,7 @@
 		02082B782242175100D4DFC2 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
 		02082B7B224219AD00D4DFC2 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
 		02097555224499F9003CE645 /* ReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterDelegate.swift; sourceTree = "<group>"; };
+		0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
 		023BBF6D22409E6600842B33 /* SysInfoPrototype */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SysInfoPrototype; sourceTree = BUILT_PRODUCTS_DIR; };
 		023BBF7022409E6600842B33 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		023BBFAF22409EE100842B33 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				02082B54224200F500D4DFC2 /* MachHostVMStatics.swift */,
+				0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */,
 				02082B53224200F500D4DFC2 /* MachHostCPULoadInfo.swift */,
 				02082B52224200F500D4DFC2 /* MachHostProcessorInfo.swift */,
 			);
@@ -340,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0209756F2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */,
 				02082B472241DA8600D4DFC2 /* Report.swift in Sources */,
 				7EADFCFA2242820D00C7AF65 /* ReporterData.swift in Sources */,
 				02082B412241DA8300D4DFC2 /* MachCPUTick.swift in Sources */,
@@ -367,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0209756E2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */,
 				023BBFBD22409EE200842B33 /* Mach.swift in Sources */,
 				7EADFCF92242820D00C7AF65 /* ReporterData.swift in Sources */,
 				02082B5E224200F500D4DFC2 /* MachTaskBasicInfo.swift in Sources */,

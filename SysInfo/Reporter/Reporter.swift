@@ -11,7 +11,7 @@ import Foundation
 public class Reporter {
 	
 	// MARK: - Enum, Const
-	private static let threadInterval = TimeInterval(0.001)
+	private static let threadInterval = TimeInterval(0.1)
 	public enum Frequency: TimeInterval {
 		case normally = 5
 		case often = 2
