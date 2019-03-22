@@ -11,7 +11,7 @@ import Foundation
 public class Reporter {
 	
 	// MARK: - Enum, Const
-	private static let threadInterval = TimeInterval(0.1)
+	private static let threadInterval = TimeInterval(0.001)
 	public enum Frequency: TimeInterval {
 		case normally = 5
 		case often = 2
@@ -144,6 +144,7 @@ extension Reporter {
 			return
 		}
 		
+		
 		// Check time interval.
 		let date = Date()
 		let interval = date.timeIntervalSince(lastProcessedDate)
@@ -152,14 +153,14 @@ extension Reporter {
 		}
 		
 		
-		// Get data and tell the delegate.
-		lockDelegate.lock()
-		defer {
-			lastProcessedDate = date
-			lockDelegate.unlock()
-		}
-		
+		// Get report's data and tell the delegate.
 		do {
+			lockDelegate.lock()
+			defer {
+				lastProcessedDate = date
+				lockDelegate.unlock()
+			}
+			
 			guard let delegate = _delegate else {
 				return
 			}
@@ -173,6 +174,7 @@ extension Reporter {
 			
 			delegate.reporter(self, didUpdate: data)
 		}
+
 	}
 	
 }

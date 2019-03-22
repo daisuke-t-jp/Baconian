@@ -56,9 +56,8 @@
 
 ## TODO
 - General
-  - Reporter delegate -> notification
-  - Timer -> Thread
-  - High load notification
+  - Memory Leaks
+  - High load delegate
 - UI
   - Reporter View
 - Demo

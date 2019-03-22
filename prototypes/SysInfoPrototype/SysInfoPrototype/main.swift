@@ -78,11 +78,10 @@ while(true) {
 		if enableImmediate {
 			testImmediate()
 		
-			Thread.sleep(forTimeInterval: 1)
-		} else {
-			Thread.sleep(forTimeInterval: 0.1)
 		}
 		
+		Thread.sleep(forTimeInterval: 1)
+
 	}
 	
 }
