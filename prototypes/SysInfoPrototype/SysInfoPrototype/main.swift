@@ -8,7 +8,7 @@
 
 import Foundation
 
-class dummy: ReporterDelegate {
+class Dummy: ReporterDelegate {
 	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
 		print("# Reporter")
 		print("- \(Date())")
@@ -61,12 +61,13 @@ func testImmediate() {
 
 
 let enableImmediate = false
-let obj = dummy()
+let dummy = Dummy()
+let reporter = Reporter()
 
 if !enableImmediate {
-	Reporter.sharedManager.delegate = obj
-	Reporter.sharedManager.updateFrequency = .veryOften
-	Reporter.sharedManager.start()
+	reporter.delegate = dummy
+	reporter.frequency = .veryOften
+	reporter.start()
 }
 
 
@@ -79,8 +80,6 @@ while(true) {
 		
 			Thread.sleep(forTimeInterval: 1)
 		} else {
-			RunLoop.current.run()
-			
 			Thread.sleep(forTimeInterval: 0.1)
 		}
 		
