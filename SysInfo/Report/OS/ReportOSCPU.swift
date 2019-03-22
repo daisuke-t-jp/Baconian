@@ -14,12 +14,14 @@ extension Report.OS {
 		let userUsage: Float
 		let systemUsage: Float
 		let idleUsage: Float
+		let niceUsage: Float
 		
 		public var description: String {
-			return String(format: "user: %.2f%%, system: %.2f%%, idle: %.2f%%",
+			return String(format: "user: %.2f%%, system: %.2f%%, idle: %.2f%%, nice: %.2f%%",
 						  userUsage * 100,
 						  systemUsage * 100,
-						  idleUsage * 100
+						  idleUsage * 100,
+						  niceUsage * 100
 			)
 		}
 		
@@ -34,6 +36,7 @@ extension Report.OS.CPU {
 		userUsage = 0
 		systemUsage = 0
 		idleUsage = 0
+		niceUsage = 0
 	}
 	
 	init(_ data: Mach.CPUTick, prevData: Mach.CPUTick) {
@@ -41,21 +44,21 @@ extension Report.OS.CPU {
 		let user = Float(data.userTick - prevData.userTick)
 		let system = Float(data.systemTick - prevData.systemTick)
 		let idle = Float(data.idleTick - prevData.idleTick)
-		
-		// TODO: nice
-		// let nice = Float(data.niceTick - prevData.niceTick)
+		let nice = Float(data.niceTick - prevData.niceTick)
 		
 		
 		// Caluculation CPU usage
-		let total = user + system + idle /* + nice */
+		let total = user + system + idle + nice
 		if total == 0 {
 			userUsage = 0
 			systemUsage = 0
 			idleUsage = 0
+			niceUsage = 0
 		} else {
 			userUsage = user / total
 			systemUsage = system / total
 			idleUsage = idle / total
+			niceUsage = nice / total
 		}
 	}
 	
