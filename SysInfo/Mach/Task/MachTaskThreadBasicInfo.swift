@@ -10,7 +10,6 @@ import Foundation
 
 extension Mach.Task {
 	
-	// TODO: Change to enum.
 	typealias ThreadState = Int32
 	static let ThreadStateRunning = TH_STATE_RUNNING	// thread is running normally
 	static let ThreadStateStopped = TH_STATE_STOPPED	// thread is stopped
