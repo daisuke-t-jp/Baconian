@@ -53,3 +53,18 @@
   - Total num
   - Busy num
   - Idle num
+
+## TODO
+- General
+  - Reporter delegate -> notification
+  - Timer -> Thread
+  - High load notification
+- UI
+  - Reporter View
+- Demo
+  - podspec
+  - macOS
+  - iOS
+- Facility
+  - README
+  - jazzy
