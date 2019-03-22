@@ -11,7 +11,7 @@ import Foundation
 extension Report.OS {
 	
 	public struct Memory: CustomStringConvertible {
-		let totalSize: UInt64
+		let physicalSize: UInt64
 		let usedSize: UInt64
 		let unusedSize: UInt64
 		
@@ -22,8 +22,8 @@ extension Report.OS {
 		
 		
 		public var description: String {
-			return String(format: "total: %@, used: %@, unused: %@ (free: %@, active: %@, inactive: %@, wire: %@)",
-						  totalSize.memoryByteFormatString,
+			return String(format: "pysical: %@, used: %@, unused: %@ (free: %@, active: %@, inactive: %@, wire: %@)",
+						  physicalSize.memoryByteFormatString,
 						  usedSize.memoryByteFormatString,
 						  unusedSize.memoryByteFormatString,
 						  freeSize.memoryByteFormatString,
@@ -39,7 +39,7 @@ extension Report.OS {
 extension Report.OS.Memory {
 	
 	init() {
-		totalSize = 0
+		physicalSize = 0
 		usedSize = 0
 		unusedSize = 0
 		
@@ -55,17 +55,17 @@ extension Report.OS.Memory {
 extension Report.OS {
 	
 	static func memory() -> Memory {
-		let machData = Mach.Host.vmStatics()
+		let machVMStatics = Mach.Host.vmStatics()
+		let machBasicInfo = Mach.Host.basicInfo()
 		
-		// TODO: Validation
 		let res = Memory(
-			totalSize: UInt64(machData.freeSize) + UInt64(machData.activeSize) + UInt64(machData.inactiveSize) + UInt64(machData.wireSize),
-			usedSize: UInt64(machData.activeSize) + UInt64(machData.wireSize),
-			unusedSize: UInt64(machData.freeSize) + UInt64(machData.inactiveSize),
-			freeSize: machData.freeSize,
-			activeSize: machData.activeSize,
-			inactiveSize: machData.inactiveSize,
-			wireSize: machData.wireSize
+			physicalSize: machBasicInfo.maxMem,
+			usedSize: machVMStatics.activeSize + machVMStatics.inactiveSize + machVMStatics.wireSize,
+			unusedSize: machBasicInfo.maxMem - UInt64(machVMStatics.activeSize + machVMStatics.inactiveSize + machVMStatics.wireSize),
+			freeSize: machVMStatics.freeSize,
+			activeSize: machVMStatics.activeSize,
+			inactiveSize: machVMStatics.inactiveSize,
+			wireSize: machVMStatics.wireSize
 		)
 		
 		return res

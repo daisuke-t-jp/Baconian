@@ -22,6 +22,7 @@
 		02082B932242338A00D4DFC2 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B902242338A00D4DFC2 /* ReporterDelegate.swift */; };
 		02082B952242338A00D4DFC2 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B922242338A00D4DFC2 /* ReporterData.swift */; };
 		02082B97224233B400D4DFC2 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B96224233B400D4DFC2 /* Reporter.swift */; };
+		020975712244C460003CE645 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975702244C460003CE645 /* MachHostBasicInfo.swift */; };
 		023BBFD52240DFB900842B33 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFCE2240DFB800842B33 /* Mach.swift */; };
 		023BBFD62240DFB900842B33 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFCF2240DFB800842B33 /* MachCPUTick.swift */; };
 		026A046F223F35DB00048572 /* SysInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026A0465223F35DA00048572 /* SysInfo.framework */; };
@@ -57,6 +58,7 @@
 		02082B902242338A00D4DFC2 /* ReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterDelegate.swift; sourceTree = "<group>"; };
 		02082B922242338A00D4DFC2 /* ReporterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterData.swift; sourceTree = "<group>"; };
 		02082B96224233B400D4DFC2 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
+		020975702244C460003CE645 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
 		023BBFCE2240DFB800842B33 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
 		023BBFCF2240DFB800842B33 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
 		026A0465223F35DA00048572 /* SysInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SysInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				02082B652242021600D4DFC2 /* MachHostVMStatics.swift */,
+				020975702244C460003CE645 /* MachHostBasicInfo.swift */,
 				02082B642242021600D4DFC2 /* MachHostCPULoadInfo.swift */,
 				02082B632242021600D4DFC2 /* MachHostProcessorInfo.swift */,
 			);
@@ -352,6 +355,7 @@
 				02082B6A2242021600D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
 				02082B932242338A00D4DFC2 /* ReporterDelegate.swift in Sources */,
 				02082B8C224223BA00D4DFC2 /* ReportProcessMemory.swift in Sources */,
+				020975712244C460003CE645 /* MachHostBasicInfo.swift in Sources */,
 				02082B97224233B400D4DFC2 /* Reporter.swift in Sources */,
 				02082B8B224223BA00D4DFC2 /* ReportOSCPU.swift in Sources */,
 				02082B692242021600D4DFC2 /* MachHostProcessorInfo.swift in Sources */,

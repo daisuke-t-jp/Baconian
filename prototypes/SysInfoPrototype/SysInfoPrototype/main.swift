@@ -66,7 +66,6 @@ let reporter = Reporter()
 
 if !enableImmediate {
 	reporter.delegate = dummy
-	reporter.frequency = .veryOften
 	reporter.start()
 }
 
