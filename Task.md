@@ -60,6 +60,10 @@
 - General
   - Check Memory Leaks
   - High load delegate
+    - OS Memory Low memory
+    - OS CPU High load
+    - Process Memory High load
+    - Process CPU High load
   - Documentation comments
 - UI
   - Reporter View
