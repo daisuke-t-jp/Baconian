@@ -8,61 +8,41 @@
 
 import Foundation
 
-class Delegate: ReporterDelegate {
+class Object: ReporterDelegate {
 	public var data = Reporter.Data()
 	
 	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
 		self.data = data
 	}
+	
+	@objc func threadFunc() {
+		while(true) {
+			autoreleasepool {
+				let array = [UInt8](repeating: 255, count: 1024 * 32)
+				var data = Data()
+				for byte in array {
+					data.append(byte)
+				}
+				
+				if Thread.current.isCancelled {
+					print("Thread exit.")
+					Thread.exit()
+				}
+				
+				Thread.sleep(forTimeInterval: 0.001)
+			}
+		}
+	}
 }
 
 
-func testImmediate() {
-	print("# Immediate")
-	print("- \(Date())")
-	print("")
-	
-	print("## Mach")
-	print("### Host")
-	print("#### VMStatics")
-	print("- \(Mach.Host.vmStatics())")
-	print("#### CPULoadInfo")
-	print("- \(Mach.Host.cpuLoadInfo())")
-	print("#### ProcessorInfo")
-	print("- \(Mach.Host.processorInfo())")
-	print("")
-	print("### Task")
-	print("#### BasicInfo")
-	print("- \(Mach.Task.basicInfo())")
-	print("#### ThreadBasicInfo")
-	print("- \(Mach.Task.threadBasicInfo())")
-	print("")
-	
-	print("## Report")
-	print("### OS")
-	print("#### Memory")
-	print("- \(Report.OS.memory())")
-	print("#### CPU")
-	print("- \(Report.OS.cpu())")
-	print("#### Processors")
-	print("- \(Report.OS.processors())")
-	print("")
-	print("### Process")
-	print("#### Memory")
-	print("- \(Report.Process.memory())")
-	print("#### CPU")
-	print("- \(Report.Process.cpu())")
-	print("#### Thread")
-	print("- \(Report.Process.thread())")
-	print("")
-	print("----------")
-}
-
-
-let delegate = Delegate()
+let object = Object()
 let reporter = Reporter()
+reporter.delegate = object
+reporter.start()
+
 var memoryMap = [Date: [UInt8]]()
-var threadMap = [Data: [Thread]]()
+var threadMap = [Date: Thread]()
 
 let commandTypeStart = "-start"
 let commandTypeStop = "-stop"
@@ -96,38 +76,60 @@ while(true) {
 			return
 		}
 		
-		if array[0].lowercased() == commandTypeStart {
+		if array[0].lowercased() == commandTypeStart.lowercased() {
 			print("start")
 			reporter.start()
-		} else if array[0].lowercased() == commandTypeStop {
+		} else if array[0].lowercased() == commandTypeStop.lowercased() {
 			print("stop")
 			reporter.stop()
-		} else if array[0].lowercased() == commandTypeDisableDelegate {
-			print("delegate enable")
-			reporter.delegate = delegate
-		} else if array[0].lowercased() == commandTypeEnableDelegate {
-			print("delegate disable")
+		} else if array[0].lowercased() == commandTypeEnableDelegate.lowercased() {
+			print("enable delegate")
+			reporter.delegate = object
+		} else if array[0].lowercased() == commandTypeDisableDelegate.lowercased() {
+			print("disable delegate")
 			reporter.delegate = nil
-		} else if array[0].lowercased() == commandTypeData {
+		} else if array[0].lowercased() == commandTypeData.lowercased() {
 			print("data")
-			print(delegate.data)
+			print("# OS")
+			print("## Memory")
+			print(object.data.osMemory)
+			print("## CPU")
+			print(object.data.osCPU)
+			print("## Processors")
+			print(object.data.osProcessors)
+			print("# Process")
+			print("## Memory")
+			print(object.data.processMemory)
+			print("## CPU")
+			print(object.data.processCPU)
+			print("## Thread")
+			print(object.data.processThread)
 		}
 		
-		if array[0].lowercased() == commandTypeTest {
-			guard array.count > 2 else {
+		if array[0].lowercased() == commandTypeTest.lowercased() {
+			guard array.count >= 2 else {
 				return
 			}
 			
-			if array[1].lowercased() == commandValueTestMemoryAlloc {
+			if array[1].lowercased() == commandValueTestMemoryAlloc.lowercased() {
 				print("memory alloc")
 				memoryMap[Date()] = [UInt8](repeating: 255, count: 1024 * 1024 * 32)
-			} else if array[1].lowercased() == commandValueTestMemoryDealloc {
+			} else if array[1].lowercased() == commandValueTestMemoryDealloc.lowercased() {
 				print("memory dealloc")
 				memoryMap = [Date: [UInt8]]()
-			} else if array[1].lowercased() == commandValueTestThreadCreate {
+			} else if array[1].lowercased() == commandValueTestThreadCreate.lowercased() {
 				print("thread create")
-			} else if array[1].lowercased() == commandValueTestThreadDestroy {
+				let thread = Thread(target: object,
+									selector: #selector(object.threadFunc),
+									object: nil)
+				thread.start()
+				threadMap[Date()] = thread
+			} else if array[1].lowercased() == commandValueTestThreadDestroy.lowercased() {
 				print("thread destroy")
+				for thread in threadMap.values {
+					thread.cancel()
+				}
+				threadMap = [Date: Thread]()
 			}
 		}
 	}
