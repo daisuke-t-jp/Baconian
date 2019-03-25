@@ -53,6 +53,8 @@
 		02ED7A592248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */; };
 		02ED7A5A2248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */; };
 		02ED7A5B2248B2CC00C9AF82 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02ED7A322248B2CC00C9AF82 /* Info.plist */; };
+		02ED7A5D2248B3C100C9AF82 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A5C2248B3C100C9AF82 /* CommandLine.swift */; };
+		02ED7A5E2248B3C100C9AF82 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A5C2248B3C100C9AF82 /* CommandLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -96,6 +98,7 @@
 		02ED7A302248B2CC00C9AF82 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
 		02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
 		02ED7A322248B2CC00C9AF82 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02ED7A5C2248B3C100C9AF82 /* CommandLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,7 @@
 		023BBF6F22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {
 			isa = PBXGroup;
 			children = (
+				02ED7A5C2248B3C100C9AF82 /* CommandLine.swift */,
 				023BBF7022409E6600842B33 /* main.swift */,
 			);
 			path = "SysInfoTester-macOSCommandLine";
@@ -377,6 +381,7 @@
 				02ED7A3E2248B2CC00C9AF82 /* MachHostProcessorInfo.swift in Sources */,
 				02ED7A582248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */,
 				02ED7A0B2248926600C9AF82 /* Tester.swift in Sources */,
+				02ED7A5E2248B3C100C9AF82 /* CommandLine.swift in Sources */,
 				02ED7A5A2248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */,
 				02ED7A3A2248B2CC00C9AF82 /* ReporterData.swift in Sources */,
 				02ED7A462248B2CC00C9AF82 /* Mach.swift in Sources */,
@@ -406,6 +411,7 @@
 				02ED7A3D2248B2CC00C9AF82 /* MachHostProcessorInfo.swift in Sources */,
 				02ED7A572248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */,
 				02ED7A0A2248926600C9AF82 /* Tester.swift in Sources */,
+				02ED7A5D2248B3C100C9AF82 /* CommandLine.swift in Sources */,
 				02ED7A592248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */,
 				02ED7A392248B2CC00C9AF82 /* ReporterData.swift in Sources */,
 				02ED7A452248B2CC00C9AF82 /* Mach.swift in Sources */,
