@@ -80,7 +80,7 @@ class CommandLine {
 			commandReporterDelegateEnable()
 		} else if value == CommandLine.commandValueReporterDelegateDisable.lowercased() {
 			commandReporterDelegateDisable()
-		} else if value == CommandLine.commandValueReporterStart.lowercased() {
+		} else if value == CommandLine.commandValueReporterFrequency.lowercased() {
 			guard array.count >= 3 else {
 				return
 			}
