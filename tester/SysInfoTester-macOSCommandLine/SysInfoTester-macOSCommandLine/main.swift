@@ -14,8 +14,14 @@ let commandTypeStart = "-start"
 let commandTypeStop = "-stop"
 let commandTypeDelegateEnable = "-delegateEnable"
 let commandTypeDelegateDisable = "-delegateDisable"
+let commandTypeFrequency = "-frequency"
 let commandTypeData = "-data"
 let commandTypeTest = "-test"
+
+let commandValueFrequencyNormally = "normally"
+let commandValueFrequencyOften = "often"
+let commandValueFrequencyVeryOften = "veryOften"
+
 let commandValueTestMemoryAlloc = "memoryAlloc"
 let commandValueTestMemoryDealloc = "memoryDealloc"
 let commandValueTestThreadCreate = "threadCreate"
@@ -25,6 +31,7 @@ let commandValueTestThreadDestroy = "threadDestroy"
 // -stop				stop report.
 // -delegateEnable		delegate switch to enable.
 // -delegateDisable		delegate switch to disable.
+// -frequency [normally|often|veryoften]	set frequency.
 // -data				show last update data.
 // -test memoryAlloc	allocate test memory.
 // -test memoryDealloc	deallocate test memory.
@@ -53,6 +60,21 @@ while(true) {
 		} else if array[0].lowercased() == commandTypeDelegateDisable.lowercased() {
 			print("Delegate disable")
 			tester.reporterDelegateDisable()
+		} else if array[0].lowercased() == commandTypeFrequency.lowercased() {
+			guard array.count >= 2 else {
+				return
+			}
+			
+			if array[1].lowercased() == commandValueFrequencyNormally.lowercased() {
+				print("Frequency normally")
+				tester.reporterSetFrequency(.normally)
+			} else if array[1].lowercased() == commandValueFrequencyOften.lowercased() {
+				print("Frequency often")
+				tester.reporterSetFrequency(.often)
+			} else if array[1].lowercased() == commandValueFrequencyVeryOften.lowercased() {
+				print("Frequency veryoften")
+				tester.reporterSetFrequency(.veryOften)
+			}
 		} else if array[0].lowercased() == commandTypeData.lowercased() {
 			print("Data")
 			print("# OS")

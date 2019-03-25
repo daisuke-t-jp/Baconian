@@ -35,7 +35,6 @@ extension Tester {
 }
 
 
-// TODO: freq
 // MARK: Reporter
 extension Tester {
 	
@@ -53,6 +52,10 @@ extension Tester {
 	
 	func reporterDelegateDisable() {
 		reporter.delegate = nil
+	}
+	
+	func reporterSetFrequency(_ frequency: Reporter.Frequency) {
+		reporter.frequency = frequency
 	}
 	
 }
