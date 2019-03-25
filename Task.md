@@ -58,18 +58,12 @@
 
 ## TODO
 - General
-  - Check Memory Leaks
   - High load delegate
     - OS Low memory
     - OS CPU High load
     - Process Memory High
     - Process CPU High load
   - Documentation comments
-  - Command class
-    - Parser
-  - Tester class (CUI, GUI common)
-  - Tester(Mac CUI)
-    - Command line
   - Tester(Mac GUI)
 - UI
   - Reporter View
