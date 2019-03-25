@@ -65,6 +65,7 @@
     - Process CPU High load
   - Documentation comments
   - Tester(Mac GUI)
+  - Framework(iOS)
 - UI
   - Reporter View
 - Demo
