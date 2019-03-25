@@ -60,11 +60,14 @@
 - General
   - Check Memory Leaks
   - High load delegate
-    - OS Memory Low memory
+    - OS Low memory
     - OS CPU High load
-    - Process Memory High load
+    - Process Memory High
     - Process CPU High load
   - Documentation comments
+  - Tester(Mac CUI)
+    - Command line
+  - Tester(Mac GUI)
 - UI
   - Reporter View
 - Demo

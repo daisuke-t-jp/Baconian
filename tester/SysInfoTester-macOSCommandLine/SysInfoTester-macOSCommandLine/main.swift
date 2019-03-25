@@ -8,12 +8,11 @@
 
 import Foundation
 
-class Dummy: ReporterDelegate {
+class Delegate: ReporterDelegate {
+	public var data = Reporter.Data()
+	
 	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
-		print("# Reporter")
-		print("- \(Date())")
-		print("- \(data)")
-		print("----------")
+		self.data = data
 	}
 }
 
@@ -60,27 +59,77 @@ func testImmediate() {
 }
 
 
-let enableImmediate = false
-let dummy = Dummy()
+let delegate = Delegate()
 let reporter = Reporter()
+var memoryMap = [Date: [UInt8]]()
+var threadMap = [Data: [Thread]]()
 
-if !enableImmediate {
-	reporter.delegate = dummy
-	reporter.start()
-}
-
-
+let commandTypeStart = "-start"
+let commandTypeStop = "-stop"
+let commandTypeEnableDelegate = "-enableDelegate"
+let commandTypeDisableDelegate = "-disableDelegate"
+let commandTypeData = "-data"
+let commandTypeTest = "-test"
+let commandValueTestMemoryAlloc = "memoryalloc"
+let commandValueTestThreadCreate = "threadcreate"
+let commandValueTestMemoryDealloc = "memorydealloc"
+let commandValueTestThreadDestroy = "threaddestroy"
+// Commands:
+// -start				start report.
+// -stop				stop report.
+// -enableDelegate		delegate switch to enable.
+// -disableDelegate		delegate switch to disable.
+// -data				show last update data.
+// TODO: test command
+// -test memoryallo		allocate test memory.
+// -test threadcreate	create test thread.
+// -test memorydealloc	deallocate test memory.
+// -test threaddestroy	destroy test thread.
 while(true) {
 	
 	autoreleasepool {
-		
-		if enableImmediate {
-			testImmediate()
-		
+		var inputStr = String(data: FileHandle.standardInput.availableData,
+							  encoding: String.Encoding.utf8) ?? ""
+		inputStr = inputStr.trimmingCharacters(in: NSCharacterSet.newlines)
+		let array = inputStr.components(separatedBy: " ")
+		guard array.count > 0 else {
+			return
 		}
 		
-		Thread.sleep(forTimeInterval: 1)
-
+		if array[0].lowercased() == commandTypeStart {
+			print("start")
+			reporter.start()
+		} else if array[0].lowercased() == commandTypeStop {
+			print("stop")
+			reporter.stop()
+		} else if array[0].lowercased() == commandTypeDisableDelegate {
+			print("delegate enable")
+			reporter.delegate = delegate
+		} else if array[0].lowercased() == commandTypeEnableDelegate {
+			print("delegate disable")
+			reporter.delegate = nil
+		} else if array[0].lowercased() == commandTypeData {
+			print("data")
+			print(delegate.data)
+		}
+		
+		if array[0].lowercased() == commandTypeTest {
+			guard array.count > 2 else {
+				return
+			}
+			
+			if array[1].lowercased() == commandValueTestMemoryAlloc {
+				print("memory alloc")
+				memoryMap[Date()] = [UInt8](repeating: 255, count: 1024 * 1024 * 32)
+			} else if array[1].lowercased() == commandValueTestMemoryDealloc {
+				print("memory dealloc")
+				memoryMap = [Date: [UInt8]]()
+			} else if array[1].lowercased() == commandValueTestThreadCreate {
+				print("thread create")
+			} else if array[1].lowercased() == commandValueTestThreadDestroy {
+				print("thread destroy")
+			}
+		}
 	}
 	
 }

@@ -20,9 +20,9 @@ public protocol ReporterDelegate: class {
 
 /// The delegate for SysInfoReporterDelegate's optional func.
 extension ReporterDelegate {
-	/*
-	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data)
+	
+	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
 		// Empty implementation to be "optional"
 	}
-	*/
+
 }
