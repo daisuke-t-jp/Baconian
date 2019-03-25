@@ -47,7 +47,7 @@ class CommandLine {
 
 	
 	func run(_ data: Data) {
-		var str = String(data: data, encoding: String.Encoding.utf8) ?? ""
+		var str = String(data: data, encoding: .utf8) ?? ""
 		str = str.trimmingCharacters(in: NSCharacterSet.newlines)
 		let array = str.components(separatedBy: " ")
 		guard array.count > 0 else {
@@ -65,6 +65,20 @@ class CommandLine {
 	}
 	
 	
+	// MARK: File Handle
+	func writeStandardOutput(_ str: String) {
+		let handle = FileHandle.standardOutput
+		let data = "\(str)\n".data(using: .utf8) ?? Data()
+		handle.write(data)
+	}
+
+	func writeStandardError(_ str: String) {
+		let handle = FileHandle.standardError
+		let data = "\(str)\n".data(using: .utf8) ?? Data()
+		handle.write(data)
+	}
+	
+
 	// MARK: Command Report
 	func commandReporter(_ array: [String]) {	// swiftlint:disable:this cyclomatic_complexity
 		guard array.count >= 2 else {
@@ -99,46 +113,46 @@ class CommandLine {
 	}
 	
 	func commandReporterStart() {
-		print("Reporter start")
+		writeStandardOutput("Reporter start")
 		tester.reporterStart()
 	}
 	
 	func commandReporterStop() {
-		print("Reporter stop")
+		writeStandardOutput("Reporter stop")
 		tester.reporterStop()
 	}
 	
 	func commandReporterDelegateEnable() {
-		print("Delegate enable")
+		writeStandardOutput("Delegate enable")
 		tester.reporterDelegateEnable()
 	}
 	
 	func commandReporterDelegateDisable() {
-		print("Delegate disable")
+		writeStandardOutput("Delegate disable")
 		tester.reporterDelegateDisable()
 	}
 	
 	func commandReporterFrequency(_ frequency: Reporter.Frequency) {
-		print("Frequency \(frequency)")
+		writeStandardOutput("Frequency \(frequency)")
 		tester.reporterSetFrequency(frequency)
 	}
 	
 	func commandReporterData() {
-		print("Data")
-		print("# OS")
-		print("## Memory")
-		print(tester.data.osMemory)
-		print("## CPU")
-		print(tester.data.osCPU)
-		print("## Processors")
-		print(tester.data.osProcessors)
-		print("# Process")
-		print("## Memory")
-		print(tester.data.processMemory)
-		print("## CPU")
-		print(tester.data.processCPU)
-		print("## Thread")
-		print(tester.data.processThread)
+		writeStandardOutput("Data")
+		writeStandardOutput("# OS")
+		writeStandardOutput("## Memory")
+		writeStandardOutput(tester.data.osMemory.description)
+		writeStandardOutput("## CPU")
+		writeStandardOutput(tester.data.osCPU.description)
+		writeStandardOutput("## Processors")
+		writeStandardOutput(tester.data.osProcessors.description)
+		writeStandardOutput("# Process")
+		writeStandardOutput("## Memory")
+		writeStandardOutput(tester.data.processMemory.description)
+		writeStandardOutput("## CPU")
+		writeStandardOutput(tester.data.processCPU.description)
+		writeStandardOutput("## Thread")
+		writeStandardOutput(tester.data.processThread.description)
 	}
 	
 	
@@ -161,22 +175,22 @@ class CommandLine {
 	}
 	
 	func commandTestMemoryAlloc() {
-		print("Memory alloc")
+		writeStandardOutput("Memory alloc")
 		tester.memoryAlloc(1024 * 1024 * 32)
 	}
 
 	func commandTestMemoryDealloc() {
-		print("Memory dealloc")
+		writeStandardOutput("Memory dealloc")
 		tester.memoryDealloc()
 	}
 	
 	func commandTestThreadCreate() {
-		print("Thread create")
+		writeStandardOutput("Thread create")
 		tester.threadCreate(1024 * 32, sleepInterval: 0.01)
 	}
 	
 	func commandTestThreadDestroy() {
-		print("Thread destroy")
+		writeStandardOutput("Thread destroy")
 		tester.threadDestroy()
 	}
 }
