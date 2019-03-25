@@ -46,6 +46,8 @@
 		023BBFC022409EE200842B33 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */; };
 		023BBFC122409EE200842B33 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB422409EE100842B33 /* FixedWidthInteger+SysInfo.swift */; };
 		023BBFC92240B18100842B33 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFC82240B18100842B33 /* MachCPUTick.swift */; };
+		02ED7A0A2248926600C9AF82 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* Tester.swift */; };
+		02ED7A0B2248926600C9AF82 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* Tester.swift */; };
 		7EADFCF92242820D00C7AF65 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADFCF52242820D00C7AF65 /* ReporterData.swift */; };
 		7EADFCFA2242820D00C7AF65 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADFCF52242820D00C7AF65 /* ReporterData.swift */; };
 		7EADFCFB2242820D00C7AF65 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADFCF62242820D00C7AF65 /* Reporter.swift */; };
@@ -89,6 +91,7 @@
 		023BBFB422409EE100842B33 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
 		023BBFB522409EE100842B33 /* SysInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SysInfo.h; path = ../../../SysInfo/SysInfo.h; sourceTree = "<group>"; };
 		023BBFC82240B18100842B33 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
+		02ED7A092248926600C9AF82 /* Tester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
 		7EADFCF52242820D00C7AF65 /* ReporterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterData.swift; sourceTree = "<group>"; };
 		7EADFCF62242820D00C7AF65 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +180,7 @@
 			children = (
 				023BBF6F22409E6600842B33 /* SysInfoTester-macOSCommandLine */,
 				020975722244D15A003CE645 /* SysInfoTests */,
+				02ED7A082248926600C9AF82 /* Common */,
 				023BBF6E22409E6600842B33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -223,6 +227,15 @@
 			);
 			name = Extension;
 			path = ../../../SysInfo/Extension;
+			sourceTree = "<group>";
+		};
+		02ED7A082248926600C9AF82 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A092248926600C9AF82 /* Tester.swift */,
+			);
+			name = Common;
+			path = ../Common;
 			sourceTree = "<group>";
 		};
 		7EADFCF32242820D00C7AF65 /* Reporter */ = {
@@ -367,6 +380,7 @@
 				02082B712242029800D4DFC2 /* ReportProcessMemory.swift in Sources */,
 				7EADFCFC2242820D00C7AF65 /* Reporter.swift in Sources */,
 				02082B59224200F500D4DFC2 /* MachHostProcessorInfo.swift in Sources */,
+				02ED7A0B2248926600C9AF82 /* Tester.swift in Sources */,
 				02082B5B224200F500D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +409,7 @@
 				023BBFC022409EE200842B33 /* TimeInterval+SysInfo.swift in Sources */,
 				7EADFCFB2242820D00C7AF65 /* Reporter.swift in Sources */,
 				02082B58224200F500D4DFC2 /* MachHostProcessorInfo.swift in Sources */,
+				02ED7A0A2248926600C9AF82 /* Tester.swift in Sources */,
 				02082B5A224200F500D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
