@@ -7,51 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02082B162241BC8400D4DFC2 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B152241BC8400D4DFC2 /* Report.swift */; };
-		02082B1A2241BFE500D4DFC2 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B182241BFE500D4DFC2 /* ReportOSMemory.swift */; };
-		02082B1B2241BFE500D4DFC2 /* ReportOSCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B192241BFE500D4DFC2 /* ReportOSCPU.swift */; };
-		02082B3E2241DA8000D4DFC2 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */; };
-		02082B3F2241DA8000D4DFC2 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB422409EE100842B33 /* FixedWidthInteger+SysInfo.swift */; };
-		02082B402241DA8300D4DFC2 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFAF22409EE100842B33 /* Mach.swift */; };
-		02082B412241DA8300D4DFC2 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFC82240B18100842B33 /* MachCPUTick.swift */; };
-		02082B472241DA8600D4DFC2 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B152241BC8400D4DFC2 /* Report.swift */; };
-		02082B482241DA8900D4DFC2 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B182241BFE500D4DFC2 /* ReportOSMemory.swift */; };
-		02082B492241DA8900D4DFC2 /* ReportOSCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B192241BFE500D4DFC2 /* ReportOSCPU.swift */; };
-		02082B58224200F500D4DFC2 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B52224200F500D4DFC2 /* MachHostProcessorInfo.swift */; };
-		02082B59224200F500D4DFC2 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B52224200F500D4DFC2 /* MachHostProcessorInfo.swift */; };
-		02082B5A224200F500D4DFC2 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B53224200F500D4DFC2 /* MachHostCPULoadInfo.swift */; };
-		02082B5B224200F500D4DFC2 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B53224200F500D4DFC2 /* MachHostCPULoadInfo.swift */; };
-		02082B5C224200F500D4DFC2 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B54224200F500D4DFC2 /* MachHostVMStatics.swift */; };
-		02082B5D224200F500D4DFC2 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B54224200F500D4DFC2 /* MachHostVMStatics.swift */; };
-		02082B5E224200F500D4DFC2 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B56224200F500D4DFC2 /* MachTaskBasicInfo.swift */; };
-		02082B5F224200F500D4DFC2 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B56224200F500D4DFC2 /* MachTaskBasicInfo.swift */; };
-		02082B60224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B57224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift */; };
-		02082B61224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B57224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift */; };
-		02082B702242029800D4DFC2 /* ReportProcessMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B6F2242029800D4DFC2 /* ReportProcessMemory.swift */; };
-		02082B712242029800D4DFC2 /* ReportProcessMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B6F2242029800D4DFC2 /* ReportProcessMemory.swift */; };
-		02082B7622420F3500D4DFC2 /* ReportOSProcessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B7522420F3500D4DFC2 /* ReportOSProcessors.swift */; };
-		02082B7722420F3500D4DFC2 /* ReportOSProcessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B7522420F3500D4DFC2 /* ReportOSProcessors.swift */; };
-		02082B792242175100D4DFC2 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B782242175100D4DFC2 /* ReportProcessCPU.swift */; };
-		02082B7A2242175100D4DFC2 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B782242175100D4DFC2 /* ReportProcessCPU.swift */; };
-		02082B7C224219AD00D4DFC2 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B7B224219AD00D4DFC2 /* ReportProcessThread.swift */; };
-		02082B7D224219AD00D4DFC2 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B7B224219AD00D4DFC2 /* ReportProcessThread.swift */; };
-		02097556224499F9003CE645 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097555224499F9003CE645 /* ReporterDelegate.swift */; };
-		02097557224499F9003CE645 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097555224499F9003CE645 /* ReporterDelegate.swift */; };
-		0209756E2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */; };
-		0209756F2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */; };
 		020975752244D15A003CE645 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975732244D15A003CE645 /* SysInfoTests.swift */; };
 		020975762244D15A003CE645 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 020975742244D15A003CE645 /* Info.plist */; };
 		023BBF7122409E6600842B33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBF7022409E6600842B33 /* main.swift */; };
-		023BBFBD22409EE200842B33 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFAF22409EE100842B33 /* Mach.swift */; };
-		023BBFC022409EE200842B33 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */; };
-		023BBFC122409EE200842B33 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFB422409EE100842B33 /* FixedWidthInteger+SysInfo.swift */; };
-		023BBFC92240B18100842B33 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFC82240B18100842B33 /* MachCPUTick.swift */; };
 		02ED7A0A2248926600C9AF82 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* Tester.swift */; };
 		02ED7A0B2248926600C9AF82 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* Tester.swift */; };
-		7EADFCF92242820D00C7AF65 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADFCF52242820D00C7AF65 /* ReporterData.swift */; };
-		7EADFCFA2242820D00C7AF65 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADFCF52242820D00C7AF65 /* ReporterData.swift */; };
-		7EADFCFB2242820D00C7AF65 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADFCF62242820D00C7AF65 /* Reporter.swift */; };
-		7EADFCFC2242820D00C7AF65 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADFCF62242820D00C7AF65 /* Reporter.swift */; };
+		02ED7A332248B2CC00C9AF82 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */; };
+		02ED7A342248B2CC00C9AF82 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */; };
+		02ED7A352248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A172248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift */; };
+		02ED7A362248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A172248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift */; };
+		02ED7A372248B2CC00C9AF82 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A192248B2CC00C9AF82 /* ReporterDelegate.swift */; };
+		02ED7A382248B2CC00C9AF82 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A192248B2CC00C9AF82 /* ReporterDelegate.swift */; };
+		02ED7A392248B2CC00C9AF82 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A1A2248B2CC00C9AF82 /* ReporterData.swift */; };
+		02ED7A3A2248B2CC00C9AF82 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A1A2248B2CC00C9AF82 /* ReporterData.swift */; };
+		02ED7A3B2248B2CC00C9AF82 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A1B2248B2CC00C9AF82 /* Reporter.swift */; };
+		02ED7A3C2248B2CC00C9AF82 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A1B2248B2CC00C9AF82 /* Reporter.swift */; };
+		02ED7A3D2248B2CC00C9AF82 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A1F2248B2CC00C9AF82 /* MachHostProcessorInfo.swift */; };
+		02ED7A3E2248B2CC00C9AF82 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A1F2248B2CC00C9AF82 /* MachHostProcessorInfo.swift */; };
+		02ED7A3F2248B2CC00C9AF82 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A202248B2CC00C9AF82 /* MachHostCPULoadInfo.swift */; };
+		02ED7A402248B2CC00C9AF82 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A202248B2CC00C9AF82 /* MachHostCPULoadInfo.swift */; };
+		02ED7A412248B2CC00C9AF82 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A212248B2CC00C9AF82 /* MachHostVMStatics.swift */; };
+		02ED7A422248B2CC00C9AF82 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A212248B2CC00C9AF82 /* MachHostVMStatics.swift */; };
+		02ED7A432248B2CC00C9AF82 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A222248B2CC00C9AF82 /* MachHostBasicInfo.swift */; };
+		02ED7A442248B2CC00C9AF82 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A222248B2CC00C9AF82 /* MachHostBasicInfo.swift */; };
+		02ED7A452248B2CC00C9AF82 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A232248B2CC00C9AF82 /* Mach.swift */; };
+		02ED7A462248B2CC00C9AF82 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A232248B2CC00C9AF82 /* Mach.swift */; };
+		02ED7A472248B2CC00C9AF82 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A252248B2CC00C9AF82 /* MachTaskBasicInfo.swift */; };
+		02ED7A482248B2CC00C9AF82 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A252248B2CC00C9AF82 /* MachTaskBasicInfo.swift */; };
+		02ED7A492248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A262248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift */; };
+		02ED7A4A2248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A262248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift */; };
+		02ED7A4B2248B2CC00C9AF82 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A272248B2CC00C9AF82 /* MachCPUTick.swift */; };
+		02ED7A4C2248B2CC00C9AF82 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A272248B2CC00C9AF82 /* MachCPUTick.swift */; };
+		02ED7A4D2248B2CC00C9AF82 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A292248B2CC00C9AF82 /* Report.swift */; };
+		02ED7A4E2248B2CC00C9AF82 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A292248B2CC00C9AF82 /* Report.swift */; };
+		02ED7A4F2248B2CC00C9AF82 /* ReportOSProcessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A2B2248B2CC00C9AF82 /* ReportOSProcessors.swift */; };
+		02ED7A502248B2CC00C9AF82 /* ReportOSProcessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A2B2248B2CC00C9AF82 /* ReportOSProcessors.swift */; };
+		02ED7A512248B2CC00C9AF82 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A2C2248B2CC00C9AF82 /* ReportOSMemory.swift */; };
+		02ED7A522248B2CC00C9AF82 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A2C2248B2CC00C9AF82 /* ReportOSMemory.swift */; };
+		02ED7A532248B2CC00C9AF82 /* ReportOSCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A2D2248B2CC00C9AF82 /* ReportOSCPU.swift */; };
+		02ED7A542248B2CC00C9AF82 /* ReportOSCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A2D2248B2CC00C9AF82 /* ReportOSCPU.swift */; };
+		02ED7A552248B2CC00C9AF82 /* ReportProcessMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A2F2248B2CC00C9AF82 /* ReportProcessMemory.swift */; };
+		02ED7A562248B2CC00C9AF82 /* ReportProcessMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A2F2248B2CC00C9AF82 /* ReportProcessMemory.swift */; };
+		02ED7A572248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A302248B2CC00C9AF82 /* ReportProcessThread.swift */; };
+		02ED7A582248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A302248B2CC00C9AF82 /* ReportProcessThread.swift */; };
+		02ED7A592248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */; };
+		02ED7A5A2248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */; };
+		02ED7A5B2248B2CC00C9AF82 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02ED7A322248B2CC00C9AF82 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,33 +68,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02082B152241BC8400D4DFC2 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
-		02082B182241BFE500D4DFC2 /* ReportOSMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSMemory.swift; sourceTree = "<group>"; };
-		02082B192241BFE500D4DFC2 /* ReportOSCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSCPU.swift; sourceTree = "<group>"; };
 		02082B212241D95300D4DFC2 /* SysInfoTester-macOSCommandLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SysInfoTester-macOSCommandLineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		02082B52224200F500D4DFC2 /* MachHostProcessorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostProcessorInfo.swift; sourceTree = "<group>"; };
-		02082B53224200F500D4DFC2 /* MachHostCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostCPULoadInfo.swift; sourceTree = "<group>"; };
-		02082B54224200F500D4DFC2 /* MachHostVMStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostVMStatics.swift; sourceTree = "<group>"; };
-		02082B56224200F500D4DFC2 /* MachTaskBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskBasicInfo.swift; sourceTree = "<group>"; };
-		02082B57224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskThreadBasicInfo.swift; sourceTree = "<group>"; };
-		02082B6F2242029800D4DFC2 /* ReportProcessMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessMemory.swift; sourceTree = "<group>"; };
-		02082B7522420F3500D4DFC2 /* ReportOSProcessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSProcessors.swift; sourceTree = "<group>"; };
-		02082B782242175100D4DFC2 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
-		02082B7B224219AD00D4DFC2 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
-		02097555224499F9003CE645 /* ReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterDelegate.swift; sourceTree = "<group>"; };
-		0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
 		020975732244D15A003CE645 /* SysInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoTests.swift; sourceTree = "<group>"; };
 		020975742244D15A003CE645 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		023BBF6D22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SysInfoTester-macOSCommandLine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		023BBF7022409E6600842B33 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		023BBFAF22409EE100842B33 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
-		023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
-		023BBFB422409EE100842B33 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
-		023BBFB522409EE100842B33 /* SysInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SysInfo.h; path = ../../../SysInfo/SysInfo.h; sourceTree = "<group>"; };
-		023BBFC82240B18100842B33 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
 		02ED7A092248926600C9AF82 /* Tester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
-		7EADFCF52242820D00C7AF65 /* ReporterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterData.swift; sourceTree = "<group>"; };
-		7EADFCF62242820D00C7AF65 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
+		02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
+		02ED7A172248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
+		02ED7A192248B2CC00C9AF82 /* ReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterDelegate.swift; sourceTree = "<group>"; };
+		02ED7A1A2248B2CC00C9AF82 /* ReporterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterData.swift; sourceTree = "<group>"; };
+		02ED7A1B2248B2CC00C9AF82 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
+		02ED7A1C2248B2CC00C9AF82 /* SysInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysInfo.h; sourceTree = "<group>"; };
+		02ED7A1F2248B2CC00C9AF82 /* MachHostProcessorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostProcessorInfo.swift; sourceTree = "<group>"; };
+		02ED7A202248B2CC00C9AF82 /* MachHostCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostCPULoadInfo.swift; sourceTree = "<group>"; };
+		02ED7A212248B2CC00C9AF82 /* MachHostVMStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostVMStatics.swift; sourceTree = "<group>"; };
+		02ED7A222248B2CC00C9AF82 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
+		02ED7A232248B2CC00C9AF82 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
+		02ED7A252248B2CC00C9AF82 /* MachTaskBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskBasicInfo.swift; sourceTree = "<group>"; };
+		02ED7A262248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskThreadBasicInfo.swift; sourceTree = "<group>"; };
+		02ED7A272248B2CC00C9AF82 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
+		02ED7A292248B2CC00C9AF82 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		02ED7A2B2248B2CC00C9AF82 /* ReportOSProcessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSProcessors.swift; sourceTree = "<group>"; };
+		02ED7A2C2248B2CC00C9AF82 /* ReportOSMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSMemory.swift; sourceTree = "<group>"; };
+		02ED7A2D2248B2CC00C9AF82 /* ReportOSCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSCPU.swift; sourceTree = "<group>"; };
+		02ED7A2F2248B2CC00C9AF82 /* ReportProcessMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessMemory.swift; sourceTree = "<group>"; };
+		02ED7A302248B2CC00C9AF82 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
+		02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
+		02ED7A322248B2CC00C9AF82 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,57 +116,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02082B122241BC6000D4DFC2 /* Report */ = {
-			isa = PBXGroup;
-			children = (
-				02082B152241BC8400D4DFC2 /* Report.swift */,
-				02082B172241BFE500D4DFC2 /* OS */,
-				02082B6E2242029800D4DFC2 /* Process */,
-			);
-			name = Report;
-			path = ../../../SysInfo/Report;
-			sourceTree = "<group>";
-		};
-		02082B172241BFE500D4DFC2 /* OS */ = {
-			isa = PBXGroup;
-			children = (
-				02082B182241BFE500D4DFC2 /* ReportOSMemory.swift */,
-				02082B192241BFE500D4DFC2 /* ReportOSCPU.swift */,
-				02082B7522420F3500D4DFC2 /* ReportOSProcessors.swift */,
-			);
-			path = OS;
-			sourceTree = "<group>";
-		};
-		02082B51224200F500D4DFC2 /* Host */ = {
-			isa = PBXGroup;
-			children = (
-				02082B54224200F500D4DFC2 /* MachHostVMStatics.swift */,
-				0209756D2244BE90003CE645 /* MachHostBasicInfo.swift */,
-				02082B53224200F500D4DFC2 /* MachHostCPULoadInfo.swift */,
-				02082B52224200F500D4DFC2 /* MachHostProcessorInfo.swift */,
-			);
-			path = Host;
-			sourceTree = "<group>";
-		};
-		02082B55224200F500D4DFC2 /* Task */ = {
-			isa = PBXGroup;
-			children = (
-				02082B56224200F500D4DFC2 /* MachTaskBasicInfo.swift */,
-				02082B57224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift */,
-			);
-			path = Task;
-			sourceTree = "<group>";
-		};
-		02082B6E2242029800D4DFC2 /* Process */ = {
-			isa = PBXGroup;
-			children = (
-				02082B6F2242029800D4DFC2 /* ReportProcessMemory.swift */,
-				02082B782242175100D4DFC2 /* ReportProcessCPU.swift */,
-				02082B7B224219AD00D4DFC2 /* ReportProcessThread.swift */,
-			);
-			path = Process;
-			sourceTree = "<group>";
-		};
 		020975722244D15A003CE645 /* SysInfoTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,9 +129,10 @@
 		023BBF6422409E6600842B33 = {
 			isa = PBXGroup;
 			children = (
-				023BBF6F22409E6600842B33 /* SysInfoTester-macOSCommandLine */,
+				02ED7A142248B2CC00C9AF82 /* SysInfo */,
 				020975722244D15A003CE645 /* SysInfoTests */,
 				02ED7A082248926600C9AF82 /* Common */,
+				023BBF6F22409E6600842B33 /* SysInfoTester-macOSCommandLine */,
 				023BBF6E22409E6600842B33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -197,36 +149,9 @@
 		023BBF6F22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {
 			isa = PBXGroup;
 			children = (
-				023BBFB522409EE100842B33 /* SysInfo.h */,
-				023BBFB222409EE100842B33 /* Extension */,
-				023BBFAD22409EE100842B33 /* Mach */,
-				02082B122241BC6000D4DFC2 /* Report */,
-				7EADFCF32242820D00C7AF65 /* Reporter */,
 				023BBF7022409E6600842B33 /* main.swift */,
 			);
 			path = "SysInfoTester-macOSCommandLine";
-			sourceTree = "<group>";
-		};
-		023BBFAD22409EE100842B33 /* Mach */ = {
-			isa = PBXGroup;
-			children = (
-				023BBFAF22409EE100842B33 /* Mach.swift */,
-				023BBFC82240B18100842B33 /* MachCPUTick.swift */,
-				02082B51224200F500D4DFC2 /* Host */,
-				02082B55224200F500D4DFC2 /* Task */,
-			);
-			name = Mach;
-			path = ../../../SysInfo/Mach;
-			sourceTree = "<group>";
-		};
-		023BBFB222409EE100842B33 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				023BBFB322409EE100842B33 /* TimeInterval+SysInfo.swift */,
-				023BBFB422409EE100842B33 /* FixedWidthInteger+SysInfo.swift */,
-			);
-			name = Extension;
-			path = ../../../SysInfo/Extension;
 			sourceTree = "<group>";
 		};
 		02ED7A082248926600C9AF82 /* Common */ = {
@@ -238,15 +163,98 @@
 			path = ../Common;
 			sourceTree = "<group>";
 		};
-		7EADFCF32242820D00C7AF65 /* Reporter */ = {
+		02ED7A142248B2CC00C9AF82 /* SysInfo */ = {
 			isa = PBXGroup;
 			children = (
-				7EADFCF52242820D00C7AF65 /* ReporterData.swift */,
-				02097555224499F9003CE645 /* ReporterDelegate.swift */,
-				7EADFCF62242820D00C7AF65 /* Reporter.swift */,
+				02ED7A152248B2CC00C9AF82 /* Extension */,
+				02ED7A1D2248B2CC00C9AF82 /* Mach */,
+				02ED7A282248B2CC00C9AF82 /* Report */,
+				02ED7A182248B2CC00C9AF82 /* Reporter */,
+				02ED7A1C2248B2CC00C9AF82 /* SysInfo.h */,
+				02ED7A322248B2CC00C9AF82 /* Info.plist */,
 			);
-			name = Reporter;
-			path = ../../../SysInfo/Reporter;
+			name = SysInfo;
+			path = ../../SysInfo;
+			sourceTree = "<group>";
+		};
+		02ED7A152248B2CC00C9AF82 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */,
+				02ED7A172248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		02ED7A182248B2CC00C9AF82 /* Reporter */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A192248B2CC00C9AF82 /* ReporterDelegate.swift */,
+				02ED7A1A2248B2CC00C9AF82 /* ReporterData.swift */,
+				02ED7A1B2248B2CC00C9AF82 /* Reporter.swift */,
+			);
+			path = Reporter;
+			sourceTree = "<group>";
+		};
+		02ED7A1D2248B2CC00C9AF82 /* Mach */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A1E2248B2CC00C9AF82 /* Host */,
+				02ED7A232248B2CC00C9AF82 /* Mach.swift */,
+				02ED7A242248B2CC00C9AF82 /* Task */,
+				02ED7A272248B2CC00C9AF82 /* MachCPUTick.swift */,
+			);
+			path = Mach;
+			sourceTree = "<group>";
+		};
+		02ED7A1E2248B2CC00C9AF82 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A1F2248B2CC00C9AF82 /* MachHostProcessorInfo.swift */,
+				02ED7A202248B2CC00C9AF82 /* MachHostCPULoadInfo.swift */,
+				02ED7A212248B2CC00C9AF82 /* MachHostVMStatics.swift */,
+				02ED7A222248B2CC00C9AF82 /* MachHostBasicInfo.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		02ED7A242248B2CC00C9AF82 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A252248B2CC00C9AF82 /* MachTaskBasicInfo.swift */,
+				02ED7A262248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		02ED7A282248B2CC00C9AF82 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A292248B2CC00C9AF82 /* Report.swift */,
+				02ED7A2A2248B2CC00C9AF82 /* OS */,
+				02ED7A2E2248B2CC00C9AF82 /* Process */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		02ED7A2A2248B2CC00C9AF82 /* OS */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A2B2248B2CC00C9AF82 /* ReportOSProcessors.swift */,
+				02ED7A2C2248B2CC00C9AF82 /* ReportOSMemory.swift */,
+				02ED7A2D2248B2CC00C9AF82 /* ReportOSCPU.swift */,
+			);
+			path = OS;
+			sourceTree = "<group>";
+		};
+		02ED7A2E2248B2CC00C9AF82 /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				02ED7A2F2248B2CC00C9AF82 /* ReportProcessMemory.swift */,
+				02ED7A302248B2CC00C9AF82 /* ReportProcessThread.swift */,
+				02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */,
+			);
+			path = Process;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02ED7A5B2248B2CC00C9AF82 /* Info.plist in Resources */,
 				020975762244D15A003CE645 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,28 +369,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0209756F2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */,
-				02082B472241DA8600D4DFC2 /* Report.swift in Sources */,
-				7EADFCFA2242820D00C7AF65 /* ReporterData.swift in Sources */,
-				02082B412241DA8300D4DFC2 /* MachCPUTick.swift in Sources */,
-				02082B5F224200F500D4DFC2 /* MachTaskBasicInfo.swift in Sources */,
-				02082B492241DA8900D4DFC2 /* ReportOSCPU.swift in Sources */,
-				02082B61224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */,
-				02097557224499F9003CE645 /* ReporterDelegate.swift in Sources */,
-				02082B3E2241DA8000D4DFC2 /* TimeInterval+SysInfo.swift in Sources */,
-				02082B7A2242175100D4DFC2 /* ReportProcessCPU.swift in Sources */,
 				020975752244D15A003CE645 /* SysInfoTests.swift in Sources */,
-				02082B402241DA8300D4DFC2 /* Mach.swift in Sources */,
-				02082B3F2241DA8000D4DFC2 /* FixedWidthInteger+SysInfo.swift in Sources */,
-				02082B7722420F3500D4DFC2 /* ReportOSProcessors.swift in Sources */,
-				02082B482241DA8900D4DFC2 /* ReportOSMemory.swift in Sources */,
-				02082B5D224200F500D4DFC2 /* MachHostVMStatics.swift in Sources */,
-				02082B7D224219AD00D4DFC2 /* ReportProcessThread.swift in Sources */,
-				02082B712242029800D4DFC2 /* ReportProcessMemory.swift in Sources */,
-				7EADFCFC2242820D00C7AF65 /* Reporter.swift in Sources */,
-				02082B59224200F500D4DFC2 /* MachHostProcessorInfo.swift in Sources */,
+				02ED7A482248B2CC00C9AF82 /* MachTaskBasicInfo.swift in Sources */,
+				02ED7A422248B2CC00C9AF82 /* MachHostVMStatics.swift in Sources */,
+				02ED7A4E2248B2CC00C9AF82 /* Report.swift in Sources */,
+				02ED7A442248B2CC00C9AF82 /* MachHostBasicInfo.swift in Sources */,
+				02ED7A3E2248B2CC00C9AF82 /* MachHostProcessorInfo.swift in Sources */,
+				02ED7A582248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */,
 				02ED7A0B2248926600C9AF82 /* Tester.swift in Sources */,
-				02082B5B224200F500D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
+				02ED7A5A2248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */,
+				02ED7A3A2248B2CC00C9AF82 /* ReporterData.swift in Sources */,
+				02ED7A462248B2CC00C9AF82 /* Mach.swift in Sources */,
+				02ED7A4A2248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift in Sources */,
+				02ED7A522248B2CC00C9AF82 /* ReportOSMemory.swift in Sources */,
+				02ED7A382248B2CC00C9AF82 /* ReporterDelegate.swift in Sources */,
+				02ED7A502248B2CC00C9AF82 /* ReportOSProcessors.swift in Sources */,
+				02ED7A4C2248B2CC00C9AF82 /* MachCPUTick.swift in Sources */,
+				02ED7A3C2248B2CC00C9AF82 /* Reporter.swift in Sources */,
+				02ED7A362248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift in Sources */,
+				02ED7A562248B2CC00C9AF82 /* ReportProcessMemory.swift in Sources */,
+				02ED7A542248B2CC00C9AF82 /* ReportOSCPU.swift in Sources */,
+				02ED7A402248B2CC00C9AF82 /* MachHostCPULoadInfo.swift in Sources */,
+				02ED7A342248B2CC00C9AF82 /* TimeInterval+SysInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,28 +398,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0209756E2244BE91003CE645 /* MachHostBasicInfo.swift in Sources */,
-				023BBFBD22409EE200842B33 /* Mach.swift in Sources */,
-				7EADFCF92242820D00C7AF65 /* ReporterData.swift in Sources */,
-				02082B5E224200F500D4DFC2 /* MachTaskBasicInfo.swift in Sources */,
-				02082B60224200F500D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */,
-				02082B162241BC8400D4DFC2 /* Report.swift in Sources */,
-				02082B792242175100D4DFC2 /* ReportProcessCPU.swift in Sources */,
-				023BBFC92240B18100842B33 /* MachCPUTick.swift in Sources */,
-				02097556224499F9003CE645 /* ReporterDelegate.swift in Sources */,
-				02082B1A2241BFE500D4DFC2 /* ReportOSMemory.swift in Sources */,
-				023BBFC122409EE200842B33 /* FixedWidthInteger+SysInfo.swift in Sources */,
 				023BBF7122409E6600842B33 /* main.swift in Sources */,
-				02082B7622420F3500D4DFC2 /* ReportOSProcessors.swift in Sources */,
-				02082B1B2241BFE500D4DFC2 /* ReportOSCPU.swift in Sources */,
-				02082B5C224200F500D4DFC2 /* MachHostVMStatics.swift in Sources */,
-				02082B7C224219AD00D4DFC2 /* ReportProcessThread.swift in Sources */,
-				02082B702242029800D4DFC2 /* ReportProcessMemory.swift in Sources */,
-				023BBFC022409EE200842B33 /* TimeInterval+SysInfo.swift in Sources */,
-				7EADFCFB2242820D00C7AF65 /* Reporter.swift in Sources */,
-				02082B58224200F500D4DFC2 /* MachHostProcessorInfo.swift in Sources */,
+				02ED7A472248B2CC00C9AF82 /* MachTaskBasicInfo.swift in Sources */,
+				02ED7A412248B2CC00C9AF82 /* MachHostVMStatics.swift in Sources */,
+				02ED7A4D2248B2CC00C9AF82 /* Report.swift in Sources */,
+				02ED7A432248B2CC00C9AF82 /* MachHostBasicInfo.swift in Sources */,
+				02ED7A3D2248B2CC00C9AF82 /* MachHostProcessorInfo.swift in Sources */,
+				02ED7A572248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */,
 				02ED7A0A2248926600C9AF82 /* Tester.swift in Sources */,
-				02082B5A224200F500D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
+				02ED7A592248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */,
+				02ED7A392248B2CC00C9AF82 /* ReporterData.swift in Sources */,
+				02ED7A452248B2CC00C9AF82 /* Mach.swift in Sources */,
+				02ED7A492248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift in Sources */,
+				02ED7A512248B2CC00C9AF82 /* ReportOSMemory.swift in Sources */,
+				02ED7A372248B2CC00C9AF82 /* ReporterDelegate.swift in Sources */,
+				02ED7A4F2248B2CC00C9AF82 /* ReportOSProcessors.swift in Sources */,
+				02ED7A4B2248B2CC00C9AF82 /* MachCPUTick.swift in Sources */,
+				02ED7A3B2248B2CC00C9AF82 /* Reporter.swift in Sources */,
+				02ED7A352248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift in Sources */,
+				02ED7A552248B2CC00C9AF82 /* ReportProcessMemory.swift in Sources */,
+				02ED7A532248B2CC00C9AF82 /* ReportOSCPU.swift in Sources */,
+				02ED7A3F2248B2CC00C9AF82 /* MachHostCPULoadInfo.swift in Sources */,
+				02ED7A332248B2CC00C9AF82 /* TimeInterval+SysInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
