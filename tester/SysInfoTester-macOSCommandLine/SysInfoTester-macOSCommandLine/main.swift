@@ -8,63 +8,28 @@
 
 import Foundation
 
-class Object: ReporterDelegate {
-	public var data = Reporter.Data()
-	
-	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
-		self.data = data
-	}
-	
-	@objc func threadFunc() {
-		while(true) {
-			autoreleasepool {
-				let array = [UInt8](repeating: 255, count: 1024 * 32)
-				var data = Data()
-				for byte in array {
-					data.append(byte)
-				}
-				
-				if Thread.current.isCancelled {
-					print("Thread exit.")
-					Thread.exit()
-				}
-				
-				Thread.sleep(forTimeInterval: 0.001)
-			}
-		}
-	}
-}
-
-
-let object = Object()
-let reporter = Reporter()
-reporter.delegate = object
-reporter.start()
-
-var memoryMap = [Date: [UInt8]]()
-var threadMap = [Date: Thread]()
+let tester = Tester()
 
 let commandTypeStart = "-start"
 let commandTypeStop = "-stop"
-let commandTypeEnableDelegate = "-enableDelegate"
-let commandTypeDisableDelegate = "-disableDelegate"
+let commandTypeDelegateEnable = "-delegateEnable"
+let commandTypeDelegateDisable = "-delegateDisable"
 let commandTypeData = "-data"
 let commandTypeTest = "-test"
-let commandValueTestMemoryAlloc = "memoryalloc"
-let commandValueTestThreadCreate = "threadcreate"
-let commandValueTestMemoryDealloc = "memorydealloc"
-let commandValueTestThreadDestroy = "threaddestroy"
+let commandValueTestMemoryAlloc = "memoryAlloc"
+let commandValueTestMemoryDealloc = "memoryDealloc"
+let commandValueTestThreadCreate = "threadCreate"
+let commandValueTestThreadDestroy = "threadDestroy"
 // Commands:
 // -start				start report.
 // -stop				stop report.
-// -enableDelegate		delegate switch to enable.
-// -disableDelegate		delegate switch to disable.
+// -delegateEnable		delegate switch to enable.
+// -delegateDisable		delegate switch to disable.
 // -data				show last update data.
-// TODO: test command
-// -test memoryallo		allocate test memory.
-// -test threadcreate	create test thread.
-// -test memorydealloc	deallocate test memory.
-// -test threaddestroy	destroy test thread.
+// -test memoryAlloc	allocate test memory.
+// -test memoryDealloc	deallocate test memory.
+// -test threadCreate	create test thread.
+// -test threadDestroy	destroy test thread.
 while(true) {
 	
 	autoreleasepool {
@@ -77,33 +42,33 @@ while(true) {
 		}
 		
 		if array[0].lowercased() == commandTypeStart.lowercased() {
-			print("start")
-			reporter.start()
+			print("Reporter start")
+			tester.reporterStart()
 		} else if array[0].lowercased() == commandTypeStop.lowercased() {
-			print("stop")
-			reporter.stop()
-		} else if array[0].lowercased() == commandTypeEnableDelegate.lowercased() {
-			print("enable delegate")
-			reporter.delegate = object
-		} else if array[0].lowercased() == commandTypeDisableDelegate.lowercased() {
-			print("disable delegate")
-			reporter.delegate = nil
+			print("Reporter stop")
+			tester.reporterStop()
+		} else if array[0].lowercased() == commandTypeDelegateEnable.lowercased() {
+			print("Delegate enable")
+			tester.reporterDelegateEnable()
+		} else if array[0].lowercased() == commandTypeDelegateDisable.lowercased() {
+			print("Delegate disable")
+			tester.reporterDelegateDisable()
 		} else if array[0].lowercased() == commandTypeData.lowercased() {
-			print("data")
+			print("Data")
 			print("# OS")
 			print("## Memory")
-			print(object.data.osMemory)
+			print(tester.data.osMemory)
 			print("## CPU")
-			print(object.data.osCPU)
+			print(tester.data.osCPU)
 			print("## Processors")
-			print(object.data.osProcessors)
+			print(tester.data.osProcessors)
 			print("# Process")
 			print("## Memory")
-			print(object.data.processMemory)
+			print(tester.data.processMemory)
 			print("## CPU")
-			print(object.data.processCPU)
+			print(tester.data.processCPU)
 			print("## Thread")
-			print(object.data.processThread)
+			print(tester.data.processThread)
 		}
 		
 		if array[0].lowercased() == commandTypeTest.lowercased() {
@@ -112,24 +77,17 @@ while(true) {
 			}
 			
 			if array[1].lowercased() == commandValueTestMemoryAlloc.lowercased() {
-				print("memory alloc")
-				memoryMap[Date()] = [UInt8](repeating: 255, count: 1024 * 1024 * 32)
+				print("Memory alloc")
+				tester.memoryAlloc(1024 * 1024 * 32)
 			} else if array[1].lowercased() == commandValueTestMemoryDealloc.lowercased() {
-				print("memory dealloc")
-				memoryMap = [Date: [UInt8]]()
+				print("Memory dealloc")
+				tester.memoryDealloc()
 			} else if array[1].lowercased() == commandValueTestThreadCreate.lowercased() {
-				print("thread create")
-				let thread = Thread(target: object,
-									selector: #selector(object.threadFunc),
-									object: nil)
-				thread.start()
-				threadMap[Date()] = thread
+				print("Thread create")
+				tester.threadCreate(1024 * 32, sleepInterval: 0.01)
 			} else if array[1].lowercased() == commandValueTestThreadDestroy.lowercased() {
-				print("thread destroy")
-				for thread in threadMap.values {
-					thread.cancel()
-				}
-				threadMap = [Date: Thread]()
+				print("Thread destroy")
+				tester.threadDestroy()
 			}
 		}
 	}
