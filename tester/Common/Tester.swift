@@ -38,7 +38,7 @@ extension Tester {
 // MARK: Reporter
 extension Tester {
 	
-	func reporterStart()  {
+	func reporterStart() {
 		 reporter.start()
 	}
 	
@@ -65,7 +65,7 @@ extension Tester {
 extension Tester {
 	
 	func memoryAlloc(_ byteSize: Int) {
-		memoryMap[Date()] = [UInt8](repeating: 255, count: byteSize)
+		memoryMap[Date()] = [UInt8](repeating: UInt8.max, count: byteSize)
 	}
 	
 	func memoryDealloc() {
@@ -91,7 +91,7 @@ extension Tester {
 				return
 			}
 			
-			while(true) {
+			while true {
 				autoreleasepool {
 					let array = [UInt8](repeating: UInt8.max, count: repeatCount)
 					var data = Data()

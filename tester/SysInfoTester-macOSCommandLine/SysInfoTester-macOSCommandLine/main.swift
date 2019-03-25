@@ -37,7 +37,7 @@ let commandValueTestThreadDestroy = "threadDestroy"
 // -test memoryDealloc	deallocate test memory.
 // -test threadCreate	create test thread.
 // -test threadDestroy	destroy test thread.
-while(true) {
+while true {
 	
 	autoreleasepool {
 		var inputStr = String(data: FileHandle.standardInput.availableData,
