@@ -78,7 +78,7 @@ extension Tester {
 // MARK: Thread
 extension Tester {
 	
-	@objc func threadFunc(_ array: [Any]) {
+	@objc func threadEntry(_ array: [Any]) {
 		autoreleasepool {
 			
 			print("start thread \(Thread.current)")
@@ -93,11 +93,7 @@ extension Tester {
 			
 			while true {
 				autoreleasepool {
-					let array = [UInt8](repeating: UInt8.max, count: repeatCount)
-					var data = Data()
-					for byte in array {
-						data.append(byte)
-					}
+					threadProc(repeatCount)
 					
 					if Thread.current.isCancelled {
 						print("exit thread \(Thread.current)")
@@ -111,9 +107,17 @@ extension Tester {
 		}
 	}
 	
+	func threadProc(_ repeatCount: Int) {
+		let array = [UInt8](repeating: UInt8.max, count: repeatCount)
+		var data = Data()
+		for byte in array {
+			data.append(byte)
+		}
+	}
+	
 	func threadCreate(_ repeatCount: Int, sleepInterval: TimeInterval) {
 		let thread = Thread(target: self,
-							selector: #selector(self.threadFunc),
+							selector: #selector(self.threadEntry),
 							object: [repeatCount, sleepInterval])
 		thread.start()
 		threadMap[Date()] = thread

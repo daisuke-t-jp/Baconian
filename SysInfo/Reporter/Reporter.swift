@@ -115,7 +115,7 @@ extension Reporter {
 		}
 		
 		thread = Thread(target: self,
-						selector: #selector(threadLoop),
+						selector: #selector(threadEntry),
 						object: nil)
 		
 		guard let thread = thread else {
@@ -129,11 +129,11 @@ extension Reporter {
 		// NOP
 	}
 	
-	@objc private func threadLoop() {
+	@objc private func threadEntry() {
 		autoreleasepool {
 			while true {
 				autoreleasepool {
-					threadFunc()
+					threadProc()
 					
 					Thread.sleep(forTimeInterval: Reporter.threadInterval)
 				}
@@ -141,7 +141,7 @@ extension Reporter {
 		}
 	}
 	
-	private func threadFunc() {
+	private func threadProc() {
 		guard state == .run else {
 			return
 		}
