@@ -57,21 +57,26 @@
   - Idle num
 
 ## TODO
-- General
+### General
+  - Swift 5
+  - Framework(iOS)
+### Reporter
+  - Immediate get data
   - High load delegate
     - OS Low memory
     - OS CPU High load
     - Process Memory High
     - Process CPU High load
-  - Documentation comments
-  - Tester(Mac GUI)
-  - Framework(iOS)
-- UI
+### UI
   - Reporter View
-- Demo
+### Tester
+  - Mac GUI
+  - iOS GUI
+### Demo
   - podspec
   - macOS
   - iOS
-- Facility
+### Facility
+  - Documentation comments
   - README
   - jazzy
