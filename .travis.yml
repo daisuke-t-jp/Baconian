@@ -6,7 +6,7 @@ matrix:
   include:
     - os: osx
       language: swift
-      osx_image: xcode10.2
+      osx_image: xcode10
       script:
         # macOS
         - xcodebuild clean -project "SysInfo.xcodeproj" 
