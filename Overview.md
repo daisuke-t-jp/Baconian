@@ -1,7 +1,18 @@
-# Task
+# Overview
 ## Goal
 - App can get system load.
 - User can watch system load on view.
+
+## Platforms
+- [ ] Swift 5
+- [ ] iOS
+- [ ] macOS
+
+## Function
+- [ ] macOS Framework
+- [ ] macOS UI(View)
+- [ ] iOS Framework
+- [ ] iOS UI(View)
 
 ## Load info
 ### Mach Layer
@@ -61,12 +72,6 @@
   - Swift 5
   - Framework(iOS)
 ### Reporter
-  - Immediate get data
-  - High load delegate
-    - OS Low memory
-    - OS CPU High load
-    - Process Memory High
-    - Process CPU High load
 ### UI
   - Reporter View
 ### Tester
@@ -80,3 +85,12 @@
   - Documentation comments
   - README
   - jazzy
+
+## Day2
+### Reporter
+  - Immediate get data
+  - High load delegate
+    - OS Low memory
+    - OS CPU High load
+    - Process Memory High
+    - Process CPU High load
