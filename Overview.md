@@ -4,9 +4,9 @@
 - User can watch system load on view.
 
 ## Platforms
-- [ ] Swift 5
+- [x] Swift 5
+- [] macOS
 - [ ] iOS
-- [ ] macOS
 
 ## Function
 - [ ] macOS Framework
@@ -69,7 +69,6 @@
 
 ## TODO
 ### General
-  - Swift 5
   - Framework(iOS)
 ### Reporter
 ### UI
