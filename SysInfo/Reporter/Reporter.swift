@@ -130,11 +130,13 @@ extension Reporter {
 	}
 	
 	@objc private func threadLoop() {
-		while true {
-			autoreleasepool {
-				threadFunc()
-				
-				Thread.sleep(forTimeInterval: Reporter.threadInterval)
+		autoreleasepool {
+			while true {
+				autoreleasepool {
+					threadFunc()
+					
+					Thread.sleep(forTimeInterval: Reporter.threadInterval)
+				}
 			}
 		}
 	}
