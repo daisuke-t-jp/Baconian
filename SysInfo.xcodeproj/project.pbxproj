@@ -273,10 +273,11 @@
 				TargetAttributes = {
 					026A0464223F35DA00048572 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					026A046D223F35DB00048572 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -286,6 +287,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 026A045B223F35DA00048572;
 			productRefGroup = 026A0466223F35DA00048572 /* Products */;
@@ -526,7 +528,7 @@
 				PRODUCT_NAME = SysInfo;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -552,7 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfo;
 				PRODUCT_NAME = SysInfo;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -570,7 +572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -588,7 +590,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

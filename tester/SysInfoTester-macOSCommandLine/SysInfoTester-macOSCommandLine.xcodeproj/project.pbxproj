@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		020975752244D15A003CE645 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975732244D15A003CE645 /* SysInfoTests.swift */; };
-		020975762244D15A003CE645 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 020975742244D15A003CE645 /* Info.plist */; };
 		023BBF7122409E6600842B33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBF7022409E6600842B33 /* main.swift */; };
 		02ED7A0A2248926600C9AF82 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* Tester.swift */; };
 		02ED7A0B2248926600C9AF82 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* Tester.swift */; };
@@ -52,7 +51,6 @@
 		02ED7A582248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A302248B2CC00C9AF82 /* ReportProcessThread.swift */; };
 		02ED7A592248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */; };
 		02ED7A5A2248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */; };
-		02ED7A5B2248B2CC00C9AF82 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02ED7A322248B2CC00C9AF82 /* Info.plist */; };
 		02ED7A5D2248B3C100C9AF82 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A5C2248B3C100C9AF82 /* CommandLine.swift */; };
 		02ED7A5E2248B3C100C9AF82 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A5C2248B3C100C9AF82 /* CommandLine.swift */; };
 /* End PBXBuildFile section */
@@ -311,10 +309,11 @@
 				TargetAttributes = {
 					02082B202241D95300D4DFC2 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					023BBF6C22409E6600842B33 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -324,6 +323,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 023BBF6422409E6600842B33;
 			productRefGroup = 023BBF6E22409E6600842B33 /* Products */;
@@ -341,8 +341,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02ED7A5B2248B2CC00C9AF82 /* Info.plist in Resources */,
-				020975762244D15A003CE645 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SysInfoTester-macOSCommandLineTests.SysInfoTester-macOSCommandLineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -467,7 +465,7 @@
 				OTHER_SWIFT_FLAGS = "-D SYSINFO_TESTER";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SysInfoTester-macOSCommandLineTests.SysInfoTester-macOSCommandLineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -591,7 +589,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -600,7 +598,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
