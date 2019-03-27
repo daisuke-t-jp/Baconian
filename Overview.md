@@ -5,7 +5,7 @@
 
 ## Platforms
 - [x] Swift 5
-- [] macOS
+- [ ] macOS
 - [ ] iOS
 
 ## Function
@@ -17,32 +17,32 @@
 ## Load info
 ### Mach Layer
 #### Host
-- [x] Virtual Memory(MachHostVMStatics)
+- [x] Virtual Memory(Mach.Host.VMStatics)
   - Free size
   - Active size
   - Inactive size
   - Wire size
-- [x] Physical Memory(MachHostBasicInfo)
+- [x] Physical Memory(Mach.Host.BasicInfo)
   - Physical size
-- [x] CPU(MachHostCPULoadInfo)
+- [x] CPU(Mach.Host.CPULoadInfo)
   - User time
   - System time
   - Idle time
   - Nice time
-- [x] Processors(MachHostProcessorInfo) 
+- [x] Processors(Mach.Host.ProcessorInfo) 
   - CPU load per core
 #### Task
-- [x] Memory(MachTaskBasicInfo)
+- [x] Memory(Mach.Task.BasicInfo)
   - Resident size
-- [x] CPU(MachTaskThreadBasicInfo)
+- [x] CPU(Mach.Task.ThreadBasicInfo)
   - Usage percent
   - Time
-- [x] Thread(MachTaskThreadBasicInfo)
+- [x] Thread(Mach.Task.ThreadBasicInfo)
   - Thread state and num
 
 ### Report Layer
 #### OS
-- [x] Memory(ReportOSMemory)
+- [x] Memory(Report.OS.Memory)
   - Physical size
   - Used size
   - Unused size
@@ -50,19 +50,19 @@
   - Active size
   - Inactive size
   - Wire size
-- [x] CPU(ReportOSCPU)
+- [x] CPU(Report.OS.CPU)
   - User usage percent
   - System usage percent
   - Idle usage percent
-- [x] Processors(ReportOSProcessors)
+- [x] Processors(Report.OS.Processors)
   - CPU load per core
 #### Process
-- [x] Memory(ReportProcessMemory)
+- [x] Memory(Report.Process.Memory)
   - Resident size
-- [x] CPU(ReportProcessCPU)
+- [x] CPU(Report.Process.CPU)
   - Usage percent
   - time
-- [x] Processors(ReportProcessThread)
+- [x] Processors(Report.Process.Thread)
   - Total num
   - Busy num
   - Idle num
@@ -71,10 +71,13 @@
 ### General
   - Framework(iOS)
 ### Reporter
+  - OS version
+  - Device type
 ### UI
-  - Reporter View
+  - Reporter View(mac OS)
+  - Reporter View(iOS)
 ### Tester
-  - Mac GUI
+  - macOS GUI
   - iOS GUI
 ### Demo
   - podspec
