@@ -95,7 +95,6 @@
 		02ED7A2F2248B2CC00C9AF82 /* ReportProcessMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessMemory.swift; sourceTree = "<group>"; };
 		02ED7A302248B2CC00C9AF82 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
 		02ED7A312248B2CC00C9AF82 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
-		02ED7A322248B2CC00C9AF82 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02ED7A5C2248B3C100C9AF82 /* CommandLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,7 +172,6 @@
 				02ED7A282248B2CC00C9AF82 /* Report */,
 				02ED7A182248B2CC00C9AF82 /* Reporter */,
 				02ED7A1C2248B2CC00C9AF82 /* SysInfo.h */,
-				02ED7A322248B2CC00C9AF82 /* Info.plist */,
 			);
 			name = SysInfo;
 			path = ../../SysInfo;
