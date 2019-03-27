@@ -30,6 +30,7 @@
 		026A0476223F35DB00048572 /* SysInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 026A0468223F35DA00048572 /* SysInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		026A04B5223F390A00048572 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A6223F390900048572 /* TimeInterval+SysInfo.swift */; };
 		026A04B6223F390A00048572 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */; };
+		02F6FBFE224B2AA0009A0C30 /* ReporterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FBFD224B2AA0009A0C30 /* ReporterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		026A0475223F35DB00048572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		026A04A6223F390900048572 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
 		026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
+		02F6FBFD224B2AA0009A0C30 /* ReporterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				026A04AA223F390A00048572 /* Mach */,
 				02082B7E224223BA00D4DFC2 /* Report */,
 				02082B8F2242338900D4DFC2 /* Reporter */,
+				02F6FBFC224B2AA0009A0C30 /* View */,
 				026A0468223F35DA00048572 /* SysInfo.h */,
 				026A0469223F35DA00048572 /* Info.plist */,
 			);
@@ -208,6 +211,14 @@
 				02082B662242021600D4DFC2 /* Task */,
 			);
 			path = Mach;
+			sourceTree = "<group>";
+		};
+		02F6FBFC224B2AA0009A0C30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02F6FBFD224B2AA0009A0C30 /* ReporterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 				02082B6D2242021600D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */,
 				02082B8A224223BA00D4DFC2 /* ReportOSMemory.swift in Sources */,
 				02082B89224223BA00D4DFC2 /* ReportOSProcessors.swift in Sources */,
+				02F6FBFE224B2AA0009A0C30 /* ReporterView.swift in Sources */,
 				02082B6A2242021600D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
 				02082B932242338A00D4DFC2 /* ReporterDelegate.swift in Sources */,
 				02082B8C224223BA00D4DFC2 /* ReportProcessMemory.swift in Sources */,
