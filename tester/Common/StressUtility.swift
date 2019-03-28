@@ -31,6 +31,16 @@ extension StressUtility {
 		memoryMap = [Date: [UInt8]]()
 	}
 	
+	public func memorySize() -> UInt64 {
+		var total = UInt64(0)
+		
+		for mem in memoryMap.values {
+			total += UInt64(mem.count)
+		}
+		
+		return total
+	}
+	
 }
 
 
@@ -50,6 +60,10 @@ extension StressUtility {
 			thread.cancel()
 		}
 		threadMap = [Date: Thread]()
+	}
+	
+	public func threadCount() -> Int {
+		return threadMap.count
 	}
 	
 	@objc private func threadEntry(_ array: [Any]) {

@@ -28,6 +28,8 @@ class ViewController: NSViewController {
 	@IBOutlet weak var viewReporter: ReporterView!
 	@IBOutlet weak var segmentedControlReporterOperation: NSSegmentedControl!
 	@IBOutlet weak var segmentedControlReporterFrequency: NSSegmentedControl!
+	@IBOutlet weak var textFieldPressureMemorySize: NSTextField!
+	@IBOutlet weak var textFieldPressureThreadCount: NSTextField!
 	@IBOutlet weak var buttonPressureMemoryAlloc: NSButton!
 	@IBOutlet weak var buttonPressureMemoryDealloc: NSButton!
 	@IBOutlet weak var buttonPressureThreadCreate: NSButton!
@@ -100,20 +102,24 @@ class ViewController: NSViewController {
 	// MARK: Memory
 	@IBAction func buttonPressureMemoryAllocTouchUpInside(_ sender: AnyObject) {
 		stress.memoryAlloc(1024 * 1024 * 32)
+		textFieldPressureMemorySize.stringValue = "Pressure Memory Size: \(stress.memorySize())"
 	}
 	
 	@IBAction func buttonPressureMemoryDeallocTouchUpInside(_ sender: AnyObject) {
 		stress.memoryDealloc()
+		textFieldPressureMemorySize.stringValue = "Pressure Memory Size: \(stress.memorySize())"
 	}
 	
 	
 	// MARK: Thread
 	@IBAction func buttonPressureThreadCreateTouchUpInside(_ sender: AnyObject) {
 		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
+		textFieldPressureThreadCount.stringValue = "Pressure Thread Count: \(stress.threadCount())"
 	}
 	
 	@IBAction func buttonPressureThreadDestroyTouchUpInside(_ sender: AnyObject) {
 		stress.threadDestroy()
+		textFieldPressureThreadCount.stringValue = "Pressure Thread Count: \(stress.threadCount())"
 	}
 	
 }
