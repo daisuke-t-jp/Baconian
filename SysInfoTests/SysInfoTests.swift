@@ -22,7 +22,7 @@ class SysInfoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-	// MARK: - Mach Host
+	// MARK: - Mach.Host
     func testMachHostVMStatics() {
 		let val = Mach.Host.vmStatics()
 		
@@ -31,7 +31,23 @@ class SysInfoTests: XCTestCase {
 			val.inactiveSize == 0 &&
 			val.wireSize == 0)
     }
-
+	
+	func testMachHostBasicInfo() {
+		let val = Mach.Host.basicInfo()
+		
+		XCTAssertFalse(val.maxCPUs == 0 &&
+			val.availCPUs == 0 &&
+			val.memorySize == 0 &&
+			val.cpuType == 0 &&
+			val.cpuSubType == 0 &&
+			val.cpuThreadType == 0 &&
+			val.physicalCPU == 0 &&
+			val.physicalCPUMax == 0 &&
+			val.logicalCPU == 0 &&
+			val.logicalCPUMax == 0 &&
+			val.maxMem == 0)
+	}
+	
 	func testMachHostCPULoadInfo() {
 		let val = Mach.Host.cpuLoadInfo()
 		
@@ -55,7 +71,7 @@ class SysInfoTests: XCTestCase {
 	}
 	
 	
-	// MARK: - Mach Task
+	// MARK: - Mach.Task
 	func testMachTaskBasicInfo() {
 		let val = Mach.Task.basicInfo()
 		
@@ -71,7 +87,7 @@ class SysInfoTests: XCTestCase {
 	}
 	
 	
-	// MARK: - Report OS
+	// MARK: - Report.OS
 	func testReportOSMemory() {
 		let val = Report.OS.memory()
 		
@@ -100,7 +116,7 @@ class SysInfoTests: XCTestCase {
 	}
 	
 	
-	// MARK: - Report Process
+	// MARK: - Report.Process
 	func testReportProcessMemory() {
 		let val = Report.Process.memory()
 		
