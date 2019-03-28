@@ -67,7 +67,9 @@ class ReporterView: NSView, ReporterDelegate {
 extension ReporterView {
 	
 	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
-		updateTextField(data)
+		DispatchQueue.main.async {
+			self.updateTextField(data)
+		}
 	}
 	
 }
