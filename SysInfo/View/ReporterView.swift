@@ -25,10 +25,14 @@ class ReporterView: NSView, ReporterDelegate {
 	
 	
 	// MARK: Property
-	let reporter = Reporter()
+	private let reporter = Reporter()
 	weak public var delegate: ReporterViewDelegate?
 	
-	var textColor = NSColor.white {
+	public var state: Reporter.State {
+		return reporter.state
+	}
+	
+	public var textColor = NSColor.white {
 		didSet {
 			for textField in textFieldArray() {
 				textField.textColor = textColor
@@ -36,13 +40,13 @@ class ReporterView: NSView, ReporterDelegate {
 		}
 	}
 	
-	var backgroundColor = NSColor.black {
+	public var backgroundColor = NSColor.black {
 		didSet {
 			layer?.backgroundColor = backgroundColor.cgColor
 		}
 	}
 	
-	var frequency = Reporter.Frequency.normally {
+	public var frequency = Reporter.Frequency.normally {
 		didSet {
 			reporter.frequency = frequency
 		}
@@ -95,12 +99,12 @@ extension ReporterView {
 // MARK: Operation
 extension ReporterView {
 	
-	func start() {
+	public func start() {
 		reporter.start()
 		reporter.delegate = self
 	}
 	
-	func stop() {
+	public func stop() {
 		reporter.stop()
 		reporter.delegate = nil
 	}
@@ -112,7 +116,7 @@ extension ReporterView {
 // MARK: TextField
 extension ReporterView {
 	
-	func initTextField() {
+	private func initTextField() {
 		textFieldOSHeader.stringValue = "# OS"
 		textFieldOSMemoryMax.stringValue = "- Max Memory: "
 		textFieldOSMemory.stringValue = "- Memory: "
@@ -123,7 +127,7 @@ extension ReporterView {
 		textFieldProcessCPU.stringValue = "- CPU: "
 	}
 	
-	func textFieldArray() -> [NSTextField] {
+	private func textFieldArray() -> [NSTextField] {
 		return [
 			textFieldOSHeader,
 			textFieldOSMemoryMax,
@@ -135,7 +139,7 @@ extension ReporterView {
 		]
 	}
 	
-	func updateTextField(_ data: Reporter.Data) {
+	private func updateTextField(_ data: Reporter.Data) {
 		textFieldOSMemoryMax.stringValue = "Memory Max: \(data.osMemory.physicalSize.memoryByteFormatString)"
 		textFieldOSMemory.stringValue = "Memory: \(data.osMemory.usedSize.memoryByteFormatString)"
 		textFieldOSCPU.stringValue = String(format: "CPU: %.2f%%", 1.0 - data.osCPU.idleUsage)
