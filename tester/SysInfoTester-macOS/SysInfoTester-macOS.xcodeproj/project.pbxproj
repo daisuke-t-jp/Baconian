@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02686DE0224CBE8D00D5C4AD /* ReporterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02686DDF224CBE8D00D5C4AD /* ReporterView.xib */; };
 		02F6FC12224B53E8009A0C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC11224B53E8009A0C30 /* AppDelegate.swift */; };
 		02F6FC14224B53E8009A0C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC13224B53E8009A0C30 /* ViewController.swift */; };
 		02F6FC16224B53EA009A0C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F6FC15224B53EA009A0C30 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02686DDF224CBE8D00D5C4AD /* ReporterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReporterView.xib; sourceTree = "<group>"; };
 		02F6FC0E224B53E8009A0C30 /* SysInfoTester-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SysInfoTester-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F6FC11224B53E8009A0C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F6FC13224B53E8009A0C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				02F6FC49224B5A58009A0C30 /* ReporterView.swift */,
+				02686DDF224CBE8D00D5C4AD /* ReporterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				02F6FC16224B53EA009A0C30 /* Assets.xcassets in Resources */,
 				02F6FC19224B53EA009A0C30 /* Main.storyboard in Resources */,
+				02686DE0224CBE8D00D5C4AD /* ReporterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
