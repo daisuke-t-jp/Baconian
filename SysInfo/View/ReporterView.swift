@@ -9,9 +9,9 @@
 import Foundation
 import Cocoa
 
-// TODO: set delegate
 // TODO: create view
-// TODO: set reporter parameter(e.g. frequency)
+typealias ReporterViewDelegate = ReporterDelegate
+
 class ReporterView: NSView, ReporterDelegate {
 	
 	// MARK: Outlet
@@ -26,15 +26,25 @@ class ReporterView: NSView, ReporterDelegate {
 	
 	// MARK: Property
 	let reporter = Reporter()
+	weak public var delegate: ReporterViewDelegate?
+	
 	var textColor = NSColor.white {
 		didSet {
-			setTextFieldColor(textColor)
+			for textField in textFieldArray() {
+				textField.textColor = textColor
+			}
 		}
 	}
 	
 	var backgroundColor = NSColor.black {
 		didSet {
-			setBackgroundColor(backgroundColor)
+			layer?.backgroundColor = backgroundColor.cgColor
+		}
+	}
+	
+	var frequency = Reporter.Frequency.normally {
+		didSet {
+			reporter.frequency = frequency
 		}
 	}
 	
@@ -53,13 +63,13 @@ class ReporterView: NSView, ReporterDelegate {
 	}
 	
 	func initInternal() {
-		reporter.delegate = self
 		wantsLayer = true
 		
-		setBackgroundColor(backgroundColor)
+		backgroundColor = NSColor.black
+		textColor = NSColor.white
 		initTextField()
-		
 	}
+	
 }
 
 
@@ -69,6 +79,13 @@ extension ReporterView {
 	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
 		DispatchQueue.main.async {
 			self.updateTextField(data)
+			
+			
+			guard let delegate = self.delegate else {
+				return
+			}
+			
+			delegate.reporter(self.reporter, didUpdate: data)
 		}
 	}
 	
@@ -80,31 +97,22 @@ extension ReporterView {
 	
 	func start() {
 		reporter.start()
+		reporter.delegate = self
 	}
 	
 	func stop() {
 		reporter.stop()
+		reporter.delegate = nil
 	}
 	
 }
 
-
-// MARK: View
-extension ReporterView {
-	
-	public func setBackgroundColor(_ color: NSColor) {
-		layer?.backgroundColor = color.cgColor
-	}
-	
-}
 
 
 // MARK: TextField
 extension ReporterView {
 	
 	func initTextField() {
-		setTextFieldColor(textColor)
-		
 		textFieldOSHeader.stringValue = "# OS"
 		textFieldOSMemoryMax.stringValue = "- Max Memory: "
 		textFieldOSMemory.stringValue = "- Memory: "
@@ -113,12 +121,6 @@ extension ReporterView {
 		textFieldProcessHeader.stringValue = "# Process"
 		textFieldProcessMemory.stringValue = "- Memory: "
 		textFieldProcessCPU.stringValue = "- CPU: "
-	}
-	
-	func setTextFieldColor(_ color: NSColor) {
-		for elm in textFieldArray() {
-			elm.textColor = color
-		}
 	}
 	
 	func textFieldArray() -> [NSTextField] {
