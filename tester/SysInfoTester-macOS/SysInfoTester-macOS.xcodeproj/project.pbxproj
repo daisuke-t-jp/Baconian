@@ -32,7 +32,7 @@
 		02F6FC72224B5A58009A0C30 /* ReportProcessMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC5C224B5A58009A0C30 /* ReportProcessMemory.swift */; };
 		02F6FC73224B5A58009A0C30 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC5D224B5A58009A0C30 /* ReportProcessThread.swift */; };
 		02F6FC74224B5A58009A0C30 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC5E224B5A58009A0C30 /* ReportProcessCPU.swift */; };
-		02F6FC78224B5A8C009A0C30 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC77224B5A8C009A0C30 /* Tester.swift */; };
+		02F6FC78224B5A8C009A0C30 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC77224B5A8C009A0C30 /* StressUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +65,7 @@
 		02F6FC5C224B5A58009A0C30 /* ReportProcessMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessMemory.swift; sourceTree = "<group>"; };
 		02F6FC5D224B5A58009A0C30 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
 		02F6FC5E224B5A58009A0C30 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
-		02F6FC77224B5A8C009A0C30 /* Tester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
+		02F6FC77224B5A8C009A0C30 /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +215,7 @@
 		02F6FC76224B5A8C009A0C30 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				02F6FC77224B5A8C009A0C30 /* Tester.swift */,
+				02F6FC77224B5A8C009A0C30 /* StressUtility.swift */,
 			);
 			name = Common;
 			path = ../Common;
@@ -297,7 +297,7 @@
 				02F6FC67224B5A58009A0C30 /* MachHostCPULoadInfo.swift in Sources */,
 				02F6FC12224B53E8009A0C30 /* AppDelegate.swift in Sources */,
 				02F6FC69224B5A58009A0C30 /* MachHostBasicInfo.swift in Sources */,
-				02F6FC78224B5A8C009A0C30 /* Tester.swift in Sources */,
+				02F6FC78224B5A8C009A0C30 /* StressUtility.swift in Sources */,
 				02F6FC68224B5A58009A0C30 /* MachHostVMStatics.swift in Sources */,
 				02F6FC6B224B5A58009A0C30 /* MachTaskBasicInfo.swift in Sources */,
 				02F6FC63224B5A58009A0C30 /* ReporterData.swift in Sources */,

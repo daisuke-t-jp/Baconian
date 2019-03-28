@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		020975752244D15A003CE645 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975732244D15A003CE645 /* SysInfoTests.swift */; };
 		023BBF7122409E6600842B33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBF7022409E6600842B33 /* main.swift */; };
-		02ED7A0A2248926600C9AF82 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* Tester.swift */; };
-		02ED7A0B2248926600C9AF82 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* Tester.swift */; };
+		02ED7A0A2248926600C9AF82 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* StressUtility.swift */; };
+		02ED7A0B2248926600C9AF82 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* StressUtility.swift */; };
 		02ED7A332248B2CC00C9AF82 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */; };
 		02ED7A342248B2CC00C9AF82 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */; };
 		02ED7A352248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A172248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift */; };
@@ -73,7 +73,7 @@
 		020975742244D15A003CE645 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		023BBF6D22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SysInfoTester-macOSCommandLine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		023BBF7022409E6600842B33 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		02ED7A092248926600C9AF82 /* Tester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
+		02ED7A092248926600C9AF82 /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
 		02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
 		02ED7A172248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
 		02ED7A192248B2CC00C9AF82 /* ReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterDelegate.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		02ED7A082248926600C9AF82 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				02ED7A092248926600C9AF82 /* Tester.swift */,
+				02ED7A092248926600C9AF82 /* StressUtility.swift */,
 			);
 			name = Common;
 			path = ../Common;
@@ -376,7 +376,7 @@
 				02ED7A442248B2CC00C9AF82 /* MachHostBasicInfo.swift in Sources */,
 				02ED7A3E2248B2CC00C9AF82 /* MachHostProcessorInfo.swift in Sources */,
 				02ED7A582248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */,
-				02ED7A0B2248926600C9AF82 /* Tester.swift in Sources */,
+				02ED7A0B2248926600C9AF82 /* StressUtility.swift in Sources */,
 				02ED7A5E2248B3C100C9AF82 /* CommandLine.swift in Sources */,
 				02ED7A5A2248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */,
 				02ED7A3A2248B2CC00C9AF82 /* ReporterData.swift in Sources */,
@@ -406,7 +406,7 @@
 				02ED7A432248B2CC00C9AF82 /* MachHostBasicInfo.swift in Sources */,
 				02ED7A3D2248B2CC00C9AF82 /* MachHostProcessorInfo.swift in Sources */,
 				02ED7A572248B2CC00C9AF82 /* ReportProcessThread.swift in Sources */,
-				02ED7A0A2248926600C9AF82 /* Tester.swift in Sources */,
+				02ED7A0A2248926600C9AF82 /* StressUtility.swift in Sources */,
 				02ED7A5D2248B3C100C9AF82 /* CommandLine.swift in Sources */,
 				02ED7A592248B2CC00C9AF82 /* ReportProcessCPU.swift in Sources */,
 				02ED7A392248B2CC00C9AF82 /* ReporterData.swift in Sources */,

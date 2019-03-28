@@ -35,7 +35,7 @@ class ViewController: NSViewController {
 	
 	
 	// MARK: Property
-	let tester = Tester()
+	let stress = StressUtility()
 
 	
 	// MARK: Life cycle
@@ -99,21 +99,21 @@ class ViewController: NSViewController {
 	
 	// MARK: Memory
 	@IBAction func buttonPressureMemoryAllocTouchUpInside(_ sender: AnyObject) {
-		tester.memoryAlloc(1024 * 1024 * 32)
+		stress.memoryAlloc(1024 * 1024 * 32)
 	}
 	
 	@IBAction func buttonPressureMemoryDeallocTouchUpInside(_ sender: AnyObject) {
-		tester.memoryDealloc()
+		stress.memoryDealloc()
 	}
 	
 	
 	// MARK: Thread
 	@IBAction func buttonPressureThreadCreateTouchUpInside(_ sender: AnyObject) {
-		tester.threadCreate(1024 * 32, sleepInterval: 0.01)
+		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
 	}
 	
 	@IBAction func buttonPressureThreadDestroyTouchUpInside(_ sender: AnyObject) {
-		tester.threadDestroy()
+		stress.threadDestroy()
 	}
 	
 }

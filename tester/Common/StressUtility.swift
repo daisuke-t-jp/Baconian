@@ -1,5 +1,5 @@
 //
-//  Tester.swift
+//  StressUtility.swift
 //  SysInfoTester
 //
 //  Created by Daisuke T on 2019/03/25.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Tester {
+class StressUtility {
 	
 	// MARK: Property
 	private var memoryMap = [Date: [UInt8]]()
@@ -21,7 +21,7 @@ class Tester {
 
 
 // MARK: Memory
-extension Tester {
+extension StressUtility {
 	
 	public func memoryAlloc(_ byteSize: Int) {
 		memoryMap[Date()] = [UInt8](repeating: UInt8.max, count: byteSize)
@@ -35,7 +35,7 @@ extension Tester {
 
 
 // MARK: Thread
-extension Tester {
+extension StressUtility {
 	
 	public func threadCreate(_ repeatCount: Int, sleepInterval: TimeInterval) {
 		let thread = Thread(target: self,

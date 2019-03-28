@@ -8,22 +8,25 @@
 
 import Foundation
 
-// Commands:
+// # Commands
+// ## Report
 // -reporter start				start report.
 // -reporter stop				stop report.
 // -reporter delegateEnable		delegate switch to enable.
 // -reporter delegateDisable	delegate switch to disable.
 // -reporter frequency [normally|often|veryoften]	set frequency.
 // -reporter data				show last update data.
-// -test memoryAlloc			allocate test memory.
-// -test memoryDealloc			deallocate test memory.
-// -test threadCreate			create test thread.
-// -test threadDestroy			destroy test thread.
+//
+// ## Stress
+// -stress memoryAlloc			allocate memory.
+// -stress memoryDealloc		deallocate memory.
+// -stress threadCreate			create thread.
+// -stress threadDestroy		destroy thread.
 class CommandLine: ReporterDelegate {
 	
 	// MARk: Enum, Const
 	private static let commandTypeReporter = "-reporter"
-	private static let commandTypeTest = "-test"
+	private static let commandTypeStress = "-stress"
 
 	private static let commandValueReporterStart = "start"
 	private static let commandValueReporterStop = "stop"
@@ -36,15 +39,15 @@ class CommandLine: ReporterDelegate {
 	private static let commandValueReporterFrequencyOften = "often"
 	private static let commandValueReporterFrequencyVeryOften = "veryOften"
 	
-	private static let commandValueTestMemoryAlloc = "memoryAlloc"
-	private static let commandValueTestMemoryDealloc = "memoryDealloc"
-	private static let commandValueTestThreadCreate = "threadCreate"
-	private static let commandValueTestThreadDestroy = "threadDestroy"
+	private static let commandValueStressMemoryAlloc = "memoryAlloc"
+	private static let commandValueStressMemoryDealloc = "memoryDealloc"
+	private static let commandValueStressThreadCreate = "threadCreate"
+	private static let commandValueStressThreadDestroy = "threadDestroy"
 	
 	
 	// MARK: Property
 	private let reporter = Reporter()
-	private let tester = Tester()
+	private let stress = StressUtility()
 	private var data = Reporter.Data()
 
 	init() {
@@ -79,8 +82,8 @@ extension CommandLine {
 		if command == CommandLine.commandTypeReporter.lowercased() {
 			commandReporter(array)
 			return
-		} else if command == CommandLine.commandTypeTest.lowercased() {
-			commandTest(array)
+		} else if command == CommandLine.commandTypeStress.lowercased() {
+			commandStress(array)
 			return
 		}
 	}
@@ -186,44 +189,44 @@ extension CommandLine {
 }
 
 
-// MARK: Command Test
+// MARK: Command Stress
 extension CommandLine {
 	
-	func commandTest(_ array: [String]) {
+	func commandStress(_ array: [String]) {
 		guard array.count >= 2 else {
 			return
 		}
 		
 		let value = array[1].lowercased()
-		if value == CommandLine.commandValueTestMemoryAlloc.lowercased() {
-			commandTestMemoryAlloc()
-		} else if value == CommandLine.commandValueTestMemoryDealloc.lowercased() {
-			commandTestMemoryDealloc()
-		} else if value == CommandLine.commandValueTestThreadCreate.lowercased() {
-			commandTestThreadCreate()
-		} else if value == CommandLine.commandValueTestThreadDestroy.lowercased() {
-			commandTestThreadDestroy()
+		if value == CommandLine.commandValueStressMemoryAlloc.lowercased() {
+			commandStressMemoryAlloc()
+		} else if value == CommandLine.commandValueStressMemoryDealloc.lowercased() {
+			commandStressMemoryDealloc()
+		} else if value == CommandLine.commandValueStressThreadCreate.lowercased() {
+			commandStressThreadCreate()
+		} else if value == CommandLine.commandValueStressThreadDestroy.lowercased() {
+			commandStressThreadDestroy()
 		}
 	}
 	
-	func commandTestMemoryAlloc() {
+	func commandStressMemoryAlloc() {
 		writeStandardOutput("Memory alloc")
-		tester.memoryAlloc(1024 * 1024 * 32)
+		stress.memoryAlloc(1024 * 1024 * 32)
 	}
 
-	func commandTestMemoryDealloc() {
+	func commandStressMemoryDealloc() {
 		writeStandardOutput("Memory dealloc")
-		tester.memoryDealloc()
+		stress.memoryDealloc()
 	}
 	
-	func commandTestThreadCreate() {
+	func commandStressThreadCreate() {
 		writeStandardOutput("Thread create")
-		tester.threadCreate(1024 * 32, sleepInterval: 0.01)
+		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
 	}
 	
-	func commandTestThreadDestroy() {
+	func commandStressThreadDestroy() {
 		writeStandardOutput("Thread destroy")
-		tester.threadDestroy()
+		stress.threadDestroy()
 	}
 	
 }
