@@ -16,17 +16,18 @@ class Tester {
 
 	init() {
 	}
+	
 }
 
 
 // MARK: Memory
 extension Tester {
 	
-	func memoryAlloc(_ byteSize: Int) {
+	public func memoryAlloc(_ byteSize: Int) {
 		memoryMap[Date()] = [UInt8](repeating: UInt8.max, count: byteSize)
 	}
 	
-	func memoryDealloc() {
+	public func memoryDealloc() {
 		memoryMap = [Date: [UInt8]]()
 	}
 	
@@ -36,7 +37,7 @@ extension Tester {
 // MARK: Thread
 extension Tester {
 	
-	func threadCreate(_ repeatCount: Int, sleepInterval: TimeInterval) {
+	public func threadCreate(_ repeatCount: Int, sleepInterval: TimeInterval) {
 		let thread = Thread(target: self,
 							selector: #selector(self.threadEntry),
 							object: [repeatCount, sleepInterval])
@@ -44,7 +45,7 @@ extension Tester {
 		threadMap[Date()] = thread
 	}
 	
-	func threadDestroy() {
+	public func threadDestroy() {
 		for thread in threadMap.values {
 			thread.cancel()
 		}

@@ -154,10 +154,10 @@
 		02F6FC4A224B5A58009A0C30 /* Mach */ = {
 			isa = PBXGroup;
 			children = (
-				02F6FC4B224B5A58009A0C30 /* Host */,
 				02F6FC50224B5A58009A0C30 /* Mach.swift */,
-				02F6FC51224B5A58009A0C30 /* Task */,
 				02F6FC54224B5A58009A0C30 /* MachCPUTick.swift */,
+				02F6FC4B224B5A58009A0C30 /* Host */,
+				02F6FC51224B5A58009A0C30 /* Task */,
 			);
 			path = Mach;
 			sourceTree = "<group>";
@@ -165,10 +165,10 @@
 		02F6FC4B224B5A58009A0C30 /* Host */ = {
 			isa = PBXGroup;
 			children = (
-				02F6FC4C224B5A58009A0C30 /* MachHostProcessorInfo.swift */,
-				02F6FC4D224B5A58009A0C30 /* MachHostCPULoadInfo.swift */,
 				02F6FC4E224B5A58009A0C30 /* MachHostVMStatics.swift */,
 				02F6FC4F224B5A58009A0C30 /* MachHostBasicInfo.swift */,
+				02F6FC4D224B5A58009A0C30 /* MachHostCPULoadInfo.swift */,
+				02F6FC4C224B5A58009A0C30 /* MachHostProcessorInfo.swift */,
 			);
 			path = Host;
 			sourceTree = "<group>";
@@ -195,9 +195,9 @@
 		02F6FC57224B5A58009A0C30 /* OS */ = {
 			isa = PBXGroup;
 			children = (
-				02F6FC58224B5A58009A0C30 /* ReportOSProcessors.swift */,
 				02F6FC59224B5A58009A0C30 /* ReportOSMemory.swift */,
 				02F6FC5A224B5A58009A0C30 /* ReportOSCPU.swift */,
+				02F6FC58224B5A58009A0C30 /* ReportOSProcessors.swift */,
 			);
 			path = OS;
 			sourceTree = "<group>";
@@ -206,8 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				02F6FC5C224B5A58009A0C30 /* ReportProcessMemory.swift */,
-				02F6FC5D224B5A58009A0C30 /* ReportProcessThread.swift */,
 				02F6FC5E224B5A58009A0C30 /* ReportProcessCPU.swift */,
+				02F6FC5D224B5A58009A0C30 /* ReportProcessThread.swift */,
 			);
 			path = Process;
 			sourceTree = "<group>";
