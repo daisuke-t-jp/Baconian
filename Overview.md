@@ -1,6 +1,6 @@
 # Overview
 ## Goal
-- App can get system load.
+- App can get system load and information.
 - User can watch system load on view.
 
 ## Platforms
@@ -67,29 +67,34 @@
   - Busy num
   - Idle num
 
-## TODO
-### General
-  - Framework(iOS)
-### Reporter
-  - OS version
-  - Device type
-### UI
-  - Reporter View(mac OS)
-  - Reporter View(iOS)
-### Tester
+## Tasks
+### v1.0.1 macOS
+#### General
+#### Reporter
+#### UI
+#### Tester
   - macOS GUI
-  - iOS GUI
-### Demo
+#### Demo
   - podspec
   - macOS
-  - iOS
-### Facility
+#### Facility
   - Documentation comments
   - README
   - jazzy
 
-## Day2
-### Reporter
+### v1.0.2 iOS
+#### General
+  - Framework(iOS)
+#### Reporter
+  - OS version
+  - Device type
+#### UI
+  - Reporter View(iOS)
+#### Tester
+  - iOS GUI
+#### Demo
+  - iOS
+#### Reporter
   - Immediate get data
   - High load delegate
     - OS Low memory
