@@ -8,56 +8,14 @@
 
 import Foundation
 
-class Tester: ReporterDelegate {
+class Tester {
 	
 	// MARK: Property
-	private let reporter = Reporter()
-	public private(set) var data = Reporter.Data()
 	private var memoryMap = [Date: [UInt8]]()
 	private var threadMap = [Date: Thread]()
-	
+
 	init() {
-		reporterDelegateEnable()
-		reporterStart()
 	}
-
-}
-
-
-
-// MARK: SysInfo Reporter Delegate
-extension Tester {
-	
-	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
-		self.data = data
-	}
-	
-}
-
-
-// MARK: Reporter
-extension Tester {
-	
-	func reporterStart() {
-		 reporter.start()
-	}
-	
-	func reporterStop() {
-		reporter.stop()
-	}
-	
-	func reporterDelegateEnable() {
-		reporter.delegate = self
-	}
-	
-	func reporterDelegateDisable() {
-		reporter.delegate = nil
-	}
-	
-	func reporterSetFrequency(_ frequency: Reporter.Frequency) {
-		reporter.frequency = frequency
-	}
-	
 }
 
 
@@ -78,7 +36,22 @@ extension Tester {
 // MARK: Thread
 extension Tester {
 	
-	@objc func threadEntry(_ array: [Any]) {
+	func threadCreate(_ repeatCount: Int, sleepInterval: TimeInterval) {
+		let thread = Thread(target: self,
+							selector: #selector(self.threadEntry),
+							object: [repeatCount, sleepInterval])
+		thread.start()
+		threadMap[Date()] = thread
+	}
+	
+	func threadDestroy() {
+		for thread in threadMap.values {
+			thread.cancel()
+		}
+		threadMap = [Date: Thread]()
+	}
+	
+	@objc private func threadEntry(_ array: [Any]) {
 		autoreleasepool {
 			
 			print("start thread \(Thread.current)")
@@ -107,27 +80,12 @@ extension Tester {
 		}
 	}
 	
-	func threadProc(_ repeatCount: Int) {
+	private func threadProc(_ repeatCount: Int) {
 		let array = [UInt8](repeating: UInt8.max, count: repeatCount)
 		var data = Data()
 		for byte in array {
 			data.append(byte)
 		}
-	}
-	
-	func threadCreate(_ repeatCount: Int, sleepInterval: TimeInterval) {
-		let thread = Thread(target: self,
-							selector: #selector(self.threadEntry),
-							object: [repeatCount, sleepInterval])
-		thread.start()
-		threadMap[Date()] = thread
-	}
-	
-	func threadDestroy() {
-		for thread in threadMap.values {
-			thread.cancel()
-		}
-		threadMap = [Date: Thread]()
 	}
 
 }

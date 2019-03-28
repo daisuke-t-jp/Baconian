@@ -19,7 +19,7 @@ import Foundation
 // -test memoryDealloc			deallocate test memory.
 // -test threadCreate			create test thread.
 // -test threadDestroy			destroy test thread.
-class CommandLine {
+class CommandLine: ReporterDelegate {
 	
 	// MARk: Enum, Const
 	private static let commandTypeReporter = "-reporter"
@@ -43,8 +43,29 @@ class CommandLine {
 	
 	
 	// MARK: Property
+	private let reporter = Reporter()
 	private let tester = Tester()
+	private var data = Reporter.Data()
 
+	init() {
+		
+	}
+	
+}
+
+
+// MARK: Reporter Delegate
+extension CommandLine {
+	
+	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
+		self.data = data
+	}
+	
+}
+
+
+// MARK: Run
+extension CommandLine {
 	
 	func run(_ data: Data) {
 		var str = String(data: data, encoding: .utf8) ?? ""
@@ -64,23 +85,31 @@ class CommandLine {
 		}
 	}
 	
+}
+
+
+// MARK: File Handle
+extension CommandLine {
 	
-	// MARK: File Handle
-	func writeStandardOutput(_ str: String) {
+	private func writeStandardOutput(_ str: String) {
 		let handle = FileHandle.standardOutput
 		let data = "\(str)\n".data(using: .utf8) ?? Data()
 		handle.write(data)
 	}
 
-	func writeStandardError(_ str: String) {
+	private func writeStandardError(_ str: String) {
 		let handle = FileHandle.standardError
 		let data = "\(str)\n".data(using: .utf8) ?? Data()
 		handle.write(data)
 	}
 	
+}
+	
 
-	// MARK: Command Report
-	func commandReporter(_ array: [String]) {	// swiftlint:disable:this cyclomatic_complexity
+// MARK: Command Report
+extension CommandLine {
+	
+	private func commandReporter(_ array: [String]) {	// swiftlint:disable:this cyclomatic_complexity
 		guard array.count >= 2 else {
 			return
 		}
@@ -114,49 +143,52 @@ class CommandLine {
 	
 	func commandReporterStart() {
 		writeStandardOutput("Reporter start")
-		tester.reporterStart()
+		reporter.start()
 	}
 	
 	func commandReporterStop() {
 		writeStandardOutput("Reporter stop")
-		tester.reporterStop()
+		reporter.stop()
 	}
 	
 	func commandReporterDelegateEnable() {
 		writeStandardOutput("Delegate enable")
-		tester.reporterDelegateEnable()
+		reporter.delegate = self
 	}
 	
 	func commandReporterDelegateDisable() {
 		writeStandardOutput("Delegate disable")
-		tester.reporterDelegateDisable()
+		reporter.delegate = nil
 	}
 	
 	func commandReporterFrequency(_ frequency: Reporter.Frequency) {
 		writeStandardOutput("Frequency \(frequency)")
-		tester.reporterSetFrequency(frequency)
+		reporter.frequency = frequency
 	}
 	
 	func commandReporterData() {
 		writeStandardOutput("Data")
 		writeStandardOutput("# OS")
 		writeStandardOutput("## Memory")
-		writeStandardOutput(tester.data.osMemory.description)
+		writeStandardOutput(data.osMemory.description)
 		writeStandardOutput("## CPU")
-		writeStandardOutput(tester.data.osCPU.description)
+		writeStandardOutput(data.osCPU.description)
 		writeStandardOutput("## Processors")
-		writeStandardOutput(tester.data.osProcessors.description)
+		writeStandardOutput(data.osProcessors.description)
 		writeStandardOutput("# Process")
 		writeStandardOutput("## Memory")
-		writeStandardOutput(tester.data.processMemory.description)
+		writeStandardOutput(data.processMemory.description)
 		writeStandardOutput("## CPU")
-		writeStandardOutput(tester.data.processCPU.description)
+		writeStandardOutput(data.processCPU.description)
 		writeStandardOutput("## Thread")
-		writeStandardOutput(tester.data.processThread.description)
+		writeStandardOutput(data.processThread.description)
 	}
+}
+
+
+// MARK: Command Test
+extension CommandLine {
 	
-	
-	// MARK: Command Test
 	func commandTest(_ array: [String]) {
 		guard array.count >= 2 else {
 			return
@@ -193,4 +225,5 @@ class CommandLine {
 		writeStandardOutput("Thread destroy")
 		tester.threadDestroy()
 	}
+	
 }
