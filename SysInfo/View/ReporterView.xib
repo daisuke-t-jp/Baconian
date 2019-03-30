@@ -16,19 +16,19 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="230" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="504-qv-GjO">
-                    <rect key="frame" x="3" y="28" width="210" height="17"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="🍎 | 🐏 11.6GB / 16GB | 🤖 100%" id="9b2-jw-duj">
+                    <rect key="frame" x="3" y="28" width="254" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="🍎 | 🐏 11.6GB / 160GB | 🤖 100.00%" id="9b2-jw-duj">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWy-iS-PN5">
-                    <rect key="frame" x="3" y="6" width="169" height="17"/>
+                    <rect key="frame" x="3" y="6" width="254" height="17"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="🍏 | 🐏 500MB | 🤖 100%" id="WlU-tE-fRm">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,11 +38,13 @@
             </subviews>
             <constraints>
                 <constraint firstItem="cWy-iS-PN5" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="0bI-nz-8wb"/>
+                <constraint firstAttribute="trailing" secondItem="504-qv-GjO" secondAttribute="trailing" constant="5" id="7Mw-pe-NUk"/>
                 <constraint firstItem="504-qv-GjO" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="Wuf-DK-Yob"/>
                 <constraint firstItem="cWy-iS-PN5" firstAttribute="top" secondItem="504-qv-GjO" secondAttribute="bottom" constant="5" id="Y3s-Aj-En5"/>
+                <constraint firstAttribute="trailing" secondItem="cWy-iS-PN5" secondAttribute="trailing" constant="5" id="enc-x9-tNv"/>
                 <constraint firstItem="504-qv-GjO" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="5" id="na6-M5-sgA"/>
             </constraints>
-            <point key="canvasLocation" x="62.5" y="83"/>
+            <point key="canvasLocation" x="-55" y="83"/>
         </customView>
     </objects>
 </document>

@@ -148,8 +148,8 @@
 		02F6FC48224B5A58009A0C30 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				02F6FC49224B5A58009A0C30 /* ReporterView.swift */,
 				02686DDF224CBE8D00D5C4AD /* ReporterView.xib */,
+				02F6FC49224B5A58009A0C30 /* ReporterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

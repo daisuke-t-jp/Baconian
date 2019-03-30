@@ -706,12 +706,12 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="SysInfoTester_macOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
+                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="630" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cEN-nP-USp">
-                                <rect key="frame" x="258" y="243" width="74" height="17"/>
+                                <rect key="frame" x="288" y="243" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="N9x-DG-ekr"/>
                                 </constraints>
@@ -722,7 +722,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-Cd-6hN">
-                                <rect key="frame" x="258" y="148" width="74" height="17"/>
+                                <rect key="frame" x="288" y="148" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="l2D-3i-rl9"/>
                                 </constraints>
@@ -733,7 +733,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-CJ-SPx">
-                                <rect key="frame" x="268" y="216" width="74" height="17"/>
+                                <rect key="frame" x="298" y="216" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="4tf-cv-fJv"/>
                                 </constraints>
@@ -744,7 +744,7 @@
                                 </textFieldCell>
                             </textField>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JAQ-Ps-fNI">
-                                <rect key="frame" x="348" y="210" width="162" height="24"/>
+                                <rect key="frame" x="378" y="210" width="162" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="Cua-N9-gsT"/>
                                 </constraints>
@@ -757,7 +757,7 @@
                                 </segmentedCell>
                             </segmentedControl>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p0G-Om-q9d">
-                                <rect key="frame" x="268" y="184" width="74" height="17"/>
+                                <rect key="frame" x="298" y="184" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="8CB-03-ODa"/>
                                 </constraints>
@@ -768,7 +768,7 @@
                                 </textFieldCell>
                             </textField>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zQH-Nl-iTO">
-                                <rect key="frame" x="348" y="178" width="242" height="24"/>
+                                <rect key="frame" x="378" y="178" width="242" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="Wbo-zY-RTb"/>
                                 </constraints>
@@ -782,7 +782,7 @@
                                 </segmentedCell>
                             </segmentedControl>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-s7-hZv">
-                                <rect key="frame" x="268" y="121" width="74" height="17"/>
+                                <rect key="frame" x="298" y="121" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0JV-CS-bSX"/>
                                 </constraints>
@@ -793,7 +793,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5bV-Bv-BRn">
-                                <rect key="frame" x="344" y="110" width="93" height="32"/>
+                                <rect key="frame" x="374" y="110" width="93" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="6rq-d6-X28"/>
                                 </constraints>
@@ -803,7 +803,7 @@
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DQi-YQ-anQ">
-                                <rect key="frame" x="344" y="58" width="93" height="32"/>
+                                <rect key="frame" x="374" y="58" width="93" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="kP9-2D-Rcs"/>
                                 </constraints>
@@ -813,7 +813,7 @@
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-Ai-B3b">
-                                <rect key="frame" x="435" y="58" width="93" height="32"/>
+                                <rect key="frame" x="465" y="58" width="93" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="x3N-Ud-Mpl"/>
                                 </constraints>
@@ -823,7 +823,7 @@
                                 </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-om-S6y">
-                                <rect key="frame" x="348" y="95" width="164" height="17"/>
+                                <rect key="frame" x="378" y="95" width="164" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="lNz-qy-ihB"/>
                                 </constraints>
@@ -834,7 +834,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-uU-ch5">
-                                <rect key="frame" x="268" y="69" width="74" height="17"/>
+                                <rect key="frame" x="298" y="69" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="O6b-Wb-WnY"/>
                                 </constraints>
@@ -845,7 +845,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-Zv-iN1">
-                                <rect key="frame" x="348" y="43" width="164" height="17"/>
+                                <rect key="frame" x="378" y="43" width="164" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="BjL-KK-Sok"/>
                                 </constraints>
@@ -856,7 +856,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="biP-hh-tbf">
-                                <rect key="frame" x="435" y="110" width="93" height="32"/>
+                                <rect key="frame" x="465" y="110" width="93" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="xtT-Vx-muD"/>
                                 </constraints>
@@ -866,10 +866,10 @@
                                 </buttonCell>
                             </button>
                             <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIj-R2-5CL" customClass="ReporterView" customModule="SysInfoTester_macOS" customModuleProvider="target">
-                                <rect key="frame" x="11" y="216" width="200" height="50"/>
+                                <rect key="frame" x="11" y="216" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RuX-CZ-hDA"/>
-                                    <constraint firstAttribute="width" constant="230" id="g4T-sx-T8H"/>
+                                    <constraint firstAttribute="width" constant="260" id="g4T-sx-T8H"/>
                                 </constraints>
                             </customView>
                         </subviews>

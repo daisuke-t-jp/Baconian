@@ -64,6 +64,9 @@ class ViewController: NSViewController {
 		
 		buttonPressureThreadDestroy.target = self
 		buttonPressureThreadDestroy.action = #selector(buttonPressureThreadDestroyTouchUpInside(_:))
+		
+		updatePressureMemorySizeUpdate()
+		updatePressureThreadCountUpdate()
 	}
 	
 	override var representedObject: Any? {
@@ -103,11 +106,15 @@ class ViewController: NSViewController {
 	// MARK: Memory
 	@IBAction func buttonPressureMemoryAllocTouchUpInside(_ sender: AnyObject) {
 		stress.memoryAlloc(1024 * 1024 * 32)
-		textFieldPressureMemorySize.stringValue = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
+		updatePressureMemorySizeUpdate()
 	}
 	
 	@IBAction func buttonPressureMemoryDeallocTouchUpInside(_ sender: AnyObject) {
 		stress.memoryDealloc()
+		updatePressureMemorySizeUpdate()
+	}
+	
+	func updatePressureMemorySizeUpdate() {
 		textFieldPressureMemorySize.stringValue = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
 	}
 	
@@ -115,13 +122,17 @@ class ViewController: NSViewController {
 	// MARK: Thread
 	@IBAction func buttonPressureThreadCreateTouchUpInside(_ sender: AnyObject) {
 		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
-		textFieldPressureThreadCount.stringValue = "Thread Count: \(stress.threadCount())"
+		updatePressureThreadCountUpdate()
 	}
 	
 	@IBAction func buttonPressureThreadDestroyTouchUpInside(_ sender: AnyObject) {
 		stress.threadDestroy()
-		textFieldPressureThreadCount.stringValue = "Thread Count: \(stress.threadCount())"
+		updatePressureThreadCountUpdate()
 	}
 	
+	func updatePressureThreadCountUpdate() {
+		textFieldPressureThreadCount.stringValue = "Thread Count: \(stress.threadCount())"
+	}
+
 }
 

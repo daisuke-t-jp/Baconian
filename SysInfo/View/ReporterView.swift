@@ -34,7 +34,7 @@ class ReporterView: NSView, ReporterDelegate {
 		}
 	}
 	
-	public var backgroundColor = NSColor.gray {
+	public var backgroundColor = NSColor.darkGray {
 		didSet {
 			layer?.backgroundColor = backgroundColor.cgColor
 		}
@@ -76,7 +76,7 @@ class ReporterView: NSView, ReporterDelegate {
 	func initOutlet() {
 		wantsLayer = true
 		
-		backgroundColor = NSColor.gray
+		backgroundColor = NSColor.darkGray
 		textColor = NSColor.white
 		initTextField()
 	}
@@ -133,14 +133,14 @@ extension ReporterView {
 	}
 	
 	private func stringOS(_ data: Reporter.Data) -> String {
-		return String(format: "🍎 | 🐏 %@/%@ | 🤖%.2%%",
+		return String(format: "🍎 | 🐏 %@ / %@ | 🤖%.2f%%",
 					  data.osMemory.usedSize.memoryByteFormatString,
 					  data.osMemory.physicalSize.memoryByteFormatString,
 					  (1.0 - data.osCPU.idleUsage) * 100)
 	}
 	
 	private func stringApp(_ data: Reporter.Data) -> String {
-		return String(format: "🍏 | 🐏 %@ | 🤖%.2%%",
+		return String(format: "🍏 | 🐏 %@ | 🤖%.2f%%",
 					  data.processMemory.residentSize.memoryByteFormatString,
 					  data.processCPU.usage)
 	}
