@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="ReporterView" customModule="SysInfoTester_macOS" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="ReporterCompactView" customModule="SysInfoTester_macOS" customModuleProvider="target">
             <connections>
                 <outlet property="textFieldApp" destination="cWy-iS-PN5" id="kKB-G9-Cag"/>
                 <outlet property="textFieldOS" destination="504-qv-GjO" id="qf4-jX-5db"/>

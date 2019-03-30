@@ -24,7 +24,7 @@ class ViewController: NSViewController {
 
 	
 	// MARK: IBOutlet
-	@IBOutlet var viewReporter: ReporterView!
+	@IBOutlet var viewReporter: ReporterCompactView!
 	
 	@IBOutlet var segmentedControlReporterControl: NSSegmentedControl!
 	@IBOutlet var segmentedControlReporterFrequency: NSSegmentedControl!

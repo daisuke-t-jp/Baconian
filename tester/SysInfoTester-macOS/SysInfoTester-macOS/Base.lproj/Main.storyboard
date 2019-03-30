@@ -706,7 +706,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="SysInfoTester_macOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                    <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="630" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -865,7 +865,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIj-R2-5CL" customClass="ReporterView" customModule="SysInfoTester_macOS" customModuleProvider="target">
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIj-R2-5CL" customClass="ReporterCompactView" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="11" y="216" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RuX-CZ-hDA"/>

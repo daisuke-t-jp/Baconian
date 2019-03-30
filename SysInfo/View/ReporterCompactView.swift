@@ -1,5 +1,5 @@
 //
-//  ReporterView.swift
+//  ReporterCompactView.swift
 //  SysInfo-macOS
 //
 //  Created by Daisuke T on 2019/03/27.
@@ -9,9 +9,9 @@
 import Foundation
 import Cocoa
 
-typealias ReporterViewDelegate = ReporterDelegate
+typealias ReporterCompactViewDelegate = ReporterDelegate
 
-class ReporterView: NSView, ReporterDelegate {
+class ReporterCompactView: NSView, ReporterDelegate {
 	
 	// MARK: Outlet
 	@IBOutlet var viewRoot: NSView!
@@ -21,7 +21,7 @@ class ReporterView: NSView, ReporterDelegate {
 	
 	// MARK: Property
 	private let reporter = Reporter()
-	weak public var delegate: ReporterViewDelegate?
+	weak public var delegate: ReporterCompactViewDelegate?
 	
 	public var state: Reporter.State {
 		return reporter.state
@@ -85,7 +85,7 @@ class ReporterView: NSView, ReporterDelegate {
 
 
 // MARK: SysInfo Reporter Delegate
-extension ReporterView {
+extension ReporterCompactView {
 	
 	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
 		DispatchQueue.main.async {
@@ -104,7 +104,7 @@ extension ReporterView {
 
 
 // MARK: Control
-extension ReporterView {
+extension ReporterCompactView {
 	
 	public func start() {
 		reporter.start()
@@ -120,7 +120,7 @@ extension ReporterView {
 
 
 // MARK: TextField
-extension ReporterView {
+extension ReporterCompactView {
 	
 	private func initTextField() {
 		textFieldOS.stringValue = "🍎 Waiting..."
