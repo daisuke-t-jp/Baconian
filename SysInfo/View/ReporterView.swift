@@ -9,19 +9,14 @@
 import Foundation
 import Cocoa
 
-// TODO: create view
 typealias ReporterViewDelegate = ReporterDelegate
 
 class ReporterView: NSView, ReporterDelegate {
 	
 	// MARK: Outlet
-	@IBOutlet var textFieldOSHeader: NSTextField!
-	@IBOutlet var textFieldOSMemoryMax: NSTextField!
-	@IBOutlet var textFieldOSMemory: NSTextField!
-	@IBOutlet var textFieldOSCPU: NSTextField!
-	@IBOutlet var textFieldProcessHeader: NSTextField!
-	@IBOutlet var textFieldProcessMemory: NSTextField!
-	@IBOutlet var textFieldProcessCPU: NSTextField!
+	@IBOutlet var viewRoot: NSView!
+	@IBOutlet var textFieldOS: NSTextField!
+	@IBOutlet var textFieldApp: NSTextField!
 	
 	
 	// MARK: Property
@@ -34,13 +29,12 @@ class ReporterView: NSView, ReporterDelegate {
 	
 	public var textColor = NSColor.white {
 		didSet {
-			for textField in textFieldArray() {
-				textField.textColor = textColor
-			}
+			textFieldOS.textColor = textColor
+			textFieldApp.textColor = textColor
 		}
 	}
 	
-	public var backgroundColor = NSColor.black {
+	public var backgroundColor = NSColor.gray {
 		didSet {
 			layer?.backgroundColor = backgroundColor.cgColor
 		}
@@ -57,15 +51,24 @@ class ReporterView: NSView, ReporterDelegate {
 	override init(frame frameRect: NSRect) {
 		super.init(frame: frameRect)
 		
-		// TODO:
+		initView()
 	}
 	
 	required init?(coder decoder: NSCoder) {
 		super.init(coder: decoder)
 		
-		guard Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self, topLevelObjects: nil) else {
+		initView()
+	}
+	
+	func initView() {
+		guard Bundle.main.loadNibNamed(String(describing: type(of: self)),
+									   owner: self,
+									   topLevelObjects: nil) else {
 			return
 		}
+		
+		viewRoot.frame = bounds
+		addSubview(viewRoot)
 		
 		initOutlet()
 	}
@@ -73,7 +76,7 @@ class ReporterView: NSView, ReporterDelegate {
 	func initOutlet() {
 		wantsLayer = true
 		
-		backgroundColor = NSColor.black
+		backgroundColor = NSColor.gray
 		textColor = NSColor.white
 		initTextField()
 	}
@@ -116,40 +119,30 @@ extension ReporterView {
 }
 
 
-
 // MARK: TextField
 extension ReporterView {
 	
 	private func initTextField() {
-		textFieldOSHeader.stringValue = "# OS"
-		textFieldOSMemoryMax.stringValue = "- Max Memory: "
-		textFieldOSMemory.stringValue = "- Memory: "
-		textFieldOSCPU.stringValue = "- CPU: "
-		
-		textFieldProcessHeader.stringValue = "# Process"
-		textFieldProcessMemory.stringValue = "- Memory: "
-		textFieldProcessCPU.stringValue = "- CPU: "
-	}
-	
-	private func textFieldArray() -> [NSTextField] {
-		return [
-			textFieldOSHeader,
-			textFieldOSMemoryMax,
-			textFieldOSMemory,
-			textFieldOSCPU,
-			textFieldProcessHeader,
-			textFieldProcessMemory,
-			textFieldProcessCPU,
-		]
+		textFieldOS.stringValue = "🍎 Waiting..."
+		textFieldApp.stringValue = "🍏 Waiting..."
 	}
 	
 	private func updateTextField(_ data: Reporter.Data) {
-		textFieldOSMemoryMax.stringValue = "Memory Max: \(data.osMemory.physicalSize.memoryByteFormatString)"
-		textFieldOSMemory.stringValue = "Memory: \(data.osMemory.usedSize.memoryByteFormatString)"
-		textFieldOSCPU.stringValue = String(format: "CPU: %.2f%%", 1.0 - data.osCPU.idleUsage)
-		
-		textFieldProcessMemory.stringValue = "Memory: \(data.processMemory.residentSize.memoryByteFormatString)"
-		textFieldProcessCPU.stringValue = String(format: "CPU: %.2f%%", 1.0 - data.processCPU.usage)
+		textFieldOS.stringValue = stringOS(data)
+		textFieldApp.stringValue = stringApp(data)
+	}
+	
+	private func stringOS(_ data: Reporter.Data) -> String {
+		return String(format: "🍎 | 🐏 %@/%@ | 🤖%.2%%",
+					  data.osMemory.usedSize.memoryByteFormatString,
+					  data.osMemory.physicalSize.memoryByteFormatString,
+					  (1.0 - data.osCPU.idleUsage) * 100)
+	}
+	
+	private func stringApp(_ data: Reporter.Data) -> String {
+		return String(format: "🍏 | 🐏 %@ | 🤖%.2%%",
+					  data.processMemory.residentSize.memoryByteFormatString,
+					  data.processCPU.usage)
 	}
 	
 }

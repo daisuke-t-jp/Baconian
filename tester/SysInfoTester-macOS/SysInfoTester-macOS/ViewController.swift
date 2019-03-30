@@ -8,7 +8,6 @@
 
 import Cocoa
 
-// TODO: create storyboard
 class ViewController: NSViewController {
 	
 	// MARK: Enum, Const
@@ -104,24 +103,24 @@ class ViewController: NSViewController {
 	// MARK: Memory
 	@IBAction func buttonPressureMemoryAllocTouchUpInside(_ sender: AnyObject) {
 		stress.memoryAlloc(1024 * 1024 * 32)
-		textFieldPressureMemorySize.stringValue = "Pressure Memory Size: \(stress.memorySize())"
+		textFieldPressureMemorySize.stringValue = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
 	}
 	
 	@IBAction func buttonPressureMemoryDeallocTouchUpInside(_ sender: AnyObject) {
 		stress.memoryDealloc()
-		textFieldPressureMemorySize.stringValue = "Pressure Memory Size: \(stress.memorySize())"
+		textFieldPressureMemorySize.stringValue = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
 	}
 	
 	
 	// MARK: Thread
 	@IBAction func buttonPressureThreadCreateTouchUpInside(_ sender: AnyObject) {
 		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
-		textFieldPressureThreadCount.stringValue = "Pressure Thread Count: \(stress.threadCount())"
+		textFieldPressureThreadCount.stringValue = "Thread Count: \(stress.threadCount())"
 	}
 	
 	@IBAction func buttonPressureThreadDestroyTouchUpInside(_ sender: AnyObject) {
 		stress.threadDestroy()
-		textFieldPressureThreadCount.stringValue = "Pressure Thread Count: \(stress.threadCount())"
+		textFieldPressureThreadCount.stringValue = "Thread Count: \(stress.threadCount())"
 	}
 	
 }
