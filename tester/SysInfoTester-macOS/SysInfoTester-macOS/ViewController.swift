@@ -12,7 +12,7 @@ import Cocoa
 class ViewController: NSViewController {
 	
 	// MARK: Enum, Const
-	enum Operation: Int {
+	enum Control: Int {
 		case start = 0
 		case stop = 1
 	}
@@ -27,7 +27,7 @@ class ViewController: NSViewController {
 	// MARK: IBOutlet
 	@IBOutlet weak var viewReporter: ReporterView!
 	
-	@IBOutlet weak var segmentedControlReporterOperation: NSSegmentedControl!
+	@IBOutlet weak var segmentedControlReporterControl: NSSegmentedControl!
 	@IBOutlet weak var segmentedControlReporterFrequency: NSSegmentedControl!
 	
 	@IBOutlet weak var textFieldPressureMemorySize: NSTextField!
@@ -46,9 +46,9 @@ class ViewController: NSViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		segmentedControlReporterOperation.selectedSegment = Operation.stop.rawValue
-		segmentedControlReporterOperation.target = self
-		segmentedControlReporterOperation.action = #selector(segmentedControlReporterOperationValueChanged(_:))
+		segmentedControlReporterControl.selectedSegment = Control.stop.rawValue
+		segmentedControlReporterControl.target = self
+		segmentedControlReporterControl.action = #selector(segmentedControlReporterControlValueChanged(_:))
 		
 		segmentedControlReporterFrequency.selectedSegment = Frequency.normally.rawValue
 		segmentedControlReporterFrequency.target = self
@@ -74,9 +74,9 @@ class ViewController: NSViewController {
 	}
 	
 	
-	// MARK: Operation
-	@IBAction func segmentedControlReporterOperationValueChanged(_ sender: AnyObject) {
-		switch Operation(rawValue: segmentedControlReporterOperation.selectedSegment)! {
+	// MARK: Control
+	@IBAction func segmentedControlReporterControlValueChanged(_ sender: AnyObject) {
+		switch Control(rawValue: segmentedControlReporterControl.selectedSegment)! {
 		case .start:
 			viewReporter.start()
 			

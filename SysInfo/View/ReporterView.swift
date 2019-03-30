@@ -96,7 +96,7 @@ extension ReporterView {
 }
 
 
-// MARK: Operation
+// MARK: Control
 extension ReporterView {
 	
 	public func start() {

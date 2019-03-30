@@ -84,7 +84,7 @@ public class Reporter {
 
 
 
-// MARK: Operation
+// MARK: Control
 extension Reporter {
 	
 	public func start() {
