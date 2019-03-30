@@ -15,13 +15,13 @@ typealias ReporterViewDelegate = ReporterDelegate
 class ReporterView: NSView, ReporterDelegate {
 	
 	// MARK: Outlet
-	@IBOutlet weak var textFieldOSHeader: NSTextField!
-	@IBOutlet weak var textFieldOSMemoryMax: NSTextField!
-	@IBOutlet weak var textFieldOSMemory: NSTextField!
-	@IBOutlet weak var textFieldOSCPU: NSTextField!
-	@IBOutlet weak var textFieldProcessHeader: NSTextField!
-	@IBOutlet weak var textFieldProcessMemory: NSTextField!
-	@IBOutlet weak var textFieldProcessCPU: NSTextField!
+	@IBOutlet var textFieldOSHeader: NSTextField!
+	@IBOutlet var textFieldOSMemoryMax: NSTextField!
+	@IBOutlet var textFieldOSMemory: NSTextField!
+	@IBOutlet var textFieldOSCPU: NSTextField!
+	@IBOutlet var textFieldProcessHeader: NSTextField!
+	@IBOutlet var textFieldProcessMemory: NSTextField!
+	@IBOutlet var textFieldProcessCPU: NSTextField!
 	
 	
 	// MARK: Property
@@ -57,16 +57,20 @@ class ReporterView: NSView, ReporterDelegate {
 	override init(frame frameRect: NSRect) {
 		super.init(frame: frameRect)
 		
-		initInternal()
+		// TODO:
 	}
 	
 	required init?(coder decoder: NSCoder) {
 		super.init(coder: decoder)
 		
-		initInternal()
+		guard Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self, topLevelObjects: nil) else {
+			return
+		}
+		
+		initOutlet()
 	}
 	
-	func initInternal() {
+	func initOutlet() {
 		wantsLayer = true
 		
 		backgroundColor = NSColor.black
