@@ -26,8 +26,10 @@ class ViewController: NSViewController {
 	
 	// MARK: IBOutlet
 	@IBOutlet weak var viewReporter: ReporterView!
+	
 	@IBOutlet weak var segmentedControlReporterOperation: NSSegmentedControl!
 	@IBOutlet weak var segmentedControlReporterFrequency: NSSegmentedControl!
+	
 	@IBOutlet weak var textFieldPressureMemorySize: NSTextField!
 	@IBOutlet weak var textFieldPressureThreadCount: NSTextField!
 	@IBOutlet weak var buttonPressureMemoryAlloc: NSButton!
