@@ -38,6 +38,7 @@ extension Report.Process {
 	
 	static func cpu() -> CPU {
 		let array = Mach.Task.threadBasicInfo()
+		let machBasicInfo = Mach.Host.basicInfo()
 		
 		var usage = Float(0)
 		var time = TimeInterval(0)
@@ -47,11 +48,12 @@ extension Report.Process {
 				continue
 			}
 			
-			usage += (Float(thread.cpuUsage) / Float(TH_USAGE_SCALE)) * 100.0
+			usage += Float(thread.cpuUsage) / Float(TH_USAGE_SCALE)
 			time += thread.userTime
 			time += thread.systemTime
 		}
 		
+		usage /= Float(machBasicInfo.maxCPUs)
 		let res = CPU(usage: usage, time: time)
 		
 		return res

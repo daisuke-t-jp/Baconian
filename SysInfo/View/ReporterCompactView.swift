@@ -142,7 +142,7 @@ extension ReporterCompactView {
 	private func stringApp(_ data: Reporter.Data) -> String {
 		return String(format: "🍏 | 🐏 %@ | 🤖%.2f%%",
 					  data.processMemory.residentSize.memoryByteFormatString,
-					  data.processCPU.usage)
+					  data.processCPU.usage * 100)
 	}
 	
 }
