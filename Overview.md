@@ -77,9 +77,7 @@
   - podspec
   - macOS
 #### Facility
-  - Documentation comments
   - README
-  - jazzy
 
 ### v1.0.2 iOS
 #### General
@@ -101,3 +99,7 @@
     - OS CPU High load
     - Process Memory High
     - Process CPU High load
+
+### Stack
+- Documentation comments
+- jazzy
