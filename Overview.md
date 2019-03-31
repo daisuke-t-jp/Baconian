@@ -5,12 +5,12 @@
 
 ## Platforms
 - [x] Swift 5
-- [ ] macOS
+- [x] macOS
 - [ ] iOS
 
 ## Function
-- [ ] macOS Framework
-- [ ] macOS UI(View)
+- [x] macOS Framework
+- [x] macOS UI(View)
 - [ ] iOS Framework
 - [ ] iOS UI(View)
 
@@ -73,7 +73,6 @@
 #### Reporter
 #### UI
 #### Tester
-  - macOS GUI
 #### Demo
   - podspec
   - macOS
@@ -84,6 +83,7 @@
 
 ### v1.0.2 iOS
 #### General
+  - Uniform CPU unit
   - Framework(iOS)
 #### Reporter
   - OS version
