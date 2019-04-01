@@ -11,12 +11,12 @@ import Foundation
 extension Report.Process {
 	
 	public struct CPU: CustomStringConvertible {
-		let usage: Float
+		let usage: Float	/// 0...1
 		let time: TimeInterval
 		
 		public var description: String {
 			return String(format: "usage: %.2f%%, time: %.2fs",
-						  usage,
+						  usage * 100,
 						  time
 			)
 		}

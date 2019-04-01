@@ -12,13 +12,19 @@ extension Report.OS {
 	
 	public struct Memory: CustomStringConvertible {
 		let physicalSize: UInt64
-		let usedSize: UInt64
-		let unusedSize: UInt64
 		
 		let freeSize: UInt64
 		let activeSize: UInt64
 		let inactiveSize: UInt64
 		let wireSize: UInt64
+		
+		var usedSize: UInt64 {
+			return activeSize + inactiveSize + wireSize
+		}
+		
+		var unusedSize: UInt64 {
+			return physicalSize - usedSize
+		}
 		
 		
 		public var description: String {
@@ -40,8 +46,6 @@ extension Report.OS.Memory {
 	
 	init() {
 		physicalSize = 0
-		usedSize = 0
-		unusedSize = 0
 		
 		freeSize = 0
 		activeSize = 0
@@ -60,8 +64,6 @@ extension Report.OS {
 		
 		let res = Memory(
 			physicalSize: machBasicInfo.maxMem,
-			usedSize: machVMStatics.activeSize + machVMStatics.inactiveSize + machVMStatics.wireSize,
-			unusedSize: machBasicInfo.maxMem - UInt64(machVMStatics.activeSize + machVMStatics.inactiveSize + machVMStatics.wireSize),
 			freeSize: machVMStatics.freeSize,
 			activeSize: machVMStatics.activeSize,
 			inactiveSize: machVMStatics.inactiveSize,

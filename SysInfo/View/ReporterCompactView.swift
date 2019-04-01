@@ -13,6 +13,13 @@ typealias ReporterCompactViewDelegate = ReporterDelegate
 
 class ReporterCompactView: NSView, ReporterDelegate {
 	
+	// MARK: Enum, Const
+	private static let markOS = "🍎"
+	private static let markProcess = "🍏"
+	private static let markMemory = "🐏"	// RAM(U+1F40F)
+	private static let markCPU = "🤖"
+
+	
 	// MARK: Outlet
 	@IBOutlet var viewRoot: NSView!
 	@IBOutlet var textFieldOS: NSTextField!
@@ -51,16 +58,18 @@ class ReporterCompactView: NSView, ReporterDelegate {
 	override init(frame frameRect: NSRect) {
 		super.init(frame: frameRect)
 		
-		initView()
+		initNib()
+		initOutlet()
 	}
 	
 	required init?(coder decoder: NSCoder) {
 		super.init(coder: decoder)
 		
-		initView()
+		initNib()
+		initOutlet()
 	}
 	
-	func initView() {
+	private func initNib() {
 		guard Bundle.main.loadNibNamed(String(describing: type(of: self)),
 									   owner: self,
 									   topLevelObjects: nil) else {
@@ -69,11 +78,9 @@ class ReporterCompactView: NSView, ReporterDelegate {
 		
 		viewRoot.frame = bounds
 		addSubview(viewRoot)
-		
-		initOutlet()
 	}
 	
-	func initOutlet() {
+	private func initOutlet() {
 		wantsLayer = true
 		
 		backgroundColor = NSColor.darkGray
@@ -123,8 +130,8 @@ extension ReporterCompactView {
 extension ReporterCompactView {
 	
 	private func initTextField() {
-		textFieldOS.stringValue = "🍎 Waiting..."
-		textFieldApp.stringValue = "🍏 Waiting..."
+		textFieldOS.stringValue = "\(ReporterCompactView.markOS) Waiting..."
+		textFieldApp.stringValue = "\(ReporterCompactView.markProcess) Waiting..."
 	}
 	
 	private func updateTextField(_ data: Reporter.Data) {
@@ -133,15 +140,21 @@ extension ReporterCompactView {
 	}
 	
 	private func stringOS(_ data: Reporter.Data) -> String {
-		return String(format: "🍎 | 🐏 %@ / %@ | 🤖%.2f%%",
+		return String(format: "%@ | %@ %@ / %@ | %@ %.2f%%",
+					  ReporterCompactView.markOS,
+					  ReporterCompactView.markMemory,
 					  data.osMemory.usedSize.memoryByteFormatString,
 					  data.osMemory.physicalSize.memoryByteFormatString,
-					  (1.0 - data.osCPU.idleUsage) * 100)
+					  ReporterCompactView.markCPU,
+					  data.osCPU.usage * 100)
 	}
 	
 	private func stringApp(_ data: Reporter.Data) -> String {
-		return String(format: "🍏 | 🐏 %@ | 🤖%.2f%%",
+		return String(format: "%@ | %@ %@ | %@ %.2f%%",
+					  ReporterCompactView.markProcess,
+					  ReporterCompactView.markMemory,
 					  data.processMemory.residentSize.memoryByteFormatString,
+					  ReporterCompactView.markCPU,
 					  data.processCPU.usage * 100)
 	}
 	

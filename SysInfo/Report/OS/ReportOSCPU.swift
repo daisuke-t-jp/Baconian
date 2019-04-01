@@ -11,10 +11,15 @@ import Foundation
 extension Report.OS {
 	
 	public struct CPU: CustomStringConvertible {
-		let userUsage: Float
-		let systemUsage: Float
-		let idleUsage: Float
-		let niceUsage: Float
+		let userUsage: Float	/// 0...1
+		let systemUsage: Float	/// 0...1
+		let idleUsage: Float	/// 0...1
+		let niceUsage: Float	/// 0...1
+		
+		/// A usage except idle(0...1)
+		var usage: Float {
+			return 1.0 - idleUsage
+		}
 		
 		public var description: String {
 			return String(format: "user: %.2f%%, system: %.2f%%, idle: %.2f%%, nice: %.2f%%",

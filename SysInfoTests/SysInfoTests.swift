@@ -106,7 +106,8 @@ class SysInfoTests: XCTestCase {
 		XCTAssertFalse(val.userUsage == 0 &&
 			val.systemUsage == 0 &&
 			val.idleUsage == 0 &&
-			val.niceUsage == 0)
+			val.niceUsage == 0 &&
+			val.usage == 0)
 	}
 	
 	func testReportOSProcessors() {
