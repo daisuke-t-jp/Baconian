@@ -25,7 +25,11 @@ class ViewController: NSViewController {
 	
 	// MARK: IBOutlet
 	@IBOutlet var viewReporter: ReporterCompactView!
+	var viewReporterProgrammatically: ReporterCompactView!
 	
+	@IBOutlet var textFieldViewStoryboard: NSTextField!
+	@IBOutlet var textFieldViewPragrammatically: NSTextField!
+
 	@IBOutlet var segmentedControlReporterControl: NSSegmentedControl!
 	@IBOutlet var segmentedControlReporterFrequency: NSSegmentedControl!
 	
@@ -44,6 +48,14 @@ class ViewController: NSViewController {
 	// MARK: Life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		viewReporterProgrammatically = ReporterCompactView(frame: NSRect(x: 0,
+																		 y: 0,
+																		 width: ReporterCompactView.xibWidth,
+																		 height: ReporterCompactView.xibHeight))
+		viewReporterProgrammatically.backgroundColor = .darkGray
+		self.view.addSubview(viewReporterProgrammatically)
+		
 		
 		segmentedControlReporterControl.selectedSegment = Control.stop.rawValue
 		segmentedControlReporterControl.target = self
@@ -69,6 +81,13 @@ class ViewController: NSViewController {
 		updatePressureThreadCountUpdate()
 	}
 	
+	override func viewDidLayout() {
+		super.viewDidLayout()
+		
+		viewReporterProgrammatically.frame.origin.x = viewReporter.frame.origin.x
+		viewReporterProgrammatically.frame.origin.y = textFieldViewPragrammatically.frame.origin.y - 10 - viewReporterProgrammatically.frame.height
+	}
+	
 	override var representedObject: Any? {
 		didSet {
 		// Update the view, if already loaded.
@@ -81,9 +100,11 @@ class ViewController: NSViewController {
 		switch Control(rawValue: segmentedControlReporterControl.selectedSegment)! {
 		case .start:
 			viewReporter.start()
+			viewReporterProgrammatically.start()
 			
 		case .stop:
 			viewReporter.stop()
+			viewReporterProgrammatically.stop()
 		}
 	}
 	
@@ -93,12 +114,15 @@ class ViewController: NSViewController {
 		switch Frequency(rawValue: segmentedControlReporterFrequency.selectedSegment)! {
 		case .normally:
 			viewReporter.frequency = .normally
+			viewReporterProgrammatically.frequency = .normally
 			
 		case .often:
 			viewReporter.frequency = .often
-			
+			viewReporterProgrammatically.frequency = .often
+
 		case .veryOften:
 			viewReporter.frequency = .veryOften
+			viewReporterProgrammatically.frequency = .veryOften
 		}
 	}
 	

@@ -18,7 +18,9 @@ class ReporterCompactView: NSView, ReporterDelegate {
 	private static let markProcess = "🍏"
 	private static let markMemory = "🐏"	// RAM(U+1F40F)
 	private static let markCPU = "🤖"
-
+	public static let xibWidth = CGFloat(260)
+	public static let xibHeight = CGFloat(50)
+	
 	
 	// MARK: Outlet
 	@IBOutlet var viewRoot: NSView!
@@ -41,7 +43,7 @@ class ReporterCompactView: NSView, ReporterDelegate {
 		}
 	}
 	
-	public var backgroundColor = NSColor.darkGray {
+	public var backgroundColor = NSColor.black {
 		didSet {
 			layer?.backgroundColor = backgroundColor.cgColor
 		}
@@ -76,14 +78,13 @@ class ReporterCompactView: NSView, ReporterDelegate {
 			return
 		}
 		
-		viewRoot.frame = bounds
 		addSubview(viewRoot)
 	}
 	
 	private func initOutlet() {
 		wantsLayer = true
 		
-		backgroundColor = NSColor.darkGray
+		backgroundColor = NSColor.black
 		textColor = NSColor.white
 		initTextField()
 	}

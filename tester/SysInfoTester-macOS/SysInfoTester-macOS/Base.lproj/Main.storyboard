@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="SysInfoTester_macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="630" height="336"/>
+                        <rect key="frame" x="0.0" y="0.0" width="670" height="336"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cEN-nP-USp">
-                                <rect key="frame" x="288" y="309" width="74" height="17"/>
+                                <rect key="frame" x="288" y="309" width="114" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="N9x-DG-ekr"/>
                                 </constraints>
@@ -722,7 +722,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-Cd-6hN">
-                                <rect key="frame" x="288" y="214" width="74" height="17"/>
+                                <rect key="frame" x="288" y="214" width="114" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="l2D-3i-rl9"/>
                                 </constraints>
@@ -855,8 +855,19 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-TI-ypZ">
+                                <rect key="frame" x="8" y="309" width="164" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Dnq-gq-cgh"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Storyboard View" id="OAF-qG-iLX">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZIj-R2-5CL" customClass="ReporterCompactView" customModule="SysInfoTester_macOS" customModuleProvider="target">
-                                <rect key="frame" x="10" y="276" width="260" height="50"/>
+                                <rect key="frame" x="10" y="249" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RuX-CZ-hDA"/>
                                     <constraint firstAttribute="width" constant="260" id="g4T-sx-T8H"/>
@@ -872,6 +883,17 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-um-Y4Q">
+                                <rect key="frame" x="8" y="212" width="164" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Zi9-4Y-1UP"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Pragrammatically View" id="C3G-cp-SMq">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="uB2-Zv-iN1" firstAttribute="leading" secondItem="O4c-uU-ch5" secondAttribute="trailing" constant="10" id="0Yb-6Y-5fi"/>
@@ -880,14 +902,15 @@
                             <constraint firstItem="yQY-s7-hZv" firstAttribute="leading" secondItem="ZIj-R2-5CL" secondAttribute="trailing" constant="30" id="8PI-2u-rVJ"/>
                             <constraint firstItem="2jy-CJ-SPx" firstAttribute="top" secondItem="cEN-nP-USp" secondAttribute="bottom" constant="10" id="8xL-XQ-xEu"/>
                             <constraint firstItem="zQH-Nl-iTO" firstAttribute="top" secondItem="p0G-Om-q9d" secondAttribute="top" id="9N2-kz-bu8"/>
+                            <constraint firstItem="ZIj-R2-5CL" firstAttribute="top" secondItem="NOw-TI-ypZ" secondAttribute="bottom" constant="10" id="AiV-vD-ygj"/>
                             <constraint firstItem="biP-hh-tbf" firstAttribute="top" secondItem="5bV-Bv-BRn" secondAttribute="bottom" constant="10" id="DCI-ln-hFQ"/>
                             <constraint firstItem="p0G-Om-q9d" firstAttribute="top" secondItem="2jy-CJ-SPx" secondAttribute="bottom" constant="15" id="Dpa-4n-xXk"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DQi-YQ-anQ" secondAttribute="trailing" constant="160" id="F8q-KU-NNk"/>
                             <constraint firstItem="2jy-CJ-SPx" firstAttribute="leading" secondItem="ZIj-R2-5CL" secondAttribute="trailing" constant="30" id="GoG-qV-WDp"/>
                             <constraint firstItem="zQH-Nl-iTO" firstAttribute="leading" secondItem="p0G-Om-q9d" secondAttribute="trailing" constant="10" id="Ib2-gR-OPJ"/>
-                            <constraint firstItem="ZIj-R2-5CL" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="JES-ts-xLw"/>
                             <constraint firstItem="O4c-uU-ch5" firstAttribute="leading" secondItem="yQY-s7-hZv" secondAttribute="leading" id="JcK-eS-DlU"/>
                             <constraint firstItem="zcT-Ai-B3b" firstAttribute="top" secondItem="DQi-YQ-anQ" secondAttribute="bottom" constant="10" id="KjD-lt-zCM"/>
+                            <constraint firstItem="Iqf-um-Y4Q" firstAttribute="top" secondItem="ZIj-R2-5CL" secondAttribute="bottom" constant="20" id="MHP-b3-yF0"/>
                             <constraint firstItem="ZIj-R2-5CL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="MSC-W7-w73"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uB2-Zv-iN1" secondAttribute="trailing" constant="90" id="NCi-XM-aSa"/>
                             <constraint firstItem="zcT-Ai-B3b" firstAttribute="leading" secondItem="DQi-YQ-anQ" secondAttribute="leading" id="PGG-Xz-rRN"/>
@@ -899,9 +922,14 @@
                             <constraint firstItem="JAQ-Ps-fNI" firstAttribute="top" secondItem="2jy-CJ-SPx" secondAttribute="top" id="RMb-31-zKI"/>
                             <constraint firstItem="O4c-uU-ch5" firstAttribute="top" secondItem="yQY-s7-hZv" secondAttribute="bottom" constant="80" id="Rnt-YF-Qpy"/>
                             <constraint firstAttribute="trailing" secondItem="cEN-nP-USp" secondAttribute="trailing" constant="270" id="Stk-40-Fcv"/>
+                            <constraint firstItem="mm5-Cd-6hN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iqf-um-Y4Q" secondAttribute="trailing" constant="100" id="UaH-J3-W4Q"/>
                             <constraint firstItem="JAQ-Ps-fNI" firstAttribute="leading" secondItem="2jy-CJ-SPx" secondAttribute="trailing" constant="10" id="YoG-SO-vyb"/>
+                            <constraint firstItem="Iqf-um-Y4Q" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="c9x-aT-vMh"/>
+                            <constraint firstItem="NOw-TI-ypZ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="cXF-yC-KXW"/>
                             <constraint firstItem="biP-hh-tbf" firstAttribute="leading" secondItem="NwR-om-S6y" secondAttribute="leading" id="d0S-cw-2K8"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zcT-Ai-B3b" secondAttribute="trailing" constant="160" id="d9L-G5-jDQ"/>
+                            <constraint firstItem="cEN-nP-USp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NOw-TI-ypZ" secondAttribute="trailing" constant="100" id="fw7-UP-TAh"/>
+                            <constraint firstItem="NOw-TI-ypZ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="gHe-LZ-pf1"/>
                             <constraint firstItem="mm5-Cd-6hN" firstAttribute="top" secondItem="zQH-Nl-iTO" secondAttribute="bottom" constant="15" id="iVW-uI-C4y"/>
                             <constraint firstItem="DQi-YQ-anQ" firstAttribute="top" secondItem="uB2-Zv-iN1" secondAttribute="bottom" constant="10" id="laR-wx-eYE"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5bV-Bv-BRn" secondAttribute="trailing" constant="160" id="q27-G5-aFd"/>
@@ -923,6 +951,8 @@
                         <outlet property="segmentedControlReporterFrequency" destination="zQH-Nl-iTO" id="pbN-33-hv1"/>
                         <outlet property="textFieldPressureMemorySize" destination="NwR-om-S6y" id="VnB-gO-ScQ"/>
                         <outlet property="textFieldPressureThreadCount" destination="uB2-Zv-iN1" id="Khe-Io-eO7"/>
+                        <outlet property="textFieldViewPragrammatically" destination="Iqf-um-Y4Q" id="kN8-0K-A4p"/>
+                        <outlet property="textFieldViewStoryboard" destination="NOw-TI-ypZ" id="0gv-CV-EIM"/>
                         <outlet property="viewReporter" destination="ZIj-R2-5CL" id="54n-OB-LMX"/>
                     </connections>
                 </viewController>
