@@ -68,38 +68,26 @@
   - Idle num
 
 ## Tasks
-### v1.0.1 macOS
-#### General
-#### Reporter
-#### UI
-#### Tester
-#### Demo
-  - podspec
-  - macOS
-#### Facility
-  - README
-
-### v1.0.2 iOS
-#### General
-  - Uniform CPU unit
+### General
   - Framework(iOS)
-#### Reporter
+### Reporter
   - OS version
   - Device type
-#### UI
+### UI
   - Reporter View(iOS)
-#### Tester
+### Tester
   - iOS GUI
-#### Demo
-  - iOS
-#### Reporter
+### Demo
+  - podspec
+  - macOS
+### Reporter
   - Immediate get data
   - High load delegate
     - OS Low memory
     - OS CPU High load
     - Process Memory High
     - Process CPU High load
-
-### Stack
+### Facillity
+- README
 - Documentation comments
 - jazzy
