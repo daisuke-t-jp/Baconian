@@ -53,7 +53,7 @@ extension Report.Process {
 			time += thread.systemTime
 		}
 		
-		usage /= Float(machBasicInfo.maxCPUs)
+		usage /= Float(machBasicInfo.maxCPUs == 0 ? 1 : machBasicInfo.maxCPUs)
 		let res = CPU(usage: usage, time: time)
 		
 		return res
