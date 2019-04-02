@@ -23,9 +23,9 @@ class ReporterCompactView: NSView, ReporterDelegate {
 	
 	
 	// MARK: Outlet
-	@IBOutlet var viewRoot: NSView!
-	@IBOutlet var textFieldOS: NSTextField!
-	@IBOutlet var textFieldApp: NSTextField!
+	@IBOutlet weak var viewRoot: NSView!
+	@IBOutlet weak var textFieldOS: NSTextField!
+	@IBOutlet weak var textFieldApp: NSTextField!
 	
 	
 	// MARK: Property
@@ -86,6 +86,7 @@ class ReporterCompactView: NSView, ReporterDelegate {
 		
 		backgroundColor = NSColor.black
 		textColor = NSColor.white
+		
 		initTextField()
 	}
 	
