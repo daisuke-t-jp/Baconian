@@ -27,8 +27,8 @@ class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	
 	// MARK: Outlet
 	@IBOutlet weak var viewRoot: CrossPlatformView!
-	@IBOutlet weak var textFieldOS: NSTextField!
-	@IBOutlet weak var textFieldApp: NSTextField!
+	@IBOutlet weak var labelOS: CrossPlatformLabel!
+	@IBOutlet weak var labelApp: CrossPlatformLabel!
 	
 	
 	// MARK: Property
@@ -41,8 +41,8 @@ class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	
 	public var textColor: CrossPlatformColor? {
 		didSet {
-			textFieldOS.textColor = textColor
-			textFieldApp.textColor = textColor
+			labelOS.textColor = textColor
+			labelApp.textColor = textColor
 		}
 	}
 	
@@ -147,13 +147,13 @@ extension ReporterCompactView {
 extension ReporterCompactView {
 	
 	private func initTextField() {
-		textFieldOS.stringValue = "\(ReporterCompactView.markOS) Waiting..."
-		textFieldApp.stringValue = "\(ReporterCompactView.markProcess) Waiting..."
+		labelOS.text = "\(ReporterCompactView.markOS) Waiting..."
+		labelApp.text = "\(ReporterCompactView.markProcess) Waiting..."
 	}
 	
 	private func updateTextField(_ data: Reporter.Data) {
-		textFieldOS.stringValue = stringOS(data)
-		textFieldApp.stringValue = stringApp(data)
+		labelOS.text = stringOS(data)
+		labelApp.text = stringApp(data)
 	}
 	
 	private func stringOS(_ data: Reporter.Data) -> String {
