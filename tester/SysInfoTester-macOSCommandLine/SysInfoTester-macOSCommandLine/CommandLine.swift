@@ -1,9 +1,9 @@
 //
 //  CommandLine.swift
-//  SysInfoTester-macOSCommandLine
+//  SysInfo
 //
 //  Created by Daisuke T on 2019/03/25.
-//  Copyright © 2019 SysInfoTester-macOSCommandLine. All rights reserved.
+//  Copyright © 2019 SysInfo. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  SysInfoTester-iOS
+//  SysInfo
 //
 //  Created by Daisuke T on 2019/04/02.
-//  Copyright © 2019 SysInfoTester-iOS. All rights reserved.
+//  Copyright © 2019 SysInfo. All rights reserved.
 //
 
 import UIKit

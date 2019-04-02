@@ -167,11 +167,11 @@
 		02ED7A142248B2CC00C9AF82 /* SysInfo */ = {
 			isa = PBXGroup;
 			children = (
+				02ED7A1C2248B2CC00C9AF82 /* SysInfo.h */,
 				02ED7A152248B2CC00C9AF82 /* Extension */,
 				02ED7A1D2248B2CC00C9AF82 /* Mach */,
 				02ED7A282248B2CC00C9AF82 /* Report */,
 				02ED7A182248B2CC00C9AF82 /* Reporter */,
-				02ED7A1C2248B2CC00C9AF82 /* SysInfo.h */,
 			);
 			name = SysInfo;
 			path = ../../SysInfo;
