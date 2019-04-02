@@ -36,6 +36,7 @@
 		7EA2900322538DD000FDBBB3 /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2900122538DD000FDBBB3 /* ReporterCompactView.xib */; };
 		7EA2900C2253910500FDBBB3 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2900B2253910500FDBBB3 /* CrossPlatform.swift */; };
 		7EA2900E2253F84900FDBBB3 /* CrossPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2900D2253F84900FDBBB3 /* CrossPlatformView.swift */; };
+		7EA290502254030200FDBBB3 /* CrossPlatformLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2904F2254030200FDBBB3 /* CrossPlatformLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		7EA2900122538DD000FDBBB3 /* ReporterCompactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReporterCompactView.xib; sourceTree = "<group>"; };
 		7EA2900B2253910500FDBBB3 /* CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
 		7EA2900D2253F84900FDBBB3 /* CrossPlatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatformView.swift; sourceTree = "<group>"; };
+		7EA2904F2254030200FDBBB3 /* CrossPlatformLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 			children = (
 				7EA2900B2253910500FDBBB3 /* CrossPlatform.swift */,
 				7EA2900D2253F84900FDBBB3 /* CrossPlatformView.swift */,
+				7EA2904F2254030200FDBBB3 /* CrossPlatformLabel.swift */,
 			);
 			path = CrossPlatform;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				02F6FC61224B5A58009A0C30 /* FixedWidthInteger+SysInfo.swift in Sources */,
 				02F6FC60224B5A58009A0C30 /* TimeInterval+SysInfo.swift in Sources */,
 				02F6FC66224B5A58009A0C30 /* MachHostProcessorInfo.swift in Sources */,
+				7EA290502254030200FDBBB3 /* CrossPlatformLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

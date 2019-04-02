@@ -9,12 +9,12 @@
 #if os(iOS)
 import UIKit
 
-typealias CrossPlatformView = UIView
+public typealias CrossPlatformView = UIView
 
 #elseif os(macOS)
 import AppKit
 
-class CrossPlatformView: NSView {
+open class CrossPlatformView: NSView {
 	open var backgroundColor: CrossPlatformColor? {
 		get {
 			if !wantsLayer {
