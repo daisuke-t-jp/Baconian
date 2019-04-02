@@ -75,6 +75,19 @@ class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 extension ReporterCompactView {
 
 	private func initNib() {
+		#if os(iOS)
+		guard let nibs = Bundle.main.loadNibNamed(String(describing: type(of: self)),
+													 owner: self,
+													 options: nil) else {
+														return
+		}
+		
+		guard let nibView = nibs.first as? CrossPlatformView else {
+			return
+		}
+		
+		addSubview(nibView)
+		#elseif os(macOS)
 		guard Bundle.main.loadNibNamed(String(describing: type(of: self)),
 									   owner: self,
 									   topLevelObjects: nil) else {
@@ -82,6 +95,7 @@ extension ReporterCompactView {
 		}
 		
 		addSubview(viewRoot)
+		#endif
 	}
 	
 	private func initOutlet() {
