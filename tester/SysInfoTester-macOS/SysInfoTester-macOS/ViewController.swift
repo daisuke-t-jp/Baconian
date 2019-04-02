@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, ReporterCompactViewDelegate {
 	
 	// MARK: Enum, Const
 	enum Control: Int {
@@ -49,6 +49,7 @@ class ViewController: NSViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		viewReporter.delegate = self
 		viewReporterProgrammatically = ReporterCompactView(frame: NSRect(x: 0,
 																		 y: 0,
 																		 width: ReporterCompactView.xibWidth,
@@ -92,6 +93,12 @@ class ViewController: NSViewController {
 		didSet {
 		// Update the view, if already loaded.
 		}
+	}
+	
+	
+	// MARK: ReporterCompactViewDelegate
+	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
+		print("data -> \(data)")
 	}
 	
 	
