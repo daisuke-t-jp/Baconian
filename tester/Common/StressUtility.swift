@@ -1,9 +1,9 @@
 //
 //  StressUtility.swift
-//  SysInfoTester
+//  SysInfo
 //
 //  Created by Daisuke T on 2019/03/25.
-//  Copyright © 2019 SysInfoTester. All rights reserved.
+//  Copyright © 2019 SysInfo. All rights reserved.
 //
 
 import Foundation
