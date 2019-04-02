@@ -9,11 +9,11 @@
 #if os(iOS)
 import UIKit
 
-typealias CrossPlatformRect = NSRect
+typealias CrossPlatformRect = CGRect
 typealias CrossPlatformColor = UIColor
 #elseif os(macOS)
 import AppKit
 
-typealias CrossPlatformRect = CGRect
+typealias CrossPlatformRect = NSRect
 typealias CrossPlatformColor = NSColor
 #endif
