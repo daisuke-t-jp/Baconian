@@ -50,10 +50,10 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 		super.viewDidLoad()
 		
 		viewReporter.delegate = self
-		viewReporterProgrammatically = ReporterCompactView(frame: NSRect(x: 0,
-																		 y: 0,
-																		 width: ReporterCompactView.xibWidth,
-																		 height: ReporterCompactView.xibHeight))
+		viewReporterProgrammatically = ReporterCompactView(frame: CrossPlatformRect(x: 0,
+																					y: 0,
+																					width: ReporterCompactView.xibWidth,
+																					height: ReporterCompactView.xibHeight))
 		viewReporterProgrammatically.backgroundColor = .darkGray
 		self.view.addSubview(viewReporterProgrammatically)
 		

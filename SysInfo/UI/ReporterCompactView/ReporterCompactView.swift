@@ -36,14 +36,14 @@ class ReporterCompactView: NSView, ReporterDelegate {
 		return reporter.state
 	}
 	
-	public var textColor = NSColor.white {
+	public var textColor = CrossPlatformColor.white {
 		didSet {
 			textFieldOS.textColor = textColor
 			textFieldApp.textColor = textColor
 		}
 	}
 	
-	public var backgroundColor = NSColor.black {
+	public var backgroundColor = CrossPlatformColor.black {
 		didSet {
 			layer?.backgroundColor = backgroundColor.cgColor
 		}
@@ -57,7 +57,7 @@ class ReporterCompactView: NSView, ReporterDelegate {
 	
 	
 	// MARK: Initialize
-	override init(frame frameRect: NSRect) {
+	override init(frame frameRect: CrossPlatformRect) {
 		super.init(frame: frameRect)
 		
 		initNib()
@@ -84,8 +84,8 @@ class ReporterCompactView: NSView, ReporterDelegate {
 	private func initOutlet() {
 		wantsLayer = true
 		
-		backgroundColor = NSColor.black
-		textColor = NSColor.white
+		backgroundColor = CrossPlatformColor.black
+		textColor = CrossPlatformColor.white
 		
 		initTextField()
 	}
