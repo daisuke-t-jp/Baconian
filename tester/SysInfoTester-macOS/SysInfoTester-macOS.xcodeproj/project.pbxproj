@@ -34,6 +34,7 @@
 		02F6FC78224B5A8C009A0C30 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC77224B5A8C009A0C30 /* StressUtility.swift */; };
 		7EA2900222538DD000FDBBB3 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2900022538DD000FDBBB3 /* ReporterCompactView.swift */; };
 		7EA2900322538DD000FDBBB3 /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2900122538DD000FDBBB3 /* ReporterCompactView.xib */; };
+		7EA2900C2253910500FDBBB3 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2900B2253910500FDBBB3 /* CrossPlatform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		02F6FC77224B5A8C009A0C30 /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
 		7EA2900022538DD000FDBBB3 /* ReporterCompactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterCompactView.swift; sourceTree = "<group>"; };
 		7EA2900122538DD000FDBBB3 /* ReporterCompactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReporterCompactView.xib; sourceTree = "<group>"; };
+		7EA2900B2253910500FDBBB3 /* CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 		7EA28FFE22538DD000FDBBB3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7EA2900422538E0C00FDBBB3 /* CrossPlatform */,
 				7EA28FFF22538DD000FDBBB3 /* ReporterCompactView */,
 			);
 			path = UI;
@@ -230,6 +233,14 @@
 				7EA2900022538DD000FDBBB3 /* ReporterCompactView.swift */,
 			);
 			path = ReporterCompactView;
+			sourceTree = "<group>";
+		};
+		7EA2900422538E0C00FDBBB3 /* CrossPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				7EA2900B2253910500FDBBB3 /* CrossPlatform.swift */,
+			);
+			path = CrossPlatform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +346,7 @@
 				02F6FC6B224B5A58009A0C30 /* MachTaskBasicInfo.swift in Sources */,
 				7EA2900222538DD000FDBBB3 /* ReporterCompactView.swift in Sources */,
 				02F6FC63224B5A58009A0C30 /* ReporterData.swift in Sources */,
+				7EA2900C2253910500FDBBB3 /* CrossPlatform.swift in Sources */,
 				02F6FC6D224B5A58009A0C30 /* MachCPUTick.swift in Sources */,
 				02F6FC71224B5A58009A0C30 /* ReportOSCPU.swift in Sources */,
 				02F6FC6C224B5A58009A0C30 /* MachTaskThreadBasicInfo.swift in Sources */,
