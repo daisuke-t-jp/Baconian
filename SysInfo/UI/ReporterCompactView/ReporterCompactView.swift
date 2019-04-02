@@ -6,12 +6,15 @@
 //  Copyright © 2019 SysInfo. All rights reserved.
 //
 
-import Foundation
-import Cocoa
+#if os(iOS)
+import UIKit
+#elseif os(macOS)
+import AppKit
+#endif
 
 typealias ReporterCompactViewDelegate = ReporterDelegate
 
-class ReporterCompactView: NSView, ReporterDelegate {
+class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	
 	// MARK: Enum, Const
 	private static let markOS = "🍎"
@@ -23,7 +26,7 @@ class ReporterCompactView: NSView, ReporterDelegate {
 	
 	
 	// MARK: Outlet
-	@IBOutlet weak var viewRoot: NSView!
+	@IBOutlet weak var viewRoot: CrossPlatformView!
 	@IBOutlet weak var textFieldOS: NSTextField!
 	@IBOutlet weak var textFieldApp: NSTextField!
 	
@@ -36,16 +39,10 @@ class ReporterCompactView: NSView, ReporterDelegate {
 		return reporter.state
 	}
 	
-	public var textColor = CrossPlatformColor.white {
+	public var textColor: CrossPlatformColor? {
 		didSet {
 			textFieldOS.textColor = textColor
 			textFieldApp.textColor = textColor
-		}
-	}
-	
-	public var backgroundColor = CrossPlatformColor.black {
-		didSet {
-			layer?.backgroundColor = backgroundColor.cgColor
 		}
 	}
 	
@@ -71,19 +68,23 @@ class ReporterCompactView: NSView, ReporterDelegate {
 		initOutlet()
 	}
 	
+}
+
+
+// MARK: Initialize
+extension ReporterCompactView {
+
 	private func initNib() {
 		guard Bundle.main.loadNibNamed(String(describing: type(of: self)),
 									   owner: self,
 									   topLevelObjects: nil) else {
-			return
+										return
 		}
 		
 		addSubview(viewRoot)
 	}
 	
 	private func initOutlet() {
-		wantsLayer = true
-		
 		backgroundColor = CrossPlatformColor.black
 		textColor = CrossPlatformColor.white
 		

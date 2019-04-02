@@ -11,6 +11,30 @@
 		7EA28FF222538A6300FDBBB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA28FF022538A6300FDBBB3 /* Main.storyboard */; };
 		7EA28FF422538A6500FDBBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA28FF322538A6500FDBBB3 /* Assets.xcassets */; };
 		7EA28FF722538A6500FDBBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA28FF522538A6500FDBBB3 /* LaunchScreen.storyboard */; };
+		7EA290352253F8E300FDBBB3 /* CrossPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290122253F8E300FDBBB3 /* CrossPlatformView.swift */; };
+		7EA290362253F8E300FDBBB3 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290132253F8E300FDBBB3 /* CrossPlatform.swift */; };
+		7EA290372253F8E300FDBBB3 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290152253F8E300FDBBB3 /* ReporterCompactView.swift */; };
+		7EA290382253F8E300FDBBB3 /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA290162253F8E300FDBBB3 /* ReporterCompactView.xib */; };
+		7EA290392253F8E300FDBBB3 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290182253F8E300FDBBB3 /* TimeInterval+SysInfo.swift */; };
+		7EA2903A2253F8E300FDBBB3 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290192253F8E300FDBBB3 /* FixedWidthInteger+SysInfo.swift */; };
+		7EA2903B2253F8E300FDBBB3 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2901B2253F8E300FDBBB3 /* ReporterDelegate.swift */; };
+		7EA2903C2253F8E300FDBBB3 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2901C2253F8E300FDBBB3 /* ReporterData.swift */; };
+		7EA2903D2253F8E300FDBBB3 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2901D2253F8E300FDBBB3 /* Reporter.swift */; };
+		7EA2903E2253F8E300FDBBB3 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290212253F8E300FDBBB3 /* MachHostProcessorInfo.swift */; };
+		7EA2903F2253F8E300FDBBB3 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290222253F8E300FDBBB3 /* MachHostCPULoadInfo.swift */; };
+		7EA290402253F8E300FDBBB3 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290232253F8E300FDBBB3 /* MachHostVMStatics.swift */; };
+		7EA290412253F8E300FDBBB3 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290242253F8E300FDBBB3 /* MachHostBasicInfo.swift */; };
+		7EA290422253F8E300FDBBB3 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290252253F8E300FDBBB3 /* Mach.swift */; };
+		7EA290432253F8E300FDBBB3 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290272253F8E300FDBBB3 /* MachTaskBasicInfo.swift */; };
+		7EA290442253F8E300FDBBB3 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290282253F8E300FDBBB3 /* MachTaskThreadBasicInfo.swift */; };
+		7EA290452253F8E300FDBBB3 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290292253F8E300FDBBB3 /* MachCPUTick.swift */; };
+		7EA290462253F8E300FDBBB3 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2902B2253F8E300FDBBB3 /* Report.swift */; };
+		7EA290472253F8E300FDBBB3 /* ReportOSProcessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2902D2253F8E300FDBBB3 /* ReportOSProcessors.swift */; };
+		7EA290482253F8E300FDBBB3 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2902E2253F8E300FDBBB3 /* ReportOSMemory.swift */; };
+		7EA290492253F8E300FDBBB3 /* ReportOSCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2902F2253F8E300FDBBB3 /* ReportOSCPU.swift */; };
+		7EA2904A2253F8E300FDBBB3 /* ReportProcessMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290312253F8E300FDBBB3 /* ReportProcessMemory.swift */; };
+		7EA2904B2253F8E300FDBBB3 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290322253F8E300FDBBB3 /* ReportProcessThread.swift */; };
+		7EA2904C2253F8E300FDBBB3 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA290332253F8E300FDBBB3 /* ReportProcessCPU.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +44,31 @@
 		7EA28FF322538A6500FDBBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA28FF622538A6500FDBBB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA28FF822538A6500FDBBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EA290122253F8E300FDBBB3 /* CrossPlatformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformView.swift; sourceTree = "<group>"; };
+		7EA290132253F8E300FDBBB3 /* CrossPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
+		7EA290152253F8E300FDBBB3 /* ReporterCompactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterCompactView.swift; sourceTree = "<group>"; };
+		7EA290162253F8E300FDBBB3 /* ReporterCompactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReporterCompactView.xib; sourceTree = "<group>"; };
+		7EA290182253F8E300FDBBB3 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
+		7EA290192253F8E300FDBBB3 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
+		7EA2901B2253F8E300FDBBB3 /* ReporterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterDelegate.swift; sourceTree = "<group>"; };
+		7EA2901C2253F8E300FDBBB3 /* ReporterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterData.swift; sourceTree = "<group>"; };
+		7EA2901D2253F8E300FDBBB3 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
+		7EA2901E2253F8E300FDBBB3 /* SysInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysInfo.h; sourceTree = "<group>"; };
+		7EA290212253F8E300FDBBB3 /* MachHostProcessorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostProcessorInfo.swift; sourceTree = "<group>"; };
+		7EA290222253F8E300FDBBB3 /* MachHostCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostCPULoadInfo.swift; sourceTree = "<group>"; };
+		7EA290232253F8E300FDBBB3 /* MachHostVMStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostVMStatics.swift; sourceTree = "<group>"; };
+		7EA290242253F8E300FDBBB3 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
+		7EA290252253F8E300FDBBB3 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
+		7EA290272253F8E300FDBBB3 /* MachTaskBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskBasicInfo.swift; sourceTree = "<group>"; };
+		7EA290282253F8E300FDBBB3 /* MachTaskThreadBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachTaskThreadBasicInfo.swift; sourceTree = "<group>"; };
+		7EA290292253F8E300FDBBB3 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
+		7EA2902B2253F8E300FDBBB3 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		7EA2902D2253F8E300FDBBB3 /* ReportOSProcessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSProcessors.swift; sourceTree = "<group>"; };
+		7EA2902E2253F8E300FDBBB3 /* ReportOSMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSMemory.swift; sourceTree = "<group>"; };
+		7EA2902F2253F8E300FDBBB3 /* ReportOSCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOSCPU.swift; sourceTree = "<group>"; };
+		7EA290312253F8E300FDBBB3 /* ReportProcessMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessMemory.swift; sourceTree = "<group>"; };
+		7EA290322253F8E300FDBBB3 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
+		7EA290332253F8E300FDBBB3 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +85,7 @@
 		7EA28FE022538A6300FDBBB3 = {
 			isa = PBXGroup;
 			children = (
+				7EA2900F2253F8E300FDBBB3 /* SysInfo */,
 				7EA28FEB22538A6300FDBBB3 /* SysInfoTester-iOS */,
 				7EA28FEA22538A6300FDBBB3 /* Products */,
 			);
@@ -59,6 +109,127 @@
 				7EA28FF822538A6500FDBBB3 /* Info.plist */,
 			);
 			path = "SysInfoTester-iOS";
+			sourceTree = "<group>";
+		};
+		7EA2900F2253F8E300FDBBB3 /* SysInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7EA2901E2253F8E300FDBBB3 /* SysInfo.h */,
+				7EA290172253F8E300FDBBB3 /* Extension */,
+				7EA2901F2253F8E300FDBBB3 /* Mach */,
+				7EA290102253F8E300FDBBB3 /* UI */,
+				7EA2901A2253F8E300FDBBB3 /* Reporter */,
+				7EA2902A2253F8E300FDBBB3 /* Report */,
+			);
+			name = SysInfo;
+			path = ../../SysInfo;
+			sourceTree = "<group>";
+		};
+		7EA290102253F8E300FDBBB3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7EA290112253F8E300FDBBB3 /* CrossPlatform */,
+				7EA290142253F8E300FDBBB3 /* ReporterCompactView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7EA290112253F8E300FDBBB3 /* CrossPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				7EA290132253F8E300FDBBB3 /* CrossPlatform.swift */,
+				7EA290122253F8E300FDBBB3 /* CrossPlatformView.swift */,
+			);
+			path = CrossPlatform;
+			sourceTree = "<group>";
+		};
+		7EA290142253F8E300FDBBB3 /* ReporterCompactView */ = {
+			isa = PBXGroup;
+			children = (
+				7EA290162253F8E300FDBBB3 /* ReporterCompactView.xib */,
+				7EA290152253F8E300FDBBB3 /* ReporterCompactView.swift */,
+			);
+			path = ReporterCompactView;
+			sourceTree = "<group>";
+		};
+		7EA290172253F8E300FDBBB3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7EA290182253F8E300FDBBB3 /* TimeInterval+SysInfo.swift */,
+				7EA290192253F8E300FDBBB3 /* FixedWidthInteger+SysInfo.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7EA2901A2253F8E300FDBBB3 /* Reporter */ = {
+			isa = PBXGroup;
+			children = (
+				7EA2901B2253F8E300FDBBB3 /* ReporterDelegate.swift */,
+				7EA2901C2253F8E300FDBBB3 /* ReporterData.swift */,
+				7EA2901D2253F8E300FDBBB3 /* Reporter.swift */,
+			);
+			path = Reporter;
+			sourceTree = "<group>";
+		};
+		7EA2901F2253F8E300FDBBB3 /* Mach */ = {
+			isa = PBXGroup;
+			children = (
+				7EA290252253F8E300FDBBB3 /* Mach.swift */,
+				7EA290292253F8E300FDBBB3 /* MachCPUTick.swift */,
+				7EA290202253F8E300FDBBB3 /* Host */,
+				7EA290262253F8E300FDBBB3 /* Task */,
+			);
+			path = Mach;
+			sourceTree = "<group>";
+		};
+		7EA290202253F8E300FDBBB3 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				7EA290232253F8E300FDBBB3 /* MachHostVMStatics.swift */,
+				7EA290242253F8E300FDBBB3 /* MachHostBasicInfo.swift */,
+				7EA290222253F8E300FDBBB3 /* MachHostCPULoadInfo.swift */,
+				7EA290212253F8E300FDBBB3 /* MachHostProcessorInfo.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		7EA290262253F8E300FDBBB3 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				7EA290272253F8E300FDBBB3 /* MachTaskBasicInfo.swift */,
+				7EA290282253F8E300FDBBB3 /* MachTaskThreadBasicInfo.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		7EA2902A2253F8E300FDBBB3 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				7EA2902B2253F8E300FDBBB3 /* Report.swift */,
+				7EA2902C2253F8E300FDBBB3 /* OS */,
+				7EA290302253F8E300FDBBB3 /* Process */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		7EA2902C2253F8E300FDBBB3 /* OS */ = {
+			isa = PBXGroup;
+			children = (
+				7EA2902E2253F8E300FDBBB3 /* ReportOSMemory.swift */,
+				7EA2902F2253F8E300FDBBB3 /* ReportOSCPU.swift */,
+				7EA2902D2253F8E300FDBBB3 /* ReportOSProcessors.swift */,
+			);
+			path = OS;
+			sourceTree = "<group>";
+		};
+		7EA290302253F8E300FDBBB3 /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				7EA290312253F8E300FDBBB3 /* ReportProcessMemory.swift */,
+				7EA290332253F8E300FDBBB3 /* ReportProcessCPU.swift */,
+				7EA290322253F8E300FDBBB3 /* ReportProcessThread.swift */,
+			);
+			path = Process;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EA28FF722538A6500FDBBB3 /* LaunchScreen.storyboard in Resources */,
+				7EA290382253F8E300FDBBB3 /* ReporterCompactView.xib in Resources */,
 				7EA28FF422538A6500FDBBB3 /* Assets.xcassets in Resources */,
 				7EA28FF222538A6300FDBBB3 /* Main.storyboard in Resources */,
 			);
@@ -132,7 +304,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA290392253F8E300FDBBB3 /* TimeInterval+SysInfo.swift in Sources */,
+				7EA290352253F8E300FDBBB3 /* CrossPlatformView.swift in Sources */,
+				7EA290432253F8E300FDBBB3 /* MachTaskBasicInfo.swift in Sources */,
+				7EA2903C2253F8E300FDBBB3 /* ReporterData.swift in Sources */,
+				7EA290472253F8E300FDBBB3 /* ReportOSProcessors.swift in Sources */,
+				7EA2903A2253F8E300FDBBB3 /* FixedWidthInteger+SysInfo.swift in Sources */,
+				7EA2904A2253F8E300FDBBB3 /* ReportProcessMemory.swift in Sources */,
+				7EA290482253F8E300FDBBB3 /* ReportOSMemory.swift in Sources */,
+				7EA290462253F8E300FDBBB3 /* Report.swift in Sources */,
+				7EA290372253F8E300FDBBB3 /* ReporterCompactView.swift in Sources */,
+				7EA290492253F8E300FDBBB3 /* ReportOSCPU.swift in Sources */,
 				7EA28FED22538A6300FDBBB3 /* AppDelegate.swift in Sources */,
+				7EA2903B2253F8E300FDBBB3 /* ReporterDelegate.swift in Sources */,
+				7EA2903D2253F8E300FDBBB3 /* Reporter.swift in Sources */,
+				7EA290422253F8E300FDBBB3 /* Mach.swift in Sources */,
+				7EA290442253F8E300FDBBB3 /* MachTaskThreadBasicInfo.swift in Sources */,
+				7EA2903F2253F8E300FDBBB3 /* MachHostCPULoadInfo.swift in Sources */,
+				7EA290452253F8E300FDBBB3 /* MachCPUTick.swift in Sources */,
+				7EA2904B2253F8E300FDBBB3 /* ReportProcessThread.swift in Sources */,
+				7EA290362253F8E300FDBBB3 /* CrossPlatform.swift in Sources */,
+				7EA2904C2253F8E300FDBBB3 /* ReportProcessCPU.swift in Sources */,
+				7EA2903E2253F8E300FDBBB3 /* MachHostProcessorInfo.swift in Sources */,
+				7EA290412253F8E300FDBBB3 /* MachHostBasicInfo.swift in Sources */,
+				7EA290402253F8E300FDBBB3 /* MachHostVMStatics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
