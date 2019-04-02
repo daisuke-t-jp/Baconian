@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02686DE0224CBE8D00D5C4AD /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02686DDF224CBE8D00D5C4AD /* ReporterCompactView.xib */; };
 		02F6FC12224B53E8009A0C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC11224B53E8009A0C30 /* AppDelegate.swift */; };
 		02F6FC14224B53E8009A0C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC13224B53E8009A0C30 /* ViewController.swift */; };
 		02F6FC16224B53EA009A0C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F6FC15224B53EA009A0C30 /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 		02F6FC62224B5A58009A0C30 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC44224B5A58009A0C30 /* ReporterDelegate.swift */; };
 		02F6FC63224B5A58009A0C30 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC45224B5A58009A0C30 /* ReporterData.swift */; };
 		02F6FC64224B5A58009A0C30 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC46224B5A58009A0C30 /* Reporter.swift */; };
-		02F6FC65224B5A58009A0C30 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC49224B5A58009A0C30 /* ReporterCompactView.swift */; };
 		02F6FC66224B5A58009A0C30 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC4C224B5A58009A0C30 /* MachHostProcessorInfo.swift */; };
 		02F6FC67224B5A58009A0C30 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC4D224B5A58009A0C30 /* MachHostCPULoadInfo.swift */; };
 		02F6FC68224B5A58009A0C30 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC4E224B5A58009A0C30 /* MachHostVMStatics.swift */; };
@@ -34,10 +32,11 @@
 		02F6FC73224B5A58009A0C30 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC5D224B5A58009A0C30 /* ReportProcessThread.swift */; };
 		02F6FC74224B5A58009A0C30 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC5E224B5A58009A0C30 /* ReportProcessCPU.swift */; };
 		02F6FC78224B5A8C009A0C30 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC77224B5A8C009A0C30 /* StressUtility.swift */; };
+		7EA2900222538DD000FDBBB3 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2900022538DD000FDBBB3 /* ReporterCompactView.swift */; };
+		7EA2900322538DD000FDBBB3 /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2900122538DD000FDBBB3 /* ReporterCompactView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02686DDF224CBE8D00D5C4AD /* ReporterCompactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReporterCompactView.xib; sourceTree = "<group>"; };
 		02F6FC0E224B53E8009A0C30 /* SysInfoTester-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SysInfoTester-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F6FC11224B53E8009A0C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F6FC13224B53E8009A0C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +50,6 @@
 		02F6FC45224B5A58009A0C30 /* ReporterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterData.swift; sourceTree = "<group>"; };
 		02F6FC46224B5A58009A0C30 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
 		02F6FC47224B5A58009A0C30 /* SysInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysInfo.h; sourceTree = "<group>"; };
-		02F6FC49224B5A58009A0C30 /* ReporterCompactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterCompactView.swift; sourceTree = "<group>"; };
 		02F6FC4C224B5A58009A0C30 /* MachHostProcessorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostProcessorInfo.swift; sourceTree = "<group>"; };
 		02F6FC4D224B5A58009A0C30 /* MachHostCPULoadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostCPULoadInfo.swift; sourceTree = "<group>"; };
 		02F6FC4E224B5A58009A0C30 /* MachHostVMStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostVMStatics.swift; sourceTree = "<group>"; };
@@ -68,6 +66,8 @@
 		02F6FC5D224B5A58009A0C30 /* ReportProcessThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessThread.swift; sourceTree = "<group>"; };
 		02F6FC5E224B5A58009A0C30 /* ReportProcessCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProcessCPU.swift; sourceTree = "<group>"; };
 		02F6FC77224B5A8C009A0C30 /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
+		7EA2900022538DD000FDBBB3 /* ReporterCompactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterCompactView.swift; sourceTree = "<group>"; };
+		7EA2900122538DD000FDBBB3 /* ReporterCompactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReporterCompactView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 				02F6FC4A224B5A58009A0C30 /* Mach */,
 				02F6FC55224B5A58009A0C30 /* Report */,
 				02F6FC43224B5A58009A0C30 /* Reporter */,
-				02F6FC48224B5A58009A0C30 /* View */,
+				7EA28FFE22538DD000FDBBB3 /* UI */,
 				02F6FC47224B5A58009A0C30 /* SysInfo.h */,
 			);
 			name = SysInfo;
@@ -143,15 +143,6 @@
 				02F6FC46224B5A58009A0C30 /* Reporter.swift */,
 			);
 			path = Reporter;
-			sourceTree = "<group>";
-		};
-		02F6FC48224B5A58009A0C30 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				02686DDF224CBE8D00D5C4AD /* ReporterCompactView.xib */,
-				02F6FC49224B5A58009A0C30 /* ReporterCompactView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		02F6FC4A224B5A58009A0C30 /* Mach */ = {
@@ -224,6 +215,23 @@
 			path = ../Common;
 			sourceTree = "<group>";
 		};
+		7EA28FFE22538DD000FDBBB3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7EA28FFF22538DD000FDBBB3 /* ReporterCompactView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7EA28FFF22538DD000FDBBB3 /* ReporterCompactView */ = {
+			isa = PBXGroup;
+			children = (
+				7EA2900122538DD000FDBBB3 /* ReporterCompactView.xib */,
+				7EA2900022538DD000FDBBB3 /* ReporterCompactView.swift */,
+			);
+			path = ReporterCompactView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,9 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA2900322538DD000FDBBB3 /* ReporterCompactView.xib in Resources */,
 				02F6FC16224B53EA009A0C30 /* Assets.xcassets in Resources */,
 				02F6FC19224B53EA009A0C30 /* Main.storyboard in Resources */,
-				02686DE0224CBE8D00D5C4AD /* ReporterCompactView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,11 +333,11 @@
 				02F6FC78224B5A8C009A0C30 /* StressUtility.swift in Sources */,
 				02F6FC68224B5A58009A0C30 /* MachHostVMStatics.swift in Sources */,
 				02F6FC6B224B5A58009A0C30 /* MachTaskBasicInfo.swift in Sources */,
+				7EA2900222538DD000FDBBB3 /* ReporterCompactView.swift in Sources */,
 				02F6FC63224B5A58009A0C30 /* ReporterData.swift in Sources */,
 				02F6FC6D224B5A58009A0C30 /* MachCPUTick.swift in Sources */,
 				02F6FC71224B5A58009A0C30 /* ReportOSCPU.swift in Sources */,
 				02F6FC6C224B5A58009A0C30 /* MachTaskThreadBasicInfo.swift in Sources */,
-				02F6FC65224B5A58009A0C30 /* ReporterCompactView.swift in Sources */,
 				02F6FC73224B5A58009A0C30 /* ReportProcessThread.swift in Sources */,
 				02F6FC70224B5A58009A0C30 /* ReportOSMemory.swift in Sources */,
 				02F6FC6F224B5A58009A0C30 /* ReportOSProcessors.swift in Sources */,
