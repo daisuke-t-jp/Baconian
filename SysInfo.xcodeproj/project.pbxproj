@@ -30,8 +30,6 @@
 		026A0476223F35DB00048572 /* SysInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 026A0468223F35DA00048572 /* SysInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		026A04B5223F390A00048572 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A6223F390900048572 /* TimeInterval+SysInfo.swift */; };
 		026A04B6223F390A00048572 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */; };
-		7E69BBBB22511A6500091523 /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E69BBB922511A6500091523 /* ReporterCompactView.xib */; };
-		7E69BBBC22511A6500091523 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E69BBBA22511A6500091523 /* ReporterCompactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +69,6 @@
 		026A0475223F35DB00048572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		026A04A6223F390900048572 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
 		026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
-		7E69BBB922511A6500091523 /* ReporterCompactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReporterCompactView.xib; sourceTree = "<group>"; };
-		7E69BBBA22511A6500091523 /* ReporterCompactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterCompactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +175,6 @@
 				026A04AA223F390A00048572 /* Mach */,
 				02082B7E224223BA00D4DFC2 /* Report */,
 				02082B8F2242338900D4DFC2 /* Reporter */,
-				02F6FBFC224B2AA0009A0C30 /* View */,
 				026A0468223F35DA00048572 /* SysInfo.h */,
 				026A0469223F35DA00048572 /* Info.plist */,
 			);
@@ -213,15 +208,6 @@
 				02082B662242021600D4DFC2 /* Task */,
 			);
 			path = Mach;
-			sourceTree = "<group>";
-		};
-		02F6FBFC224B2AA0009A0C30 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7E69BBB922511A6500091523 /* ReporterCompactView.xib */,
-				7E69BBBA22511A6500091523 /* ReporterCompactView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +305,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E69BBBB22511A6500091523 /* ReporterCompactView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +348,6 @@
 				023BBFD62240DFB900842B33 /* MachCPUTick.swift in Sources */,
 				02082B8D224223BA00D4DFC2 /* ReportProcessThread.swift in Sources */,
 				023BBFD52240DFB900842B33 /* Mach.swift in Sources */,
-				7E69BBBC22511A6500091523 /* ReporterCompactView.swift in Sources */,
 				02082B8E224223BA00D4DFC2 /* ReportProcessCPU.swift in Sources */,
 				02082B6C2242021600D4DFC2 /* MachTaskBasicInfo.swift in Sources */,
 				02082B6B2242021600D4DFC2 /* MachHostVMStatics.swift in Sources */,
