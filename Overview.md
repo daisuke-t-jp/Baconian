@@ -69,17 +69,17 @@
 
 ## Tasks
 ### General
-  - Framework(iOS)
 ### Reporter
   - OS version
   - Device type
 ### UI
-  - Reporter View(iOS)
+  - Text Color animation
 ### Tester
-  - iOS GUI
 ### Demo
   - podspec
-  - macOS
+  - macOS GUI
+  - macOS CUI
+  - iOS GUI
 ### Reporter
   - Immediate get data
   - High load delegate
