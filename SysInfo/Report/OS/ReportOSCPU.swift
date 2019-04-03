@@ -46,10 +46,10 @@ extension Report.OS.CPU {
 	
 	init(_ data: Mach.CPUTick, prevData: Mach.CPUTick) {
 		// Caluculation tick's diff.
-		let user = Float(data.userTick - prevData.userTick)
-		let system = Float(data.systemTick - prevData.systemTick)
-		let idle = Float(data.idleTick - prevData.idleTick)
-		let nice = Float(data.niceTick - prevData.niceTick)
+		let user = Float(Int64(data.userTick) - Int64(prevData.userTick))
+		let system = Float(Int64(data.systemTick) - Int64(prevData.systemTick))
+		let idle = Float(Int64(data.idleTick) - Int64(prevData.idleTick))
+		let nice = Float(Int64(data.niceTick) - Int64(prevData.niceTick))
 		
 		
 		// Caluculation CPU usage
