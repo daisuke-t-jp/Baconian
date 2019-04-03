@@ -43,9 +43,12 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	
 	// MARK: Property
 	let stress = StressUtility()
-	
-	
-	// MARK: Life cycle
+}
+
+
+// MARK: Life cycle
+extension ViewController {
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -79,21 +82,22 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 		viewReporterProgrammatically.frame.origin.x = viewReporter.frame.origin.x
 		viewReporterProgrammatically.frame.origin.y = labelViewPragrammatically.frame.origin.y - 10 - viewReporterProgrammatically.frame.height
 	}
+}
+
+
+// MARK: ReporterCompactViewDelegate
+extension ViewController {
 	
-	override var representedObject: Any? {
-		didSet {
-		// Update the view, if already loaded.
-		}
-	}
-	
-	
-	// MARK: ReporterCompactViewDelegate
 	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
 		print("data -> \(data)")
 	}
 	
-	
-	// MARK: Control
+}
+
+
+// MARK: Control
+extension ViewController {
+
 	@IBAction func segmentedControlReporterControlEvent(_ sender: AnyObject) {
 		switch Control(rawValue: segmentedControlReporterControl.selectedSegment)! {
 		case .start:
@@ -105,9 +109,13 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 			viewReporterProgrammatically.stop()
 		}
 	}
-	
-	
-	// MARK: Frequency
+
+}
+
+
+// MARK: Frequency
+extension ViewController {
+
 	@IBAction func segmentedControlReporterFrequencyEvent(_ sender: AnyObject) {
 		switch Frequency(rawValue: segmentedControlReporterFrequency.selectedSegment)! {
 		case .normally:
@@ -124,8 +132,12 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 		}
 	}
 	
-	
-	// MARK: Memory
+}
+
+
+// MARK: Memory
+extension ViewController {
+
 	@IBAction func buttonPressureMemoryAllocEvent(_ sender: AnyObject) {
 		stress.memoryAlloc(1024 * 1024 * 32)
 		updatePressureMemorySizeUpdate()
@@ -140,8 +152,12 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 		labelPressureMemorySize.text = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
 	}
 	
-	
-	// MARK: Thread
+}
+
+
+// MARK: Thread
+extension ViewController {
+
 	@IBAction func buttonPressureThreadCreateEvent(_ sender: AnyObject) {
 		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
 		updatePressureThreadCountUpdate()
