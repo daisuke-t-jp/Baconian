@@ -84,9 +84,8 @@ extension ViewController {
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		
-		// TODO: iOS
-		// viewReporterProgrammatically.frame.origin.x = viewReporter.frame.origin.x
-		// viewReporterProgrammatically.frame.origin.y = labelViewPragrammatically.frame.origin.y - 10 - viewReporterProgrammatically.frame.height
+		viewReporterProgrammatically.frame.origin.x = viewReporter.frame.origin.x
+		viewReporterProgrammatically.frame.origin.y = labelViewPragrammatically.frame.origin.y + labelViewPragrammatically.frame.height + 10
 	}
 	#elseif os(macOS)
 	override func viewDidLayout() {
