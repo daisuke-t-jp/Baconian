@@ -13,7 +13,7 @@ class StressUtility {
 	// MARK: Property
 	private var memoryMap = [Date: [UInt8]]()
 	private var threadMap = [Date: Thread]()
-
+	
 	init() {
 	}
 	

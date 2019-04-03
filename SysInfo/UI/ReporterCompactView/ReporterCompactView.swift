@@ -151,11 +151,11 @@ extension ReporterCompactView {
 	}
 	
 	private func updateLabel(_ data: Reporter.Data) {
-		labelOS.text = stringOS(data)
-		labelApp.text = stringApp(data)
+		labelOS.text = textOS(data)
+		labelApp.text = textApp(data)
 	}
 	
-	private func stringOS(_ data: Reporter.Data) -> String {
+	private func textOS(_ data: Reporter.Data) -> String {
 		return String(format: "%@ | %@ %@ / %@ | %@ %.2f%%",
 					  ReporterCompactView.markOS,
 					  ReporterCompactView.markMemory,
@@ -165,7 +165,7 @@ extension ReporterCompactView {
 					  data.osCPU.usage * 100)
 	}
 	
-	private func stringApp(_ data: Reporter.Data) -> String {
+	private func textApp(_ data: Reporter.Data) -> String {
 		return String(format: "%@ | %@ %@ | %@ %.2f%%",
 					  ReporterCompactView.markProcess,
 					  ReporterCompactView.markMemory,
