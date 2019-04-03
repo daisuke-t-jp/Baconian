@@ -710,7 +710,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="670" height="336"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cEN-nP-USp">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cEN-nP-USp" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="288" y="309" width="114" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="N9x-DG-ekr"/>
@@ -721,7 +721,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-Cd-6hN">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-Cd-6hN" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="288" y="214" width="114" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="l2D-3i-rl9"/>
@@ -732,7 +732,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-CJ-SPx">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-CJ-SPx" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="298" y="282" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="4tf-cv-fJv"/>
@@ -743,7 +743,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JAQ-Ps-fNI">
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JAQ-Ps-fNI" customClass="CrossPlatformSegmentedControl" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="378" y="276" width="162" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="Cua-N9-gsT"/>
@@ -756,7 +756,7 @@
                                     </segments>
                                 </segmentedCell>
                             </segmentedControl>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p0G-Om-q9d">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p0G-Om-q9d" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="298" y="250" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="8CB-03-ODa"/>
@@ -767,7 +767,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zQH-Nl-iTO">
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zQH-Nl-iTO" customClass="CrossPlatformSegmentedControl" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="378" y="244" width="242" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="Wbo-zY-RTb"/>
@@ -781,7 +781,7 @@
                                     </segments>
                                 </segmentedCell>
                             </segmentedControl>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-s7-hZv">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-s7-hZv" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="298" y="187" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0JV-CS-bSX"/>
@@ -792,7 +792,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5bV-Bv-BRn">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5bV-Bv-BRn" customClass="CrossPlatformButton" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="374" y="149" width="102" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="6rq-d6-X28"/>
@@ -802,7 +802,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DQi-YQ-anQ">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DQi-YQ-anQ" customClass="CrossPlatformButton" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="374" y="52" width="102" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="dr6-DK-i3X"/>
@@ -812,7 +812,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-om-S6y">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-om-S6y" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="378" y="187" width="164" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="lNz-qy-ihB"/>
@@ -823,7 +823,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-uU-ch5">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-uU-ch5" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="298" y="90" width="74" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="O6b-Wb-WnY"/>
@@ -834,7 +834,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-Zv-iN1">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-Zv-iN1" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="378" y="90" width="164" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="BjL-KK-Sok"/>
@@ -845,7 +845,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="biP-hh-tbf">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="biP-hh-tbf" customClass="CrossPlatformButton" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="374" y="118" width="102" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="0U9-0k-WRv"/>
@@ -855,7 +855,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-TI-ypZ">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-TI-ypZ" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="8" y="309" width="164" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Dnq-gq-cgh"/>
@@ -873,7 +873,7 @@
                                     <constraint firstAttribute="width" constant="260" id="g4T-sx-T8H"/>
                                 </constraints>
                             </customView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-Ai-B3b">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-Ai-B3b" customClass="CrossPlatformButton" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="374" y="21" width="102" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="4qK-im-P7b"/>
@@ -883,7 +883,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-um-Y4Q">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-um-Y4Q" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                                 <rect key="frame" x="8" y="212" width="164" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Zi9-4Y-1UP"/>
@@ -947,12 +947,12 @@
                         <outlet property="buttonPressureMemoryDealloc" destination="biP-hh-tbf" id="7bU-l7-YAG"/>
                         <outlet property="buttonPressureThreadCreate" destination="DQi-YQ-anQ" id="orI-m5-84N"/>
                         <outlet property="buttonPressureThreadDestroy" destination="zcT-Ai-B3b" id="E5D-SZ-86s"/>
+                        <outlet property="labelPressureMemorySize" destination="NwR-om-S6y" id="VnB-gO-ScQ"/>
+                        <outlet property="labelPressureThreadCount" destination="uB2-Zv-iN1" id="Khe-Io-eO7"/>
+                        <outlet property="labelViewPragrammatically" destination="Iqf-um-Y4Q" id="kN8-0K-A4p"/>
+                        <outlet property="labelViewStoryboard" destination="NOw-TI-ypZ" id="0gv-CV-EIM"/>
                         <outlet property="segmentedControlReporterControl" destination="JAQ-Ps-fNI" id="fOr-t8-kfe"/>
                         <outlet property="segmentedControlReporterFrequency" destination="zQH-Nl-iTO" id="pbN-33-hv1"/>
-                        <outlet property="textFieldPressureMemorySize" destination="NwR-om-S6y" id="VnB-gO-ScQ"/>
-                        <outlet property="textFieldPressureThreadCount" destination="uB2-Zv-iN1" id="Khe-Io-eO7"/>
-                        <outlet property="textFieldViewPragrammatically" destination="Iqf-um-Y4Q" id="kN8-0K-A4p"/>
-                        <outlet property="textFieldViewStoryboard" destination="NOw-TI-ypZ" id="0gv-CV-EIM"/>
                         <outlet property="viewReporter" destination="ZIj-R2-5CL" id="54n-OB-LMX"/>
                     </connections>
                 </viewController>

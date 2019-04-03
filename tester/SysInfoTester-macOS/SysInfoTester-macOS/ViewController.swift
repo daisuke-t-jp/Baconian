@@ -21,29 +21,29 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 		case often = 1
 		case veryOften = 2
 	}
-
+	
 	
 	// MARK: IBOutlet
 	@IBOutlet weak var viewReporter: ReporterCompactView!
 	var viewReporterProgrammatically: ReporterCompactView!
 	
-	@IBOutlet weak var textFieldViewStoryboard: NSTextField!
-	@IBOutlet weak var textFieldViewPragrammatically: NSTextField!
-
-	@IBOutlet weak var segmentedControlReporterControl: NSSegmentedControl!
-	@IBOutlet weak var segmentedControlReporterFrequency: NSSegmentedControl!
+	@IBOutlet weak var labelViewStoryboard: CrossPlatformLabel!
+	@IBOutlet weak var labelViewPragrammatically: CrossPlatformLabel!
 	
-	@IBOutlet weak var textFieldPressureMemorySize: NSTextField!
-	@IBOutlet weak var textFieldPressureThreadCount: NSTextField!
-	@IBOutlet weak var buttonPressureMemoryAlloc: NSButton!
-	@IBOutlet weak var buttonPressureMemoryDealloc: NSButton!
-	@IBOutlet weak var buttonPressureThreadCreate: NSButton!
-	@IBOutlet weak var buttonPressureThreadDestroy: NSButton!
+	@IBOutlet weak var segmentedControlReporterControl: CrossPlatformSegmentedControl!
+	@IBOutlet weak var segmentedControlReporterFrequency: CrossPlatformSegmentedControl!
+	
+	@IBOutlet weak var labelPressureMemorySize: CrossPlatformLabel!
+	@IBOutlet weak var labelPressureThreadCount: CrossPlatformLabel!
+	@IBOutlet weak var buttonPressureMemoryAlloc: CrossPlatformButton!
+	@IBOutlet weak var buttonPressureMemoryDealloc: CrossPlatformButton!
+	@IBOutlet weak var buttonPressureThreadCreate: CrossPlatformButton!
+	@IBOutlet weak var buttonPressureThreadDestroy: CrossPlatformButton!
 	
 	
 	// MARK: Property
 	let stress = StressUtility()
-
+	
 	
 	// MARK: Life cycle
 	override func viewDidLoad() {
@@ -86,7 +86,7 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 		super.viewDidLayout()
 		
 		viewReporterProgrammatically.frame.origin.x = viewReporter.frame.origin.x
-		viewReporterProgrammatically.frame.origin.y = textFieldViewPragrammatically.frame.origin.y - 10 - viewReporterProgrammatically.frame.height
+		viewReporterProgrammatically.frame.origin.y = labelViewPragrammatically.frame.origin.y - 10 - viewReporterProgrammatically.frame.height
 	}
 	
 	override var representedObject: Any? {
@@ -146,7 +146,7 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	}
 	
 	func updatePressureMemorySizeUpdate() {
-		textFieldPressureMemorySize.stringValue = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
+		labelPressureMemorySize.stringValue = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
 	}
 	
 	
@@ -162,7 +162,7 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	}
 	
 	func updatePressureThreadCountUpdate() {
-		textFieldPressureThreadCount.stringValue = "Thread Count: \(stress.threadCount())"
+		labelPressureThreadCount.stringValue = "Thread Count: \(stress.threadCount())"
 	}
 
 }

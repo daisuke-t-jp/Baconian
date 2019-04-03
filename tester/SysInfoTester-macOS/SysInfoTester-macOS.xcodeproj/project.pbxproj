@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02A423BF22542FB00063048F /* CrossPlatformButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423BE22542FB00063048F /* CrossPlatformButton.swift */; };
+		02A423C32254318A0063048F /* CrossPlatformSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423C22254318A0063048F /* CrossPlatformSegmentedControl.swift */; };
 		02F6FC12224B53E8009A0C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC11224B53E8009A0C30 /* AppDelegate.swift */; };
 		02F6FC14224B53E8009A0C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6FC13224B53E8009A0C30 /* ViewController.swift */; };
 		02F6FC16224B53EA009A0C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F6FC15224B53EA009A0C30 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02A423BE22542FB00063048F /* CrossPlatformButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformButton.swift; sourceTree = "<group>"; };
+		02A423C22254318A0063048F /* CrossPlatformSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformSegmentedControl.swift; sourceTree = "<group>"; };
 		02F6FC0E224B53E8009A0C30 /* SysInfoTester-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SysInfoTester-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F6FC11224B53E8009A0C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F6FC13224B53E8009A0C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +249,8 @@
 				7EA2900B2253910500FDBBB3 /* CrossPlatform.swift */,
 				7EA2900D2253F84900FDBBB3 /* CrossPlatformView.swift */,
 				7EA2904F2254030200FDBBB3 /* CrossPlatformLabel.swift */,
+				02A423BE22542FB00063048F /* CrossPlatformButton.swift */,
+				02A423C22254318A0063048F /* CrossPlatformSegmentedControl.swift */,
 			);
 			path = CrossPlatform;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				02F6FC67224B5A58009A0C30 /* MachHostCPULoadInfo.swift in Sources */,
 				7EA2900E2253F84900FDBBB3 /* CrossPlatformView.swift in Sources */,
 				02F6FC12224B53E8009A0C30 /* AppDelegate.swift in Sources */,
+				02A423C32254318A0063048F /* CrossPlatformSegmentedControl.swift in Sources */,
 				02F6FC69224B5A58009A0C30 /* MachHostBasicInfo.swift in Sources */,
 				02F6FC78224B5A8C009A0C30 /* StressUtility.swift in Sources */,
 				02F6FC68224B5A58009A0C30 /* MachHostVMStatics.swift in Sources */,
@@ -360,6 +367,7 @@
 				02F6FC73224B5A58009A0C30 /* ReportProcessThread.swift in Sources */,
 				02F6FC70224B5A58009A0C30 /* ReportOSMemory.swift in Sources */,
 				02F6FC6F224B5A58009A0C30 /* ReportOSProcessors.swift in Sources */,
+				02A423BF22542FB00063048F /* CrossPlatformButton.swift in Sources */,
 				02F6FC72224B5A58009A0C30 /* ReportProcessMemory.swift in Sources */,
 				02F6FC62224B5A58009A0C30 /* ReporterDelegate.swift in Sources */,
 				02F6FC64224B5A58009A0C30 /* Reporter.swift in Sources */,

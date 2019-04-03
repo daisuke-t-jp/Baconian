@@ -75,6 +75,7 @@ class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 extension ReporterCompactView {
 
 	private func initNib() {
+		// TODO: Use UINib, NSNib
 		#if os(iOS)
 		guard let nibs = Bundle.main.loadNibNamed(String(describing: type(of: self)),
 													 owner: self,
