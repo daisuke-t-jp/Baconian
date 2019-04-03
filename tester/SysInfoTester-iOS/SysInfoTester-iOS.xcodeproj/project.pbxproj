@@ -11,6 +11,7 @@
 		02A423C5225431E60063048F /* CrossPlatformSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423C4225431E60063048F /* CrossPlatformSegmentedControl.swift */; };
 		02A423CD22543A620063048F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423CB22543A620063048F /* ViewController.swift */; };
 		02A423CE22543A620063048F /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423CC22543A620063048F /* StressUtility.swift */; };
+		02A423D62254513D0063048F /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A423D52254513D0063048F /* ReporterCompactView.xib */; };
 		7EA28FED22538A6300FDBBB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA28FEC22538A6300FDBBB3 /* AppDelegate.swift */; };
 		7EA28FF222538A6300FDBBB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA28FF022538A6300FDBBB3 /* Main.storyboard */; };
 		7EA28FF422538A6500FDBBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA28FF322538A6500FDBBB3 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		02A423C4225431E60063048F /* CrossPlatformSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformSegmentedControl.swift; sourceTree = "<group>"; };
 		02A423CB22543A620063048F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02A423CC22543A620063048F /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
+		02A423D52254513D0063048F /* ReporterCompactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ReporterCompactView.xib; path = iOS/ReporterCompactView.xib; sourceTree = "<group>"; };
 		7EA28FE922538A6300FDBBB3 /* SysInfoTester-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SysInfoTester-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA28FEC22538A6300FDBBB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EA28FF122538A6300FDBBB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		7EA290142253F8E300FDBBB3 /* ReporterCompactView */ = {
 			isa = PBXGroup;
 			children = (
+				02A423D52254513D0063048F /* ReporterCompactView.xib */,
 				7EA290152253F8E300FDBBB3 /* ReporterCompactView.swift */,
 			);
 			path = ReporterCompactView;
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EA28FF722538A6500FDBBB3 /* LaunchScreen.storyboard in Resources */,
+				02A423D62254513D0063048F /* ReporterCompactView.xib in Resources */,
 				7EA28FF422538A6500FDBBB3 /* Assets.xcassets in Resources */,
 				7EA28FF222538A6300FDBBB3 /* Main.storyboard in Resources */,
 			);
