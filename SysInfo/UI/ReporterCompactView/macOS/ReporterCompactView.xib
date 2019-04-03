@@ -21,6 +21,9 @@
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="504-qv-GjO" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                     <rect key="frame" x="3" y="28" width="254" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="BAh-i3-X5D"/>
+                    </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="🍎 | 🐏 11.6GB / 160GB | 🤖 100.00%" id="9b2-jw-duj">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,6 +32,9 @@
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWy-iS-PN5" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
                     <rect key="frame" x="3" y="6" width="254" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="ykm-lB-zsS"/>
+                    </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="🍏 | 🐏 500MB | 🤖 100%" id="WlU-tE-fRm">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
