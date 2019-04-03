@@ -58,25 +58,16 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 		self.view.addSubview(viewReporterProgrammatically)
 		
 		
-		segmentedControlReporterControl.selectedSegment = Control.stop.rawValue
-		segmentedControlReporterControl.target = self
-		segmentedControlReporterControl.action = #selector(segmentedControlReporterControlEvent(_:))
+		segmentedControlReporterControl.selectedSegmentIndex = Control.stop.rawValue
+		segmentedControlReporterControl.addTarget(self, action: #selector(segmentedControlReporterControlEvent(_:)))
 		
-		segmentedControlReporterFrequency.selectedSegment = Frequency.normally.rawValue
-		segmentedControlReporterFrequency.target = self
-		segmentedControlReporterFrequency.action = #selector(segmentedControlReporterFrequencyEvent(_:))
+		segmentedControlReporterFrequency.selectedSegmentIndex = Frequency.normally.rawValue
+		segmentedControlReporterFrequency.addTarget(self, action: #selector(segmentedControlReporterFrequencyEvent(_:)))
 		
-		buttonPressureMemoryAlloc.target = self
-		buttonPressureMemoryAlloc.action = #selector(buttonPressureMemoryAllocEvent(_:))
-		
-		buttonPressureMemoryDealloc.target = self
-		buttonPressureMemoryDealloc.action = #selector(buttonPressureMemoryDeallocEvent(_:))
-		
-		buttonPressureThreadCreate.target = self
-		buttonPressureThreadCreate.action = #selector(buttonPressureThreadCreateEvent(_:))
-		
-		buttonPressureThreadDestroy.target = self
-		buttonPressureThreadDestroy.action = #selector(buttonPressureThreadDestroyEvent(_:))
+		buttonPressureMemoryAlloc.addTarget(self, action: #selector(buttonPressureMemoryAllocEvent(_:)))
+		buttonPressureMemoryDealloc.addTarget(self, action: #selector(buttonPressureMemoryDeallocEvent(_:)))
+		buttonPressureThreadCreate.addTarget(self, action: #selector(buttonPressureThreadCreateEvent(_:)))
+		buttonPressureThreadDestroy.addTarget(self, action: #selector(buttonPressureThreadDestroyEvent(_:)))
 		
 		updatePressureMemorySizeUpdate()
 		updatePressureThreadCountUpdate()
@@ -146,7 +137,7 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	}
 	
 	func updatePressureMemorySizeUpdate() {
-		labelPressureMemorySize.stringValue = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
+		labelPressureMemorySize.text = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
 	}
 	
 	
@@ -162,7 +153,7 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	}
 	
 	func updatePressureThreadCountUpdate() {
-		labelPressureThreadCount.stringValue = "Thread Count: \(stress.threadCount())"
+		labelPressureThreadCount.text = "Thread Count: \(stress.threadCount())"
 	}
 
 }
