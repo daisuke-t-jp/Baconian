@@ -60,23 +60,23 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 		
 		segmentedControlReporterControl.selectedSegment = Control.stop.rawValue
 		segmentedControlReporterControl.target = self
-		segmentedControlReporterControl.action = #selector(segmentedControlReporterControlValueChanged(_:))
+		segmentedControlReporterControl.action = #selector(segmentedControlReporterControlEvent(_:))
 		
 		segmentedControlReporterFrequency.selectedSegment = Frequency.normally.rawValue
 		segmentedControlReporterFrequency.target = self
-		segmentedControlReporterFrequency.action = #selector(segmentedControlReporterFrequencyValueChanged(_:))
+		segmentedControlReporterFrequency.action = #selector(segmentedControlReporterFrequencyEvent(_:))
 		
 		buttonPressureMemoryAlloc.target = self
-		buttonPressureMemoryAlloc.action = #selector(buttonPressureMemoryAllocTouchUpInside(_:))
+		buttonPressureMemoryAlloc.action = #selector(buttonPressureMemoryAllocEvent(_:))
 		
 		buttonPressureMemoryDealloc.target = self
-		buttonPressureMemoryDealloc.action = #selector(buttonPressureMemoryDeallocTouchUpInside(_:))
+		buttonPressureMemoryDealloc.action = #selector(buttonPressureMemoryDeallocEvent(_:))
 		
 		buttonPressureThreadCreate.target = self
-		buttonPressureThreadCreate.action = #selector(buttonPressureThreadCreateTouchUpInside(_:))
+		buttonPressureThreadCreate.action = #selector(buttonPressureThreadCreateEvent(_:))
 		
 		buttonPressureThreadDestroy.target = self
-		buttonPressureThreadDestroy.action = #selector(buttonPressureThreadDestroyTouchUpInside(_:))
+		buttonPressureThreadDestroy.action = #selector(buttonPressureThreadDestroyEvent(_:))
 		
 		updatePressureMemorySizeUpdate()
 		updatePressureThreadCountUpdate()
@@ -103,7 +103,7 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	
 	
 	// MARK: Control
-	@IBAction func segmentedControlReporterControlValueChanged(_ sender: AnyObject) {
+	@IBAction func segmentedControlReporterControlEvent(_ sender: AnyObject) {
 		switch Control(rawValue: segmentedControlReporterControl.selectedSegment)! {
 		case .start:
 			viewReporter.start()
@@ -117,7 +117,7 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	
 	
 	// MARK: Frequency
-	@IBAction func segmentedControlReporterFrequencyValueChanged(_ sender: AnyObject) {
+	@IBAction func segmentedControlReporterFrequencyEvent(_ sender: AnyObject) {
 		switch Frequency(rawValue: segmentedControlReporterFrequency.selectedSegment)! {
 		case .normally:
 			viewReporter.frequency = .normally
@@ -135,12 +135,12 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	
 	
 	// MARK: Memory
-	@IBAction func buttonPressureMemoryAllocTouchUpInside(_ sender: AnyObject) {
+	@IBAction func buttonPressureMemoryAllocEvent(_ sender: AnyObject) {
 		stress.memoryAlloc(1024 * 1024 * 32)
 		updatePressureMemorySizeUpdate()
 	}
 	
-	@IBAction func buttonPressureMemoryDeallocTouchUpInside(_ sender: AnyObject) {
+	@IBAction func buttonPressureMemoryDeallocEvent(_ sender: AnyObject) {
 		stress.memoryDealloc()
 		updatePressureMemorySizeUpdate()
 	}
@@ -151,12 +151,12 @@ class ViewController: NSViewController, ReporterCompactViewDelegate {
 	
 	
 	// MARK: Thread
-	@IBAction func buttonPressureThreadCreateTouchUpInside(_ sender: AnyObject) {
+	@IBAction func buttonPressureThreadCreateEvent(_ sender: AnyObject) {
 		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
 		updatePressureThreadCountUpdate()
 	}
 	
-	@IBAction func buttonPressureThreadDestroyTouchUpInside(_ sender: AnyObject) {
+	@IBAction func buttonPressureThreadDestroyEvent(_ sender: AnyObject) {
 		stress.threadDestroy()
 		updatePressureThreadCountUpdate()
 	}

@@ -103,7 +103,7 @@ extension ReporterCompactView {
 		backgroundColor = CrossPlatformColor.black
 		textColor = CrossPlatformColor.white
 		
-		initTextField()
+		initLabel()
 	}
 	
 }
@@ -114,8 +114,7 @@ extension ReporterCompactView {
 	
 	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
 		DispatchQueue.main.async {
-			self.updateTextField(data)
-			
+			self.updateLabel(data)
 			
 			guard let delegate = self.delegate else {
 				return
@@ -144,15 +143,15 @@ extension ReporterCompactView {
 }
 
 
-// MARK: TextField
+// MARK: Label
 extension ReporterCompactView {
 	
-	private func initTextField() {
+	private func initLabel() {
 		labelOS.text = "\(ReporterCompactView.markOS) Waiting..."
 		labelApp.text = "\(ReporterCompactView.markProcess) Waiting..."
 	}
 	
-	private func updateTextField(_ data: Reporter.Data) {
+	private func updateLabel(_ data: Reporter.Data) {
 		labelOS.text = stringOS(data)
 		labelApp.text = stringApp(data)
 	}
