@@ -19,6 +19,16 @@ open class CrossPlatformSegmentedControl: UISegmentedControl {
 import AppKit
 
 open class CrossPlatformSegmentedControl: NSSegmentedControl {
+	open var selectedSegmentIndex: Int {
+		get {
+			return selectedSegment
+		}
+		
+		set {
+			selectedSegment = newValue
+		}
+	}
+	
 	open func addTarget(_ target: Any?, action: Selector) {
 		self.target = target as AnyObject?
 		self.action = action
