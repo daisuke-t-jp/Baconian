@@ -37,12 +37,12 @@ class ViewController: CrossPlatformViewController, ReporterCompactViewDelegate {
 	@IBOutlet weak var segmentedControlReporterControl: CrossPlatformSegmentedControl!
 	@IBOutlet weak var segmentedControlReporterFrequency: CrossPlatformSegmentedControl!
 	
-	@IBOutlet weak var labelPressureMemorySize: CrossPlatformLabel!
-	@IBOutlet weak var labelPressureThreadCount: CrossPlatformLabel!
-	@IBOutlet weak var buttonPressureMemoryAlloc: CrossPlatformButton!
-	@IBOutlet weak var buttonPressureMemoryDealloc: CrossPlatformButton!
-	@IBOutlet weak var buttonPressureThreadCreate: CrossPlatformButton!
-	@IBOutlet weak var buttonPressureThreadDestroy: CrossPlatformButton!
+	@IBOutlet weak var labelStressMemorySize: CrossPlatformLabel!
+	@IBOutlet weak var labelStressThreadCount: CrossPlatformLabel!
+	@IBOutlet weak var buttonStressMemoryAlloc: CrossPlatformButton!
+	@IBOutlet weak var buttonStressMemoryDealloc: CrossPlatformButton!
+	@IBOutlet weak var buttonStressThreadCreate: CrossPlatformButton!
+	@IBOutlet weak var buttonStressThreadDestroy: CrossPlatformButton!
 	
 	
 	// MARK: Property
@@ -71,13 +71,13 @@ extension ViewController {
 		segmentedControlReporterFrequency.selectedSegmentIndex = Frequency.normally.rawValue
 		segmentedControlReporterFrequency.addTarget(self, action: #selector(segmentedControlReporterFrequencyEvent(_:)))
 		
-		buttonPressureMemoryAlloc.addTarget(self, action: #selector(buttonPressureMemoryAllocEvent(_:)))
-		buttonPressureMemoryDealloc.addTarget(self, action: #selector(buttonPressureMemoryDeallocEvent(_:)))
-		buttonPressureThreadCreate.addTarget(self, action: #selector(buttonPressureThreadCreateEvent(_:)))
-		buttonPressureThreadDestroy.addTarget(self, action: #selector(buttonPressureThreadDestroyEvent(_:)))
+		buttonStressMemoryAlloc.addTarget(self, action: #selector(buttonStressMemoryAllocEvent(_:)))
+		buttonStressMemoryDealloc.addTarget(self, action: #selector(buttonStressMemoryDeallocEvent(_:)))
+		buttonStressThreadCreate.addTarget(self, action: #selector(buttonStressThreadCreateEvent(_:)))
+		buttonStressThreadDestroy.addTarget(self, action: #selector(buttonStressThreadDestroyEvent(_:)))
 		
-		updatePressureMemorySizeUpdate()
-		updatePressureThreadCountUpdate()
+		updateStressMemorySizeUpdate()
+		updateStressThreadCountUpdate()
 	}
 	
 	#if os(iOS)
@@ -151,18 +151,18 @@ extension ViewController {
 // MARK: Memory
 extension ViewController {
 
-	@IBAction func buttonPressureMemoryAllocEvent(_ sender: AnyObject) {
+	@IBAction func buttonStressMemoryAllocEvent(_ sender: AnyObject) {
 		stress.memoryAlloc(1024 * 1024 * 32)
-		updatePressureMemorySizeUpdate()
+		updateStressMemorySizeUpdate()
 	}
 	
-	@IBAction func buttonPressureMemoryDeallocEvent(_ sender: AnyObject) {
+	@IBAction func buttonStressMemoryDeallocEvent(_ sender: AnyObject) {
 		stress.memoryDealloc()
-		updatePressureMemorySizeUpdate()
+		updateStressMemorySizeUpdate()
 	}
 	
-	func updatePressureMemorySizeUpdate() {
-		labelPressureMemorySize.text = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
+	func updateStressMemorySizeUpdate() {
+		labelStressMemorySize.text = "Memory Size: \(stress.memorySize().memoryByteFormatString)"
 	}
 	
 }
@@ -171,18 +171,18 @@ extension ViewController {
 // MARK: Thread
 extension ViewController {
 
-	@IBAction func buttonPressureThreadCreateEvent(_ sender: AnyObject) {
+	@IBAction func buttonStressThreadCreateEvent(_ sender: AnyObject) {
 		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
-		updatePressureThreadCountUpdate()
+		updateStressThreadCountUpdate()
 	}
 	
-	@IBAction func buttonPressureThreadDestroyEvent(_ sender: AnyObject) {
+	@IBAction func buttonStressThreadDestroyEvent(_ sender: AnyObject) {
 		stress.threadDestroy()
-		updatePressureThreadCountUpdate()
+		updateStressThreadCountUpdate()
 	}
 	
-	func updatePressureThreadCountUpdate() {
-		labelPressureThreadCount.text = "Thread Count: \(stress.threadCount())"
+	func updateStressThreadCountUpdate() {
+		labelStressThreadCount.text = "Thread Count: \(stress.threadCount())"
 	}
 
 }

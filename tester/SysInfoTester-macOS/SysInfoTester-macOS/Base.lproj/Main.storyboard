@@ -726,7 +726,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="l2D-3i-rl9"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Pressure" id="XC9-Ri-mG5">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Stress" id="XC9-Ri-mG5">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -943,12 +943,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonPressureMemoryAlloc" destination="5bV-Bv-BRn" id="F4i-t9-bXs"/>
-                        <outlet property="buttonPressureMemoryDealloc" destination="biP-hh-tbf" id="7bU-l7-YAG"/>
-                        <outlet property="buttonPressureThreadCreate" destination="DQi-YQ-anQ" id="orI-m5-84N"/>
-                        <outlet property="buttonPressureThreadDestroy" destination="zcT-Ai-B3b" id="E5D-SZ-86s"/>
-                        <outlet property="labelPressureMemorySize" destination="NwR-om-S6y" id="VnB-gO-ScQ"/>
-                        <outlet property="labelPressureThreadCount" destination="uB2-Zv-iN1" id="Khe-Io-eO7"/>
+                        <outlet property="buttonStressMemoryAlloc" destination="5bV-Bv-BRn" id="F4i-t9-bXs"/>
+                        <outlet property="buttonStressMemoryDealloc" destination="biP-hh-tbf" id="7bU-l7-YAG"/>
+                        <outlet property="buttonStressThreadCreate" destination="DQi-YQ-anQ" id="orI-m5-84N"/>
+                        <outlet property="buttonStressThreadDestroy" destination="zcT-Ai-B3b" id="E5D-SZ-86s"/>
+                        <outlet property="labelStressMemorySize" destination="NwR-om-S6y" id="VnB-gO-ScQ"/>
+                        <outlet property="labelStressThreadCount" destination="uB2-Zv-iN1" id="Khe-Io-eO7"/>
                         <outlet property="labelViewPragrammatically" destination="Iqf-um-Y4Q" id="kN8-0K-A4p"/>
                         <outlet property="labelViewStoryboard" destination="NOw-TI-ypZ" id="0gv-CV-EIM"/>
                         <outlet property="segmentedControlReporterControl" destination="JAQ-Ps-fNI" id="fOr-t8-kfe"/>

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// StressUtility
 class StressUtility {
 	
 	// MARK: Property
