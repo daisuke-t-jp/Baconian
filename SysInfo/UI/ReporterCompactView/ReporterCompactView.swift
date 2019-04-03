@@ -26,7 +26,9 @@ class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	
 	
 	// MARK: Outlet
-	@IBOutlet weak var viewRoot: CrossPlatformView!
+	#if os(macOS)
+	@IBOutlet weak var viewTopLevel: CrossPlatformView!
+	#endif
 	@IBOutlet weak var labelOS: CrossPlatformLabel!
 	@IBOutlet weak var labelApp: CrossPlatformLabel!
 	
@@ -92,7 +94,7 @@ extension ReporterCompactView {
 			return
 		}
 		
-		addSubview(viewRoot)
+		addSubview(viewTopLevel)
 		#endif
 	}
 	

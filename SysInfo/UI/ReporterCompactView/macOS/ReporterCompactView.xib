@@ -10,7 +10,7 @@
             <connections>
                 <outlet property="labelApp" destination="cWy-iS-PN5" id="kKB-G9-Cag"/>
                 <outlet property="labelOS" destination="504-qv-GjO" id="qf4-jX-5db"/>
-                <outlet property="viewRoot" destination="c22-O7-iKe" id="zsF-93-Kqz"/>
+                <outlet property="viewTopLevel" destination="c22-O7-iKe" id="D7C-mN-Eg8"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
