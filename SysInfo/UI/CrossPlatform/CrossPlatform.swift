@@ -11,9 +11,11 @@ import UIKit
 
 public typealias CrossPlatformRect = CGRect
 public typealias CrossPlatformColor = UIColor
+public typealias CrossPlatformViewController = UIViewController
 #elseif os(macOS)
 import AppKit
 
 public typealias CrossPlatformRect = NSRect
 public typealias CrossPlatformColor = NSColor
+public typealias CrossPlatformViewController = NSViewController
 #endif

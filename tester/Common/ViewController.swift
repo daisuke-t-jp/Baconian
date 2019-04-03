@@ -6,9 +6,13 @@
 //  Copyright © 2019 SysInfo. All rights reserved.
 //
 
-import Cocoa
+#if os(iOS)
+import UIKit
+#elseif os(macOS)
+import AppKit
+#endif
 
-class ViewController: NSViewController, ReporterCompactViewDelegate {
+class ViewController: CrossPlatformViewController, ReporterCompactViewDelegate {
 	
 	// MARK: Enum, Const
 	enum Control: Int {
@@ -76,12 +80,22 @@ extension ViewController {
 		updatePressureThreadCountUpdate()
 	}
 	
+	#if os(iOS)
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		
+		// TODO: iOS
+		// viewReporterProgrammatically.frame.origin.x = viewReporter.frame.origin.x
+		// viewReporterProgrammatically.frame.origin.y = labelViewPragrammatically.frame.origin.y - 10 - viewReporterProgrammatically.frame.height
+	}
+	#elseif os(macOS)
 	override func viewDidLayout() {
 		super.viewDidLayout()
 		
 		viewReporterProgrammatically.frame.origin.x = viewReporter.frame.origin.x
 		viewReporterProgrammatically.frame.origin.y = labelViewPragrammatically.frame.origin.y - 10 - viewReporterProgrammatically.frame.height
 	}
+	#endif
 }
 
 
@@ -99,7 +113,7 @@ extension ViewController {
 extension ViewController {
 
 	@IBAction func segmentedControlReporterControlEvent(_ sender: AnyObject) {
-		switch Control(rawValue: segmentedControlReporterControl.selectedSegment)! {
+		switch Control(rawValue: segmentedControlReporterControl.selectedSegmentIndex)! {
 		case .start:
 			viewReporter.start()
 			viewReporterProgrammatically.start()
@@ -117,7 +131,7 @@ extension ViewController {
 extension ViewController {
 
 	@IBAction func segmentedControlReporterFrequencyEvent(_ sender: AnyObject) {
-		switch Frequency(rawValue: segmentedControlReporterFrequency.selectedSegment)! {
+		switch Frequency(rawValue: segmentedControlReporterFrequency.selectedSegmentIndex)! {
 		case .normally:
 			viewReporter.frequency = .normally
 			viewReporterProgrammatically.frequency = .normally

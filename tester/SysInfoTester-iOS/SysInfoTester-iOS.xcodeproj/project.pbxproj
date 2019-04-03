@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		02A423C12254309F0063048F /* CrossPlatformButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423C02254309F0063048F /* CrossPlatformButton.swift */; };
 		02A423C5225431E60063048F /* CrossPlatformSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423C4225431E60063048F /* CrossPlatformSegmentedControl.swift */; };
+		02A423CD22543A620063048F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423CB22543A620063048F /* ViewController.swift */; };
+		02A423CE22543A620063048F /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423CC22543A620063048F /* StressUtility.swift */; };
 		7EA28FED22538A6300FDBBB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA28FEC22538A6300FDBBB3 /* AppDelegate.swift */; };
 		7EA28FF222538A6300FDBBB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA28FF022538A6300FDBBB3 /* Main.storyboard */; };
 		7EA28FF422538A6500FDBBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA28FF322538A6500FDBBB3 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		02A423C02254309F0063048F /* CrossPlatformButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformButton.swift; sourceTree = "<group>"; };
 		02A423C4225431E60063048F /* CrossPlatformSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformSegmentedControl.swift; sourceTree = "<group>"; };
+		02A423CB22543A620063048F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02A423CC22543A620063048F /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
 		7EA28FE922538A6300FDBBB3 /* SysInfoTester-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SysInfoTester-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA28FEC22538A6300FDBBB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EA28FF122538A6300FDBBB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,10 +90,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02A423CA22543A620063048F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				02A423CC22543A620063048F /* StressUtility.swift */,
+				02A423CB22543A620063048F /* ViewController.swift */,
+			);
+			name = Common;
+			path = ../Common;
+			sourceTree = "<group>";
+		};
 		7EA28FE022538A6300FDBBB3 = {
 			isa = PBXGroup;
 			children = (
 				7EA2900F2253F8E300FDBBB3 /* SysInfo */,
+				02A423CA22543A620063048F /* Common */,
 				7EA28FEB22538A6300FDBBB3 /* SysInfoTester-iOS */,
 				7EA28FEA22538A6300FDBBB3 /* Products */,
 			);
@@ -121,9 +136,9 @@
 				7EA2901E2253F8E300FDBBB3 /* SysInfo.h */,
 				7EA290172253F8E300FDBBB3 /* Extension */,
 				7EA2901F2253F8E300FDBBB3 /* Mach */,
-				7EA290102253F8E300FDBBB3 /* UI */,
-				7EA2901A2253F8E300FDBBB3 /* Reporter */,
 				7EA2902A2253F8E300FDBBB3 /* Report */,
+				7EA2901A2253F8E300FDBBB3 /* Reporter */,
+				7EA290102253F8E300FDBBB3 /* UI */,
 			);
 			name = SysInfo;
 			path = ../../SysInfo;
@@ -348,8 +363,10 @@
 				7EA2903D2253F8E300FDBBB3 /* Reporter.swift in Sources */,
 				7EA290422253F8E300FDBBB3 /* Mach.swift in Sources */,
 				7EA290442253F8E300FDBBB3 /* MachTaskThreadBasicInfo.swift in Sources */,
+				02A423CD22543A620063048F /* ViewController.swift in Sources */,
 				7EA2903F2253F8E300FDBBB3 /* MachHostCPULoadInfo.swift in Sources */,
 				7EA290452253F8E300FDBBB3 /* MachCPUTick.swift in Sources */,
+				02A423CE22543A620063048F /* StressUtility.swift in Sources */,
 				7EA2904B2253F8E300FDBBB3 /* ReportProcessThread.swift in Sources */,
 				7EA290362253F8E300FDBBB3 /* CrossPlatform.swift in Sources */,
 				7EA2904C2253F8E300FDBBB3 /* ReportProcessCPU.swift in Sources */,
