@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		020975752244D15A003CE645 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975732244D15A003CE645 /* SysInfoTests.swift */; };
 		023BBF7122409E6600842B33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBF7022409E6600842B33 /* main.swift */; };
+		02D8FEAD2255C98000113A6C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02D8FEAC2255C98000113A6C /* Info.plist */; };
 		02ED7A0A2248926600C9AF82 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* StressUtility.swift */; };
 		02ED7A0B2248926600C9AF82 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* StressUtility.swift */; };
 		02ED7A332248B2CC00C9AF82 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */; };
@@ -73,6 +74,7 @@
 		020975742244D15A003CE645 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		023BBF6D22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SysInfoTester-macOSCommandLine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		023BBF7022409E6600842B33 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		02D8FEAC2255C98000113A6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02ED7A092248926600C9AF82 /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
 		02ED7A162248B2CC00C9AF82 /* TimeInterval+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+SysInfo.swift"; sourceTree = "<group>"; };
 		02ED7A172248B2CC00C9AF82 /* FixedWidthInteger+SysInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+SysInfo.swift"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				020975722244D15A003CE645 /* SysInfoTests */,
 				02ED7A082248926600C9AF82 /* Common */,
 				023BBF6F22409E6600842B33 /* SysInfoTester-macOSCommandLine */,
+				02D8FEAB2255C98000113A6C /* SysInfoTester-macOSCommandLineTests */,
 				023BBF6E22409E6600842B33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,6 +156,14 @@
 				023BBF7022409E6600842B33 /* main.swift */,
 			);
 			path = "SysInfoTester-macOSCommandLine";
+			sourceTree = "<group>";
+		};
+		02D8FEAB2255C98000113A6C /* SysInfoTester-macOSCommandLineTests */ = {
+			isa = PBXGroup;
+			children = (
+				02D8FEAC2255C98000113A6C /* Info.plist */,
+			);
+			path = "SysInfoTester-macOSCommandLineTests";
 			sourceTree = "<group>";
 		};
 		02ED7A082248926600C9AF82 /* Common */ = {
@@ -339,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D8FEAD2255C98000113A6C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
