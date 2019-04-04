@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0238B7ED2255867D007C0805"
-               BuildableName = "SysInfo_iOS.framework"
+               BuildableName = "SysInfo.framework"
                BlueprintName = "SysInfo-iOS"
                ReferencedContainer = "container:SysInfo.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0238B7ED2255867D007C0805"
-            BuildableName = "SysInfo_iOS.framework"
+            BuildableName = "SysInfo.framework"
             BlueprintName = "SysInfo-iOS"
             ReferencedContainer = "container:SysInfo.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0238B7ED2255867D007C0805"
-            BuildableName = "SysInfo_iOS.framework"
+            BuildableName = "SysInfo.framework"
             BlueprintName = "SysInfo-iOS"
             ReferencedContainer = "container:SysInfo.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0238B7ED2255867D007C0805"
-            BuildableName = "SysInfo_iOS.framework"
+            BuildableName = "SysInfo.framework"
             BlueprintName = "SysInfo-iOS"
             ReferencedContainer = "container:SysInfo.xcodeproj">
          </BuildableReference>
