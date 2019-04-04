@@ -23,7 +23,42 @@
 		02082B952242338A00D4DFC2 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B922242338A00D4DFC2 /* ReporterData.swift */; };
 		02082B97224233B400D4DFC2 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B96224233B400D4DFC2 /* Reporter.swift */; };
 		020975712244C460003CE645 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975702244C460003CE645 /* MachHostBasicInfo.swift */; };
-		0238B7F72255867E007C0805 /* SysInfo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0238B7EE2255867D007C0805 /* SysInfo_iOS.framework */; };
+		0238B7F72255867E007C0805 /* SysInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0238B7EE2255867D007C0805 /* SysInfo.framework */; };
+		0238B81222558E7E007C0805 /* CrossPlatformSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80722558E7E007C0805 /* CrossPlatformSegmentedControl.swift */; };
+		0238B81322558E7E007C0805 /* CrossPlatformSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80722558E7E007C0805 /* CrossPlatformSegmentedControl.swift */; };
+		0238B81422558E7E007C0805 /* CrossPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80822558E7E007C0805 /* CrossPlatformView.swift */; };
+		0238B81522558E7E007C0805 /* CrossPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80822558E7E007C0805 /* CrossPlatformView.swift */; };
+		0238B81622558E7E007C0805 /* CrossPlatformLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80922558E7E007C0805 /* CrossPlatformLabel.swift */; };
+		0238B81722558E7E007C0805 /* CrossPlatformLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80922558E7E007C0805 /* CrossPlatformLabel.swift */; };
+		0238B81822558E7E007C0805 /* CrossPlatformButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80A22558E7E007C0805 /* CrossPlatformButton.swift */; };
+		0238B81922558E7E007C0805 /* CrossPlatformButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80A22558E7E007C0805 /* CrossPlatformButton.swift */; };
+		0238B81A22558E7E007C0805 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80B22558E7E007C0805 /* CrossPlatform.swift */; };
+		0238B81B22558E7E007C0805 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B80B22558E7E007C0805 /* CrossPlatform.swift */; };
+		0238B81C22558E7E007C0805 /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0238B80E22558E7E007C0805 /* ReporterCompactView.xib */; };
+		0238B81F22558E7E007C0805 /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0238B81022558E7E007C0805 /* ReporterCompactView.xib */; };
+		0238B82022558E7E007C0805 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B81122558E7E007C0805 /* ReporterCompactView.swift */; };
+		0238B82122558E7E007C0805 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B81122558E7E007C0805 /* ReporterCompactView.swift */; };
+		0238B82322558F75007C0805 /* TimeInterval+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A6223F390900048572 /* TimeInterval+SysInfo.swift */; };
+		0238B82422558F78007C0805 /* FixedWidthInteger+SysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+SysInfo.swift */; };
+		0238B82522558F7B007C0805 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFCE2240DFB800842B33 /* Mach.swift */; };
+		0238B82622558F7E007C0805 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFCF2240DFB800842B33 /* MachCPUTick.swift */; };
+		0238B82722558F85007C0805 /* MachHostVMStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B652242021600D4DFC2 /* MachHostVMStatics.swift */; };
+		0238B82822558F87007C0805 /* MachHostBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975702244C460003CE645 /* MachHostBasicInfo.swift */; };
+		0238B82922558F8A007C0805 /* MachHostCPULoadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B642242021600D4DFC2 /* MachHostCPULoadInfo.swift */; };
+		0238B82A22558F8C007C0805 /* MachHostProcessorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B632242021600D4DFC2 /* MachHostProcessorInfo.swift */; };
+		0238B82B22558F91007C0805 /* MachTaskBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B672242021600D4DFC2 /* MachTaskBasicInfo.swift */; };
+		0238B82C22558F91007C0805 /* MachTaskThreadBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B682242021600D4DFC2 /* MachTaskThreadBasicInfo.swift */; };
+		0238B82D22558F98007C0805 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B7F224223BA00D4DFC2 /* Report.swift */; };
+		0238B82E22558F9E007C0805 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B82224223BA00D4DFC2 /* ReportOSMemory.swift */; };
+		0238B82F22558F9E007C0805 /* ReportOSCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B83224223BA00D4DFC2 /* ReportOSCPU.swift */; };
+		0238B83022558F9E007C0805 /* ReportOSProcessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B81224223BA00D4DFC2 /* ReportOSProcessors.swift */; };
+		0238B83122558FA3007C0805 /* ReportProcessMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B85224223BA00D4DFC2 /* ReportProcessMemory.swift */; };
+		0238B83222558FA3007C0805 /* ReportProcessCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B87224223BA00D4DFC2 /* ReportProcessCPU.swift */; };
+		0238B83322558FA3007C0805 /* ReportProcessThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B86224223BA00D4DFC2 /* ReportProcessThread.swift */; };
+		0238B83422558FA8007C0805 /* ReporterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B922242338A00D4DFC2 /* ReporterData.swift */; };
+		0238B83522558FA8007C0805 /* ReporterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B902242338A00D4DFC2 /* ReporterDelegate.swift */; };
+		0238B83622558FA8007C0805 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B96224233B400D4DFC2 /* Reporter.swift */; };
+		0238B83722558FB5007C0805 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A0473223F35DB00048572 /* SysInfoTests.swift */; };
 		023BBFD52240DFB900842B33 /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFCE2240DFB800842B33 /* Mach.swift */; };
 		023BBFD62240DFB900842B33 /* MachCPUTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBFCF2240DFB800842B33 /* MachCPUTick.swift */; };
 		026A046F223F35DB00048572 /* SysInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026A0465223F35DA00048572 /* SysInfo.framework */; };
@@ -67,8 +102,16 @@
 		02082B922242338A00D4DFC2 /* ReporterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterData.swift; sourceTree = "<group>"; };
 		02082B96224233B400D4DFC2 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
 		020975702244C460003CE645 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
-		0238B7EE2255867D007C0805 /* SysInfo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SysInfo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0238B7EE2255867D007C0805 /* SysInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SysInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0238B7F62255867E007C0805 /* SysInfo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SysInfo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0238B80722558E7E007C0805 /* CrossPlatformSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformSegmentedControl.swift; sourceTree = "<group>"; };
+		0238B80822558E7E007C0805 /* CrossPlatformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformView.swift; sourceTree = "<group>"; };
+		0238B80922558E7E007C0805 /* CrossPlatformLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformLabel.swift; sourceTree = "<group>"; };
+		0238B80A22558E7E007C0805 /* CrossPlatformButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformButton.swift; sourceTree = "<group>"; };
+		0238B80B22558E7E007C0805 /* CrossPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
+		0238B80E22558E7E007C0805 /* ReporterCompactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReporterCompactView.xib; sourceTree = "<group>"; };
+		0238B81022558E7E007C0805 /* ReporterCompactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReporterCompactView.xib; sourceTree = "<group>"; };
+		0238B81122558E7E007C0805 /* ReporterCompactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterCompactView.swift; sourceTree = "<group>"; };
 		023BBFCE2240DFB800842B33 /* Mach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
 		023BBFCF2240DFB800842B33 /* MachCPUTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachCPUTick.swift; sourceTree = "<group>"; };
 		026A0465223F35DA00048572 /* SysInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SysInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0238B7F72255867E007C0805 /* SysInfo_iOS.framework in Frameworks */,
+				0238B7F72255867E007C0805 /* SysInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +218,53 @@
 			path = Reporter;
 			sourceTree = "<group>";
 		};
+		0238B80522558E7E007C0805 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0238B80622558E7E007C0805 /* CrossPlatform */,
+				0238B80C22558E7E007C0805 /* ReporterCompactView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0238B80622558E7E007C0805 /* CrossPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				0238B80722558E7E007C0805 /* CrossPlatformSegmentedControl.swift */,
+				0238B80822558E7E007C0805 /* CrossPlatformView.swift */,
+				0238B80922558E7E007C0805 /* CrossPlatformLabel.swift */,
+				0238B80A22558E7E007C0805 /* CrossPlatformButton.swift */,
+				0238B80B22558E7E007C0805 /* CrossPlatform.swift */,
+			);
+			path = CrossPlatform;
+			sourceTree = "<group>";
+		};
+		0238B80C22558E7E007C0805 /* ReporterCompactView */ = {
+			isa = PBXGroup;
+			children = (
+				0238B80D22558E7E007C0805 /* macOS */,
+				0238B80F22558E7E007C0805 /* iOS */,
+				0238B81122558E7E007C0805 /* ReporterCompactView.swift */,
+			);
+			path = ReporterCompactView;
+			sourceTree = "<group>";
+		};
+		0238B80D22558E7E007C0805 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				0238B80E22558E7E007C0805 /* ReporterCompactView.xib */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		0238B80F22558E7E007C0805 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0238B81022558E7E007C0805 /* ReporterCompactView.xib */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		026A045B223F35DA00048572 = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +279,7 @@
 			children = (
 				026A0465223F35DA00048572 /* SysInfo.framework */,
 				026A046E223F35DB00048572 /* SysInfoTests-macOS.xctest */,
-				0238B7EE2255867D007C0805 /* SysInfo_iOS.framework */,
+				0238B7EE2255867D007C0805 /* SysInfo.framework */,
 				0238B7F62255867E007C0805 /* SysInfo-iOSTests.xctest */,
 			);
 			name = Products;
@@ -204,6 +294,7 @@
 				026A04AA223F390A00048572 /* Mach */,
 				02082B7E224223BA00D4DFC2 /* Report */,
 				02082B8F2242338900D4DFC2 /* Reporter */,
+				0238B80522558E7E007C0805 /* UI */,
 			);
 			path = SysInfo;
 			sourceTree = "<group>";
@@ -273,7 +364,7 @@
 			);
 			name = "SysInfo-iOS";
 			productName = "SysInfo-iOS";
-			productReference = 0238B7EE2255867D007C0805 /* SysInfo_iOS.framework */;
+			productReference = 0238B7EE2255867D007C0805 /* SysInfo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0238B7F52255867E007C0805 /* SysInfo-iOSTests */ = {
@@ -383,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0238B81F22558E7E007C0805 /* ReporterCompactView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0238B81C22558E7E007C0805 /* ReporterCompactView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +527,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0238B82D22558F98007C0805 /* Report.swift in Sources */,
+				0238B82622558F7E007C0805 /* MachCPUTick.swift in Sources */,
+				0238B83422558FA8007C0805 /* ReporterData.swift in Sources */,
+				0238B82522558F7B007C0805 /* Mach.swift in Sources */,
+				0238B82B22558F91007C0805 /* MachTaskBasicInfo.swift in Sources */,
+				0238B83022558F9E007C0805 /* ReportOSProcessors.swift in Sources */,
+				0238B82322558F75007C0805 /* TimeInterval+SysInfo.swift in Sources */,
+				0238B83522558FA8007C0805 /* ReporterDelegate.swift in Sources */,
+				0238B82822558F87007C0805 /* MachHostBasicInfo.swift in Sources */,
+				0238B82722558F85007C0805 /* MachHostVMStatics.swift in Sources */,
+				0238B83222558FA3007C0805 /* ReportProcessCPU.swift in Sources */,
+				0238B81522558E7E007C0805 /* CrossPlatformView.swift in Sources */,
+				0238B81B22558E7E007C0805 /* CrossPlatform.swift in Sources */,
+				0238B81322558E7E007C0805 /* CrossPlatformSegmentedControl.swift in Sources */,
+				0238B82E22558F9E007C0805 /* ReportOSMemory.swift in Sources */,
+				0238B82922558F8A007C0805 /* MachHostCPULoadInfo.swift in Sources */,
+				0238B83622558FA8007C0805 /* Reporter.swift in Sources */,
+				0238B82C22558F91007C0805 /* MachTaskThreadBasicInfo.swift in Sources */,
+				0238B82122558E7E007C0805 /* ReporterCompactView.swift in Sources */,
+				0238B83122558FA3007C0805 /* ReportProcessMemory.swift in Sources */,
+				0238B81722558E7E007C0805 /* CrossPlatformLabel.swift in Sources */,
+				0238B83322558FA3007C0805 /* ReportProcessThread.swift in Sources */,
+				0238B82A22558F8C007C0805 /* MachHostProcessorInfo.swift in Sources */,
+				0238B82F22558F9E007C0805 /* ReportOSCPU.swift in Sources */,
+				0238B82422558F78007C0805 /* FixedWidthInteger+SysInfo.swift in Sources */,
+				0238B81922558E7E007C0805 /* CrossPlatformButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0238B83722558FB5007C0805 /* SysInfoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,21 +570,27 @@
 			files = (
 				026A04B5223F390A00048572 /* TimeInterval+SysInfo.swift in Sources */,
 				02082B952242338A00D4DFC2 /* ReporterData.swift in Sources */,
+				0238B81222558E7E007C0805 /* CrossPlatformSegmentedControl.swift in Sources */,
+				0238B82022558E7E007C0805 /* ReporterCompactView.swift in Sources */,
 				02082B88224223BA00D4DFC2 /* Report.swift in Sources */,
 				023BBFD62240DFB900842B33 /* MachCPUTick.swift in Sources */,
 				02082B8D224223BA00D4DFC2 /* ReportProcessThread.swift in Sources */,
 				023BBFD52240DFB900842B33 /* Mach.swift in Sources */,
 				02082B8E224223BA00D4DFC2 /* ReportProcessCPU.swift in Sources */,
+				0238B81622558E7E007C0805 /* CrossPlatformLabel.swift in Sources */,
 				02082B6C2242021600D4DFC2 /* MachTaskBasicInfo.swift in Sources */,
 				02082B6B2242021600D4DFC2 /* MachHostVMStatics.swift in Sources */,
+				0238B81A22558E7E007C0805 /* CrossPlatform.swift in Sources */,
 				02082B6D2242021600D4DFC2 /* MachTaskThreadBasicInfo.swift in Sources */,
 				02082B8A224223BA00D4DFC2 /* ReportOSMemory.swift in Sources */,
 				02082B89224223BA00D4DFC2 /* ReportOSProcessors.swift in Sources */,
 				02082B6A2242021600D4DFC2 /* MachHostCPULoadInfo.swift in Sources */,
+				0238B81822558E7E007C0805 /* CrossPlatformButton.swift in Sources */,
 				02082B932242338A00D4DFC2 /* ReporterDelegate.swift in Sources */,
 				02082B8C224223BA00D4DFC2 /* ReportProcessMemory.swift in Sources */,
 				020975712244C460003CE645 /* MachHostBasicInfo.swift in Sources */,
 				02082B97224233B400D4DFC2 /* Reporter.swift in Sources */,
+				0238B81422558E7E007C0805 /* CrossPlatformView.swift in Sources */,
 				02082B8B224223BA00D4DFC2 /* ReportOSCPU.swift in Sources */,
 				02082B692242021600D4DFC2 /* MachHostProcessorInfo.swift in Sources */,
 				026A04B6223F390A00048572 /* FixedWidthInteger+SysInfo.swift in Sources */,
@@ -504,16 +630,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SysInfo-iOS/Info.plist";
+				INFOPLIST_FILE = SysInfo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SysInfo-iOS.SysInfo-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfo;
+				PRODUCT_NAME = SysInfo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -530,16 +656,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SysInfo-iOS/Info.plist";
+				INFOPLIST_FILE = SysInfo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SysInfo-iOS.SysInfo-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfo;
+				PRODUCT_NAME = SysInfo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -551,16 +677,17 @@
 		0238B8012255867E007C0805 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "SysInfo-iOSTests/Info.plist";
+				INFOPLIST_FILE = SysInfoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SysInfo-iOS.SysInfo-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -571,16 +698,17 @@
 		0238B8022255867E007C0805 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "SysInfo-iOSTests/Info.plist";
+				INFOPLIST_FILE = SysInfoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SysInfo-iOS.SysInfo-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SysInfo.SysInfoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -641,6 +769,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -699,6 +828,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
