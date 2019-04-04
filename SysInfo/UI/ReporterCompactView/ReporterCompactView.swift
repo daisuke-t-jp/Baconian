@@ -12,9 +12,9 @@ import UIKit
 import AppKit
 #endif
 
-typealias ReporterCompactViewDelegate = ReporterDelegate
+public typealias ReporterCompactViewDelegate = ReporterDelegate
 
-class ReporterCompactView: CrossPlatformView, ReporterDelegate {
+public class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	
 	// MARK: Enum, Const
 	private static let markOS = "🍎"
@@ -111,7 +111,7 @@ extension ReporterCompactView {
 // MARK: SysInfo Reporter Delegate
 extension ReporterCompactView {
 	
-	func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
+	public func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
 		DispatchQueue.main.async {
 			self.updateLabel(data)
 			

@@ -83,6 +83,11 @@ public class Reporter {
 	private var machHostCPULoadInfoPrev = Mach.CPUTick()
 	private var machHostProcessorInfoPrev = [Mach.CPUTick]()
 	
+	
+	// MARK: Initialize
+	public init() {
+	}
+	
 }
 
 
