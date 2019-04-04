@@ -101,7 +101,8 @@ class SysInfoTests: XCTestCase {
 	}
 	
 	func testReportOSCPU() {
-		let val = Report.OS.cpu()
+		let val = Report.OS.cpu(Mach.Host.cpuLoadInfo(),
+								machHostCPULoadInfoPrev: Mach.Host.cpuLoadInfo())
 		
 		XCTAssertFalse(val.userUsage == 0 &&
 			val.systemUsage == 0 &&
@@ -111,7 +112,8 @@ class SysInfoTests: XCTestCase {
 	}
 	
 	func testReportOSProcessors() {
-		let array = Report.OS.processors()
+		let array = Report.OS.processors(Mach.Host.processorInfo(),
+										 machHostProcessorInfoPrev: Mach.Host.processorInfo())
 		
 		XCTAssertNotEqual(array.count, 0)
 	}
