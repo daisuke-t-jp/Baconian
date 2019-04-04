@@ -11,3 +11,7 @@ matrix:
         # macOS
         - xcodebuild clean -project "SysInfo.xcodeproj" 
         - xcodebuild test -project "SysInfo.xcodeproj" -scheme "SysInfo-macOS" -destination "platform=OS X" -configuration Debug
+
+        # iOS
+        - xcodebuild clean -project "SysInfo.xcodeproj" 
+        - xcodebuild test -project "SysInfo.xcodeproj" -scheme "SysInfo-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone X" -configuration Debug
