@@ -71,7 +71,7 @@ extension Mach.Task {
 				return [ThreadBasicInfo]()
 			}
 			defer {
-				vm_deallocate(mach_task_self_, vm_address_t(bitPattern: actList), vm_size_t(actListCount))
+				vm_deallocate(mach_task_self_, vm_address_t(actList.pointee), vm_size_t(actListCount))
 			}
 			
 			

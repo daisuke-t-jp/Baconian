@@ -27,7 +27,7 @@ extension Mach.Host {
 				return [Mach.CPUTick]()
 			}
 			defer {
-				vm_deallocate(mach_task_self_, vm_address_t(bitPattern: cpuInfoArray), vm_size_t(cpuInfoCount))
+				vm_deallocate(mach_task_self_, vm_address_t(cpuInfoArray.pointee), vm_size_t(cpuInfoCount))
 			}
 			
 			var array = [Mach.CPUTick]()
