@@ -72,13 +72,9 @@ extension Report.OS.CPU {
 
 extension Report.OS {
 
-	static func cpu() -> CPU {
-		let machData = Mach.Host.cpuLoadInfo()
-		
-		let res = CPU(machData, prevData: machHostCPULoadInfoCache)
-		
-		// Caching data
-		machHostCPULoadInfoCache = machData
+	static func cpu(_ machHostCPULoadInfo: Mach.CPUTick,
+					machHostCPULoadInfoPrev: Mach.CPUTick) -> CPU {
+		let res = CPU(machHostCPULoadInfo, prevData: machHostCPULoadInfoPrev)
 		
 		return res
 	}

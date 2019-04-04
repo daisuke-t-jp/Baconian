@@ -10,24 +10,21 @@ import Foundation
 
 extension Report.OS {
 
-	static func processors() -> [CPU] {
-		let machArray = Mach.Host.processorInfo()
+	static func processors(_ machHostProcessorInfo: [Mach.CPUTick],
+						   machHostProcessorInfoPrev: [Mach.CPUTick]) -> [CPU] {
 		
 		var res = [CPU]()
-		for i in 0..<machArray.count {
-			let machData = machArray[i]
-			var cacheData = Mach.CPUTick()
+		for i in 0..<machHostProcessorInfo.count {
+			let machData = machHostProcessorInfo[i]
+			var prevData = Mach.CPUTick()
 			
-			if i < machHostProcessorInfoCache.count {
-				cacheData = machHostProcessorInfoCache[i]
+			if i < machHostProcessorInfoPrev.count {
+				prevData = machHostProcessorInfoPrev[i]
 			}
 			
-			let cpu = CPU(machData, prevData: cacheData)
+			let cpu = CPU(machData, prevData: prevData)
 			res.append(cpu)
 		}
-		
-		// Caching data
-		machHostProcessorInfoCache = machArray
 		
 		return res
 	}

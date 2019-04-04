@@ -13,9 +13,9 @@ public class Reporter {
 	// MARK: - Enum, Const
 	private static let threadInterval = TimeInterval(0.1)
 	public enum Frequency: TimeInterval {
-		case normally = 5
-		case often = 2
-		case veryOften = 1
+		case normally = 5	/// 5 sec
+		case often = 2		/// 2 sec
+		case veryOften = 1	/// 1 sec
 	}
 	
 	public enum State {
@@ -80,6 +80,9 @@ public class Reporter {
 	}
 	
 	private var lastProcessedDate = Date()
+	private var machHostCPULoadInfoPrev = Mach.CPUTick()
+	private var machHostProcessorInfoPrev = [Mach.CPUTick]()
+	
 }
 
 
@@ -167,12 +170,21 @@ extension Reporter {
 				return
 			}
 			
+			let machHostCPULoadInfo = Mach.Host.cpuLoadInfo()
+			let machHostProcessorInfo = Mach.Host.processorInfo()
 			let data = Reporter.Data(osMemory: Report.OS.memory(),
-									 osCPU: Report.OS.cpu(),
-									 osProcessors: Report.OS.processors(),
+									 osCPU: Report.OS.cpu(machHostCPULoadInfo,
+														  machHostCPULoadInfoPrev: machHostCPULoadInfoPrev),
+									 osProcessors: Report.OS.processors(machHostProcessorInfo,
+																		machHostProcessorInfoPrev: machHostProcessorInfoPrev),
 									 processMemory: Report.Process.memory(),
 									 processCPU: Report.Process.cpu(),
 									 processThread: Report.Process.thread())
+			
+			
+			// Caching prev data
+			machHostCPULoadInfoPrev = machHostCPULoadInfo
+			machHostProcessorInfoPrev = machHostProcessorInfo
 			
 			delegate.reporter(self, didUpdate: data)
 		}
