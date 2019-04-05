@@ -38,11 +38,12 @@ class ViewController: CrossPlatformViewController, ReporterCompactViewDelegate {
 	@IBOutlet weak var segmentedControlReporterFrequency: CrossPlatformSegmentedControl!
 	
 	@IBOutlet weak var labelStressMemorySize: CrossPlatformLabel!
-	@IBOutlet weak var labelStressThreadCount: CrossPlatformLabel!
 	@IBOutlet weak var buttonStressMemoryAlloc: CrossPlatformButton!
 	@IBOutlet weak var buttonStressMemoryDealloc: CrossPlatformButton!
-	@IBOutlet weak var buttonStressThreadCreate: CrossPlatformButton!
-	@IBOutlet weak var buttonStressThreadDestroy: CrossPlatformButton!
+	
+	@IBOutlet weak var labelStressOperationCount: CrossPlatformLabel!
+	@IBOutlet weak var buttonStressOperationAdd: CrossPlatformButton!
+	@IBOutlet weak var buttonStressOperationCancel: CrossPlatformButton!
 	
 	
 	// MARK: Property
@@ -73,11 +74,11 @@ extension ViewController {
 		
 		buttonStressMemoryAlloc.addTarget(self, action: #selector(buttonStressMemoryAllocEvent(_:)))
 		buttonStressMemoryDealloc.addTarget(self, action: #selector(buttonStressMemoryDeallocEvent(_:)))
-		buttonStressThreadCreate.addTarget(self, action: #selector(buttonStressThreadCreateEvent(_:)))
-		buttonStressThreadDestroy.addTarget(self, action: #selector(buttonStressThreadDestroyEvent(_:)))
+		buttonStressOperationAdd.addTarget(self, action: #selector(buttonStressOperationAddEvent(_:)))
+		buttonStressOperationCancel.addTarget(self, action: #selector(buttonStressOperationCancelEvent(_:)))
 		
 		updateStressMemorySizeUpdate()
-		updateStressThreadCountUpdate()
+		updateStressOperationCountUpdate()
 	}
 	
 	#if os(iOS)
@@ -168,21 +169,21 @@ extension ViewController {
 }
 
 
-// MARK: Thread
+// MARK: Operation
 extension ViewController {
 
-	@IBAction func buttonStressThreadCreateEvent(_ sender: AnyObject) {
-		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
-		updateStressThreadCountUpdate()
+	@IBAction func buttonStressOperationAddEvent(_ sender: AnyObject) {
+		stress.operationAdd(1024 * 32, sleepInterval: 0.01)
+		updateStressOperationCountUpdate()
 	}
 	
-	@IBAction func buttonStressThreadDestroyEvent(_ sender: AnyObject) {
-		stress.threadDestroy()
-		updateStressThreadCountUpdate()
+	@IBAction func buttonStressOperationCancelEvent(_ sender: AnyObject) {
+		stress.operationCancel()
+		updateStressOperationCountUpdate()
 	}
 	
-	func updateStressThreadCountUpdate() {
-		labelStressThreadCount.text = "Thread Count: \(stress.threadCount())"
+	func updateStressOperationCountUpdate() {
+		labelStressOperationCount.text = "Operation Count: \(stress.operationCount())"
 	}
 
 }

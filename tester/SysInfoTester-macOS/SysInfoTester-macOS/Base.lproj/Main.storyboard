@@ -807,7 +807,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="dr6-DK-i3X"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Create" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="45R-27-mKl">
+                                <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="45R-27-mKl">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -828,7 +828,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="O6b-Wb-WnY"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Thread" id="uUg-md-HR4">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Operation" id="uUg-md-HR4">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -878,9 +878,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="4qK-im-P7b"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Destroy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YLF-Ou-N1m">
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YLF-Ou-N1m">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
                                 </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-um-Y4Q" customClass="CrossPlatformLabel" customModule="SysInfoTester_macOS" customModuleProvider="target">
@@ -945,10 +948,10 @@
                     <connections>
                         <outlet property="buttonStressMemoryAlloc" destination="5bV-Bv-BRn" id="F4i-t9-bXs"/>
                         <outlet property="buttonStressMemoryDealloc" destination="biP-hh-tbf" id="7bU-l7-YAG"/>
-                        <outlet property="buttonStressThreadCreate" destination="DQi-YQ-anQ" id="orI-m5-84N"/>
-                        <outlet property="buttonStressThreadDestroy" destination="zcT-Ai-B3b" id="E5D-SZ-86s"/>
+                        <outlet property="buttonStressOperationAdd" destination="DQi-YQ-anQ" id="orI-m5-84N"/>
+                        <outlet property="buttonStressOperationCancel" destination="zcT-Ai-B3b" id="E5D-SZ-86s"/>
                         <outlet property="labelStressMemorySize" destination="NwR-om-S6y" id="VnB-gO-ScQ"/>
-                        <outlet property="labelStressThreadCount" destination="uB2-Zv-iN1" id="Khe-Io-eO7"/>
+                        <outlet property="labelStressOperationCount" destination="uB2-Zv-iN1" id="23P-wi-wdh"/>
                         <outlet property="labelViewPragrammatically" destination="Iqf-um-Y4Q" id="kN8-0K-A4p"/>
                         <outlet property="labelViewStoryboard" destination="NOw-TI-ypZ" id="0gv-CV-EIM"/>
                         <outlet property="segmentedControlReporterControl" destination="JAQ-Ps-fNI" id="fOr-t8-kfe"/>
