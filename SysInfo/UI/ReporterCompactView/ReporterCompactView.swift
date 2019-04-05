@@ -17,10 +17,10 @@ public typealias ReporterCompactViewDelegate = ReporterDelegate
 public class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	
 	// MARK: Enum, Const
-	private static let markOS = "🍎"
-	private static let markProcess = "🍏"
-	private static let markMemory = "🐏"	// RAM(U+1F40F)
-	private static let markCPU = "🤖"
+	private static let symbolOS = "🍎"
+	private static let symbolProcess = "🍏"
+	private static let symbolMemory = "🐏"	// RAM(U+1F40F)
+	private static let symbolCPU = "🤖"
 	public static let xibWidth = CGFloat(260)
 	public static let xibHeight = CGFloat(50)
 	
@@ -146,8 +146,8 @@ extension ReporterCompactView {
 extension ReporterCompactView {
 	
 	private func initLabel() {
-		labelOS.text = "\(ReporterCompactView.markOS) Waiting..."
-		labelApp.text = "\(ReporterCompactView.markProcess) Waiting..."
+		labelOS.text = "\(ReporterCompactView.symbolOS) Waiting..."
+		labelApp.text = "\(ReporterCompactView.symbolProcess) Waiting..."
 	}
 	
 	private func updateLabel(_ data: Reporter.Data) {
@@ -157,20 +157,20 @@ extension ReporterCompactView {
 	
 	private func textOS(_ data: Reporter.Data) -> String {
 		return String(format: "%@ | %@ %@ / %@ | %@ %.2f%%",
-					  ReporterCompactView.markOS,
-					  ReporterCompactView.markMemory,
+					  ReporterCompactView.symbolOS,
+					  ReporterCompactView.symbolMemory,
 					  data.osMemory.usedSize.memoryByteFormatString,
 					  data.osMemory.physicalSize.memoryByteFormatString,
-					  ReporterCompactView.markCPU,
+					  ReporterCompactView.symbolCPU,
 					  data.osCPU.usage * 100)
 	}
 	
 	private func textApp(_ data: Reporter.Data) -> String {
 		return String(format: "%@ | %@ %@ | %@ %.2f%%",
-					  ReporterCompactView.markProcess,
-					  ReporterCompactView.markMemory,
+					  ReporterCompactView.symbolProcess,
+					  ReporterCompactView.symbolMemory,
 					  data.processMemory.residentSize.memoryByteFormatString,
-					  ReporterCompactView.markCPU,
+					  ReporterCompactView.symbolCPU,
 					  data.processCPU.usage * 100)
 	}
 	
