@@ -12,12 +12,16 @@ import Foundation
 class StressUtility {
 	
 	// MARK: Property
-	private var memoryMap = [Date: [UInt8]]()
-	private var threadMap = [Date: Thread]()
+	private var memoryArray = [[UInt8]]()
+	private var operationQueue = OperationQueue()
 	
 	init() {
 	}
 	
+	deinit {
+		memoryDealloc()
+		operationCancel()
+	}
 }
 
 
@@ -25,17 +29,17 @@ class StressUtility {
 extension StressUtility {
 	
 	public func memoryAlloc(_ byteSize: Int) {
-		memoryMap[Date()] = [UInt8](repeating: UInt8.max, count: byteSize)
+		memoryArray.append([UInt8](repeating: UInt8.max, count: byteSize))
 	}
 	
 	public func memoryDealloc() {
-		memoryMap = [Date: [UInt8]]()
+		memoryArray = [[UInt8]]()
 	}
 	
 	public func memorySize() -> UInt64 {
 		var total = UInt64(0)
 		
-		for mem in memoryMap.values {
+		for mem in memoryArray {
 			total += UInt64(mem.count)
 		}
 		
@@ -45,63 +49,57 @@ extension StressUtility {
 }
 
 
-// MARK: Thread
+// MARK: Operation
 extension StressUtility {
 	
-	public func threadCreate(_ repeatCount: Int, sleepInterval: TimeInterval) {
-		let thread = Thread(target: self,
-							selector: #selector(self.threadEntry),
-							object: [repeatCount, sleepInterval])
-		thread.start()
-		threadMap[Date()] = thread
-	}
-	
-	public func threadDestroy() {
-		for thread in threadMap.values {
-			thread.cancel()
+	class StressOperation: Operation {
+		
+		// MARK: Property
+		let repeatCount: Int
+		let sleepInterval: TimeInterval
+		
+		
+		// MARK: Initialize
+		init(_ repeatCount: Int, sleepInterval: TimeInterval) {
+			self.repeatCount = repeatCount
+			self.sleepInterval = sleepInterval
 		}
-		threadMap = [Date: Thread]()
-	}
-	
-	public func threadCount() -> Int {
-		return threadMap.count
-	}
-	
-	@objc private func threadEntry(_ array: [Any]) {
-		autoreleasepool {
-			
-			print("start thread \(Thread.current)")
-			
-			guard let repeatCount = array[0] as? Int else {
-				return
-			}
-			
-			guard let sleepInterval = array[1] as? TimeInterval else {
-				return
-			}
-			
-			while true {
+		
+		
+		// MARK: Override
+		override func main() {
+			print("start operation thread[\(Thread.current)]")
+
+			while !isCancelled {
 				autoreleasepool {
-					threadProc(repeatCount)
-					
-					if Thread.current.isCancelled {
-						print("exit thread \(Thread.current)")
-						Thread.exit()
+					for _ in 0..<repeatCount {
+						autoreleasepool {
+							_ = Data(capacity: 1000)
+						}
 					}
 					
 					Thread.sleep(forTimeInterval: sleepInterval)
 				}
 			}
 			
+			print("exit operation thread[\(Thread.current)]")
 		}
 	}
 	
-	private func threadProc(_ repeatCount: Int) {
-		let array = [UInt8](repeating: UInt8.max, count: repeatCount)
-		var data = Data()
-		for byte in array {
-			data.append(byte)
-		}
+	private func operationInit() {
+		operationQueue.maxConcurrentOperationCount = OperationQueue.defaultMaxConcurrentOperationCount
 	}
-
+	
+	public func operationAdd(_ repeatCount: Int, sleepInterval: TimeInterval) {
+		operationQueue.addOperation(StressOperation(repeatCount, sleepInterval: sleepInterval))
+	}
+	
+	public func operationCancel() {
+		operationQueue.cancelAllOperations()
+	}
+	
+	public func operationCount() -> Int {
+		return operationQueue.operationCount
+	}
+	
 }

@@ -21,9 +21,9 @@ import Foundation
 // -stress memoryAlloc			allocate memory.
 // -stress memoryDealloc		deallocate memory.
 // -stress memorySize			show memory size
-// -stress threadCreate			create thread.
-// -stress threadDestroy		destroy thread.
-// -stress threadCount			show thread count.
+// -stress operationAdd			add operation.
+// -stress operationCancel		cancel operation.
+// -stress operationCount		show operation count.
 class CommandLine: ReporterDelegate {
 	
 	// MARk: Enum, Const
@@ -44,9 +44,9 @@ class CommandLine: ReporterDelegate {
 	private static let commandValueStressMemoryAlloc = "memoryAlloc"
 	private static let commandValueStressMemoryDealloc = "memoryDealloc"
 	private static let commandValueStressMemorySize = "memorySize"
-	private static let commandValueStressThreadCreate = "threadCreate"
-	private static let commandValueStressThreadDestroy = "threadDestroy"
-	private static let commandValueStressThreadCount = "threadCount"
+	private static let commandValueStressOperationAdd = "operationAdd"
+	private static let commandValueStressOperationCancel = "operationCancel"
+	private static let commandValueStressOperationCount = "operationCount"
 	
 	
 	// MARK: Property
@@ -208,12 +208,12 @@ extension CommandLine {
 			commandStressMemoryDealloc()
 		} else if value == CommandLine.commandValueStressMemorySize.lowercased() {
 			commandStressMemorySize()
-		} else if value == CommandLine.commandValueStressThreadCreate.lowercased() {
-			commandStressThreadCreate()
-		} else if value == CommandLine.commandValueStressThreadDestroy.lowercased() {
-			commandStressThreadDestroy()
-		} else if value == CommandLine.commandValueStressThreadCount.lowercased() {
-			commandStressThreadCount()
+		} else if value == CommandLine.commandValueStressOperationAdd.lowercased() {
+			commandStressOperationAdd()
+		} else if value == CommandLine.commandValueStressOperationCancel.lowercased() {
+			commandStressOperationCancel()
+		} else if value == CommandLine.commandValueStressOperationCount.lowercased() {
+			commandStressOperationCount()
 		}
 	}
 	
@@ -232,19 +232,19 @@ extension CommandLine {
 		writeStandardOutput(stress.memorySize().memoryByteFormatString)
 	}
 	
-	func commandStressThreadCreate() {
-		writeStandardOutput("Thread create")
-		stress.threadCreate(1024 * 32, sleepInterval: 0.01)
+	func commandStressOperationAdd() {
+		writeStandardOutput("Operation add")
+		stress.operationAdd(1024 * 32, sleepInterval: 0.01)
 	}
 	
-	func commandStressThreadDestroy() {
-		writeStandardOutput("Thread destroy")
-		stress.threadDestroy()
+	func commandStressOperationCancel() {
+		writeStandardOutput("Operation cancel")
+		stress.operationCancel()
 	}
 	
-	func commandStressThreadCount() {
-		writeStandardOutput("# Thread count")
-		writeStandardOutput("\(stress.threadCount())")
+	func commandStressOperationCount() {
+		writeStandardOutput("# Operation count")
+		writeStandardOutput("\(stress.operationCount())")
 	}
 	
 }
