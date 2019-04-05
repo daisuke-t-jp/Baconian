@@ -5,6 +5,7 @@
 
 
 <img src="https://raw.githubusercontent.com/daisuke-t-jp/Baconian/master/images/DemoMovie-iOS.gif" width="400">  
+<img src="https://raw.githubusercontent.com/daisuke-t-jp/Baconian/master/images/DemoMovie-macOS.gif" width="600">  
 
 ## Introduction
 
