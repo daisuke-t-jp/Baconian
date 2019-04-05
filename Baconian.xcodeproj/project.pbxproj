@@ -68,8 +68,6 @@
 		026A04B6223F390A00048572 /* FixedWidthInteger+Baconian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+Baconian.swift */; };
 		7E7B189E2257A1FF00F8F404 /* BaconianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B189C2257A1FF00F8F404 /* BaconianTests.swift */; };
 		7E7B189F2257A1FF00F8F404 /* BaconianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B189C2257A1FF00F8F404 /* BaconianTests.swift */; };
-		7E7B18A02257A1FF00F8F404 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E7B189D2257A1FF00F8F404 /* Info.plist */; };
-		7E7B18A12257A1FF00F8F404 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E7B189D2257A1FF00F8F404 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -488,7 +486,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E7B18A12257A1FF00F8F404 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +501,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E7B18A02257A1FF00F8F404 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
