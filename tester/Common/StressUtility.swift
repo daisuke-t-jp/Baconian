@@ -13,7 +13,7 @@ class StressUtility {
 	
 	// MARK: Property
 	private var memoryArray = [[UInt8]]()
-	private var operationQueue = OperationQueue()
+	private let operationQueue = OperationQueue()
 	
 	
 	// MARK: Initialize
@@ -35,7 +35,7 @@ extension StressUtility {
 	}
 	
 	public func memoryDealloc() {
-		memoryArray = [[UInt8]]()
+		memoryArray.removeAll()
 	}
 	
 	public func memorySize() -> UInt64 {
