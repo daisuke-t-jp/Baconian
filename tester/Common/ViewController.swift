@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  SysInfo
+//  Baconian
 //
 //  Created by Daisuke T on 2019/03/27.
-//  Copyright © 2019 SysInfo. All rights reserved.
+//  Copyright © 2019 Baconian. All rights reserved.
 //
 
 #if os(iOS)

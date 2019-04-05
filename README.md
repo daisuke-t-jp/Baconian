@@ -1,4 +1,4 @@
-# SysInfo
+# Baconian
 System information reporter.
 
-- [Overview](https://github.com/daisuke-t-jp/SysInfo/blob/master/Overview.md)
+- [Overview](https://github.com/daisuke-t-jp/Baconian/blob/master/Overview.md)

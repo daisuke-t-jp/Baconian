@@ -6,13 +6,13 @@
 ## Platforms
 - [x] Swift 5
 - [x] macOS
-- [ ] iOS
+- [x ] iOS
 
 ## Function
 - [x] macOS Framework
 - [x] macOS UI(View)
-- [ ] iOS Framework
-- [ ] iOS UI(View)
+- [x ] iOS Framework
+- [x ] iOS UI(View)
 
 ## Load info
 ### Mach Layer

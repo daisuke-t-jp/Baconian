@@ -1,5 +1,5 @@
 included:
-    - SysInfo
+    - Baconian
     - tester
 disabled_rules:
     - file_length

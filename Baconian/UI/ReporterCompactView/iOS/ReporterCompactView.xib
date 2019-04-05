@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReporterCompactView" customModule="BaconianTester_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="labelApp" destination="vMy-mK-VNe" id="Amh-NA-VAa"/>
+                <outlet property="labelOS" destination="i6x-R4-5jW" id="BBW-Di-kQL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍎 | 🐏 11.6GB / 160GB | 🤖 100.00%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="i6x-R4-5jW" customClass="CrossPlatformLabel" customModule="BaconianTester_iOS" customModuleProvider="target">
+                    <rect key="frame" x="5" y="5" width="250" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="wP2-NB-Jdv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍏 | 🐏 500MB | 🤖 100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="vMy-mK-VNe" customClass="CrossPlatformLabel" customModule="BaconianTester_iOS" customModuleProvider="target">
+                    <rect key="frame" x="5" y="27" width="250" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="xZZ-Sr-a7i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vMy-mK-VNe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="EgY-VP-srO"/>
+                <constraint firstAttribute="trailing" secondItem="vMy-mK-VNe" secondAttribute="trailing" constant="5" id="H0x-9y-tQ9"/>
+                <constraint firstItem="i6x-R4-5jW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Wx8-n3-IDq"/>
+                <constraint firstItem="vMy-mK-VNe" firstAttribute="top" secondItem="i6x-R4-5jW" secondAttribute="bottom" constant="5" id="dTo-jo-mYS"/>
+                <constraint firstAttribute="trailing" secondItem="i6x-R4-5jW" secondAttribute="trailing" constant="5" id="szf-5F-nQv"/>
+                <constraint firstItem="i6x-R4-5jW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="tx1-Uk-pRU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="105.97826086956522"/>
+        </view>
+    </objects>
+</document>

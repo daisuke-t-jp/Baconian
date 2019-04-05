@@ -9,9 +9,9 @@ matrix:
       osx_image: xcode10.2
       script:
         # macOS
-        - xcodebuild clean -project "SysInfo.xcodeproj" 
-        - xcodebuild test -project "SysInfo.xcodeproj" -scheme "SysInfo-macOS" -destination "platform=OS X" -configuration Debug
+        - xcodebuild clean -project "Baconian.xcodeproj" 
+        - xcodebuild test -project "Baconian.xcodeproj" -scheme "Baconian-macOS" -destination "platform=OS X" -configuration Debug
 
         # iOS
-        - xcodebuild clean -project "SysInfo.xcodeproj" 
-        - xcodebuild test -project "SysInfo.xcodeproj" -scheme "SysInfo-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone X" -configuration Debug
+        - xcodebuild clean -project "Baconian.xcodeproj" 
+        - xcodebuild test -project "Baconian.xcodeproj" -scheme "Baconian-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone X" -configuration Debug
