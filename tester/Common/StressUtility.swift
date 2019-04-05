@@ -15,6 +15,8 @@ class StressUtility {
 	private var memoryArray = [[UInt8]]()
 	private var operationQueue = OperationQueue()
 	
+	
+	// MARK: Initialize
 	init() {
 	}
 	

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,17 +15,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SysInfoTester_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storyboard View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpU-lp-Qkd" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="10" y="30" width="580" height="21"/>
+                                <rect key="frame" x="10" y="54" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ux5-rk-fkT" customClass="ReporterCompactView" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="10" y="61" width="260" height="50"/>
+                                <rect key="frame" x="10" y="85" width="260" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="EVY-LN-RTK"/>
@@ -29,25 +33,25 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programmatically View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hl-67-ovE" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="10" y="131" width="580" height="21"/>
+                                <rect key="frame" x="10" y="155" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reporter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQi-41-oSx" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="10" y="252" width="580" height="21"/>
+                                <rect key="frame" x="10" y="276" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8q-0B-CgA" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="10" y="368.5" width="580" height="21"/>
+                                <rect key="frame" x="10" y="392.5" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXp-cw-Ekj" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="283" width="90" height="21"/>
+                                <rect key="frame" x="20" y="307" width="90" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="HEF-0u-ykb"/>
                                 </constraints>
@@ -56,13 +60,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk6-eC-dE3" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="324" width="90" height="21"/>
+                                <rect key="frame" x="20" y="348" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ctm-iG-s8D" customClass="CrossPlatformSegmentedControl" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="120" y="279.5" width="133" height="29"/>
+                                <rect key="frame" x="120" y="303.5" width="133" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="133" id="ZQP-oN-UEE"/>
                                 </constraints>
@@ -72,7 +76,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TsQ-jY-DN5" customClass="CrossPlatformSegmentedControl" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="120" y="320.5" width="200" height="29"/>
+                                <rect key="frame" x="120" y="344.5" width="200" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="vSH-fe-BX0"/>
                                 </constraints>
@@ -83,7 +87,7 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kD0-xu-2Wb" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="399.5" width="90" height="21"/>
+                                <rect key="frame" x="20" y="423.5" width="90" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="kXa-3R-P8c"/>
                                 </constraints>
@@ -91,8 +95,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thread" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ak-6m-qvR" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="480.5" width="90" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Operation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ak-6m-qvR" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="504.5" width="90" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="PSx-iD-sM1"/>
                                 </constraints>
@@ -101,7 +105,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kN-mx-neR" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="120" y="399.5" width="200" height="21"/>
+                                <rect key="frame" x="120" y="423.5" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="WjW-a8-1EZ"/>
                                 </constraints>
@@ -110,7 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldd-lP-M0w" customClass="CrossPlatformLabel" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="120" y="480.5" width="200" height="21"/>
+                                <rect key="frame" x="120" y="504.5" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="CDq-V4-wI2"/>
                                 </constraints>
@@ -119,7 +123,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVv-Av-Es6" customClass="CrossPlatformButton" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="120" y="430.5" width="90" height="30"/>
+                                <rect key="frame" x="120" y="454.5" width="90" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="Wkg-G7-Z2B"/>
@@ -127,25 +131,25 @@
                                 <state key="normal" title="Alloc"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXE-dt-zQo" customClass="CrossPlatformButton" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="120" y="511.5" width="90" height="30"/>
+                                <rect key="frame" x="120" y="535.5" width="90" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="7iq-TB-Z4o"/>
                                 </constraints>
-                                <state key="normal" title="Create"/>
+                                <state key="normal" title="Add"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-hG-ioa" customClass="CrossPlatformButton" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="220" y="430.5" width="90" height="30"/>
+                                <rect key="frame" x="220" y="454.5" width="90" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Dealloc"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq0-SX-URn" customClass="CrossPlatformButton" customModule="SysInfoTester_iOS" customModuleProvider="target">
-                                <rect key="frame" x="220" y="511.5" width="90" height="30"/>
+                                <rect key="frame" x="220" y="535.5" width="90" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="0Ro-nf-15v"/>
                                 </constraints>
-                                <state key="normal" title="Destroy"/>
+                                <state key="normal" title="Cancel"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -205,10 +209,10 @@
                     <connections>
                         <outlet property="buttonStressMemoryAlloc" destination="tVv-Av-Es6" id="IIP-aY-BWL"/>
                         <outlet property="buttonStressMemoryDealloc" destination="Oe8-hG-ioa" id="wCL-9e-JOj"/>
-                        <outlet property="buttonStressThreadCreate" destination="rXE-dt-zQo" id="8Jd-yr-5G9"/>
-                        <outlet property="buttonStressThreadDestroy" destination="fq0-SX-URn" id="CCL-Ma-7yb"/>
+                        <outlet property="buttonStressOperationAdd" destination="rXE-dt-zQo" id="gbn-if-SHO"/>
+                        <outlet property="buttonStressOperationCancel" destination="fq0-SX-URn" id="AyU-Az-zZN"/>
                         <outlet property="labelStressMemorySize" destination="2kN-mx-neR" id="0xA-d9-1DG"/>
-                        <outlet property="labelStressThreadCount" destination="ldd-lP-M0w" id="re5-zJ-ndb"/>
+                        <outlet property="labelStressOperationCount" destination="ldd-lP-M0w" id="Q4I-XS-xXz"/>
                         <outlet property="labelViewPragrammatically" destination="9Hl-67-ovE" id="DaI-Ed-qAx"/>
                         <outlet property="labelViewStoryboard" destination="bpU-lp-Qkd" id="oP9-Ug-NJP"/>
                         <outlet property="segmentedControlReporterControl" destination="Ctm-iG-s8D" id="ASc-dn-ABh"/>
