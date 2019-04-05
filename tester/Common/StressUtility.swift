@@ -73,8 +73,10 @@ extension StressUtility {
 			while !isCancelled {
 				autoreleasepool {
 					for _ in 0..<repeatCount {
-						autoreleasepool {
-							_ = Data(capacity: 1000)
+						_ = Data(capacity: 1000)
+						
+						if isCancelled {
+							break
 						}
 					}
 					
@@ -96,6 +98,7 @@ extension StressUtility {
 	
 	public func operationCancel() {
 		operationQueue.cancelAllOperations()
+		operationQueue.waitUntilAllOperationsAreFinished()
 	}
 	
 	public func operationCount() -> Int {
