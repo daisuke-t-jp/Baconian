@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		020975752244D15A003CE645 /* SysInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020975732244D15A003CE645 /* SysInfoTests.swift */; };
+		021B880D22572317005B7CB8 /* ReporterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B880C22572317005B7CB8 /* ReporterOperation.swift */; };
+		021B880E22572328005B7CB8 /* ReporterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B880C22572317005B7CB8 /* ReporterOperation.swift */; };
 		023BBF7122409E6600842B33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BBF7022409E6600842B33 /* main.swift */; };
 		02D8FEAD2255C98000113A6C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02D8FEAC2255C98000113A6C /* Info.plist */; };
 		02ED7A0A2248926600C9AF82 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED7A092248926600C9AF82 /* StressUtility.swift */; };
@@ -72,6 +74,7 @@
 		02082B212241D95300D4DFC2 /* SysInfoTester-macOSCommandLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SysInfoTester-macOSCommandLineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		020975732244D15A003CE645 /* SysInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfoTests.swift; sourceTree = "<group>"; };
 		020975742244D15A003CE645 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		021B880C22572317005B7CB8 /* ReporterOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterOperation.swift; sourceTree = "<group>"; };
 		023BBF6D22409E6600842B33 /* SysInfoTester-macOSCommandLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SysInfoTester-macOSCommandLine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		023BBF7022409E6600842B33 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		02D8FEAC2255C98000113A6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,6 +205,7 @@
 			children = (
 				02ED7A192248B2CC00C9AF82 /* ReporterDelegate.swift */,
 				02ED7A1A2248B2CC00C9AF82 /* ReporterData.swift */,
+				021B880C22572317005B7CB8 /* ReporterOperation.swift */,
 				02ED7A1B2248B2CC00C9AF82 /* Reporter.swift */,
 			);
 			path = Reporter;
@@ -395,6 +399,7 @@
 				02ED7A462248B2CC00C9AF82 /* Mach.swift in Sources */,
 				02ED7A4A2248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift in Sources */,
 				02ED7A522248B2CC00C9AF82 /* ReportOSMemory.swift in Sources */,
+				021B880E22572328005B7CB8 /* ReporterOperation.swift in Sources */,
 				02ED7A382248B2CC00C9AF82 /* ReporterDelegate.swift in Sources */,
 				02ED7A502248B2CC00C9AF82 /* ReportOSProcessors.swift in Sources */,
 				02ED7A4C2248B2CC00C9AF82 /* MachCPUTick.swift in Sources */,
@@ -425,6 +430,7 @@
 				02ED7A452248B2CC00C9AF82 /* Mach.swift in Sources */,
 				02ED7A492248B2CC00C9AF82 /* MachTaskThreadBasicInfo.swift in Sources */,
 				02ED7A512248B2CC00C9AF82 /* ReportOSMemory.swift in Sources */,
+				021B880D22572317005B7CB8 /* ReporterOperation.swift in Sources */,
 				02ED7A372248B2CC00C9AF82 /* ReporterDelegate.swift in Sources */,
 				02ED7A4F2248B2CC00C9AF82 /* ReportOSProcessors.swift in Sources */,
 				02ED7A4B2248B2CC00C9AF82 /* MachCPUTick.swift in Sources */,
