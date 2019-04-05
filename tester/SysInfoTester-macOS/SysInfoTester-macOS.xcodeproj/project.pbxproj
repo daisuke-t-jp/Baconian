@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021B881522573D94005B7CB8 /* ReporterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B881422573D94005B7CB8 /* ReporterOperation.swift */; };
 		02A423BF22542FB00063048F /* CrossPlatformButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423BE22542FB00063048F /* CrossPlatformButton.swift */; };
 		02A423C32254318A0063048F /* CrossPlatformSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423C22254318A0063048F /* CrossPlatformSegmentedControl.swift */; };
 		02A423C722543A300063048F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423C622543A300063048F /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021B881422573D94005B7CB8 /* ReporterOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterOperation.swift; sourceTree = "<group>"; };
 		02A423BE22542FB00063048F /* CrossPlatformButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformButton.swift; sourceTree = "<group>"; };
 		02A423C22254318A0063048F /* CrossPlatformSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformSegmentedControl.swift; sourceTree = "<group>"; };
 		02A423C622543A300063048F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				02F6FC44224B5A58009A0C30 /* ReporterDelegate.swift */,
 				02F6FC45224B5A58009A0C30 /* ReporterData.swift */,
+				021B881422573D94005B7CB8 /* ReporterOperation.swift */,
 				02F6FC46224B5A58009A0C30 /* Reporter.swift */,
 			);
 			path = Reporter;
@@ -367,6 +370,7 @@
 				02F6FC70224B5A58009A0C30 /* ReportOSMemory.swift in Sources */,
 				02F6FC6F224B5A58009A0C30 /* ReportOSProcessors.swift in Sources */,
 				02A423BF22542FB00063048F /* CrossPlatformButton.swift in Sources */,
+				021B881522573D94005B7CB8 /* ReporterOperation.swift in Sources */,
 				02A423C722543A300063048F /* ViewController.swift in Sources */,
 				02F6FC72224B5A58009A0C30 /* ReportProcessMemory.swift in Sources */,
 				02F6FC62224B5A58009A0C30 /* ReporterDelegate.swift in Sources */,

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021B881022573D3F005B7CB8 /* ReporterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B880F22573D3F005B7CB8 /* ReporterOperation.swift */; };
 		02A423C12254309F0063048F /* CrossPlatformButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423C02254309F0063048F /* CrossPlatformButton.swift */; };
 		02A423C5225431E60063048F /* CrossPlatformSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423C4225431E60063048F /* CrossPlatformSegmentedControl.swift */; };
 		02A423CD22543A620063048F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A423CB22543A620063048F /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021B880F22573D3F005B7CB8 /* ReporterOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterOperation.swift; sourceTree = "<group>"; };
 		02A423C02254309F0063048F /* CrossPlatformButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformButton.swift; sourceTree = "<group>"; };
 		02A423C4225431E60063048F /* CrossPlatformSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformSegmentedControl.swift; sourceTree = "<group>"; };
 		02A423CB22543A620063048F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				7EA2901B2253F8E300FDBBB3 /* ReporterDelegate.swift */,
 				7EA2901C2253F8E300FDBBB3 /* ReporterData.swift */,
+				021B880F22573D3F005B7CB8 /* ReporterOperation.swift */,
 				7EA2901D2253F8E300FDBBB3 /* Reporter.swift */,
 			);
 			path = Reporter;
@@ -369,6 +372,7 @@
 				7EA290442253F8E300FDBBB3 /* MachTaskThreadBasicInfo.swift in Sources */,
 				02A423CD22543A620063048F /* ViewController.swift in Sources */,
 				7EA2903F2253F8E300FDBBB3 /* MachHostCPULoadInfo.swift in Sources */,
+				021B881022573D3F005B7CB8 /* ReporterOperation.swift in Sources */,
 				7EA290452253F8E300FDBBB3 /* MachCPUTick.swift in Sources */,
 				02A423CE22543A620063048F /* StressUtility.swift in Sources */,
 				7EA2904B2253F8E300FDBBB3 /* ReportProcessThread.swift in Sources */,
