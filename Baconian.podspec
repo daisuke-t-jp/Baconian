@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "System information reporter in Swift."
   spec.description  = <<-DESC
                    **Baconian** is system information reporter framework in Swift.  
-                   The reporter provides the following information.  
+                   The reporter provides memory pressure and cpu load.  
                    DESC
 
   spec.homepage     = "https://github.com/daisuke-t-jp/Baconian"
