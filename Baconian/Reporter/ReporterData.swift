@@ -12,14 +12,14 @@ extension Reporter {
 	
 	public struct Data {
 		// OS
-		let osMemory: Report.OS.Memory
-		let osCPU: Report.OS.CPU
-		let osProcessors: [Report.OS.CPU]
+		public let osMemory: Report.OS.Memory
+		public let osCPU: Report.OS.CPU
+		public let osProcessors: [Report.OS.CPU]
 
 		// Process
-		let processMemory: Report.Process.Memory
-		let processCPU: Report.Process.CPU
-		let processThread: Report.Process.Thread
+		public let processMemory: Report.Process.Memory
+		public let processCPU: Report.Process.CPU
+		public let processThread: Report.Process.Thread
 	}
 	
 }
@@ -27,7 +27,7 @@ extension Reporter {
 
 extension Reporter.Data {
 	
-	init() {
+	public init() {
 		osMemory = Report.OS.Memory()
 		osCPU = Report.OS.CPU()
 		osProcessors = [Report.OS.CPU]()
