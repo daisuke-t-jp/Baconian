@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  BaconianDemo-macOS
+//  Baconian
 //
 //  Created by Daisuke T on 2019/04/08.
-//  Copyright © 2019 BaconianDemo-macOS. All rights reserved.
+//  Copyright © 2019 Baconian. All rights reserved.
 //
 
 import Cocoa

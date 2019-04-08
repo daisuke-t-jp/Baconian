@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		02356FB0225B205200E0AED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02356FAF225B205200E0AED6 /* AppDelegate.swift */; };
-		02356FB2225B205200E0AED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02356FB1225B205200E0AED6 /* ViewController.swift */; };
 		02356FB4225B205200E0AED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02356FB3225B205200E0AED6 /* Assets.xcassets */; };
 		02356FB7225B205200E0AED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02356FB5225B205200E0AED6 /* Main.storyboard */; };
+		02356FC2225B22F400E0AED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02356FC0225B22F400E0AED6 /* ViewController.swift */; };
+		02356FC3225B22F400E0AED6 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02356FC1225B22F400E0AED6 /* StressUtility.swift */; };
 		440415971B7AE47E2C792D81 /* Pods_BaconianDemo_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3485FA9087055EAE6A50A3A /* Pods_BaconianDemo_macOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02356FAC225B205200E0AED6 /* BaconianDemo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BaconianDemo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02356FAF225B205200E0AED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02356FB1225B205200E0AED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02356FB3225B205200E0AED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02356FB6225B205200E0AED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02356FB8225B205200E0AED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02356FB9225B205200E0AED6 /* BaconianDemo_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaconianDemo_macOS.entitlements; sourceTree = "<group>"; };
+		02356FC0225B22F400E0AED6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02356FC1225B22F400E0AED6 /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
 		5A7E512F85046405CEF77501 /* Pods-BaconianDemo-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianDemo-macOS.debug.xcconfig"; path = "Target Support Files/Pods-BaconianDemo-macOS/Pods-BaconianDemo-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A3485FA9087055EAE6A50A3A /* Pods_BaconianDemo_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaconianDemo_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F8A52497BB13A82F42E51E /* Pods-BaconianDemo-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianDemo-macOS.release.xcconfig"; path = "Target Support Files/Pods-BaconianDemo-macOS/Pods-BaconianDemo-macOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		02356FA3225B205200E0AED6 = {
 			isa = PBXGroup;
 			children = (
+				02356FBF225B22F400E0AED6 /* Common */,
 				02356FAE225B205200E0AED6 /* BaconianDemo-macOS */,
 				02356FAD225B205200E0AED6 /* Products */,
 				D37C9B7AA983E54F9E52ECDD /* Pods */,
@@ -61,13 +64,22 @@
 			isa = PBXGroup;
 			children = (
 				02356FAF225B205200E0AED6 /* AppDelegate.swift */,
-				02356FB1225B205200E0AED6 /* ViewController.swift */,
 				02356FB3225B205200E0AED6 /* Assets.xcassets */,
 				02356FB5225B205200E0AED6 /* Main.storyboard */,
 				02356FB8225B205200E0AED6 /* Info.plist */,
 				02356FB9225B205200E0AED6 /* BaconianDemo_macOS.entitlements */,
 			);
 			path = "BaconianDemo-macOS";
+			sourceTree = "<group>";
+		};
+		02356FBF225B22F400E0AED6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				02356FC0225B22F400E0AED6 /* ViewController.swift */,
+				02356FC1225B22F400E0AED6 /* StressUtility.swift */,
+			);
+			name = Common;
+			path = ../Common;
 			sourceTree = "<group>";
 		};
 		8643A2A46395999E2762730D /* Frameworks */ = {
@@ -206,7 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02356FB2225B205200E0AED6 /* ViewController.swift in Sources */,
+				02356FC2225B22F400E0AED6 /* ViewController.swift in Sources */,
+				02356FC3225B22F400E0AED6 /* StressUtility.swift in Sources */,
 				02356FB0225B205200E0AED6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +293,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -334,6 +348,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
