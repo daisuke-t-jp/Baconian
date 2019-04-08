@@ -40,7 +40,19 @@ Table of View's symbol meaning.
 
 
 ## Installation
-- [ ] TODO
+### Carthage
+```
+github "daisuke-t-jp/Baconian"
+```
+
+### CocoaPods
+```
+use_frameworks!
+
+target 'target' do
+pod 'Baconian'
+end
+```
 
 
 ## Usage
