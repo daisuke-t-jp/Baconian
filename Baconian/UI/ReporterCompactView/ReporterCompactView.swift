@@ -56,7 +56,7 @@ public class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	
 	
 	// MARK: Initialize
-	override init(frame frameRect: CrossPlatformRect) {
+	public override init(frame frameRect: CrossPlatformRect) {
 		super.init(frame: frameRect)
 		
 		initNib()
