@@ -1,5 +1,5 @@
 PODS:
-  - Baconian (1.0.0)
+  - Baconian (1.0.1)
 
 DEPENDENCIES:
   - Baconian (from `../../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Baconian: b51783222514123d14699310fba5cf51d78e9489
+  Baconian: e484bfcbca5de098f37fdbcaf39523c0415421f7
 
 PODFILE CHECKSUM: 5fff1a2fbf5fc8be6fe2958ddc877198d66209c5
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1
