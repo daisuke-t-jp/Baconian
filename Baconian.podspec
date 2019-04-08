@@ -35,8 +35,14 @@ Pod::Spec.new do |spec|
   spec.source_files  = "Baconian/**/*.{swift}"
 
 
+  # ――― Resource ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  spec.resources = "Baconian/**/*.{xib}"
+
+
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.swift_version = "5.0"
   spec.requires_arc = true
+  spec.ios.framework = 'UIKit'
+  spec.osx.framework = 'AppKit'
 
 end
