@@ -11,6 +11,7 @@
 		02356FB2225B205200E0AED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02356FB1225B205200E0AED6 /* ViewController.swift */; };
 		02356FB4225B205200E0AED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02356FB3225B205200E0AED6 /* Assets.xcassets */; };
 		02356FB7225B205200E0AED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02356FB5225B205200E0AED6 /* Main.storyboard */; };
+		440415971B7AE47E2C792D81 /* Pods_BaconianDemo_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3485FA9087055EAE6A50A3A /* Pods_BaconianDemo_macOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,9 @@
 		02356FB6225B205200E0AED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02356FB8225B205200E0AED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02356FB9225B205200E0AED6 /* BaconianDemo_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaconianDemo_macOS.entitlements; sourceTree = "<group>"; };
+		5A7E512F85046405CEF77501 /* Pods-BaconianDemo-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianDemo-macOS.debug.xcconfig"; path = "Target Support Files/Pods-BaconianDemo-macOS/Pods-BaconianDemo-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A3485FA9087055EAE6A50A3A /* Pods_BaconianDemo_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaconianDemo_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F8A52497BB13A82F42E51E /* Pods-BaconianDemo-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianDemo-macOS.release.xcconfig"; path = "Target Support Files/Pods-BaconianDemo-macOS/Pods-BaconianDemo-macOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440415971B7AE47E2C792D81 /* Pods_BaconianDemo_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,8 @@
 			children = (
 				02356FAE225B205200E0AED6 /* BaconianDemo-macOS */,
 				02356FAD225B205200E0AED6 /* Products */,
+				D37C9B7AA983E54F9E52ECDD /* Pods */,
+				8643A2A46395999E2762730D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +70,24 @@
 			path = "BaconianDemo-macOS";
 			sourceTree = "<group>";
 		};
+		8643A2A46395999E2762730D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3485FA9087055EAE6A50A3A /* Pods_BaconianDemo_macOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D37C9B7AA983E54F9E52ECDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A7E512F85046405CEF77501 /* Pods-BaconianDemo-macOS.debug.xcconfig */,
+				A6F8A52497BB13A82F42E51E /* Pods-BaconianDemo-macOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02356FBC225B205200E0AED6 /* Build configuration list for PBXNativeTarget "BaconianDemo-macOS" */;
 			buildPhases = (
+				4272A606CC5178BD8EF80F1C /* [CP] Check Pods Manifest.lock */,
 				02356FA8225B205200E0AED6 /* Sources */,
 				02356FA9225B205200E0AED6 /* Frameworks */,
 				02356FAA225B205200E0AED6 /* Resources */,
+				7768B5207A6880602734DBBE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +154,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4272A606CC5178BD8EF80F1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaconianDemo-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7768B5207A6880602734DBBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaconianDemo-macOS/Pods-BaconianDemo-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Baconian/Baconian.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Baconian.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaconianDemo-macOS/Pods-BaconianDemo-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02356FA8225B205200E0AED6 /* Sources */ = {
@@ -269,6 +343,7 @@
 		};
 		02356FBD225B205200E0AED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A7E512F85046405CEF77501 /* Pods-BaconianDemo-macOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "BaconianDemo-macOS/BaconianDemo_macOS.entitlements";
@@ -287,6 +362,7 @@
 		};
 		02356FBE225B205200E0AED6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6F8A52497BB13A82F42E51E /* Pods-BaconianDemo-macOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "BaconianDemo-macOS/BaconianDemo_macOS.entitlements";
