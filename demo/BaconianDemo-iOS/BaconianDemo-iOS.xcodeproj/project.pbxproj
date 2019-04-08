@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		02185B28225B3AD600B34485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02185B27225B3AD600B34485 /* AppDelegate.swift */; };
-		02185B2A225B3AD600B34485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02185B29225B3AD600B34485 /* ViewController.swift */; };
 		02185B2D225B3AD600B34485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02185B2B225B3AD600B34485 /* Main.storyboard */; };
 		02185B2F225B3AD700B34485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02185B2E225B3AD700B34485 /* Assets.xcassets */; };
 		02185B32225B3AD700B34485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02185B30225B3AD700B34485 /* LaunchScreen.storyboard */; };
+		02185B5A225B3D7300B34485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02185B58225B3D7300B34485 /* ViewController.swift */; };
+		02185B5B225B3D7300B34485 /* StressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02185B59225B3D7300B34485 /* StressUtility.swift */; };
+		738BACD8060A322734869ED3 /* Pods_BaconianDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B76D9363115161A01096B /* Pods_BaconianDemo_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02185B24225B3AD600B34485 /* BaconianDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BaconianDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02185B27225B3AD600B34485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02185B29225B3AD600B34485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02185B2C225B3AD600B34485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02185B2E225B3AD700B34485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02185B31225B3AD700B34485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02185B33225B3AD700B34485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02185B58225B3D7300B34485 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02185B59225B3D7300B34485 /* StressUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressUtility.swift; sourceTree = "<group>"; };
+		2D9AC578852249C939F4CAEA /* Pods-BaconianDemo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianDemo-iOS.release.xcconfig"; path = "Target Support Files/Pods-BaconianDemo-iOS/Pods-BaconianDemo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		5B0B76D9363115161A01096B /* Pods_BaconianDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaconianDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87306C0C46A89DAE036D805F /* Pods-BaconianDemo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianDemo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-BaconianDemo-iOS/Pods-BaconianDemo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				738BACD8060A322734869ED3 /* Pods_BaconianDemo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +45,11 @@
 		02185B1B225B3AD600B34485 = {
 			isa = PBXGroup;
 			children = (
+				02185B57225B3D7300B34485 /* Common */,
 				02185B26225B3AD600B34485 /* BaconianDemo-iOS */,
 				02185B25225B3AD600B34485 /* Products */,
+				1D2F2A5F6B50200D2A1FC3A6 /* Pods */,
+				3977ADCD629D7440B66B0CCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +65,39 @@
 			isa = PBXGroup;
 			children = (
 				02185B27225B3AD600B34485 /* AppDelegate.swift */,
-				02185B29225B3AD600B34485 /* ViewController.swift */,
 				02185B2B225B3AD600B34485 /* Main.storyboard */,
 				02185B2E225B3AD700B34485 /* Assets.xcassets */,
 				02185B30225B3AD700B34485 /* LaunchScreen.storyboard */,
 				02185B33225B3AD700B34485 /* Info.plist */,
 			);
 			path = "BaconianDemo-iOS";
+			sourceTree = "<group>";
+		};
+		02185B57225B3D7300B34485 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				02185B58225B3D7300B34485 /* ViewController.swift */,
+				02185B59225B3D7300B34485 /* StressUtility.swift */,
+			);
+			name = Common;
+			path = ../Common;
+			sourceTree = "<group>";
+		};
+		1D2F2A5F6B50200D2A1FC3A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87306C0C46A89DAE036D805F /* Pods-BaconianDemo-iOS.debug.xcconfig */,
+				2D9AC578852249C939F4CAEA /* Pods-BaconianDemo-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3977ADCD629D7440B66B0CCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B0B76D9363115161A01096B /* Pods_BaconianDemo_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02185B36225B3AD700B34485 /* Build configuration list for PBXNativeTarget "BaconianDemo-iOS" */;
 			buildPhases = (
+				6FA206BF7B233593A8B1609E /* [CP] Check Pods Manifest.lock */,
 				02185B20225B3AD600B34485 /* Sources */,
 				02185B21225B3AD600B34485 /* Frameworks */,
 				02185B22225B3AD600B34485 /* Resources */,
+				29202BA4670FD235169A3D23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +168,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29202BA4670FD235169A3D23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaconianDemo-iOS/Pods-BaconianDemo-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Baconian/Baconian.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Baconian.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaconianDemo-iOS/Pods-BaconianDemo-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FA206BF7B233593A8B1609E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaconianDemo-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		02185B20225B3AD600B34485 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02185B2A225B3AD600B34485 /* ViewController.swift in Sources */,
+				02185B5A225B3D7300B34485 /* ViewController.swift in Sources */,
+				02185B5B225B3D7300B34485 /* StressUtility.swift in Sources */,
 				02185B28225B3AD600B34485 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +366,7 @@
 		};
 		02185B37225B3AD700B34485 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87306C0C46A89DAE036D805F /* Pods-BaconianDemo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +384,7 @@
 		};
 		02185B38225B3AD700B34485 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D9AC578852249C939F4CAEA /* Pods-BaconianDemo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
