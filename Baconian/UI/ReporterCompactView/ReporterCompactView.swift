@@ -23,7 +23,7 @@ public class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	private static let symbolCPU = "🤖"
 	public static let xibWidth = CGFloat(260)
 	public static let xibHeight = CGFloat(50)
-	
+	private static let xibName = "ReporterCompactView"
 	
 	// MARK: Outlet
 	#if os(macOS)
@@ -78,7 +78,8 @@ extension ReporterCompactView {
 
 	private func initNib() {
 		#if os(iOS)
-		let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle.main)
+		let nib = UINib(nibName: ReporterCompactView.xibName,
+						bundle: Bundle(for: ReporterCompactView.self))
 		
 		guard let view = nib.instantiate(withOwner: self, options: nil).first as? CrossPlatformView else {
 			return
@@ -86,7 +87,8 @@ extension ReporterCompactView {
 		
 		addSubview(view)
 		#elseif os(macOS)
-		guard let nib = NSNib(nibNamed: String(describing: type(of: self)), bundle: Bundle.main) else {
+		guard let nib = NSNib(nibNamed: ReporterCompactView.xibName,
+							  bundle: Bundle(for: ReporterCompactView.self)) else {
 			return
 		}
 		
