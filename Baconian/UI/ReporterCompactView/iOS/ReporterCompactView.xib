@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReporterCompactView" customModule="BaconianTester_iOS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReporterCompactView" customModule="Baconian" customModuleProvider="target">
             <connections>
                 <outlet property="labelApp" destination="vMy-mK-VNe" id="Amh-NA-VAa"/>
                 <outlet property="labelOS" destination="i6x-R4-5jW" id="BBW-Di-kQL"/>
@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍎 | 🐏 11.6GB / 160GB | 🤖 100.00%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="i6x-R4-5jW" customClass="CrossPlatformLabel" customModule="BaconianTester_iOS" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍎 | 🐏 11.6GB / 160GB | 🤖 100.00%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="i6x-R4-5jW" customClass="CrossPlatformLabel" customModule="Baconian" customModuleProvider="target">
                     <rect key="frame" x="5" y="5" width="250" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="wP2-NB-Jdv"/>
@@ -29,7 +29,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍏 | 🐏 500MB | 🤖 100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="vMy-mK-VNe" customClass="CrossPlatformLabel" customModule="BaconianTester_iOS" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍏 | 🐏 500MB | 🤖 100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="vMy-mK-VNe" customClass="CrossPlatformLabel" customModule="Baconian" customModuleProvider="target">
                     <rect key="frame" x="5" y="27" width="250" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="xZZ-Sr-a7i"/>
