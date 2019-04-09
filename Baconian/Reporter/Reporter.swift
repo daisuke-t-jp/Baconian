@@ -12,6 +12,8 @@ public class Reporter {
 	
 	// MARK: - Enum, Const
 	static let threadInterval = TimeInterval(0.1)
+	
+	/// Frequency of report.
 	public enum Frequency: TimeInterval {
 		case normally = 5	/// 5 sec
 		case often = 2		/// 2 sec
@@ -30,7 +32,7 @@ public class Reporter {
 	/// A delegate of Reporter.
 	public var delegate: ReporterDelegate? {
 		get {
-			guard let operation = operationQueue.operations.first as? ReporterOperation else {
+			guard let operation = operation else {
 				return nil
 			}
 			
@@ -38,7 +40,7 @@ public class Reporter {
 		}
 		
 		set {
-			guard let operation = operationQueue.operations.first as? ReporterOperation else {
+			guard let operation = operation else {
 				return
 			}
 			
@@ -48,7 +50,7 @@ public class Reporter {
 	
 	public var state: State {
 		get {
-			guard let operation = operationQueue.operations.first as? ReporterOperation else {
+			guard let operation = operation else {
 				return .stop
 			}
 			
@@ -56,7 +58,7 @@ public class Reporter {
 		}
 		
 		set {
-			guard let operation = operationQueue.operations.first as? ReporterOperation else {
+			guard let operation = operation else {
 				return
 			}
 			
@@ -66,7 +68,7 @@ public class Reporter {
 	
 	public var frequency: Frequency {
 		get {
-			guard let operation = operationQueue.operations.first as? ReporterOperation else {
+			guard let operation = operation else {
 				return .normally
 			}
 			
@@ -74,7 +76,7 @@ public class Reporter {
 		}
 		
 		set {
-			guard let operation = operationQueue.operations.first as? ReporterOperation else {
+			guard let operation = operation else {
 				return
 			}
 			
@@ -85,11 +87,11 @@ public class Reporter {
 	
 	// MARK: Initialize
 	public init() {
-		operationQueue.addOperation(ReporterOperation(reporter: self))
+		initOperation()
 	}
 	
 	deinit {
-		operationQueue.cancelAllOperations()
+		deinitOperation()
 	}
 	
 }
@@ -110,3 +112,19 @@ extension Reporter {
 	
 }
 
+
+// MARK: Operation
+extension Reporter {
+	
+	func initOperation() {
+		operationQueue.addOperation(ReporterOperation(reporter: self))
+	}
+	
+	func deinitOperation() {
+		operationQueue.cancelAllOperations()
+	}
+	
+	var operation: ReporterOperation? {
+		 return operationQueue.operations.first as? ReporterOperation
+	}
+}

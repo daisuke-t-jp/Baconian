@@ -60,7 +60,7 @@ extension Reporter {
 		
 		private let lockFrequency = NSLock()
 		private var _frequency: Frequency = .normally
-		public var frequency: Frequency {
+		var frequency: Frequency {
 			get {
 				lockFrequency.lock()
 				let val = _frequency
