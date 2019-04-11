@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Mach_Swift
 
 extension Reporter {
 	
@@ -14,8 +15,8 @@ extension Reporter {
 		
 		// MARK: Property
 		private var lastProcessedDate = Date()
-		private var machHostCPULoadInfoPrev = Mach.CPUTick()
-		private var machHostProcessorInfoPrev = [Mach.CPUTick]()
+		private var machHostStatisticsCPULoadInfoPrev = Mach.CPUTick()
+		private var machHostProcessorCPULoadInfoArray = [Mach.CPUTick]()
 		private weak var reporter: Reporter?
 		
 		// MARK: Initialize
@@ -121,21 +122,21 @@ extension Reporter {
 					return
 				}
 				
-				let machHostCPULoadInfo = Mach.Host.cpuLoadInfo()
-				let machHostProcessorInfo = Mach.Host.processorInfo()
+				let cpu = Mach.Host.Statistics.cpuLoadInfo()
+				let processors = Mach.Host.Processor.cpuLoadInfoArray()
 				let data = Reporter.Data(osMemory: Report.OS.memory(),
-										 osCPU: Report.OS.cpu(machHostCPULoadInfo,
-															  machHostCPULoadInfoPrev: machHostCPULoadInfoPrev),
-										 osProcessors: Report.OS.processors(machHostProcessorInfo,
-																			machHostProcessorInfoPrev: machHostProcessorInfoPrev),
+										 osCPU: Report.OS.cpu(cpu,
+															  machHostStatisticsCPULoadInfoPrev: machHostStatisticsCPULoadInfoPrev),
+										 osProcessors: Report.OS.processors(processors,
+																			machHostProcessorCPULoadInfoArray: machHostProcessorCPULoadInfoArray),
 										 processMemory: Report.Process.memory(),
 										 processCPU: Report.Process.cpu(),
 										 processThread: Report.Process.thread())
 				
 				
 				// Caching prev data
-				machHostCPULoadInfoPrev = machHostCPULoadInfo
-				machHostProcessorInfoPrev = machHostProcessorInfo
+				machHostStatisticsCPULoadInfoPrev = cpu
+				machHostProcessorCPULoadInfoArray = processors
 				
 				delegate.reporter(reporter, didUpdate: data)
 			}

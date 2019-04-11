@@ -7,19 +7,20 @@
 //
 
 import Foundation
+import Mach_Swift
 
 extension Report.OS {
 
 	static func processors(_ machHostProcessorInfo: [Mach.CPUTick],
-						   machHostProcessorInfoPrev: [Mach.CPUTick]) -> [CPU] {
+						   machHostProcessorCPULoadInfoArray: [Mach.CPUTick]) -> [CPU] {
 		
 		var res = [CPU]()
 		for i in 0..<machHostProcessorInfo.count {
 			let machData = machHostProcessorInfo[i]
 			var prevData = Mach.CPUTick()
 			
-			if i < machHostProcessorInfoPrev.count {
-				prevData = machHostProcessorInfoPrev[i]
+			if i < machHostProcessorCPULoadInfoArray.count {
+				prevData = machHostProcessorCPULoadInfoArray[i]
 			}
 			
 			let cpu = CPU(machData, prevData: prevData)

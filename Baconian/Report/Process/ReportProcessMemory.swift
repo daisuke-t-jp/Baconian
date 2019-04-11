@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Mach_Swift
 
 extension Report.Process {
 	
@@ -34,7 +35,7 @@ extension Report.Process.Memory {
 extension Report.Process {
 	
 	static func memory() -> Memory {
-		let machData = Mach.Task.basicInfo()
+		let machData = Mach.Task.Info.basicInfo()
 		
 		let res = Memory(
 			residentSize: machData.residentSize

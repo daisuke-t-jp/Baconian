@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Mach_Swift
 
 extension Report.OS {
 	
@@ -59,15 +60,15 @@ extension Report.OS.Memory {
 extension Report.OS {
 	
 	static func memory() -> Memory {
-		let machVMStatics = Mach.Host.vmStatics()
-		let machBasicInfo = Mach.Host.basicInfo()
+		let vmInfo = Mach.Host.Statistics.vmInfo()
+		let basicInfo = Mach.Host.Info.basicInfo()
 		
 		let res = Memory(
-			physicalSize: machBasicInfo.maxMem,
-			freeSize: machVMStatics.freeSize,
-			activeSize: machVMStatics.activeSize,
-			inactiveSize: machVMStatics.inactiveSize,
-			wireSize: machVMStatics.wireSize
+			physicalSize: basicInfo.maxMem,
+			freeSize: vmInfo.freeSize,
+			activeSize: vmInfo.activeSize,
+			inactiveSize: vmInfo.inactiveSize,
+			wireSize: vmInfo.wireSize
 		)
 		
 		return res

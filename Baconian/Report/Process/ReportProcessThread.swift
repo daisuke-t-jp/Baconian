@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Mach_Swift
 
 extension Report.Process {
 	
@@ -40,13 +41,13 @@ extension Report.Process.Thread {
 extension Report.Process {
 	
 	static func thread() -> Thread {
-		let array = Mach.Task.threadBasicInfo()
+		let array = Mach.Task.Thread.basicInfoArray()
 		
 		var busy = Int(0)
 		var idle = Int(0)
 		
 		for thread in array {
-			guard !Mach.Task.threadBasicInfoIsIdle(thread) else {
+			guard !Mach.Task.Thread.basicInfoIsIdle(thread) else {
 				idle += 1
 				continue
 			}

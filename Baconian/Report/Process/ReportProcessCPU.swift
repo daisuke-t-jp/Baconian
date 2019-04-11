@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Mach_Swift
 
 extension Report.Process {
 	
@@ -37,14 +38,14 @@ extension Report.Process.CPU {
 extension Report.Process {
 	
 	static func cpu() -> CPU {
-		let array = Mach.Task.threadBasicInfo()
-		let machBasicInfo = Mach.Host.basicInfo()
+		let array = Mach.Task.Thread.basicInfoArray()
+		let machBasicInfo = Mach.Host.Info.basicInfo()
 		
 		var usage = Float(0)
 		var time = TimeInterval(0)
 		
 		for thread in array {
-			guard !Mach.Task.threadBasicInfoIsIdle(thread) else {
+			guard !Mach.Task.Thread.basicInfoIsIdle(thread) else {
 				continue
 			}
 			

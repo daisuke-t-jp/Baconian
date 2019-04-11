@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Mach_Swift
 
 extension Report.OS {
 	
@@ -73,8 +74,8 @@ extension Report.OS.CPU {
 extension Report.OS {
 
 	static func cpu(_ machHostCPULoadInfo: Mach.CPUTick,
-					machHostCPULoadInfoPrev: Mach.CPUTick) -> CPU {
-		let res = CPU(machHostCPULoadInfo, prevData: machHostCPULoadInfoPrev)
+					machHostStatisticsCPULoadInfoPrev: Mach.CPUTick) -> CPU {
+		let res = CPU(machHostCPULoadInfo, prevData: machHostStatisticsCPULoadInfoPrev)
 		
 		return res
 	}
