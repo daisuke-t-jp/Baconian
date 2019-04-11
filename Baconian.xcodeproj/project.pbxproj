@@ -66,8 +66,12 @@
 		026A0476223F35DB00048572 /* Baconian.h in Headers */ = {isa = PBXBuildFile; fileRef = 026A0468223F35DA00048572 /* Baconian.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		026A04B5223F390A00048572 /* TimeInterval+Baconian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A6223F390900048572 /* TimeInterval+Baconian.swift */; };
 		026A04B6223F390A00048572 /* FixedWidthInteger+Baconian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+Baconian.swift */; };
+		7D9039462D7CE32885882D25 /* Pods_Baconian_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DEBC26C70DABACECC8088A /* Pods_Baconian_macOS.framework */; };
 		7E7B189E2257A1FF00F8F404 /* BaconianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B189C2257A1FF00F8F404 /* BaconianTests.swift */; };
 		7E7B189F2257A1FF00F8F404 /* BaconianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B189C2257A1FF00F8F404 /* BaconianTests.swift */; };
+		82E31AA971E3C2EAAE49163A /* Pods_BaconianTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05D82C1F598682C6DCF3BBA /* Pods_BaconianTests_iOS.framework */; };
+		88618DC1A84139DE29B6056B /* Pods_BaconianTests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28332DA85E942942641FE7A5 /* Pods_BaconianTests_macOS.framework */; };
+		C0C0DFE804E9D60BDF332467 /* Pods_Baconian_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3088AB51A69A70C4DAE061D5 /* Pods_Baconian_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +110,7 @@
 		020975702244C460003CE645 /* MachHostBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachHostBasicInfo.swift; sourceTree = "<group>"; };
 		021B881122573D71005B7CB8 /* ReporterOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterOperation.swift; sourceTree = "<group>"; };
 		0238B7EE2255867D007C0805 /* Baconian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baconian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0238B7F62255867E007C0805 /* Baconian-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Baconian-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0238B7F62255867E007C0805 /* BaconianTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaconianTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0238B80722558E7E007C0805 /* CrossPlatformSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformSegmentedControl.swift; sourceTree = "<group>"; };
 		0238B80822558E7E007C0805 /* CrossPlatformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformView.swift; sourceTree = "<group>"; };
 		0238B80922558E7E007C0805 /* CrossPlatformLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformLabel.swift; sourceTree = "<group>"; };
@@ -123,8 +127,20 @@
 		026A046E223F35DB00048572 /* BaconianTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaconianTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026A04A6223F390900048572 /* TimeInterval+Baconian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Baconian.swift"; sourceTree = "<group>"; };
 		026A04A7223F390900048572 /* FixedWidthInteger+Baconian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+Baconian.swift"; sourceTree = "<group>"; };
+		043ACF5A9C7B37D721ADD515 /* Pods-BaconianTests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianTests-macOS.release.xcconfig"; path = "Target Support Files/Pods-BaconianTests-macOS/Pods-BaconianTests-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		28332DA85E942942641FE7A5 /* Pods_BaconianTests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaconianTests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3088AB51A69A70C4DAE061D5 /* Pods_Baconian_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baconian_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		425672309993169901FEEF2A /* Pods-Baconian-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baconian-iOS.release.xcconfig"; path = "Target Support Files/Pods-Baconian-iOS/Pods-Baconian-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		51DEBC26C70DABACECC8088A /* Pods_Baconian_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baconian_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C5EF470E498BBF1614D5C02 /* Pods-Baconian-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baconian-macOS.debug.xcconfig"; path = "Target Support Files/Pods-Baconian-macOS/Pods-Baconian-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7E7B189C2257A1FF00F8F404 /* BaconianTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaconianTests.swift; sourceTree = "<group>"; };
 		7E7B189D2257A1FF00F8F404 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80E7B4497B567613FA8F6A13 /* Pods-BaconianTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianTests-iOS.debug.xcconfig"; path = "Target Support Files/Pods-BaconianTests-iOS/Pods-BaconianTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA3D7A558239EDE820E4382 /* Pods-BaconianTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianTests-iOS.release.xcconfig"; path = "Target Support Files/Pods-BaconianTests-iOS/Pods-BaconianTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A505D33686F792EBC6D2A59B /* Pods-Baconian-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baconian-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Baconian-iOS/Pods-Baconian-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B05D82C1F598682C6DCF3BBA /* Pods_BaconianTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaconianTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E083942D17FAFC0B7D1CB4B7 /* Pods-Baconian-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baconian-macOS.release.xcconfig"; path = "Target Support Files/Pods-Baconian-macOS/Pods-Baconian-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		F3CF02F286CD6B9C6AAD12DE /* Pods-BaconianTests-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianTests-macOS.debug.xcconfig"; path = "Target Support Files/Pods-BaconianTests-macOS/Pods-BaconianTests-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C0DFE804E9D60BDF332467 /* Pods_Baconian_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0238B7F72255867E007C0805 /* Baconian.framework in Frameworks */,
+				82E31AA971E3C2EAAE49163A /* Pods_BaconianTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D9039462D7CE32885882D25 /* Pods_Baconian_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				026A046F223F35DB00048572 /* Baconian.framework in Frameworks */,
+				88618DC1A84139DE29B6056B /* Pods_BaconianTests_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +295,8 @@
 				026A0467223F35DA00048572 /* Baconian */,
 				7E7B189B2257A1FF00F8F404 /* BaconianTests */,
 				026A0466223F35DA00048572 /* Products */,
+				72A04C3ABE3F3626553A71E9 /* Pods */,
+				8F6ADC3C56446EC78D393644 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,6 +345,21 @@
 			path = Mach;
 			sourceTree = "<group>";
 		};
+		72A04C3ABE3F3626553A71E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A505D33686F792EBC6D2A59B /* Pods-Baconian-iOS.debug.xcconfig */,
+				425672309993169901FEEF2A /* Pods-Baconian-iOS.release.xcconfig */,
+				6C5EF470E498BBF1614D5C02 /* Pods-Baconian-macOS.debug.xcconfig */,
+				E083942D17FAFC0B7D1CB4B7 /* Pods-Baconian-macOS.release.xcconfig */,
+				80E7B4497B567613FA8F6A13 /* Pods-BaconianTests-iOS.debug.xcconfig */,
+				9FA3D7A558239EDE820E4382 /* Pods-BaconianTests-iOS.release.xcconfig */,
+				F3CF02F286CD6B9C6AAD12DE /* Pods-BaconianTests-macOS.debug.xcconfig */,
+				043ACF5A9C7B37D721ADD515 /* Pods-BaconianTests-macOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7E7B189B2257A1FF00F8F404 /* BaconianTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +367,17 @@
 				7E7B189D2257A1FF00F8F404 /* Info.plist */,
 			);
 			path = BaconianTests;
+			sourceTree = "<group>";
+		};
+		8F6ADC3C56446EC78D393644 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3088AB51A69A70C4DAE061D5 /* Pods_Baconian_iOS.framework */,
+				51DEBC26C70DABACECC8088A /* Pods_Baconian_macOS.framework */,
+				B05D82C1F598682C6DCF3BBA /* Pods_BaconianTests_iOS.framework */,
+				28332DA85E942942641FE7A5 /* Pods_BaconianTests_macOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +405,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0238B8032255867E007C0805 /* Build configuration list for PBXNativeTarget "Baconian-iOS" */;
 			buildPhases = (
+				FEF9E2F601BC699279AF2942 /* [CP] Check Pods Manifest.lock */,
 				0238B7E92255867D007C0805 /* Headers */,
 				0238B7EA2255867D007C0805 /* Sources */,
 				0238B7EB2255867D007C0805 /* Frameworks */,
@@ -372,28 +421,31 @@
 			productReference = 0238B7EE2255867D007C0805 /* Baconian.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0238B7F52255867E007C0805 /* Baconian-iOSTests */ = {
+		0238B7F52255867E007C0805 /* BaconianTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0238B8042255867E007C0805 /* Build configuration list for PBXNativeTarget "Baconian-iOSTests" */;
+			buildConfigurationList = 0238B8042255867E007C0805 /* Build configuration list for PBXNativeTarget "BaconianTests-iOS" */;
 			buildPhases = (
+				41E7288E5C65B5F5E3C16E73 /* [CP] Check Pods Manifest.lock */,
 				0238B7F22255867E007C0805 /* Sources */,
 				0238B7F32255867E007C0805 /* Frameworks */,
 				0238B7F42255867E007C0805 /* Resources */,
+				C137A52833A9A410B570EDB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0238B7F92255867E007C0805 /* PBXTargetDependency */,
 			);
-			name = "Baconian-iOSTests";
+			name = "BaconianTests-iOS";
 			productName = "Baconian-iOSTests";
-			productReference = 0238B7F62255867E007C0805 /* Baconian-iOSTests.xctest */;
+			productReference = 0238B7F62255867E007C0805 /* BaconianTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		026A0464223F35DA00048572 /* Baconian-macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 026A0479223F35DB00048572 /* Build configuration list for PBXNativeTarget "Baconian-macOS" */;
 			buildPhases = (
+				3AE49169FE658241B6D230F4 /* [CP] Check Pods Manifest.lock */,
 				026A0460223F35DA00048572 /* Headers */,
 				026A0461223F35DA00048572 /* Sources */,
 				026A0462223F35DA00048572 /* Frameworks */,
@@ -413,9 +465,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 026A047C223F35DB00048572 /* Build configuration list for PBXNativeTarget "BaconianTests-macOS" */;
 			buildPhases = (
+				6D449B0B573ECD7FB598A3B2 /* [CP] Check Pods Manifest.lock */,
 				026A046A223F35DB00048572 /* Sources */,
 				026A046B223F35DB00048572 /* Frameworks */,
 				026A046C223F35DB00048572 /* Resources */,
+				5877688AD4B89990B453A1DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -469,7 +523,7 @@
 				026A0464223F35DA00048572 /* Baconian-macOS */,
 				026A046D223F35DB00048572 /* BaconianTests-macOS */,
 				0238B7ED2255867D007C0805 /* Baconian-iOS */,
-				0238B7F52255867E007C0805 /* Baconian-iOSTests */,
+				0238B7F52255867E007C0805 /* BaconianTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -541,6 +595,138 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed.\"\nfi\n";
+		};
+		3AE49169FE658241B6D230F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Baconian-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41E7288E5C65B5F5E3C16E73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaconianTests-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5877688AD4B89990B453A1DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaconianTests-macOS/Pods-BaconianTests-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Mach-Swift-macOS/Mach_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mach_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaconianTests-macOS/Pods-BaconianTests-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D449B0B573ECD7FB598A3B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaconianTests-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C137A52833A9A410B570EDB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaconianTests-iOS/Pods-BaconianTests-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Mach-Swift-iOS/Mach_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mach_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaconianTests-iOS/Pods-BaconianTests-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEF9E2F601BC699279AF2942 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Baconian-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -647,6 +833,7 @@
 /* Begin XCBuildConfiguration section */
 		0238B7FF2255867E007C0805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A505D33686F792EBC6D2A59B /* Pods-Baconian-iOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -673,6 +860,7 @@
 		};
 		0238B8002255867E007C0805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425672309993169901FEEF2A /* Pods-Baconian-iOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -700,6 +888,7 @@
 		};
 		0238B8012255867E007C0805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80E7B4497B567613FA8F6A13 /* Pods-BaconianTests-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -721,6 +910,7 @@
 		};
 		0238B8022255867E007C0805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA3D7A558239EDE820E4382 /* Pods-BaconianTests-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -866,6 +1056,7 @@
 		};
 		026A047A223F35DB00048572 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C5EF470E498BBF1614D5C02 /* Pods-Baconian-macOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -893,6 +1084,7 @@
 		};
 		026A047B223F35DB00048572 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E083942D17FAFC0B7D1CB4B7 /* Pods-Baconian-macOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -919,6 +1111,7 @@
 		};
 		026A047D223F35DB00048572 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3CF02F286CD6B9C6AAD12DE /* Pods-BaconianTests-macOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -937,6 +1130,7 @@
 		};
 		026A047E223F35DB00048572 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043ACF5A9C7B37D721ADD515 /* Pods-BaconianTests-macOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -965,7 +1159,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0238B8042255867E007C0805 /* Build configuration list for PBXNativeTarget "Baconian-iOSTests" */ = {
+		0238B8042255867E007C0805 /* Build configuration list for PBXNativeTarget "BaconianTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0238B8012255867E007C0805 /* Debug */,
