@@ -8,9 +8,7 @@
 
 import XCTest
 
-#if !BACONIAN_TESTER
 @testable import Baconian
-#endif
 
 class BaconianTests: XCTestCase {
 
