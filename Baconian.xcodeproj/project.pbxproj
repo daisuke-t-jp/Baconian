@@ -34,7 +34,6 @@
 		0238B81F22558E7E007C0805 /* ReporterCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0238B81022558E7E007C0805 /* ReporterCompactView.xib */; };
 		0238B82022558E7E007C0805 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B81122558E7E007C0805 /* ReporterCompactView.swift */; };
 		0238B82122558E7E007C0805 /* ReporterCompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238B81122558E7E007C0805 /* ReporterCompactView.swift */; };
-		0238B82322558F75007C0805 /* TimeInterval+Baconian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A6223F390900048572 /* TimeInterval+Baconian.swift */; };
 		0238B82422558F78007C0805 /* FixedWidthInteger+Baconian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+Baconian.swift */; };
 		0238B82D22558F98007C0805 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B7F224223BA00D4DFC2 /* Report.swift */; };
 		0238B82E22558F9E007C0805 /* ReportOSMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B82224223BA00D4DFC2 /* ReportOSMemory.swift */; };
@@ -48,7 +47,6 @@
 		0238B83622558FA8007C0805 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02082B96224233B400D4DFC2 /* Reporter.swift */; };
 		026A046F223F35DB00048572 /* Baconian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026A0465223F35DA00048572 /* Baconian.framework */; };
 		026A0476223F35DB00048572 /* Baconian.h in Headers */ = {isa = PBXBuildFile; fileRef = 026A0468223F35DA00048572 /* Baconian.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		026A04B5223F390A00048572 /* TimeInterval+Baconian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A6223F390900048572 /* TimeInterval+Baconian.swift */; };
 		026A04B6223F390A00048572 /* FixedWidthInteger+Baconian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A04A7223F390900048572 /* FixedWidthInteger+Baconian.swift */; };
 		7D9039462D7CE32885882D25 /* Pods_Baconian_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DEBC26C70DABACECC8088A /* Pods_Baconian_macOS.framework */; };
 		7E7B189E2257A1FF00F8F404 /* BaconianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B189C2257A1FF00F8F404 /* BaconianTests.swift */; };
@@ -101,7 +99,6 @@
 		026A0468223F35DA00048572 /* Baconian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Baconian.h; sourceTree = "<group>"; };
 		026A0469223F35DA00048572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		026A046E223F35DB00048572 /* BaconianTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaconianTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		026A04A6223F390900048572 /* TimeInterval+Baconian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Baconian.swift"; sourceTree = "<group>"; };
 		026A04A7223F390900048572 /* FixedWidthInteger+Baconian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+Baconian.swift"; sourceTree = "<group>"; };
 		043ACF5A9C7B37D721ADD515 /* Pods-BaconianTests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaconianTests-macOS.release.xcconfig"; path = "Target Support Files/Pods-BaconianTests-macOS/Pods-BaconianTests-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		28332DA85E942942641FE7A5 /* Pods_BaconianTests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaconianTests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,7 +280,6 @@
 		026A04A5223F390900048572 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				026A04A6223F390900048572 /* TimeInterval+Baconian.swift */,
 				026A04A7223F390900048572 /* FixedWidthInteger+Baconian.swift */,
 			);
 			path = Extension;
@@ -683,7 +679,6 @@
 				0238B83422558FA8007C0805 /* ReporterData.swift in Sources */,
 				021B881322573D71005B7CB8 /* ReporterOperation.swift in Sources */,
 				0238B83022558F9E007C0805 /* ReportOSProcessors.swift in Sources */,
-				0238B82322558F75007C0805 /* TimeInterval+Baconian.swift in Sources */,
 				0238B83522558FA8007C0805 /* ReporterDelegate.swift in Sources */,
 				0238B83222558FA3007C0805 /* ReportProcessCPU.swift in Sources */,
 				0238B81522558E7E007C0805 /* CrossPlatformView.swift in Sources */,
@@ -713,7 +708,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026A04B5223F390A00048572 /* TimeInterval+Baconian.swift in Sources */,
 				02082B952242338A00D4DFC2 /* ReporterData.swift in Sources */,
 				0238B81222558E7E007C0805 /* CrossPlatformSegmentedControl.swift in Sources */,
 				0238B82022558E7E007C0805 /* ReporterCompactView.swift in Sources */,
