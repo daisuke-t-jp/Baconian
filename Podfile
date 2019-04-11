@@ -1,5 +1,5 @@
 def depend_pods
-    pod 'Mach-Swift', '1.0.2'
+    pod 'Mach-Swift', :git => 'https://github.com/daisuke-t-jp/Mach-Swift.git'
 end
 
 target 'Baconian-macOS' do
