@@ -12,8 +12,8 @@ import Mach_Swift
 extension Report.Process {
 	
 	public struct CPU: CustomStringConvertible {
-		let usage: Float	/// 0...1
-		let time: TimeInterval
+		public let usage: Float	/// 0...1
+		public let time: TimeInterval
 		
 		public var description: String {
 			return String(format: "usage: %.2f%%, time: %.2fs",
@@ -27,7 +27,7 @@ extension Report.Process {
 
 extension Report.Process.CPU {
 	
-	init() {
+	public init() {
 		usage = 0
 		time = 0
 	}
@@ -37,7 +37,7 @@ extension Report.Process.CPU {
 
 extension Report.Process {
 	
-	static func cpu() -> CPU {
+	public static func cpu() -> CPU {
 		let array = Mach.Task.Thread.basicInfoArray()
 		let machBasicInfo = Mach.Host.Info.basicInfo()
 		

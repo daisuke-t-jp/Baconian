@@ -12,9 +12,9 @@ import Mach_Swift
 extension Report.Process {
 	
 	public struct Thread: CustomStringConvertible {
-		let totalNum: Int
-		let busyNum: Int
-		let idleNum: Int
+		public let totalNum: Int
+		public let busyNum: Int
+		public let idleNum: Int
 		
 		public var description: String {
 			return String(format: "totalNum: %d, busyNum: %d, idleNum: %d",
@@ -29,7 +29,7 @@ extension Report.Process {
 
 extension Report.Process.Thread {
 	
-	init() {
+	public init() {
 		totalNum = 0
 		busyNum = 0
 		idleNum = 0
@@ -40,7 +40,7 @@ extension Report.Process.Thread {
 
 extension Report.Process {
 	
-	static func thread() -> Thread {
+	public static func thread() -> Thread {
 		let array = Mach.Task.Thread.basicInfoArray()
 		
 		var busy = Int(0)

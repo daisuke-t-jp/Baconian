@@ -11,7 +11,7 @@ import Mach_Swift
 
 extension Report.OS {
 
-	static func processors(_ machHostProcessorInfo: [Mach.CPUTick],
+	public static func processors(_ machHostProcessorInfo: [Mach.CPUTick],
 						   machHostProcessorCPULoadInfoArray: [Mach.CPUTick]) -> [CPU] {
 		
 		var res = [CPU]()

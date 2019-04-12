@@ -12,7 +12,7 @@ import Mach_Swift
 extension Report.Process {
 	
 	public struct Memory: CustomStringConvertible {
-		let residentSize: UInt64
+		public let residentSize: UInt64
 		
 		public var description: String {
 			return String(format: "residentSize: %@",
@@ -25,7 +25,7 @@ extension Report.Process {
 
 extension Report.Process.Memory {
 	
-	init() {
+	public init() {
 		residentSize = 0
 	}
 	
@@ -34,7 +34,7 @@ extension Report.Process.Memory {
 
 extension Report.Process {
 	
-	static func memory() -> Memory {
+	public static func memory() -> Memory {
 		let machData = Mach.Task.Info.basicInfo()
 		
 		let res = Memory(
