@@ -7,15 +7,11 @@ matrix:
     - os: osx
       language: swift
       osx_image: xcode10.2
-      cache:
-          - cocoapods
       script:
         # macOS
-        - xcodebuild clean -project "Baconian.xcodeproj" 
-        - pod install
-        - xcodebuild test -project "Baconian.xcodeproj" -scheme "Baconian-macOS" -destination "platform=OS X" -configuration Debug
+        - xcodebuild clean -workspace "Baconian.xcworkspace" -scheme "Baconian-macOS"
+        - xcodebuild test -workspace "Baconian.xcworkspace" -scheme "Baconian-macOS" -destination "platform=OS X" -configuration Debug
 
         # iOS
-        - xcodebuild clean -project "Baconian.xcodeproj" 
-        - pod install
-        - xcodebuild test -project "Baconian.xcodeproj" -scheme "Baconian-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone X" -configuration Debug
+        - xcodebuild clean -workspace "Baconian.xcworkspace" -scheme "Baconian-iOS"
+        - xcodebuild test -workspace "Baconian.xcworkspace" -scheme "Baconian-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone X" -configuration Debug
