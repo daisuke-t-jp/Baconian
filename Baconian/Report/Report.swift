@@ -10,10 +10,4 @@ import Foundation
 
 public class Report {
 	
-	public class OS {
-	}
-	
-	public class Process {
-	}
-	
 }
