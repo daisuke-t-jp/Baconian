@@ -25,6 +25,7 @@ public class ReporterCompactView: CrossPlatformView, ReporterDelegate {
 	public static let xibHeight = CGFloat(50)
 	private static let xibName = "ReporterCompactView"
 	
+	
 	// MARK: Outlet
 	#if os(macOS)
 	@IBOutlet weak var viewTopLevel: CrossPlatformView!

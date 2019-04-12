@@ -12,17 +12,19 @@ import Mach_Swift
 extension Report.OS {
 	
 	public struct Memory: CustomStringConvertible {
-		public let physicalSize: UInt64
+		public let physicalSize: UInt64	/// byte size
 		
-		public let freeSize: UInt64
-		public let activeSize: UInt64
-		public let inactiveSize: UInt64
-		public let wireSize: UInt64
+		public let freeSize: UInt64		/// byte size
+		public let activeSize: UInt64	/// byte size
+		public let inactiveSize: UInt64	/// byte size
+		public let wireSize: UInt64		/// byte size
 		
+		/// byte size
 		public var usedSize: UInt64 {
 			return activeSize + inactiveSize + wireSize
 		}
 		
+		/// byte size
 		public var unusedSize: UInt64 {
 			return physicalSize - usedSize
 		}

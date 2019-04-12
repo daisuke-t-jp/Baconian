@@ -12,7 +12,7 @@ import Mach_Swift
 extension Report.Process {
 	
 	public struct Memory: CustomStringConvertible {
-		public let residentSize: UInt64
+		public let residentSize: UInt64		/// byte size
 		
 		public var description: String {
 			return String(format: "residentSize: %@",
