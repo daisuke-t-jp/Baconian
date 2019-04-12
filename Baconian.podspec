@@ -45,5 +45,6 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.ios.framework = 'UIKit'
   spec.osx.framework = 'AppKit'
+  spec.dependency 'Mach-Swift'
 
 end
