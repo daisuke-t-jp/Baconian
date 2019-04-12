@@ -2,6 +2,8 @@
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20macOS%20-blue.svg)
 [![Language Swift%205.0](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)](https://developer.apple.com/swift)
 [![Build Status](https://travis-ci.org/daisuke-t-jp/Baconian.svg?branch=master)](https://travis-ci.org/daisuke-t-jp/Baconian)
+[![Cocoapods](https://img.shields.io/cocoapods/v/Baconian.svg)](https://cocoapods.org/pods/Baconian)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
 
 
 <img src="https://raw.githubusercontent.com/daisuke-t-jp/Baconian/master/images/DemoMovie-iOS.gif" width="400">  
@@ -63,7 +65,7 @@ import Baconian
 
 ### Reporter class
 
-#### 1. Adopt ReporterDelegate protocol
+#### 1. Confirm ReporterDelegate protocol
 ```swift
 class ViewController: ReporterDelegate {
 ```
