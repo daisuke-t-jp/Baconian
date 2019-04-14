@@ -1,5 +1,5 @@
 PODS:
-  - Baconian (1.0.3):
+  - Baconian (1.0.4):
     - Mach-Swift
   - Mach-Swift (1.0.2)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Baconian: 0374d351dfba06ea5c4c3b29fb9c5e9169217091
+  Baconian: dcc89bd8b949f1237b6e3c50400e1cdb0414a9f5
   Mach-Swift: 66922efc52431fda0162a8177a79929a2f6d38e2
 
 PODFILE CHECKSUM: f03acdb93676573bbe1afe104d62f929fdf0575f
