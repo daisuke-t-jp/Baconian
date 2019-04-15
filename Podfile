@@ -1,7 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
 def depend_pods
-    pod 'Mach-Swift', :git => 'https://github.com/daisuke-t-jp/Mach-Swift.git'
+    pod 'Mach-Swift','~> 1.0.3'
 end
 
 target 'Baconian-macOS' do
