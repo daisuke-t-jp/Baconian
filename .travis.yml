@@ -10,10 +10,8 @@ matrix:
       script:
         # macOS
         - xcodebuild clean -workspace "Baconian.xcworkspace" -scheme "Baconian-macOS"
-        - xcodebuild clean -workspace "Baconian.xcworkspace" -scheme "Baconian-iOS"
         - xcodebuild test -workspace "Baconian.xcworkspace" -scheme "Baconian-macOS" -destination "platform=OS X" -configuration Debug
 
         # iOS
-        - xcodebuild clean -workspace "Baconian.xcworkspace" -scheme "Baconian-macOS"
         - xcodebuild clean -workspace "Baconian.xcworkspace" -scheme "Baconian-iOS"
         - xcodebuild test -workspace "Baconian.xcworkspace" -scheme "Baconian-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone X" -configuration Debug
