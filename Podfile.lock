@@ -1,21 +1,16 @@
 PODS:
-  - Mach-Swift (1.0.2)
+  - Mach-Swift (1.0.3)
 
 DEPENDENCIES:
-  - Mach-Swift (from `https://github.com/daisuke-t-jp/Mach-Swift.git`)
+  - Mach-Swift (~> 1.0.3)
 
-EXTERNAL SOURCES:
-  Mach-Swift:
-    :git: https://github.com/daisuke-t-jp/Mach-Swift.git
-
-CHECKOUT OPTIONS:
-  Mach-Swift:
-    :commit: 3be9d23bffea523cb95f99559db2c7d5975e6130
-    :git: https://github.com/daisuke-t-jp/Mach-Swift.git
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Mach-Swift
 
 SPEC CHECKSUMS:
-  Mach-Swift: 66922efc52431fda0162a8177a79929a2f6d38e2
+  Mach-Swift: 2b61fe6dda30ec6204d729636b98885839f141de
 
-PODFILE CHECKSUM: df2185f24345f7a6fe9d92b23fc62a872ca8f45f
+PODFILE CHECKSUM: 646f137df6ca4e7a94fbd546c76076cb76ab22d8
 
 COCOAPODS: 1.6.1
