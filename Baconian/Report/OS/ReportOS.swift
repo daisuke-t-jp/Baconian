@@ -9,8 +9,8 @@
 import Foundation
 
 extension Report {
-	
-	public class OS {
-	}
-	
+  
+  public class OS {
+  }
+  
 }

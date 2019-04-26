@@ -9,7 +9,7 @@
 import Foundation
 
 public extension FixedWidthInteger {
-	var memoryByteFormatString: String {
-		return ByteCountFormatter.string(fromByteCount: Int64(self), countStyle: .memory)
-	}
+  var memoryByteFormatString: String {
+    return ByteCountFormatter.string(fromByteCount: Int64(self), countStyle: .memory)
+  }
 }

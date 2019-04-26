@@ -10,29 +10,29 @@
 import UIKit
 
 open class CrossPlatformSegmentedControl: UISegmentedControl {
-	open func addTarget(_ target: Any?, action: Selector) {
-		addTarget(target, action: action, for: .valueChanged)
-	}
+  open func addTarget(_ target: Any?, action: Selector) {
+    addTarget(target, action: action, for: .valueChanged)
+  }
 }
 
 #elseif os(macOS)
 import AppKit
 
 open class CrossPlatformSegmentedControl: NSSegmentedControl {
-	open var selectedSegmentIndex: Int {
-		get {
-			return selectedSegment
-		}
-		
-		set {
-			selectedSegment = newValue
-		}
-	}
-	
-	open func addTarget(_ target: Any?, action: Selector) {
-		self.target = target as AnyObject?
-		self.action = action
-	}
+  open var selectedSegmentIndex: Int {
+    get {
+      return selectedSegment
+    }
+    
+    set {
+      selectedSegment = newValue
+    }
+  }
+  
+  open func addTarget(_ target: Any?, action: Selector) {
+    self.target = target as AnyObject?
+    self.action = action
+  }
 }
 
 #endif
