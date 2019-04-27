@@ -1,14 +1,8 @@
-branches:
-  only: 
-    - master
-
 matrix:
   include:
     - os: osx
       language: swift
       osx_image: xcode10.2
-      cache:
-        - cocoapods
       before_install:
         - pod repo update
       script:
