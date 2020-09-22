@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "Baconian"
-  spec.version      = "1.0.5"
+  spec.version      = "1.1.0"
   spec.summary      = "System information reporter in Swift."
   spec.description  = <<-DESC
                    **Baconian** is system information reporter framework in Swift.  
