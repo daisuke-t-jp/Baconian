@@ -9,8 +9,8 @@
 import Foundation
 
 extension Report {
-  
-  public class Process {
-  }
-  
+    
+    public class Process {
+    }
+    
 }

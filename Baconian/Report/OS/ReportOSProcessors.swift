@@ -10,24 +10,24 @@ import Foundation
 import Mach_Swift
 
 extension Report.OS {
-  
-  public static func processors(_ machHostProcessorInfo: [Mach.CPUTick],
-                                machHostProcessorCPULoadInfoArray: [Mach.CPUTick]) -> [CPU] {
     
-    var res = [CPU]()
-    for i in 0..<machHostProcessorInfo.count {
-      let machData = machHostProcessorInfo[i]
-      var prevData = Mach.CPUTick()
-      
-      if i < machHostProcessorCPULoadInfoArray.count {
-        prevData = machHostProcessorCPULoadInfoArray[i]
-      }
-      
-      let cpu = CPU(machData, prevData: prevData)
-      res.append(cpu)
+    public static func processors(_ machHostProcessorInfo: [Mach.CPUTick],
+                                  machHostProcessorCPULoadInfoArray: [Mach.CPUTick]) -> [CPU] {
+        
+        var res = [CPU]()
+        for i in 0..<machHostProcessorInfo.count {
+            let machData = machHostProcessorInfo[i]
+            var prevData = Mach.CPUTick()
+            
+            if i < machHostProcessorCPULoadInfoArray.count {
+                prevData = machHostProcessorCPULoadInfoArray[i]
+            }
+            
+            let cpu = CPU(machData, prevData: prevData)
+            res.append(cpu)
+        }
+        
+        return res
     }
     
-    return res
-  }
-  
 }

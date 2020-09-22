@@ -10,74 +10,74 @@ import Foundation
 import Mach_Swift
 
 extension Report.OS {
-  
-  public struct CPU: CustomStringConvertible {
-    public let userUsage: Float	  /// 0...1
-    public let systemUsage: Float	/// 0...1
-    public let idleUsage: Float 	/// 0...1
-    public let niceUsage: Float 	/// 0...1
     
-    /// A usage except idle(0...1)
-    public var usage: Float {
-      return 1.0 - idleUsage
+    public struct CPU: CustomStringConvertible {
+        public let userUsage: Float	    /// 0...1
+        public let systemUsage: Float	/// 0...1
+        public let idleUsage: Float 	/// 0...1
+        public let niceUsage: Float 	/// 0...1
+        
+        /// A usage except idle(0...1)
+        public var usage: Float {
+            return 1.0 - idleUsage
+        }
+        
+        public var description: String {
+            return String(format: "user: %.2f%%, system: %.2f%%, idle: %.2f%%, nice: %.2f%%",
+                          userUsage * 100,
+                          systemUsage * 100,
+                          idleUsage * 100,
+                          niceUsage * 100
+            )
+        }
+        
     }
     
-    public var description: String {
-      return String(format: "user: %.2f%%, system: %.2f%%, idle: %.2f%%, nice: %.2f%%",
-                    userUsage * 100,
-                    systemUsage * 100,
-                    idleUsage * 100,
-                    niceUsage * 100
-      )
-    }
-    
-  }
-  
 }
 
 
 extension Report.OS.CPU {
-  
-  public init() {
-    userUsage = 0
-    systemUsage = 0
-    idleUsage = 0
-    niceUsage = 0
-  }
-  
-  public init(_ data: Mach.CPUTick, prevData: Mach.CPUTick) {
-    // Caluculation tick's diff.
-    let user = Float(Int64(data.userTick) - Int64(prevData.userTick))
-    let system = Float(Int64(data.systemTick) - Int64(prevData.systemTick))
-    let idle = Float(Int64(data.idleTick) - Int64(prevData.idleTick))
-    let nice = Float(Int64(data.niceTick) - Int64(prevData.niceTick))
     
-    
-    // Caluculation CPU usage
-    let total = user + system + idle + nice
-    if total == 0 {
-      userUsage = 0
-      systemUsage = 0
-      idleUsage = 0
-      niceUsage = 0
-    } else {
-      userUsage = user / total
-      systemUsage = system / total
-      idleUsage = idle / total
-      niceUsage = nice / total
+    public init() {
+        userUsage = 0
+        systemUsage = 0
+        idleUsage = 0
+        niceUsage = 0
     }
-  }
-  
+    
+    public init(_ data: Mach.CPUTick, prevData: Mach.CPUTick) {
+        // Caluculation tick's diff.
+        let user = Float(Int64(data.userTick) - Int64(prevData.userTick))
+        let system = Float(Int64(data.systemTick) - Int64(prevData.systemTick))
+        let idle = Float(Int64(data.idleTick) - Int64(prevData.idleTick))
+        let nice = Float(Int64(data.niceTick) - Int64(prevData.niceTick))
+        
+        
+        // Caluculation CPU usage
+        let total = user + system + idle + nice
+        if total == 0 {
+            userUsage = 0
+            systemUsage = 0
+            idleUsage = 0
+            niceUsage = 0
+        } else {
+            userUsage = user / total
+            systemUsage = system / total
+            idleUsage = idle / total
+            niceUsage = nice / total
+        }
+    }
+    
 }
 
 
 extension Report.OS {
-  
-  public static func cpu(_ machHostCPULoadInfo: Mach.CPUTick,
-                         machHostStatisticsCPULoadInfoPrev: Mach.CPUTick) -> CPU {
-    let res = CPU(machHostCPULoadInfo, prevData: machHostStatisticsCPULoadInfoPrev)
     
-    return res
-  }
-  
+    public static func cpu(_ machHostCPULoadInfo: Mach.CPUTick,
+                           machHostStatisticsCPULoadInfoPrev: Mach.CPUTick) -> CPU {
+        let res = CPU(machHostCPULoadInfo, prevData: machHostStatisticsCPULoadInfoPrev)
+        
+        return res
+    }
+    
 }
