@@ -41,7 +41,7 @@ Pod::Spec.new do |spec|
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.swift_version = "5.0"
+  spec.swift_version = "5.3"
   spec.requires_arc = true
   spec.ios.framework = 'UIKit'
   spec.osx.framework = 'AppKit'
