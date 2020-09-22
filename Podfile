@@ -4,7 +4,7 @@ source 'https://github.com/Artsy/Specs.git'
 use_frameworks!
 
 def depend_pods
-    pod 'Mach-Swift', '~> 1.0.3'
+    pod 'Mach-Swift', '~> 1.1.0'
 end
 
 target 'Baconian-macOS' do

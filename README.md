@@ -58,6 +58,7 @@ end
 
 
 ## Usage
+
 ### Import framework
 ```swift
 import Baconian
@@ -80,55 +81,55 @@ reporter.start()
 #### 3. Implement delegate
 ```swift
 func reporter(_ manager: Reporter, didUpdate data: Reporter.Data) {
-  print("# Report")
+    print("# Report")
   
-  print("## OS")
-  print("### Memory")
-  print("- physicalSize: \(data.osMemory.physicalSize.memoryByteFormatString)")
-  print("- freeSize: \(data.osMemory.freeSize.memoryByteFormatString)")
-  print("- inactiveSize: \(data.osMemory.inactiveSize.memoryByteFormatString)")
-  print("- wireSize: \(data.osMemory.wireSize.memoryByteFormatString)")
-  print("- usedSize: \(data.osMemory.usedSize.memoryByteFormatString)")
-  print("- unusedSize: \(data.osMemory.unusedSize.memoryByteFormatString)")
-  print("")
-  
-  
-  print("### CPU")
-  print(String.init(format: "- userUsage: %.2f", data.osCPU.userUsage))
-  print(String.init(format: "- systemUsage: %.2f", data.osCPU.systemUsage))
-  print(String.init(format: "- idleUsage: %.2f", data.osCPU.idleUsage))
-  print(String.init(format: "- niceUsage: %.2f", data.osCPU.niceUsage))
-  print(String.init(format: "- usage: %.2f", data.osCPU.usage))
-  print("")
-  
-  
-  print("### Processors")
-  for i in 0..<data.osProcessors.count {
-    print("- Core No.\(i)")
-    print(String.init(format: "    - userUsage: %.2f", data.osCPU.userUsage))
-    print(String.init(format: "    - systemUsage: %.2f", data.osCPU.systemUsage))
-    print(String.init(format: "    - idleUsage: %.2f", data.osCPU.idleUsage))
-    print(String.init(format: "    - niceUsage: %.2f", data.osCPU.niceUsage))
-    print(String.init(format: "    - usage: %.2f", data.osCPU.usage))
+    print("## OS")
+    print("### Memory")
+    print("- physicalSize: \(data.osMemory.physicalSize.memoryByteFormatString)")
+    print("- freeSize: \(data.osMemory.freeSize.memoryByteFormatString)")
+    print("- inactiveSize: \(data.osMemory.inactiveSize.memoryByteFormatString)")
+    print("- wireSize: \(data.osMemory.wireSize.memoryByteFormatString)")
+    print("- usedSize: \(data.osMemory.usedSize.memoryByteFormatString)")
+    print("- unusedSize: \(data.osMemory.unusedSize.memoryByteFormatString)")
     print("")
-  }
   
   
-  print("## Process")
-  print("### Memory")
-  print("- residentSize: \(data.processMemory.residentSize.memoryByteFormatString)")
-  print("")
+    print("### CPU")
+    print(String.init(format: "- userUsage: %.2f", data.osCPU.userUsage))
+    print(String.init(format: "- systemUsage: %.2f", data.osCPU.systemUsage))
+    print(String.init(format: "- idleUsage: %.2f", data.osCPU.idleUsage))
+    print(String.init(format: "- niceUsage: %.2f", data.osCPU.niceUsage))
+    print(String.init(format: "- usage: %.2f", data.osCPU.usage))
+    print("")
   
-  print("### CPU")
-  print(String.init(format: "- usage: %.2f", data.processCPU.usage))
-  print(String.init(format: "- time: %.2f", data.processCPU.time))
-  print("")
   
-  print("### Thread")
-  print("- totalNum: \(data.processThread.totalNum)")
-  print("- busyNum: \(data.processThread.busyNum)")
-  print("- idleNum: \(data.processThread.idleNum)")
-  print("")
+    print("### Processors")
+    for i in 0..<data.osProcessors.count {
+        print("- Core No.\(i)")
+        print(String.init(format: "    - userUsage: %.2f", data.osCPU.userUsage))
+        print(String.init(format: "    - systemUsage: %.2f", data.osCPU.systemUsage))
+        print(String.init(format: "    - idleUsage: %.2f", data.osCPU.idleUsage))
+        print(String.init(format: "    - niceUsage: %.2f", data.osCPU.niceUsage))
+        print(String.init(format: "    - usage: %.2f", data.osCPU.usage))
+        print("")
+    }
+  
+  
+    print("## Process")
+    print("### Memory")
+    print("- residentSize: \(data.processMemory.residentSize.memoryByteFormatString)")
+    print("")
+  
+    print("### CPU")
+    print(String.init(format: "- usage: %.2f", data.processCPU.usage))
+    print(String.init(format: "- time: %.2f", data.processCPU.time))
+    print("")
+  
+    print("### Thread")
+    print("- totalNum: \(data.processThread.totalNum)")
+    print("- busyNum: \(data.processThread.busyNum)")
+    print("- idleNum: \(data.processThread.idleNum)")
+    print("")
 }
 ```
 

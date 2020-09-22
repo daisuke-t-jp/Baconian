@@ -10,19 +10,19 @@
 import UIKit
 
 open class CrossPlatformButton: UIButton {
-  open func addTarget(_ target: Any?, action: Selector) {
-    addTarget(target, action: action, for: .touchUpInside)
-  }
+    open func addTarget(_ target: Any?, action: Selector) {
+        addTarget(target, action: action, for: .touchUpInside)
+    }
 }
 
 #elseif os(macOS)
 import AppKit
 
 open class CrossPlatformButton: NSButton {
-  open func addTarget(_ target: Any?, action: Selector) {
-    self.target = target as AnyObject?
-    self.action = action
-  }
+    open func addTarget(_ target: Any?, action: Selector) {
+        self.target = target as AnyObject?
+        self.action = action
+    }
 }
 
 #endif

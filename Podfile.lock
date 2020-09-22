@@ -1,16 +1,16 @@
 PODS:
-  - Mach-Swift (1.0.3)
+  - Mach-Swift (1.1.0)
 
 DEPENDENCIES:
-  - Mach-Swift (~> 1.0.3)
+  - Mach-Swift (~> 1.1.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Mach-Swift
 
 SPEC CHECKSUMS:
-  Mach-Swift: 2b61fe6dda30ec6204d729636b98885839f141de
+  Mach-Swift: 785b3309e839ff30771d286350435b37dc992eb2
 
-PODFILE CHECKSUM: 646f137df6ca4e7a94fbd546c76076cb76ab22d8
+PODFILE CHECKSUM: 9840256b4545df4df33e84139c3e0fdaf9e95f99
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.1

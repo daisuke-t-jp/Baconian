@@ -15,23 +15,23 @@ public typealias CrossPlatformView = UIView
 import AppKit
 
 open class CrossPlatformView: NSView {
-  open var backgroundColor: CrossPlatformColor? {
-    get {
-      if !wantsLayer {
-        wantsLayer = true
-      }
-      
-      return CrossPlatformColor(cgColor: self.layer?.backgroundColor ?? CrossPlatformColor.clear.cgColor)
+    open var backgroundColor: CrossPlatformColor? {
+        get {
+            if !wantsLayer {
+                wantsLayer = true
+            }
+            
+            return CrossPlatformColor(cgColor: self.layer?.backgroundColor ?? CrossPlatformColor.clear.cgColor)
+        }
+        
+        set {
+            if !wantsLayer {
+                wantsLayer = true
+            }
+            
+            layer?.backgroundColor = newValue?.cgColor
+        }
     }
-    
-    set {
-      if !wantsLayer {
-        wantsLayer = true
-      }
-      
-      layer?.backgroundColor = newValue?.cgColor
-    }
-  }
 }
 
 #endif

@@ -15,15 +15,15 @@ public typealias CrossPlatformLabel = UILabel
 import AppKit
 
 open class CrossPlatformLabel: NSTextField {
-  open var text: String? {
-    get {
-      return stringValue
+    open var text: String? {
+        get {
+            return stringValue
+        }
+        
+        set {
+            stringValue = newValue ?? ""
+        }
     }
-    
-    set {
-      stringValue = newValue ?? ""
-    }
-  }
 }
 
 #endif
